@@ -56,7 +56,7 @@ const Home: NextPage = ({nodes}: InferGetStaticPropsType<typeof getStaticProps>)
   return (
     <ul>
       {nodes.map((node: Node) => (
-        <li><Link href={`/nodes/${node.id}`}><a>{node.title}</a></Link></li>
+        <li key={node.id}><Link href={`/nodes/${node.id}`}><a>{node.title}</a></Link></li>
       ))}
     </ul>
 )}

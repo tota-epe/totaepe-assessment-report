@@ -28,7 +28,7 @@ const Page: NextPage = ({ statements }: InferGetServerSidePropsType<typeof getSe
   return (
     <ul>
       {statements.map((statement: Statement) => (
-        <li>{JSON.stringify(statement)}</li>
+        <li key={statement.id}>{JSON.stringify(statement)}</li>
       ))}
     </ul>
 )}
