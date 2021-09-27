@@ -1,26 +1,24 @@
-// @ts-nocheck
-
 import { useRouter } from 'next/router'
 import { InferGetServerSidePropsType, GetServerSideProps, NextPage } from 'next'
 import queryString from 'query-string';
-import { parse, serialize } from 'tinyduration';
-import { Statement } from '@gradiant/xapi-dsl';
+import { parse, Duration } from 'tinyduration';
+import { Statement, Activity } from '@gradiant/xapi-dsl';
 
 type TotaStatement = {
-  id: string
+  id?: string
   objectId: string,
   timestamp: string,
-  verb: string,
-  duration: string,
+  verb?: string,
+  duration: Duration,
   response: string[][],
-  word: string,
-  perf: number,
-  correct: boolean,
-  result: object,
-  ma5: number,
-  complete: boolean,
-  occurrence: number,
-  first: boolean
+  word?: string,
+  perf?: number,
+  correct?: boolean,
+  result?: object,
+  ma5?: number,
+  complete?: boolean,
+  occurrence?: number,
+  first?: boolean
 }
 
 const Page: NextPage = ({ statements }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
@@ -62,32 +60,33 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   // Fetch data from external API
   const res = await fetch(`https://watershedlrs.com/api/organizations/15733/interactions/search`, requestOptions)
   const data = await res.json() as { results: { result: Statement[] }[] }
+  interface Hash<T> { [key: string]: T; }
 
-  var moving_average_word = new Proxy({}, {
-    get: function(object, property) {
+  var moving_average_word = new Proxy({} as Hash<any[]>, {
+    get: function(object, property: string) {
       return object.hasOwnProperty(property) ? object[property] : object[property] = new Array();
     }
   });
-  var moving_average_node = new Proxy({}, {
-    get: function(object, property) {
+  var moving_average_node = new Proxy({} as Hash<any[]>, {
+    get: function(object, property: string) {
       return object.hasOwnProperty(property) ? object[property] : object[property] = new Array();
     }
   });
   
   let resultStatements: TotaStatement[] = data.results[0].result.map(s => {
-    let totaStatement: TotaStatement =  {
-      objectId: s.object?.id?.replace('https://tota-app.lxp.io#/id/', ''),
-      timestamp: Date.parse(s.timestamp)
-        .toLocaleString("en-US", { timeZone: 'America/Sao_Paulo' }),
+    let totaStatement: TotaStatement = {
+      objectId: (s.object as Activity).id.replace('https://tota-app.lxp.io#/id/', ''),
+      timestamp: Date.parse(s.timestamp ?? '')
+        .toLocaleString('en-US'),
                       // .in_time_zone('America/Sao_Paulo')
                       // .strftime('%d/%m/%Y %H:%M:%S'),
-      verb: s.verb.display['en-US'],
-      duration: parse(s.result.duration),
+      verb: s?.verb?.id.replace('http://adlnet.gov/expapi/verbs/', ''),
+      duration: parse(s?.result?.duration ?? ''),
       response: s?.result?.response
-                  .replace(/^[ \[\]]+/, '')
-                  .replace(/[ \[\]]+$/, '')
-                  .split('],[')
-                  .map ( l => l.split(',') )
+                  ?.replace(/^[ \[\]]+/, '')
+                  ?.replace(/[ \[\]]+$/, '')
+                  ?.split('],[')
+                  ?.map ( l => l.split(',') ) ?? []
     }
     totaStatement.word = totaStatement.response.map(r => { return r.slice(-1)[0] }).join('')
     totaStatement.perf = totaStatement.response.length / totaStatement.response.reduce(
@@ -102,7 +101,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
 
     let word = totaStatement.word
     moving_average_word[word].unshift(totaStatement)
-    moving_average_node[totaStatement.object_id].unshift(totaStatement)
+    moving_average_node[totaStatement.objectId].unshift(totaStatement)
     let moving_average5 = moving_average_word[word].slice(0, 5)
     totaStatement.ma5 = moving_average5.reduce(((p,c) => p + c.perf), 0) / moving_average5.length
     totaStatement.complete = (moving_average5.reduce(((p,c) => p + c.correct), 0) / 5.0) >= 0.8
