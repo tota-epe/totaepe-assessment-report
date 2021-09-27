@@ -3,15 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@gradiant/xapi-dsl": "^1.10.0",
     "next": "11.1.2",
+    "query-string": "^7.0.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "tinyduration": "^3.2.2"
   },
   "devDependencies": {
     "@types/react": "17.0.24",
