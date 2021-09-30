@@ -6,9 +6,10 @@ type WordProps = {
   wordData: { word: string; conceptRange: string; },
   statements: TotaStatement[]
 }
+type WordState = { showHideStatements: boolean };
 interface Hash<T> { [key: string]: T; }
 
-export class Word extends React.Component<WordProps> {
+export class Word extends React.Component<WordProps, WordState> {
   conceptRange: number[] = [0,0]
   word: string = ''
   letterData: any
@@ -20,6 +21,12 @@ export class Word extends React.Component<WordProps> {
 
   constructor(props: WordProps) {
     super(props)
+
+    this.state = {
+      showHideStatements: false
+    }
+    this.toggleStatements = this.toggleStatements.bind(this)
+    
     this.statements = this.props.statements
     this.word = this.props.wordData.word
     this.conceptRange = this.props.wordData.conceptRange.split(',').map(Number)
@@ -83,9 +90,18 @@ export class Word extends React.Component<WordProps> {
     this.withConceptError = reducedStatements.withConceptError
     this.correct = reducedStatements.correct
   }
+
+  toggleStatements() {
+    this.setState({ showHideStatements: !this.state.showHideStatements });
+  }
   
   render() {
-    if (!this.statements) {
+    const { showHideStatements } = this.state;
+    let statementsStyle = { display: 'none' }
+    if (showHideStatements) {
+      statementsStyle = { display: 'block' }
+    }
+   if (!this.statements) {
       return (
         <div>Sem dados</div>
       )
@@ -138,6 +154,12 @@ export class Word extends React.Component<WordProps> {
             <li key={index}>
               <p>Letra: {letter} | Erros: {JSON.stringify(this.letterData[index])}</p>
             </li>
+          ))}
+        </ul>
+        <button onClick={() => this.toggleStatements()}>Dados brutos</button>
+        <ul style={statementsStyle}>
+          {this.statements.map((statement) => (
+            <li key={statement.id}>{JSON.stringify(statement)}</li>
           ))}
         </ul>
       </div>

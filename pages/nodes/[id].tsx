@@ -75,7 +75,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   });
   var statementsOnNode = []
   
-  let resultStatements: TotaStatement[] = data.results[0].result.map(s => {
+  let resultStatements: TotaStatement[] = data.results[0].result.reverse().map(s => {
     let totaStatement: TotaStatement = {
       objectId: (s.object as Activity).id.replace('https://tota-app.lxp.io#/id/', ''),
       timestamp: s.timestamp ?? '',
