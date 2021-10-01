@@ -570,5 +570,62 @@
         "conceptRange": ""
       }
     ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "Nó do CE:CI",
+    "displayTitle": "Nó do CE:CI",
+    "body": "",
+    "_id": "61570b4267d1f7001c4710cf",
+    "_parentId": "61570b3667d1f7001c4710ce",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "omission": "1"
+    },
+    "_wordLimit": "5",
+    "_words": [
+      {
+        "word": "DOCE",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "VOCÊ",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "CEBOLA",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "CEDO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "VACINA",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "MACIO",
+        "conceptRange": "2,3"
+      }
+    ]
   }
 ]
