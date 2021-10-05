@@ -92,7 +92,7 @@ export class ErrorType {
       return false
     }
 
-    return word.split('').slice(0, (index - 1)).includes(user_input)
+    return word.split('').slice(0, index).includes(user_input)
   }
 
   intrusion(word: string, index: number, user_input: string) {
