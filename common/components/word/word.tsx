@@ -116,7 +116,14 @@ export class Word extends React.Component<WordProps, WordState> {
         t[letter] = (t[letter] ?? 0) + 1
         return t
       }, {} as {[key: string]: number})
-      errors.push(<span>{errorType}: {JSON.stringify(elementsCount)}</span>)
+      errors.push(<div>
+        <span>{errorType}</span>
+        <ul>
+          {Object.entries(elementsCount).map(letter => (
+            <li>{letter[0]}: { letter[1] }</li>
+          ))}
+        </ul>
+      </div>)
     }
     return errors
   }

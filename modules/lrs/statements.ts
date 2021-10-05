@@ -64,6 +64,9 @@ export const getLRSDataForNode = async (objectID: string) => {
     totaStatement.errorsPerLetter = totaStatement.response.map((l, index) => {
       let errorsPerLetter = { } as ErrorProfile
       return l.slice(0, l.length - 1).reduce(((t, wrongLetter) => {
+        if (!wrongLetter.match(/[a-z]/i)) {
+          return t
+        }
         let errorType = new ErrorType(word, index, wrongLetter)
         if (!t[errorType.errorType]) {
           t[errorType.errorType] = { count: 0, occurrences: [] }          
@@ -92,7 +95,7 @@ export const getLRSDataForNode = async (objectID: string) => {
         t[errorType].count += errorsOnLetter[errorType].count
       }
       return t
-    }))
+    }), {} as ErrorProfile)
     if (totaStatement.conceptErrors && Object.keys(totaStatement.conceptErrors).length) {
         totaStatement.conceptErrorGrade = 1
     }
