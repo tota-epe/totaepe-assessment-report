@@ -1,19 +1,20 @@
 import React from "react";
-import { TotaStatement } from '../../../types/tota_statement'
+import { TotaStatement, ErrorProfile } from '../../../types/tota_statement'
+import { ErrorTypes } from "../../../modules/error_type/error_type";
 import * as V from 'victory';
 
 type WordProps = {
   wordData: { word: string; conceptRange: string; },
   statements: TotaStatement[]
 }
-type WordState = { showHideStatements: boolean };
-interface Hash<T> { [key: string]: T; }
+type WordState = { showHideStatements: boolean }
 
 export class Word extends React.Component<WordProps, WordState> {
   conceptRange: number[] = [0,0]
   word: string = ''
-  letterData: any
+  letterData: ErrorProfile[] = []
   statements: TotaStatement[] = []
+  recentStatements: TotaStatement[] = []
   chartData: { x?: Date, y?: number }[] = []
   correct: number[] = []
   withError: number[] = []
@@ -28,6 +29,7 @@ export class Word extends React.Component<WordProps, WordState> {
     this.toggleStatements = this.toggleStatements.bind(this)
     
     this.statements = this.props.statements
+    this.recentStatements = this.props.statements.slice(0,10)
     this.word = this.props.wordData.word
     this.conceptRange = this.props.wordData.conceptRange.split(',').map(Number)
 
@@ -43,17 +45,17 @@ export class Word extends React.Component<WordProps, WordState> {
       correct: [0, 0],
       withError: [0, 0],
       withConceptError: [0, 0],
-      letterData: this.word.split('').map(letter => { return {} as Hash<number> }),
+      letterData: this.word.split('').map(letter => { return { } as ErrorProfile }),
       chartData: []
     }
 
     this.props.statements.reduce(((t, statement) => {
-      if (statement.errorsPerLetter?.some(e => Object.keys(e).length)) {
-        t.withError[0] += 1
-      } else {
+      if (statement.correct) {
         t.correct[0] += 1
+      } else {
+        t.withError[0] += 1
       }
-      if (statement.conceptErrors && Object.keys(statement.conceptErrors).length) {
+      if (statement.conceptErrorGrade > 0) {
         t.withConceptError[0] += 1
       }
       if (statement.errorsPerLetter) {
@@ -62,24 +64,28 @@ export class Word extends React.Component<WordProps, WordState> {
           if (Object.keys(errorsOnLetter).length == 0) { return }
           
           // Get error with most occurence on letter
-          let mainErrorOnLetter = Object.keys(errorsOnLetter).reduce((a, b) => errorsOnLetter[a] > errorsOnLetter[b] ? a : b)
-          r[index][mainErrorOnLetter] = ((r[index][mainErrorOnLetter] ?? 0) + errorsOnLetter[mainErrorOnLetter])
-          // for (const errorType in errorsOnLetter) {
-          //   t[index][errorType] = ((t[index][errorType] ?? 0) + errorsOnLetter[errorType])      
-          // }
+          let mainErrorOnLetter = Object.keys(errorsOnLetter).reduce((a, b) => errorsOnLetter[a].count > errorsOnLetter[b].count ? a : b)
+          if (!r[index][mainErrorOnLetter]) {
+            r[index][mainErrorOnLetter] = {
+              count: 0,
+              occurrences: []
+            }            
+          } 
+          r[index][mainErrorOnLetter].count += 1
+          r[index][mainErrorOnLetter].occurrences = r[index][mainErrorOnLetter].occurrences.concat(errorsOnLetter[mainErrorOnLetter].occurrences)
         })
       }
 
       return reducedStatements
     }), reducedStatements)
 
-    this.props.statements.slice(0,10).reduce(((t, statement) => {
-      if (statement.errorsPerLetter?.some(e => Object.keys(e).length)) {
-        t.withError[1] += 1
-      } else {
+    this.recentStatements.reduce(((t, statement) => {
+      if (statement.correct) {
         t.correct[1] += 1
+      } else {
+        t.withError[1] += 1
       }
-      if (statement.conceptErrors && Object.keys(statement.conceptErrors).length) {
+      if (statement.conceptErrorGrade > 0) {
         t.withConceptError[1] += 1
       }
       return reducedStatements
@@ -93,6 +99,26 @@ export class Word extends React.Component<WordProps, WordState> {
 
   toggleStatements() {
     this.setState({ showHideStatements: !this.state.showHideStatements });
+  }
+
+  numberWithPercent(n: number, total: number) {
+    return (
+      <span>
+        <span>{ n }</span> ({(n / total).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })})
+      </span>
+    )
+  }
+
+  errorsOnLetter(errorProfile: ErrorProfile) {
+    let errors = []
+    for (const errorType in errorProfile) {
+      let elementsCount = errorProfile[errorType].occurrences.reduce((t, letter) => {
+        t[letter] = (t[letter] ?? 0) + 1
+        return t
+      }, {} as {[key: string]: number})
+      errors.push(<span>{errorType}: {JSON.stringify(elementsCount)}</span>)
+    }
+    return errors
   }
   
   render() {
@@ -115,21 +141,21 @@ export class Word extends React.Component<WordProps, WordState> {
             <tr><td></td><td>Total</td><td>Mais recentes</td></tr>
           </thead>
           <tbody>
-            <tr><td>Apresentações:</td><td>{this.statements.length}</td><td>{this.props.statements.slice(0, 10).length}</td></tr>
+            <tr><td>Apresentações:</td><td>{this.statements.length}</td><td>{this.recentStatements.length}</td></tr>
             <tr>
               <td>Corretas:</td>
-              <td>{this.correct[0]} ({(this.correct[0] / this.statements.length).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })})</td>
-              <td>{this.correct[1]} ({(this.correct[1] / this.props.statements.slice(0, 10).length).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })})</td>
-            </tr>
+              <td>{this.numberWithPercent(this.correct[0], this.statements.length)}</td>
+              <td>{this.numberWithPercent(this.correct[1], this.recentStatements.length)}</td>
+             </tr>
             <tr>
               <td>Com erro:</td>
-              <td>{this.withError[0]} ({(this.withError[0] / this.statements.length).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })})</td>
-              <td>{this.withError[1]} ({(this.withError[1] / this.props.statements.slice(0, 10).length).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })})</td>
+              <td>{this.numberWithPercent(this.withError[0], this.statements.length)}</td>
+              <td>{this.numberWithPercent(this.withError[1], this.recentStatements.length)}</td>
             </tr>
             <tr>
               <td>Com erro no conceito:</td>
-              <td>{this.withConceptError[0]} ({(this.withConceptError[0] / this.statements.length).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })})</td>
-              <td>{this.withConceptError[1]} ({(this.withConceptError[1] / this.props.statements.slice(0, 10).length).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })})</td>
+              <td>{this.numberWithPercent(this.withConceptError[0], this.statements.length)}</td>
+              <td>{this.numberWithPercent(this.withConceptError[1], this.recentStatements.length)}</td>
             </tr>
           </tbody>
         </table>
@@ -149,13 +175,16 @@ export class Word extends React.Component<WordProps, WordState> {
             data={this.chartData}
           />
         </V.VictoryChart> */}
-        <ul>
+        <div style={{display: 'flex'}}>
           {this.word.split('').map((letter, index) => (
-            <li key={index}>
-              <p>Letra: {letter} | Erros: {JSON.stringify(this.letterData[index])}</p>
-            </li>
+            <div key={index} style={{ flex: 1, border: '1px solid', padding: '10px' }}>
+              <p>Letra: {letter}</p>
+              <ul>
+                {this.errorsOnLetter(this.letterData[index]).map(e => <li>{e}</li>)}
+              </ul>
+            </div>
           ))}
-        </ul>
+        </div>
         <button onClick={() => this.toggleStatements()}>Dados brutos</button>
         <ul style={statementsStyle}>
           {this.statements.map((statement) => (

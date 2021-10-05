@@ -1,6 +1,13 @@
 import { Duration } from 'tinyduration';
+import { Hash } from './hash';
 
-interface Hash<T> { [key: string]: T; }
+export type ErrorProfile = {
+  [key: string]: {
+    count: number,
+    occurrences: string[]
+  }  
+}
+
 export type TotaStatement = {
   id?: string
   objectId: string,
@@ -9,14 +16,14 @@ export type TotaStatement = {
   duration: Duration,
   response: string[][],
   word?: string,
-  perf?: number,
+  perf: number,
   correct?: boolean,
   result?: object,
   ma5?: number,
   complete?: boolean,
   occurrence?: number,
   first?: boolean,
-  errorsPerLetter?: Hash<number>[],
-  conceptErrors?: Hash<number>,
-  conceptErrorGrade?: number
+  errorsPerLetter?: ErrorProfile[],
+  conceptErrors?: ErrorProfile,
+  conceptErrorGrade: number
 }
