@@ -2,9 +2,10 @@ import queryString from 'query-string';
 import { parse, Duration } from 'tinyduration';
 import { Statement, Activity } from '@gradiant/xapi-dsl';
 import { ErrorType } from '../../modules/error_type/error_type'
-import { Node, components, idMap } from '../../common/models/totaepe_nodes'
+import { Node, components, idMap, idComponentInverseMap } from '../../common/models/totaepe_nodes'
 import { TotaStatement, ErrorProfile } from '../../types/tota_statement'
 import { Hash } from '../../types/hash';
+import latinize from 'latinize';
   
 export const getLRSDataForNode = async (nodeID: string) => {
   const authorization = Buffer.from(`${process.env.LRS_LOGIN}:${process.env.LRS_PASSWORD}`).toString('base64')
@@ -32,7 +33,7 @@ export const getLRSDataForNode = async (nodeID: string) => {
   const res = await fetch('https://watershedlrs.com/api/organizations/15733/interactions/search', requestOptions)
   const data = await res.json() as { results: { result: Statement[] }[] }
 
-  return processStatements(data.results[0].result.reverse(), nodeID)
+  return processStatements(data.results[0].result.reverse())
 }
 
 export const getLRSDataForComponent = async (objectID: string) => {
@@ -61,7 +62,7 @@ export const getLRSDataForComponent = async (objectID: string) => {
   const res = await fetch('https://watershedlrs.com/api/organizations/15733/interactions/search', requestOptions)
   const data = await res.json() as { results: { result: Statement[] }[] }
 
-  return processStatements(data.results[0].result.reverse(), objectID)
+  return processStatements(data.results[0].result.reverse())
 }
 
 export const getStatementsPerWord = (resultStatements: TotaStatement[]): Hash<TotaStatement[]> => {
@@ -86,18 +87,24 @@ export const getStatementsPerWord = (resultStatements: TotaStatement[]): Hash<To
 }
 
 
-const processStatements = (statements: Statement[], objectID: string) => {
-  var nodeWords = components.find(n => n.id == objectID)?.words.reduce(function(map, obj) {
-    map[obj.word] = obj;
-    return map;
-  }, {} as Hash<any>);
+const processStatements = (statements: Statement[]) => {
+  type WordConceptMap = {
+    [key: string]: {
+      [key: string]: {
+        word: string,
+        conceptRange: string
+      }
+    }
+  }
+  var wordConcepts: WordConceptMap = components.reduce(((map, component) => {
+    map[component.id] = {}
+    component.words.reduce(((componentMap, obj) => {
+      componentMap[latinize(obj.word)] = obj;
+      return componentMap;
+    }), map[component.id])
+    return map
+  }), {} as WordConceptMap)
 
-
-  // if (!data?.results) {
-  //   return [] as TotaStatement[]
-  // }
-
-  // let resultStatements: TotaStatement[] = []
   return statements.map(s => {
     let totaStatement: TotaStatement = {
       objectId: (s.object as Activity).id.replace('https://tota-app.lxp.io#/id/', ''),
@@ -139,7 +146,9 @@ const processStatements = (statements: Statement[], objectID: string) => {
 
     totaStatement.conceptErrorGrade = 0
     
-    let currentWordData = nodeWords ? nodeWords[word] : undefined
+    let newComponentId = idComponentInverseMap[totaStatement.objectId]
+    let componentData = wordConcepts[totaStatement.objectId] ?? wordConcepts[newComponentId]
+    let currentWordData = componentData[word]
     if (!currentWordData?.conceptRange) {
       return totaStatement
     }

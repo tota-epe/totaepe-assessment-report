@@ -40,6 +40,19 @@ export const idMap: { [key: string]: string[] } = {
   '615e01b43f71e3dffca2c70f': ['61570b4267d1f7001c4710cf']
 }
 
+export const idComponentInverseMap: {[key:string]: string} = {
+  // Inverse of components
+  '60708e5e07adda001d321d27': '615368803f71e3dffca2c704',
+  '60b4f2bef37db9001d572b22': '615368803f71e3dffca2c705',
+  '60cb81cd12f81a001c4cc4d0': '615368813f71e3dffca2c706',
+  '60e8ac860dd55b001dad4b82': '615368813f71e3dffca2c707',
+  '611536171eeab3001d45341c': '615368813f71e3dffca2c708',
+  '612aadd9953f33001d87d9df': '615368813f71e3dffca2c709',
+  '613a4ebc66c91b001c5fc48f': '615368813f71e3dffca2c70a',
+  '6140f8a0b92f5e001dfe4eaa': '615368813f71e3dffca2c70b',
+  '61570b4267d1f7001c4710cf': '615e01b43f71e3dffca2c70f',
+}
+
 export const components: Node[] = courseComponents.map(component => {
   return {
     id: component._id,
