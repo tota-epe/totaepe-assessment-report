@@ -23,7 +23,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const conceptErrorGrade = recentStatements.reduce(((p, c) => p + c.conceptErrorGrade), 0) / recentStatements.length
   const nodeComplete = (recentStatements.length === 30 && conceptErrorGrade < 0.2)
 
-
   let node = nodes.filter(node => node._id === nodeId)[0]
   let currentComponent = node?.articles.map(a => a.blocks.map(b => b.components)).flat(3)[0]
   let words = currentComponent.words
@@ -55,8 +54,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   let newState = {
     _id: currentComponent.id,
     _extras: { words: wordsForNode.map(w => w.word), shuffle: true }
-  } 
-  updateComponentState(newState)
+  }
+  
+  const shouldWrite = req.query.write
+  if (shouldWrite === 'true') {
+    updateComponentState(newState)
+  }
 
-  res.status(200).json({ sortedWords })
+  res.status(200).json({ shouldWrite, nodeComplete, sortedWords, newState })
 }

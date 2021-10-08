@@ -65,8 +65,8 @@ const LRSStateURL = (stateId: string) => {
     objectType: 'Agent',
     account: {
       homePage: 'http://cloud.scorm.com',
-      name: '2BNE75KTBT|rmello@gmail.com'
-      // name: '2BNE75KTBT|teste_ninoca@mailinator.com'
+      // name: '2BNE75KTBT|rmello@gmail.com'
+      name: '2BNE75KTBT|teste_ninoca@mailinator.com'
     }
   }
   url.search = new URLSearchParams({

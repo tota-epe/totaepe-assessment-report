@@ -4,7 +4,7 @@ import queryString from 'query-string';
 import { parse, Duration } from 'tinyduration';
 import { Statement, Activity } from '@gradiant/xapi-dsl';
 import { ErrorType } from '../../modules/error_type/error_type'
-import { Node, components } from '../../common/models/totaepe_nodes'
+import { nodes } from '../../common/models/totaepe_nodes'
 import React from 'react';
 import { Word } from '../../common/components/word/word'
 import { TotaStatement } from '../../types/tota_statement'
@@ -15,7 +15,8 @@ import { Hash } from '../../types/hash'
 const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter()
   const { id } = router.query
-  const nodeData = components.find(n => n.id == id)
+  let node = nodes.find(node => node._id === id)
+  let nodeData = node?.articles.map(a => a.blocks.map(b => b.components)).flat(3)[0]
   if (!nodeData) {
     return (<div>Node não encontrado</div>)
   }
@@ -28,7 +29,7 @@ const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsTy
 
   return (
     <div>
-      <h3>{nodeData.title} - {nodeData.id}</h3>
+      <h3>{nodeData.title} - {id}</h3>
       <p>Conceitos: {JSON.stringify(nodeData.concepts)}</p>
       <p>Score de erros de conceito: {conceptErrorGrade.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })}</p>
       <p>Nó dominado?: { nodeComplete ? 'sim' : 'não'} - {statements.length} Apresentações de palavras</p>
@@ -49,7 +50,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 
   const objectID = Array.isArray(params.id) ? params.id[0] : params.id
-  let resultStatements = await getLRSDataForComponent(objectID)
+  let resultStatements = await getLRSDataForNode(objectID)
   var statementsPerWord: Hash<TotaStatement[]> = getStatementsPerWord(resultStatements)
       
   // Pass data to the page via props
