@@ -2,17 +2,21 @@ import queryString from 'query-string';
 import { parse, Duration } from 'tinyduration';
 import { Statement, Activity } from '@gradiant/xapi-dsl';
 import { ErrorType } from '../../modules/error_type/error_type'
-import { Node, nodes } from '../../common/models/totaepe_nodes'
+import { Node, components, idMap } from '../../common/models/totaepe_nodes'
 import { TotaStatement, ErrorProfile } from '../../types/tota_statement'
 import { Hash } from '../../types/hash';
   
-// export const getStaticProps: GetStaticProps = async ({ params }) => {
-export const getLRSDataForNode = async (objectID: string) => {
+export const getLRSDataForNode = async (nodeID: string) => {
   const authorization = Buffer.from(`${process.env.LRS_LOGIN}:${process.env.LRS_PASSWORD}`).toString('base64')
+
+  let query = [`context.contextActivities.grouping.id=https://tota-app.lxp.io#/id/${nodeID}`]
+  if (idMap[nodeID]) {
+    idMap[nodeID].map(o => { query.push(`context.contextActivities.grouping.id=https://tota-app.lxp.io#/id/${o}`) })
+  }
   const requestData = {
     'agent.name': '/.*Maria Ines.*/',
     'verb.name': '/answered/',
-    query: `object.id=https://tota-app.lxp.io#/id/${objectID}`,
+    query: query.join(' OR '),
     limit: 5000
   }
   const requestOptions = {
@@ -27,7 +31,63 @@ export const getLRSDataForNode = async (objectID: string) => {
   // Fetch data from external API
   const res = await fetch('https://watershedlrs.com/api/organizations/15733/interactions/search', requestOptions)
   const data = await res.json() as { results: { result: Statement[] }[] }
-  var nodeWords = nodes.find(n => n.id == objectID)?.words.reduce(function(map, obj) {
+
+  return processStatements(data.results[0].result.reverse(), nodeID)
+}
+
+export const getLRSDataForComponent = async (objectID: string) => {
+  const authorization = Buffer.from(`${process.env.LRS_LOGIN}:${process.env.LRS_PASSWORD}`).toString('base64')
+
+  let query = [`object.id=https://tota-app.lxp.io#/id/${objectID}`]
+  if (idMap[objectID]) {
+    idMap[objectID].map(o => { query.push(`object.id=https://tota-app.lxp.io#/id/${o}`) })
+  }
+  const requestData = {
+    'agent.name': '/.*Maria Ines.*/',
+    'verb.name': '/answered/',
+    query: query.join(' OR '),
+    limit: 5000
+  }
+  const requestOptions = {
+    method: 'POST',
+    body: queryString.stringify(requestData),
+    headers: new Headers({
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Authorization': `Basic ${authorization}`
+    })
+  };
+
+  // Fetch data from external API
+  const res = await fetch('https://watershedlrs.com/api/organizations/15733/interactions/search', requestOptions)
+  const data = await res.json() as { results: { result: Statement[] }[] }
+
+  return processStatements(data.results[0].result.reverse(), objectID)
+}
+
+export const getStatementsPerWord = (resultStatements: TotaStatement[]): Hash<TotaStatement[]> => {
+  var statementsPerWord = new Proxy({} as Hash<TotaStatement[]>, {
+    get: function(object, property: string) {
+      return object.hasOwnProperty(property) ? object[property] : object[property] = new Array();
+    }
+  });
+
+  resultStatements.forEach((statement, index, statements) => {
+    let word = statement.word ?? ''
+    statementsPerWord[word].unshift(statement)
+    
+    let movingAverage5 = statementsPerWord[word].slice(0, 5)
+    statements[index].ma5 = movingAverage5.reduce(((p: number, c: TotaStatement) => p + c.perf), 0) / movingAverage5.length
+    statements[index].complete = (movingAverage5.reduce(((p: number, c: TotaStatement) => p + (c.correct ? 1 : 0)), 0) / 5.0) >= 0.8
+    statements[index].occurrence = statementsPerWord[word].length
+    statements[index].first = (statementsPerWord[word].length == 0 ? true : false)
+  })
+
+  return statementsPerWord
+}
+
+
+const processStatements = (statements: Statement[], objectID: string) => {
+  var nodeWords = components.find(n => n.id == objectID)?.words.reduce(function(map, obj) {
     map[obj.word] = obj;
     return map;
   }, {} as Hash<any>);
@@ -38,7 +98,7 @@ export const getLRSDataForNode = async (objectID: string) => {
   // }
 
   // let resultStatements: TotaStatement[] = []
-  return data.results[0].result.reverse().map(s => {
+  return statements.map(s => {
     let totaStatement: TotaStatement = {
       objectId: (s.object as Activity).id.replace('https://tota-app.lxp.io#/id/', ''),
       timestamp: s.timestamp ?? '',

@@ -4,18 +4,18 @@ import queryString from 'query-string';
 import { parse, Duration } from 'tinyduration';
 import { Statement, Activity } from '@gradiant/xapi-dsl';
 import { ErrorType } from '../../modules/error_type/error_type'
-import { Node, nodes } from '../../common/models/totaepe_nodes'
+import { Node, components } from '../../common/models/totaepe_nodes'
 import React from 'react';
 import { Word } from '../../common/components/word/word'
 import { TotaStatement } from '../../types/tota_statement'
 import latinize from 'latinize'
-import { getLRSDataForNode } from '../../modules/lrs/statements';
+import { getLRSDataForComponent, getLRSDataForNode, getStatementsPerWord } from '../../modules/lrs/statements';
 import { Hash } from '../../types/hash'
  
 const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter()
   const { id } = router.query
-  const nodeData = nodes.find(n => n.id == id)
+  const nodeData = components.find(n => n.id == id)
   if (!nodeData) {
     return (<div>Node não encontrado</div>)
   }
@@ -49,25 +49,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 
   const objectID = Array.isArray(params.id) ? params.id[0] : params.id
-  let resultStatements = await getLRSDataForNode(objectID)
-
-  var statementsPerWord = new Proxy({} as Hash<TotaStatement[]>, {
-    get: function(object, property: string) {
-      return object.hasOwnProperty(property) ? object[property] : object[property] = new Array();
-    }
-  });
-
-  resultStatements.forEach((statement, index, statements) => {
-    let word = statement.word ?? ''
-    statementsPerWord[word].unshift(statement)
-    
-    let movingAverage5 = statementsPerWord[word].slice(0, 5)
-    statements[index].ma5 = movingAverage5.reduce(((p: number, c: TotaStatement) => p + c.perf), 0) / movingAverage5.length
-    statements[index].complete = (movingAverage5.reduce(((p: number, c: TotaStatement) => p + (c.correct ? 1 : 0)), 0) / 5.0) >= 0.8
-    statements[index].occurrence = statementsPerWord[word].length
-    statements[index].first = (statementsPerWord[word].length == 0 ? true : false)
-  })
-  
+  let resultStatements = await getLRSDataForComponent(objectID)
+  var statementsPerWord: Hash<TotaStatement[]> = getStatementsPerWord(resultStatements)
+      
   // Pass data to the page via props
   return {
     props: {
