@@ -627,5 +627,143 @@
         "conceptRange": "2,3"
       }
     ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": " Nó do GI/GE",
+    "displayTitle": "",
+    "body": "",
+    "_id": "61606f583f71e3dffca2c713",
+    "_parentId": "61606f3d3f71e3dffca2c712",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "omission": "1"
+    },
+    "_wordLimit": "5",
+    "_words": [
+      {
+        "word": "VIAGEM",
+        "conceptRange": "3,4"
+      },
+      {
+        "word": "GELO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "MÁGICO",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "GIRAFA",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "RELÓGIO",
+        "conceptRange": "4,5"
+      },
+      {
+        "word": "AGENDA",
+        "conceptRange": "1,2"
+      },
+      {
+        "word": "GEMA",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "TANGERINA",
+        "conceptRange": "3,4"
+      },
+      {
+        "word": "GIZ",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "GEL",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "GENTIL",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "GESSO",
+        "conceptRange": "0,1"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": " Nó do J",
+    "displayTitle": "",
+    "body": "",
+    "_id": "616070c13f71e3dffca2c717",
+    "_parentId": "616070a23f71e3dffca2c716",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "omission": "1"
+    },
+    "_wordLimit": "5",
+    "_words": [
+      {
+        "word": "JABUTI",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "JOGO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "JANELA",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "JOELHO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "JARDIM",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "LOJA",
+        "conceptRange": "2,3"
+      }
+    ]
   }
 ]

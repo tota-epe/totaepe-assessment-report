@@ -4,7 +4,8 @@ import courseArticles from '../course/en/articles.json'
 import courseContentObjects from '../course/en/contentObjects.json'
 
 export const nodeTransitons = {
-  '615e01943f71e3dffca2c70c': '615e01943f71e3dffca2c70c'
+  '615e01943f71e3dffca2c70c': '61606f3c3f71e3dffca2c710',
+  '61606f3c3f71e3dffca2c710': '616070a13f71e3dffca2c714'
 }
 
 export type Node = {
