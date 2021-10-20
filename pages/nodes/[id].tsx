@@ -21,7 +21,7 @@ const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsTy
     return (<div>Node não encontrado</div>)
   }
   
-  const recentStatements = statements.slice(0, 30)
+  const recentStatements = statements.reverse().slice(0, 30)
   const conceptErrorGrade = recentStatements.reduce(((p: number, c: TotaStatement) => p + c.conceptErrorGrade), 0) / recentStatements.length
   const nodeComplete = (recentStatements.length === 30 && conceptErrorGrade < 0.2)
   
