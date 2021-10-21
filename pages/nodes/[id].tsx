@@ -46,7 +46,7 @@ const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsTy
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   if (!params || !params['id']) {
-    return { props: { } }
+    return { props: { }, revalidate: 1 }
   }
 
   const objectID = Array.isArray(params.id) ? params.id[0] : params.id
@@ -64,9 +64,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 export async function getStaticPaths() {
-  // let paths = nodes.map((n: Node) => { return { params: { id: n.id } } } )
+  let paths = nodes.map((n) => { return { params: { id: n._id } } } )
   return {
-    paths: [], //paths,
+    paths: paths,
     fallback: 'blocking'
   }
 }

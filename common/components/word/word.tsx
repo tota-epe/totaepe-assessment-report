@@ -120,7 +120,7 @@ export class Word extends React.Component<WordProps, WordState> {
         <span>{errorType}</span>
         <ul>
           {Object.entries(elementsCount).map(letter => (
-            <li>{letter[0]}: { letter[1] }</li>
+            <li key={letter[0]}>{letter[0]}: { letter[1] }</li>
           ))}
         </ul>
       </div>)
