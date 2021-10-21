@@ -2,7 +2,7 @@ import queryString from 'query-string';
 import { parse, Duration } from 'tinyduration';
 import { Statement, Activity } from '@gradiant/xapi-dsl';
 import { ErrorType } from '../../modules/error_type/error_type'
-import { Node, components, idMap, idComponentInverseMap } from '../../common/models/totaepe_nodes'
+import { components, idMap, idComponentInverseMap } from '../../common/models/totaepe_nodes'
 import { TotaStatement, ErrorProfile } from '../../types/tota_statement'
 import { Hash } from '../../types/hash';
 import latinize from 'latinize';

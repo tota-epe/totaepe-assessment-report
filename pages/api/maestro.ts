@@ -2,7 +2,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getComponentState, getCourseState, updateComponentState } from '../../modules/lrs/states'
 import { Hash } from '../../types/hash';
-import { Node, nodes, components } from '../../common/models/totaepe_nodes'
+import { nodes, components } from '../../common/models/totaepe_nodes'
 import { getLRSDataForNode, getStatementsPerWord } from '../../modules/lrs/statements';
 import latinize from 'latinize';
 

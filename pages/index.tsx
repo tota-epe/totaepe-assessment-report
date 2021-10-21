@@ -4,7 +4,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import { ErrorTypes } from '../modules/error_type/error_type'
-import { Node, nodes } from '../common/models/totaepe_nodes'
+import { nodes } from '../common/models/totaepe_nodes'
 
 const Home: NextPage = ({nodes}: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (

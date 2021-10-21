@@ -21,7 +21,7 @@ const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsTy
     return (<div>Node não encontrado</div>)
   }
   
-  const recentStatements = statements.reverse().slice(0, 30)
+  const recentStatements = statements.slice(-30)
   const conceptErrorGrade = recentStatements.reduce(((p: number, c: TotaStatement) => p + c.conceptErrorGrade), 0) / recentStatements.length
   const nodeComplete = (recentStatements.length === 30 && conceptErrorGrade < 0.2)
   
@@ -31,7 +31,7 @@ const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsTy
     <div>
       <h3>{nodeData.title} - {id}</h3>
       <p>Conceitos: {JSON.stringify(nodeData.concepts)}</p>
-      <p>Score de erros de conceito: {conceptErrorGrade.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })}</p>
+      <p>Score de erros de conceito.: {conceptErrorGrade.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })}</p>
       <p>Nó dominado?: { nodeComplete ? 'sim' : 'não'} - {statements.length} Apresentações de palavras</p>
       <div>
         {nodeWords?.map((wordData) => (

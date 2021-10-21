@@ -8,14 +8,6 @@ export const nodeTransitons = {
   '61606f3c3f71e3dffca2c710': '616070a13f71e3dffca2c714'
 }
 
-export type Node = {
-  id: string,
-  title: string,
-  _parentId: string,
-  concepts?: { [key: string]: string},
-  words: { word: string, conceptRange: string }[]
-}
-
 export const idMap: { [key: string]: string[] } = {
   // Nodes
   '615368803f71e3dffca2c6ec': ['60708e3007adda001d321d23'],
@@ -53,7 +45,7 @@ export const idComponentInverseMap: {[key:string]: string} = {
   '61570b4267d1f7001c4710cf': '615e01b43f71e3dffca2c70f',
 }
 
-export const components: Node[] = courseComponents.map(component => {
+export const components = courseComponents.map(component => {
   return {
     id: component._id,
     title: component.title,
