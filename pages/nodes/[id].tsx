@@ -59,7 +59,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       statements: resultStatements,
       statementsPerWord: statementsPerWord
     },
-    revalidate: 60 * 60
+    revalidate: 5 * 60
   }
 }
 
@@ -67,7 +67,7 @@ export async function getStaticPaths() {
   let paths = nodes.map((n) => { return { params: { id: n._id } } } )
   return {
     paths: paths,
-    fallback: 'blocking'
+    fallback: true
   }
 }
 
