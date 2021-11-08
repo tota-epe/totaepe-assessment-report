@@ -58,6 +58,36 @@ export class Word extends React.Component<WordProps, WordState> {
       if (statement.conceptErrorGrade > 0) {
         t.withConceptError[0] += 1
       }
+      // if (statement.errorsPerLetter) {
+      //   let r = reducedStatements.letterData
+      //   statement.errorsPerLetter.forEach((errorsOnLetter, index) => {
+      //     if (Object.keys(errorsOnLetter).length == 0) { return }
+          
+      //     // Get error with most occurence on letter
+      //     let mainErrorOnLetter = Object.keys(errorsOnLetter).reduce((a, b) => errorsOnLetter[a].count > errorsOnLetter[b].count ? a : b)
+      //     if (!r[index][mainErrorOnLetter]) {
+      //       r[index][mainErrorOnLetter] = {
+      //         count: 0,
+      //         occurrences: []
+      //       }            
+      //     } 
+      //     r[index][mainErrorOnLetter].count += 1
+      //     r[index][mainErrorOnLetter].occurrences = r[index][mainErrorOnLetter].occurrences.concat(errorsOnLetter[mainErrorOnLetter].occurrences)
+      //   })
+      // }
+
+      return reducedStatements
+    }), reducedStatements)
+
+    this.recentStatements.reduce(((t, statement) => {
+      if (statement.correct) {
+        t.correct[1] += 1
+      } else {
+        t.withError[1] += 1
+      }
+      if (statement.conceptErrorGrade > 0) {
+        t.withConceptError[1] += 1
+      }
       if (statement.errorsPerLetter) {
         let r = reducedStatements.letterData
         statement.errorsPerLetter.forEach((errorsOnLetter, index) => {
@@ -74,19 +104,6 @@ export class Word extends React.Component<WordProps, WordState> {
           r[index][mainErrorOnLetter].count += 1
           r[index][mainErrorOnLetter].occurrences = r[index][mainErrorOnLetter].occurrences.concat(errorsOnLetter[mainErrorOnLetter].occurrences)
         })
-      }
-
-      return reducedStatements
-    }), reducedStatements)
-
-    this.recentStatements.reduce(((t, statement) => {
-      if (statement.correct) {
-        t.correct[1] += 1
-      } else {
-        t.withError[1] += 1
-      }
-      if (statement.conceptErrorGrade > 0) {
-        t.withConceptError[1] += 1
       }
       return reducedStatements
     }), reducedStatements)
@@ -187,7 +204,7 @@ export class Word extends React.Component<WordProps, WordState> {
             <div key={index} style={{ flex: 1, border: '1px solid', padding: '10px' }}>
               <p>Letra: {letter}</p>
               <ul>
-                {this.errorsOnLetter(this.letterData[index]).map(e => <li>{e}</li>)}
+                {this.errorsOnLetter(this.letterData[index]).map((e, i) => <li key={i}>{e}</li>)}
               </ul>
             </div>
           ))}
