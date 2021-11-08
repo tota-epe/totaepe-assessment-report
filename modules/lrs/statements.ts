@@ -138,6 +138,13 @@ const processStatements = (statements: Statement[]) => {
         if (!t[errorType.errorType]) {
           t[errorType.errorType] = { count: 0, occurrences: [] }          
         }
+
+        // Prevents consecutive sequences of more than 2 occurences of same letter
+        if (t[errorType.errorType].occurrences[0] == wrongLetter &&
+            t[errorType.errorType].occurrences[1] == wrongLetter) {
+          return t
+        }
+
         t[errorType.errorType].count += 1
         t[errorType.errorType].occurrences.unshift(wrongLetter)
         return t
