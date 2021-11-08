@@ -5,39 +5,47 @@ export enum ErrorTypes {
   intrusion = 'intrusion',
   memory = 'memory',
   orthographic = 'orthographic',
+  speech = 'speech',
   other = 'other'
 } 
 
 export class ErrorType {
-  ERROR_TYPES: ErrorTypes[] = [ErrorTypes.phonic, ErrorTypes.graphic, ErrorTypes.omission, ErrorTypes.intrusion, ErrorTypes.memory, ErrorTypes.orthographic, ErrorTypes.other]
+  ERROR_TYPES: ErrorTypes[] = [ErrorTypes.phonic, ErrorTypes.graphic, ErrorTypes.omission, 
+                               ErrorTypes.intrusion, ErrorTypes.memory, ErrorTypes.orthographic, 
+                               ErrorTypes.speech, ErrorTypes.other]
   ERRORS: { [key: string]: { [key: string]: string[] } } = {
     phonic: {
+      A: ['E'],
       B: ['M', 'P'],
       C: ['G'],
       D: ['T'],
       F: ['V'],
-      G: ['C'],
-      J: ['S', 'X', 'Z'],
+      G: ['C', 'Q', 'K'],
+      J: ['S', 'X', 'Z', 'C'], // C de CH
       K: ['G'],
-      M: ['B'],
+      M: ['B', 'P'],
       P: ['B'],
       Q: ['G'],
       S: ['J', 'X', 'Z'],
       T: ['D'],
       V: ['F'],
       X: ['J', 'Z', 'S'],
-      Z: ['S']
+      Z: ['S', 'J']
 
       // 'R' => ['L'],
       // 'I' => ['E'],
     },
     graphic: { // Deveria ter o inverso sempre?
+      A: ['E'],
       B: ['D'],
       D: ['B'],
       E: ['A'],
       F: ['T'],
       G: ['Q'],
+      H: ['N'],
       I: ['L'],
+      J: ['L'],
+      L: ['I', 'J'],
       M: ['W'],
       N: ['U'],
       P: ['Q'],
@@ -64,7 +72,13 @@ export class ErrorType {
       S: ['C', 'Z'],
       X: ['C', 'Z', 'S'], // CH
       Z: ['S', 'X'],
-      A: ['E']
+
+    },
+    speech: {
+      R: ['L'],
+      E: ['I'],
+      O: ['U'],
+      LH: ['LI', 'LHI']
     }
   }
 
@@ -85,6 +99,11 @@ export class ErrorType {
   phonic(word: string, index: number, user_input: string) {
     let correct_letter = word[index]
     return this.ERRORS['phonic'][correct_letter]?.includes(user_input)
+  }
+
+  speech(word: string, index: number, user_input: string) {
+    let correct_letter = word[index]
+    return this.ERRORS['speech'][correct_letter]?.includes(user_input)
   }
 
   memory(word: string, index: number, user_input: string) {
