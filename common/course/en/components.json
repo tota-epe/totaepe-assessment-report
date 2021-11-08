@@ -765,5 +765,58 @@
         "conceptRange": "2,3"
       }
     ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "N26",
+    "displayTitle": "",
+    "body": "",
+    "_id": "6179ad8a3f71e3dffca2c71d",
+    "_parentId": "6179ad713f71e3dffca2c71c",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "omission": "1"
+    },
+    "_wordLimit": "5",
+    "_words": [
+      {
+        "word": "ARTE",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ARCO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "IRMÃ",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "IRMÃO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "URSO",
+        "conceptRange": "0,1"
+      }
+    ]
   }
 ]
