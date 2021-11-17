@@ -480,6 +480,7 @@
       "omission": "0"
     },
     "_wordLimit": "0",
+    "_resumable": true,
     "_words": [
       {
         "word": "MAR",
@@ -815,6 +816,122 @@
       },
       {
         "word": "URSO",
+        "conceptRange": "0,1"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "Vogal Consoante Vogal",
+    "displayTitle": "",
+    "body": "",
+    "_id": "6194f4d13f71e3dffca2c722",
+    "_parentId": "6194f3273f71e3dffca2c721",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "omission": "0"
+    },
+    "_wordLimit": "5",
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "ELA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "ELE",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "AVE",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "OVO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "OLÁ",
+        "conceptRange": "0,2"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "Vogal com N",
+    "displayTitle": "",
+    "body": "",
+    "_id": "6194faf23f71e3dffca2c726",
+    "_parentId": "6194f6b33f71e3dffca2c725",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "omission": "0"
+    },
+    "_wordLimit": "5",
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "ANDO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ONDA",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ANJO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ANTA",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ENFEITE",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ENJOO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "INJEÇÃO",
         "conceptRange": "0,1"
       }
     ]
