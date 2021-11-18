@@ -4,7 +4,6 @@ import { getComponentState, getCourseState, updateComponentState } from '../../m
 import { Hash } from '../../types/hash';
 import { nodes, components } from '../../common/models/totaepe_nodes'
 import { getLRSDataForNode, getStatementsPerWord } from '../../modules/lrs/statements';
-import latinize from 'latinize';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   let courseState = await getCourseState()
@@ -28,8 +27,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   let words = currentComponent.words
   let sortedWords = words.map(wordData => {
     const word: string = wordData.word
-    let latinizedWord = latinize(word)
-    const lastOccurrenceOfWord = statementsPerWord[latinizedWord][0]
+    const lastOccurrenceOfWord = statementsPerWord[word][0]
 
     return {
       word: word,

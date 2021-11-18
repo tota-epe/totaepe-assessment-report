@@ -28,14 +28,14 @@ export class Word extends React.Component<WordProps, WordState> {
     }
     this.toggleStatements = this.toggleStatements.bind(this)
     
+    if (!this.props.statements) {
+      return
+    }
+
     this.statements = this.props.statements
     this.recentStatements = this.props.statements.slice(0,10)
     this.word = this.props.wordData.word
     this.conceptRange = this.props.wordData.conceptRange.split(',').map(Number)
-
-    if (!this.statements) {
-      return
-    }
 
     this.chartData = this.props.statements.map((statement) => {
       return { x: new Date(statement.timestamp), y: statement.ma5 }
@@ -159,7 +159,7 @@ export class Word extends React.Component<WordProps, WordState> {
     return (
       <div>
         <h4>{this.word} - grupo conceito: {this.word.slice(this.conceptRange[0], this.conceptRange[1] + 1)}</h4>
-        <p>Media Móvel 5 ultimas {this.props.statements[0]?.ma5?.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })}</p>
+        <p>Media Móvel 5 ultimas {this.statements[0]?.ma5?.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })}</p>
         <table>
           <thead>
             <tr><td></td><td>Total</td><td>Mais recentes</td></tr>

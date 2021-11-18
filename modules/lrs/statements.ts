@@ -67,8 +67,25 @@ export const getLRSDataForComponent = async (objectID: string) => {
 
 export const getStatementsPerWord = (resultStatements: TotaStatement[]): Hash<TotaStatement[]> => {
   var statementsPerWord = new Proxy({} as Hash<TotaStatement[]>, {
-    get: function(object, property: string) {
-      return object.hasOwnProperty(property) ? object[property] : object[property] = new Array();
+    get: function(object, property) {
+      if (typeof property !== 'string') {
+        return 
+      }
+
+      if (object.hasOwnProperty(property)) {
+        return object[property]
+      }
+
+      if (object.hasOwnProperty(latinize(property))) {
+        return object[property] = object[latinize(property)]
+      }
+
+      let latinizedProperty = Object.keys(object).find(k => property === latinize(k))
+      if (latinizedProperty && object.hasOwnProperty(latinizedProperty)) {
+        return object[latinizedProperty]
+      }
+
+      return object[property] = new Array()
     }
   });
 
@@ -107,6 +124,7 @@ const processStatements = (statements: Statement[]) => {
 
   return statements.map(s => {
     let totaStatement: TotaStatement = {
+      id: s.id,
       objectId: (s.object as Activity).id.replace('https://tota-app.lxp.io#/id/', ''),
       timestamp: s.timestamp ?? '',
       // timestamp: Date.parse(s.timestamp ?? '').toLocaleString('en-US'),

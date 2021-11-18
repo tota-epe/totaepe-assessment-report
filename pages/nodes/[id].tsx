@@ -8,7 +8,6 @@ import { nodes } from '../../common/models/totaepe_nodes'
 import React from 'react';
 import { Word } from '../../common/components/word/word'
 import { TotaStatement } from '../../types/tota_statement'
-import latinize from 'latinize'
 import { getLRSDataForComponent, getLRSDataForNode, getStatementsPerWord } from '../../modules/lrs/statements';
 import { Hash } from '../../types/hash'
  
@@ -36,7 +35,7 @@ const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsTy
       <div>
         {nodeWords?.map((wordData) => (
           <div key={wordData.word}>
-            <Word wordData={wordData} statements={statementsPerWord[latinize(wordData.word)]}/>
+            <Word wordData={wordData} statements={statementsPerWord[wordData.word]}/>
           </div>
         ))}
       </div>
