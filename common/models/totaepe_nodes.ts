@@ -3,9 +3,10 @@ import courseBlocks from '../course/en/blocks.json'
 import courseArticles from '../course/en/articles.json'
 import courseContentObjects from '../course/en/contentObjects.json'
 
-export const nodeTransitons = {
+export const nodeTransitons: { [key: string]: string } = {
   '615e01943f71e3dffca2c70c': '61606f3c3f71e3dffca2c710',
-  '61606f3c3f71e3dffca2c710': '616070a13f71e3dffca2c714'
+  '61606f3c3f71e3dffca2c710': '616070a13f71e3dffca2c714',
+  '6194f3273f71e3dffca2c71f': '6194f6b33f71e3dffca2c723'
 }
 
 export const idMap: { [key: string]: string[] } = {

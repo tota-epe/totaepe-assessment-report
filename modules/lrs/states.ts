@@ -40,6 +40,23 @@ export const updateComponentState = async (newState: ComponentState) => {
   const res = await fetch(LRSStateURL('components').toString(), requestOptionsPut)
 }
 
+export const updateCourseState = async (newState: CourseState) => {
+  let courseState = await getCourseState()
+  let currentCourseState = {
+    ...courseState,
+    ...newState
+  }
+
+  let requestOptionsPut = {
+    ...requestOptions(),
+    method: 'PUT',
+    body: JSON.stringify(currentCourseState)
+  }
+  requestOptionsPut.headers.set('Content-Type', 'application/json')
+
+  const res = await fetch(LRSStateURL('course').toString(), requestOptionsPut)
+}
+
 const requestOptions = () => {
   const authorization = Buffer.from(`${process.env.LRS_MAESTRO_LOGIN}:${process.env.LRS_MAESTRO_PASSWORD}`).toString('base64')
   return {

@@ -1,17 +1,19 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { getComponentState, getCourseState, updateComponentState } from '../../modules/lrs/states'
+import { getComponentState, getCourseState, updateComponentState, updateCourseState } from '../../modules/lrs/states'
 import { Hash } from '../../types/hash';
-import { nodes, components } from '../../common/models/totaepe_nodes'
+import { nodes, components, nodeTransitons } from '../../common/models/totaepe_nodes'
 import { getLRSDataForNode, getStatementsPerWord } from '../../modules/lrs/statements';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const shouldWrite = req.query.write
   let courseState = await getCourseState()
 
   let nodeId = Array.isArray(req.query.nodeID) ? req.query.nodeID[0] : req.query.nodeID
   if (!nodeId) {
     nodeId = courseState._startId
   }
+  let shouldUpdateStart = (nodeId === courseState._startId)
 
   // Get data from current component and analyse
   let resultStatements = await getLRSDataForNode(nodeId)
@@ -49,15 +51,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     wordsForNode = wordsForNode.concat(wordsToAdd)    
   }
 
-  let newState = {
+  let newComponentState = {
     _id: currentComponent.id,
     _extras: { words: wordsForNode.map(w => w.word), shuffle: true }
   }
-  
-  const shouldWrite = req.query.write
+
   if (shouldWrite === 'true') {
-    updateComponentState(newState)
+    updateComponentState(newComponentState)
   }
 
-  res.status(200).json({ shouldWrite, nodeComplete, sortedWords, newState })
+  if (nodeComplete && shouldUpdateStart && nodeTransitons[nodeId]) {
+    courseState['_startId'] = nodeTransitons[nodeId]
+    if (shouldWrite === 'true') {
+      updateCourseState(courseState)
+    }
+  }
+  
+  res.status(200).json({ shouldWrite, nodeComplete, sortedWords, newComponentState, courseState })
 }
