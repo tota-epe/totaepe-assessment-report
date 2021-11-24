@@ -116,6 +116,7 @@ const processStatements = (statements: Statement[]) => {
   var wordConcepts: WordConceptMap = components.reduce(((map, component) => {
     map[component.id] = {}
     component.words.reduce(((componentMap, obj) => {
+      componentMap[obj.word] = obj;
       componentMap[latinize(obj.word)] = obj;
       return componentMap;
     }), map[component.id])

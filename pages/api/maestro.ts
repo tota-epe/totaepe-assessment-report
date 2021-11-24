@@ -1,8 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { getComponentState, getCourseState, updateComponentState, updateCourseState } from '../../modules/lrs/states'
-import { Hash } from '../../types/hash';
-import { nodes, components, nodeTransitons } from '../../common/models/totaepe_nodes'
+import { getCourseState, updateComponentState, updateCourseState } from '../../modules/lrs/states'
+import { nodes, nodeTransitons } from '../../common/models/totaepe_nodes'
 import { getLRSDataForNode, getStatementsPerWord } from '../../modules/lrs/statements';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
