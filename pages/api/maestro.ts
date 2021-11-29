@@ -20,7 +20,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   // Check if node should advance to next Node 
   const recentStatements = resultStatements.slice(-30)
-  const conceptErrorGrade = recentStatements.reduce(((p, c) => p + c.conceptErrorGrade), 0) / recentStatements.length
+  const conceptErrorGrade = recentStatements.reduce(((p, c) => p + (c.conceptErrorGrade > 0 ? 1 : 0)), 0) / recentStatements.length
   const nodeComplete = (recentStatements.length === 30 && conceptErrorGrade < 0.2)
 
   let node = nodes.filter(node => node._id === nodeId)[0]

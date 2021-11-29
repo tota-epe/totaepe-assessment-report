@@ -169,10 +169,10 @@ const processStatements = (statements: Statement[]) => {
         return t
       }), errorsPerLetter)
     })
-
-    totaStatement.conceptErrorGrade = 0
     
     let newComponentId = idComponentInverseMap[totaStatement.objectId]
+    let componentSourceData = components.find(c => c.id == totaStatement.objectId || c.id == newComponentId)
+    let conceptErrorsWeights = componentSourceData?.concepts as { [key: string]: string }
     let componentData = wordConcepts[totaStatement.objectId] ?? wordConcepts[newComponentId]
     let currentWordData = componentData[word]
     if (!currentWordData?.conceptRange) {
@@ -192,7 +192,9 @@ const processStatements = (statements: Statement[]) => {
       return t
     }), {} as ErrorProfile)
     if (totaStatement.conceptErrors && Object.keys(totaStatement.conceptErrors).length) {
-        totaStatement.conceptErrorGrade = 1
+      for (const error in conceptErrorsWeights) {
+        totaStatement.conceptErrorGrade +=  (totaStatement?.conceptErrors?.[error]?.count ?? 0) * Number(conceptErrorsWeights[error])
+      }
     }
 
     return totaStatement
