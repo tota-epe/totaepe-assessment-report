@@ -6,7 +6,7 @@
   "description": "",
   "instruction": "",
   "_htmlClasses": "",
-  "_latestTrackingId": 14,
+  "_latestTrackingId": 16,
   "_buttons": {
     "_submit": {
       "buttonText": "Submit",
@@ -92,22 +92,35 @@
         "ariaRegion": ""
       },
       "_matching": {
-        "ariaRegion": "Matching. Select from lists and then submit."
+        "ariaRegion": "Matching. Select from lists and then submit.",
+        "ariaCorrectAnswer": "The correct answer for {{{itemText}}} is {{{correctAnswer}}}",
+        "ariaUserAnswer": "The answer you chose for {{{itemText}}} was {{{userAnswer}}}"
       },
       "_textinput": {
         "ariaRegion": "Text input. Type your answer and then submit."
       },
       "_mcq": {
-        "ariaRegion": "Multiple choice question"
+        "ariaRegion": "Multiple choice question",
+        "ariaCorrectAnswer": "The correct answer is {{{correctAnswer}}}",
+        "ariaCorrectAnswers": "The correct answers are {{{correctAnswer}}}",
+        "ariaUserAnswer": "The answer you chose was {{{userAnswer}}}",
+        "ariaUserAnswers": "The answers you chose were {{{userAnswer}}}"
       },
       "_gmcq": {
-        "ariaRegion": "Multiple choice question"
+        "ariaRegion": "Multiple choice question",
+        "ariaCorrectAnswer": "The correct answer is {{{correctAnswer}}}",
+        "ariaCorrectAnswers": "The correct answers are {{{correctAnswer}}}",
+        "ariaUserAnswer": "The answer you chose was {{{userAnswer}}}",
+        "ariaUserAnswers": "The answers you chose were {{{userAnswer}}}"
       },
       "_assessmentResults": {
         "ariaRegion": "Assessment results."
       },
       "_slider": {
         "ariaRegion": "Slider. Respond to the question by selecting a value on the scale and then submit.",
+        "ariaCorrectAnswer": "The correct answer is {{{correctAnswer}}}",
+        "ariaCorrectAnswerRange": "The correct answer is any value from {{{bottom}}} to {{{top}}}",
+        "ariaUserAnswer": "The answer you chose was {{{userAnswer}}}",
         "labelStart": "Start of the scale",
         "labelEnd": "End of the scale"
       }
@@ -243,7 +256,7 @@
     }
   },
   "_pageLevelProgress": {
-    "_isEnabled": true,
+    "_isEnabled": false,
     "_showPageCompletion": true,
     "_isCompletionIndicatorEnabled": false,
     "_isShownInNavigationBar": true

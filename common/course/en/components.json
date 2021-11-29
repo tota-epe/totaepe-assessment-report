@@ -935,5 +935,113 @@
         "conceptRange": "0,1"
       }
     ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "Segundo fonema L V-C + L",
+    "displayTitle": "",
+    "body": "",
+    "_id": "61a0e9ea3f71e3dffca2c72b",
+    "_parentId": "61a0e98d3f71e3dffca2c72a",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "omission": "1"
+    },
+    "_wordLimit": "5",
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "ALTO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ALGO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ALFACE",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "OLFATO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ALMOÇO",
+        "conceptRange": "0,1"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "dissílabas + 3 letras term com r",
+    "displayTitle": "",
+    "body": "",
+    "_id": "61a0eaad3f71e3dffca2c72f",
+    "_parentId": "61a0ea8c3f71e3dffca2c72e",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "omission": "1"
+    },
+    "_wordLimit": "5",
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "BARCO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "PORTA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "PORCO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "PERNA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "CARTA",
+        "conceptRange": "0,2"
+      }
+    ]
   }
 ]
