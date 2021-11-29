@@ -58,23 +58,6 @@ export class Word extends React.Component<WordProps, WordState> {
       if (statement.conceptErrorGrade > 0) {
         t.withConceptError[0] += 1
       }
-      // if (statement.errorsPerLetter) {
-      //   let r = reducedStatements.letterData
-      //   statement.errorsPerLetter.forEach((errorsOnLetter, index) => {
-      //     if (Object.keys(errorsOnLetter).length == 0) { return }
-          
-      //     // Get error with most occurence on letter
-      //     let mainErrorOnLetter = Object.keys(errorsOnLetter).reduce((a, b) => errorsOnLetter[a].count > errorsOnLetter[b].count ? a : b)
-      //     if (!r[index][mainErrorOnLetter]) {
-      //       r[index][mainErrorOnLetter] = {
-      //         count: 0,
-      //         occurrences: []
-      //       }            
-      //     } 
-      //     r[index][mainErrorOnLetter].count += 1
-      //     r[index][mainErrorOnLetter].occurrences = r[index][mainErrorOnLetter].occurrences.concat(errorsOnLetter[mainErrorOnLetter].occurrences)
-      //   })
-      // }
 
       return reducedStatements
     }), reducedStatements)
@@ -93,16 +76,27 @@ export class Word extends React.Component<WordProps, WordState> {
         statement.errorsPerLetter.forEach((errorsOnLetter, index) => {
           if (Object.keys(errorsOnLetter).length == 0) { return }
           
-          // Get error with most occurence on letter
-          let mainErrorOnLetter = Object.keys(errorsOnLetter).reduce((a, b) => errorsOnLetter[a].count > errorsOnLetter[b].count ? a : b)
-          if (!r[index][mainErrorOnLetter]) {
-            r[index][mainErrorOnLetter] = {
-              count: 0,
-              occurrences: []
-            }            
-          } 
-          r[index][mainErrorOnLetter].count += 1
-          r[index][mainErrorOnLetter].occurrences = r[index][mainErrorOnLetter].occurrences.concat(errorsOnLetter[mainErrorOnLetter].occurrences)
+          // // Get error with most occurence on letter
+          // let mainErrorOnLetter = Object.keys(errorsOnLetter).reduce((a, b) => errorsOnLetter[a].count > errorsOnLetter[b].count ? a : b)
+          // if (!r[index][mainErrorOnLetter]) {
+          //   r[index][mainErrorOnLetter] = {
+          //     count: 0,
+          //     occurrences: []
+          //   }            
+          // }
+          // r[index][mainErrorOnLetter].count += 1
+          // r[index][mainErrorOnLetter].occurrences = r[index][mainErrorOnLetter].occurrences.concat(errorsOnLetter[mainErrorOnLetter].occurrences)
+
+          for (const error in errorsOnLetter) {
+            if (!r[index][error]) {
+              r[index][error] = {
+                count: 0,
+                occurrences: []
+              }            
+            }
+            r[index][error].count += 1
+            r[index][error].occurrences = r[index][error].occurrences.concat(errorsOnLetter[error].occurrences)
+          }
         })
       }
       return reducedStatements
