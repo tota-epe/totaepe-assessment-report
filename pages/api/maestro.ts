@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getCourseState, updateComponentState, updateCourseState } from '../../modules/lrs/states'
-import { nodes, nodeTransitons } from '../../common/models/totaepe_nodes'
+import { nodes } from '../../common/models/totaepe_nodes'
 import { getLRSDataForNode, getStatementsPerWord } from '../../modules/lrs/statements';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -59,12 +59,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     updateComponentState(newComponentState)
   }
 
-  if (nodeComplete && shouldUpdateStart && nodeTransitons[nodeId]) {
-    courseState['_startId'] = nodeTransitons[nodeId]
+  let nextNodeIndex = nodes.findIndex(n => n._id == nodeId) + 1
+  let nextNodeId = nodes[nextNodeIndex]?._id
+  if (nodeComplete && shouldUpdateStart && nextNodeId) {
+    courseState['_startId'] = nextNodeId
     if (shouldWrite === 'true') {
       updateCourseState(courseState)
     }
   }
   
-  res.status(200).json({ shouldWrite, nodeComplete, sortedWords, newComponentState, courseState })
+  res.status(200).json({ shouldWrite, nodeComplete, sortedWords, newComponentState, courseState, nextNodeId })
 }
