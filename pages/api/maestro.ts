@@ -5,7 +5,7 @@ import { nodes } from '../../common/models/totaepe_nodes'
 import { getLRSDataForNode, getStatementsPerWord } from '../../modules/lrs/statements';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const shouldWrite = req.query.write
+  const shouldWrite = (req.method === 'POST')
   let courseState = await getCourseState()
 
   let nodeId = Array.isArray(req.query.nodeID) ? req.query.nodeID[0] : req.query.nodeID
@@ -55,7 +55,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     _extras: { words: wordsForNode.map(w => w.word), shuffle: true }
   }
 
-  if (shouldWrite === 'true') {
+  if (shouldWrite) {
     updateComponentState(newComponentState)
   }
 
@@ -63,7 +63,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   let nextNodeId = nodes[nextNodeIndex]?._id
   if (nodeComplete && shouldUpdateStart && nextNodeId) {
     courseState['_startId'] = nextNodeId
-    if (shouldWrite === 'true') {
+    if (shouldWrite) {
       updateCourseState(courseState)
     }
   }
