@@ -7,7 +7,7 @@ type ComponentState = {
 }
 
 type CourseState = {
-  _id: string,
+  _id?: string,
   _startId: string
 }
 

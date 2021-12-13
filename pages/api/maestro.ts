@@ -6,13 +6,14 @@ import { getLRSDataForNode, getStatementsPerWord } from '../../modules/lrs/state
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const shouldWrite = (req.method === 'POST')
-  let courseState = await getCourseState()
+  let shouldUpdateStart = false
 
   let nodeId = Array.isArray(req.query.nodeID) ? req.query.nodeID[0] : req.query.nodeID
   if (!nodeId) {
+    let courseState = await getCourseState()
     nodeId = courseState._startId
+    shouldUpdateStart = true
   }
-  let shouldUpdateStart = (nodeId === courseState._startId)
 
   // Get data from current component and analyse
   let resultStatements = await getLRSDataForNode(nodeId)
@@ -61,12 +62,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   let nextNodeIndex = nodes.findIndex(n => n._id == nodeId) + 1
   let nextNodeId = nodes[nextNodeIndex]?._id
-  if (nodeComplete && shouldUpdateStart && nextNodeId) {
-    courseState['_startId'] = nextNodeId
-    if (shouldWrite) {
-      updateCourseState(courseState)
-    }
+  if (nodeComplete && shouldUpdateStart && nextNodeId && shouldWrite) {
+    updateCourseState({ '_startId': nextNodeId })
   }
   
-  res.status(200).json({ shouldWrite, nodeComplete, sortedWords, newComponentState, courseState, nextNodeId })
+  res.status(200).json({ shouldWrite, nodeComplete, sortedWords, newComponentState, shouldUpdateStart, nextNodeId })
 }
