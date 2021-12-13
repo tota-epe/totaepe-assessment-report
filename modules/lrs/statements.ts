@@ -15,7 +15,7 @@ export const getLRSDataForNode = async (nodeID: string) => {
     idMap[nodeID].map(o => { query.push(`context.contextActivities.grouping.id=https://tota-app.lxp.io#/id/${o}`) })
   }
   const requestData = {
-    'agent.name': '/.*Maria Ines.*/',
+    'agent.account.name': '/.*teste_ninoca@mailinator.*/',
     'verb.name': '/answered/',
     query: query.join(' OR '),
     limit: 5000
@@ -32,7 +32,6 @@ export const getLRSDataForNode = async (nodeID: string) => {
   // Fetch data from external API
   const res = await fetch('https://watershedlrs.com/api/organizations/15733/interactions/search', requestOptions)
   const data = await res.json() as { results: { result: Statement[] }[] }
-
   return processStatements(data.results[0].result.reverse())
 }
 
@@ -44,7 +43,7 @@ export const getLRSDataForComponent = async (objectID: string) => {
     idMap[objectID].map(o => { query.push(`object.id=https://tota-app.lxp.io#/id/${o}`) })
   }
   const requestData = {
-    'agent.name': '/.*Maria Ines.*/',
+    'agent.account.name': '/.*teste_ninoca@mailinator.*/',
     'verb.name': '/answered/',
     query: query.join(' OR '),
     limit: 5000
