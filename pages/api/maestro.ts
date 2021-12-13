@@ -41,7 +41,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return b.performance - a.performance
   })
 
-  let completedWords = sortedWords.filter(w => w.performance > 0.8)
+  let completedWords = sortedWords.filter(w => w.performance > 0.8 && w.occurrence >= 5)
   let wordsForNode = sortedWords.filter(w => !completedWords.includes(w)).slice(0, 5)
   if (wordsForNode.length < 5) {
     // Keep at least 5 items on word array
