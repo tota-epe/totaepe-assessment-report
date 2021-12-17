@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { getCourseState, updateComponentState, updateCourseState } from '../../modules/lrs/states'
+import { getCourseState, getComponentState, updateComponentState, updateCourseState } from '../../modules/lrs/states'
 import { nodes } from '../../common/models/totaepe_nodes'
 import { getLRSDataForNode, getStatementsPerWord } from '../../modules/lrs/statements';
 
@@ -53,17 +53,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   let newComponentState = {
     _id: currentComponent.id,
+    _lxpMaestroTimestamp: Date(),
     _extras: { words: wordsForNode.map(w => w.word), shuffle: true }
   }
 
   if (shouldWrite) {
-    updateComponentState(newComponentState)
+    await updateComponentState(newComponentState)  
   }
 
   let nextNodeIndex = nodes.findIndex(n => n._id == nodeId) + 1
   let nextNodeId = nodes[nextNodeIndex]?._id
   if (nodeComplete && shouldUpdateStart && nextNodeId && shouldWrite) {
-    updateCourseState({ '_startId': nextNodeId })
+    await updateCourseState({ '_startId': nextNodeId })
   }
   
   res.status(200).json({ shouldWrite, nodeComplete, sortedWords, newComponentState, shouldUpdateStart, nextNodeId })

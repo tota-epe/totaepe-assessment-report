@@ -37,7 +37,7 @@ export const updateComponentState = async (newState: ComponentState) => {
   }
   requestOptionsPut.headers.set('Content-Type', 'application/json')
 
-  const res = await fetch(LRSStateURL('components').toString(), requestOptionsPut)
+  return await fetch(LRSStateURL('components').toString(), requestOptionsPut)
 }
 
 export const updateCourseState = async (newState: CourseState) => {
