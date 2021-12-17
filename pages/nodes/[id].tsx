@@ -1,14 +1,10 @@
 import { useRouter } from 'next/router'
-import { InferGetServerSidePropsType, InferGetStaticPropsType, GetServerSideProps, GetStaticProps, NextPage } from 'next'
-import queryString from 'query-string';
-import { parse, Duration } from 'tinyduration';
-import { Statement, Activity } from '@gradiant/xapi-dsl';
-import { ErrorType } from '../../modules/error_type/error_type'
+import { InferGetStaticPropsType, GetStaticProps, NextPage } from 'next'
 import { nodes } from '../../common/models/totaepe_nodes'
 import React from 'react';
 import { Word } from '../../common/components/word/word'
 import { TotaStatement } from '../../types/tota_statement'
-import { getLRSDataForComponent, getLRSDataForNode, getStatementsPerWord } from '../../modules/lrs/statements';
+import { getLRSDataForNode, getStatementsPerWord } from '../../modules/lrs/statements';
 import { Hash } from '../../types/hash'
  
 const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsType<typeof getStaticProps>) => {
