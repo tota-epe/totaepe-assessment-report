@@ -1145,7 +1145,7 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "omission": "0"
+      "omission": "1"
     },
     "_wordLimit": "5",
     "_resumable": false,
