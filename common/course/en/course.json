@@ -6,7 +6,7 @@
   "description": "",
   "instruction": "",
   "_htmlClasses": "",
-  "_latestTrackingId": 18,
+  "_latestTrackingId": 21,
   "_buttons": {
     "_submit": {
       "buttonText": "Submit",
@@ -256,7 +256,7 @@
     }
   },
   "_pageLevelProgress": {
-    "_isEnabled": false,
+    "_isEnabled": true,
     "_showPageCompletion": true,
     "_isCompletionIndicatorEnabled": false,
     "_isShownInNavigationBar": true
