@@ -64,7 +64,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   let nextNodeIndex = nodes.findIndex(n => n._id == nodeId) + 1
   let nextNodeId = nodes[nextNodeIndex]?._id
   if (nodeComplete && shouldUpdateStart && nextNodeId && shouldWrite) {
-    await updateCourseState({ '_startId': nextNodeId })
+    await updateCourseState({ _startId: nextNodeId, _lxpMaestroTimestamp: Date() })
   }
   
   res.status(200).json({ shouldWrite, nodeComplete, sortedWords, newComponentState, shouldUpdateStart, nextNodeId })

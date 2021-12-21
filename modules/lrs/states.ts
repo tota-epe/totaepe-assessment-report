@@ -8,7 +8,8 @@ type ComponentState = {
 
 type CourseState = {
   _id?: string,
-  _startId: string
+  _startId: string,
+  _lxpMaestroTimestamp?: string
 }
 
 export const getCourseState = async () => {
