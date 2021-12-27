@@ -15,6 +15,7 @@ export class Word extends React.Component<WordProps, WordState> {
   letterData: ErrorProfile[] = []
   statements: TotaStatement[] = []
   recentStatements: TotaStatement[] = []
+  last24h: TotaStatement[] = []
   chartData: { x?: Date, y?: number }[] = []
   correct: number[] = []
   withError: number[] = []
@@ -34,6 +35,10 @@ export class Word extends React.Component<WordProps, WordState> {
 
     this.statements = this.props.statements
     this.recentStatements = this.props.statements.slice(0,10)
+
+    var timeStamp = Math.round(new Date().getTime() / 1000);
+    var timeStampYesterday = new Date((timeStamp - (24 * 3600))*1000);
+    this.last24h = this.props.statements.filter(s => { return new Date(s.timestamp) >= timeStampYesterday })
     this.word = this.props.wordData.word
     this.conceptRange = this.props.wordData.conceptRange.split(',').map(Number)
 
@@ -156,24 +161,31 @@ export class Word extends React.Component<WordProps, WordState> {
         <p>Media Móvel 5 ultimas {this.statements[0]?.ma5?.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })}</p>
         <table>
           <thead>
-            <tr><td></td><td>Total</td><td>Mais recentes</td></tr>
+            <tr><td></td><td>Total</td><td>Mais recentes</td><td>Ultimas 24hs</td></tr>
           </thead>
           <tbody>
-            <tr><td>Apresentações:</td><td>{this.statements.length}</td><td>{this.recentStatements.length}</td></tr>
+            <tr>
+              <td>Apresentações:</td><td>{this.statements.length}</td>
+              <td>{this.recentStatements.length}</td>
+              <td>{this.last24h.length}</td>
+            </tr>
             <tr>
               <td>Corretas:</td>
               <td>{this.numberWithPercent(this.correct[0], this.statements.length)}</td>
               <td>{this.numberWithPercent(this.correct[1], this.recentStatements.length)}</td>
+              <td></td>
              </tr>
             <tr>
               <td>Com erro:</td>
               <td>{this.numberWithPercent(this.withError[0], this.statements.length)}</td>
               <td>{this.numberWithPercent(this.withError[1], this.recentStatements.length)}</td>
+              <td></td>
             </tr>
             <tr>
               <td>Com erro no conceito:</td>
               <td>{this.numberWithPercent(this.withConceptError[0], this.statements.length)}</td>
               <td>{this.numberWithPercent(this.withConceptError[1], this.recentStatements.length)}</td>
+              <td></td>
             </tr>
           </tbody>
         </table>
