@@ -17,6 +17,10 @@ const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsTy
   }
   
   const recentStatements = statements.slice(-30)
+  var timeStamp = Math.round(new Date().getTime() / 1000);
+  var timeStampYesterday = new Date((timeStamp - (24 * 3600))*1000);
+  const last24h = statements.filter((s: TotaStatement) => { return new Date(s.timestamp) >= timeStampYesterday })
+
   const conceptErrorGrade = recentStatements.reduce(((p: number, c: TotaStatement) => p + (c.conceptErrorGrade > 0 ? 1 : 0)), 0) / recentStatements.length
   const nodeComplete = (recentStatements.length === 30 && conceptErrorGrade < 0.2)
   
@@ -28,6 +32,7 @@ const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsTy
       <p>Conceitos: {JSON.stringify(nodeData.concepts)}</p>
       <p>Score de erros de conceito.: {conceptErrorGrade.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })}</p>
       <p>Nó dominado?: { nodeComplete ? 'sim' : 'não'} - {statements.length} Apresentações de palavras</p>
+      <p>Apresentações nas ultimas 24hs: {last24h.length}</p>
       <div>
         {nodeWords?.map((wordData) => (
           <div key={wordData.word}>
