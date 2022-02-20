@@ -1,19 +1,27 @@
 import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next'
 import Link from 'next/link'
-import { nodes } from '../common/models/totaepe_nodes'
+import { getLRSPeople } from '../modules/lrs/people'
 
-const Home: NextPage = ({nodes}: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Home: NextPage = ({people}: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <ul>
-      {nodes.map((node: {_id: string, title: string}) => (
-        <li key={node._id}><Link href={`/nodes/${node._id}`}><a>{node.title}</a></Link></li>
-      ))}
-    </ul>
+    <div>
+    <h1>Alunos</h1>
+      <ul>
+        {people.map((person: {name: string, id: number, acountMail: string}) => {
+          return (
+            <li key={person.id}><Link href={`/person/${person.id}`}><a>{person.name}</a></Link></li>
+          )
+        }
+
+        )}
+      </ul>
+    </div>
 )}
 
 // This also gets called at build time
 export const getStaticProps: GetStaticProps = async () => {
-  return { props: { nodes: nodes } }
+  const people = await getLRSPeople()
+  return { props: { people: people } }
 }
 
 export default Home

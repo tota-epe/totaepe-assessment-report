@@ -6,8 +6,41 @@ import { components, idMap, idComponentInverseMap } from '../../common/models/to
 import { TotaStatement, ErrorProfile } from '../../types/tota_statement'
 import { Hash } from '../../types/hash';
 import latinize from 'latinize';
+import { getLRSPeople } from '../lrs/people'
   
-export const getLRSDataForNode = async (nodeID: string) => {
+export const getLRSDataForPersonAndNode = async (personId: string, nodeID: string) => {
+  const authorization = Buffer.from(`${process.env.LRS_LOGIN}:${process.env.LRS_PASSWORD}`).toString('base64')
+
+  let query = [`context.contextActivities.grouping.id=https://tota-app.lxp.io#/id/${nodeID}`]
+  if (idMap[nodeID]) {
+    idMap[nodeID].map(o => { query.push(`context.contextActivities.grouping.id=https://tota-app.lxp.io#/id/${o}`) })
+  }
+
+  const people = await getLRSPeople()
+  const person = people.filter(person => person.id === parseInt(personId))[0]
+
+  const requestData = {
+    'agent.account.name': person.acountName,
+    'verb.name': '/answered/',
+    query: query.join(' OR '),
+    limit: 5000
+  }
+  const requestOptions = {
+    method: 'POST',
+    body: queryString.stringify(requestData),
+    headers: new Headers({
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Authorization': `Basic ${authorization}`
+    })
+  };
+
+  // Fetch data from external API
+  const res = await fetch('https://watershedlrs.com/api/organizations/15733/interactions/search', requestOptions)
+  const data = await res.json() as { results: { result: Statement[] }[] }
+  return processStatements(data.results[0].result.reverse())
+}
+
+export const getLRSDataForNode = async (personId: string, nodeID: string) => {
   const authorization = Buffer.from(`${process.env.LRS_LOGIN}:${process.env.LRS_PASSWORD}`).toString('base64')
 
   let query = [`context.contextActivities.grouping.id=https://tota-app.lxp.io#/id/${nodeID}`]

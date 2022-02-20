@@ -66,7 +66,7 @@ export const articles = courseArticles.map(article => {
 
 export const nodes = courseContentObjects.map(contentObject => {
   return {
-    articles: articles.filter(article => article._parentId === contentObject._id),
+    articles: [],
     ...contentObject
   }
 })
