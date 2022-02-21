@@ -65,9 +65,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 export async function getStaticPaths() {
-  //let paths = nodes.map((n) => { return { params: { id: n._id } } } )
+  let paths = nodes.map((n) => { return { params: { id: n._id } } } )
   return {
-    paths: [],
+    paths: paths,
     fallback: true
   }
 }
