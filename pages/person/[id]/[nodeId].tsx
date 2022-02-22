@@ -1,16 +1,17 @@
 import { useRouter } from 'next/router'
 import { InferGetStaticPropsType, GetStaticProps, NextPage } from 'next'
-import { nodes } from '../../common/models/totaepe_nodes'
+import { nodes } from '../../../common/models/totaepe_nodes'
 import React from 'react';
-import { Word } from '../../common/components/word/word'
-import { TotaStatement } from '../../types/tota_statement'
-import { getLRSDataForNode, getStatementsPerWord } from '../../modules/lrs/statements';
-import { Hash } from '../../types/hash'
+import { Word } from '../../../common/components/word/word'
+import { TotaStatement } from '../../../types/tota_statement'
+import { getLRSDataForPersonAndNode, getStatementsPerWord } from '../../../modules/lrs/statements';
+import { Hash } from '../../../types/hash'
+import { getLRSPeople } from '../../../modules/lrs/people'
  
 const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter()
-  const { id } = router.query
-  let node = nodes.find(node => node._id === id)
+  const { id, nodeId } = router.query
+  let node = nodes.find(node => node._id === nodeId)
   let nodeData = node?.articles.map(a => a.blocks.map(b => b.components)).flat(3)[0]
   if (!nodeData) {
     return (<div>Node não encontrado</div>)
@@ -45,12 +46,13 @@ const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsTy
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  if (!params || !params['id']) {
+  if (!params || !params['id'] || !params['nodeId']) {
     return { props: { }, revalidate: 1 }
   }
 
-  const objectID = Array.isArray(params.id) ? params.id[0] : params.id
-  let resultStatements = await getLRSDataForNode(objectID)
+  const nodeId = Array.isArray(params.nodeId) ? params.nodeId[0] : params.nodeId
+  const personId = Array.isArray(params.id) ? params.id[0] : params.id
+  let resultStatements = await getLRSDataForPersonAndNode(personId, nodeId)
   var statementsPerWord: Hash<TotaStatement[]> = getStatementsPerWord(resultStatements)
       
   // Pass data to the page via props
@@ -64,7 +66,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 export async function getStaticPaths() {
-  let paths = nodes.map((n) => { return { params: { id: n._id } } } )
+  let paths = [] as { params: { id: string, nodeId: string } }[]
+  // const people = await getLRSPeople()
+  // people.map((person) => { 
+  //   nodes.map((n) => { 
+  //     paths.push({ params: { id: `${person.id}`, nodeId: n._id } })
+  //   })
+  // })
   return {
     paths: paths,
     fallback: true
