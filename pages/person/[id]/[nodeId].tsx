@@ -6,6 +6,7 @@ import { Word } from '../../../common/components/word/word'
 import { TotaStatement } from '../../../types/tota_statement'
 import { getLRSDataForPersonAndNode, getStatementsPerWord } from '../../../modules/lrs/statements';
 import { Hash } from '../../../types/hash'
+import { getLRSPeople } from '../../../modules/lrs/people'
  
 const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter()
@@ -65,7 +66,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 export async function getStaticPaths() {
-  let paths = nodes.map((n) => { return { params: { id: n._id } } } )
+  let paths = [] as { params: { id: string, nodeId: string } }[]
+  // const people = await getLRSPeople()
+  // people.map((person) => { 
+  //   nodes.map((n) => { 
+  //     paths.push({ params: { id: `${person.id}`, nodeId: n._id } })
+  //   })
+  // })
   return {
     paths: paths,
     fallback: true

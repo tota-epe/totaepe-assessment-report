@@ -16,7 +16,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   // Get data from current component and analyse
-  let resultStatements = await getLRSDataForNode(nodeId)
+  // TODO: Adjust person id from service - Hardcoded for Maria Ines
+  let resultStatements = await getLRSDataForNode('211', nodeId)
   var statementsPerWord = getStatementsPerWord(resultStatements)
 
   // Check if node should advance to next Node 

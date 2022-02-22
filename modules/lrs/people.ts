@@ -23,7 +23,7 @@ export const getLRSPeople = async () => {
 
   // Fetch data from external API
   const res = await fetch('https://watershedlrs.com/api/organizations/15733/people?_limit=1000', requestOptions)
-  const data = await res.json() as { results: { result: LRSPeople }[] }
+  const data = await res.json() as { results: LRSPeople[] }
   const totaepePeople = data.results.filter( person => person.personas[0]?.account?.homePage === 'https://totaepe.global')
   return totaepePeople.map(person => {
     return {

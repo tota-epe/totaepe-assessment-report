@@ -4,9 +4,13 @@ import Link from 'next/link'
 import { nodes } from '../../common/models/totaepe_nodes'
 import { getLRSPeople } from '../../modules/lrs/people'
 
-const Page: NextPage = ({nodes, person}: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Page: NextPage = ({person}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter()
   const { id } = router.query
+  if (!person) {
+    return (<div>Usuário não encontrado</div>)
+  }
+
   return (
     <div>
       <h1> Nós feitos da {person.name}</h1>
@@ -19,10 +23,15 @@ const Page: NextPage = ({nodes, person}: InferGetStaticPropsType<typeof getStati
 )}
 
 // This also gets called at build time
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  if (!params || !params['id']) {
+    return { props: { }, revalidate: 1 }
+  }
+  const personId = Array.isArray(params.id) ? params.id[0] : params.id
+
   const people = await getLRSPeople()
-  const person = people.filter(person => person.id === parseInt(context.params.id))[0]
-  return { props: { nodes: nodes, person: person } }
+  const person = people.filter(person => person.id === parseInt(personId))[0]
+  return { props: { person: person } }
 }
 
 export async function getStaticPaths() {

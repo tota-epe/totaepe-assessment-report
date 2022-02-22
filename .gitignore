@@ -51,6 +51,9 @@ web_modules/
 # Optional npm cache directory
 .npm
 
+# nvm configuration
+.nvmrc
+
 # Optional eslint cache
 .eslintcache
 
