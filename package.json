@@ -12,7 +12,7 @@
     "@gradiant/xapi-dsl": "^1.10.0",
     "@types/latinize": "^0.2.15",
     "latinize": "^0.5.0",
-    "next": "11.1.2",
+    "next": "12",
     "nprogress": "^0.2.0",
     "query-string": "^7.0.1",
     "react": "17.0.2",
