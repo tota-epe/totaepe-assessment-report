@@ -21,6 +21,7 @@
     "victory": "^36.0.1"
   },
   "devDependencies": {
+    "@types/node": "^17.0.24",
     "@types/nprogress": "^0.2.0",
     "@types/react": "17.0.24",
     "eslint": "7.32.0",
