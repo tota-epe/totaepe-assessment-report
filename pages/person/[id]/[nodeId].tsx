@@ -7,7 +7,7 @@ import { TotaStatement } from '../../../types/tota_statement'
 import { getLRSDataForPersonAndNode, getStatementsPerWord } from '../../../modules/lrs/statements';
 import { Hash } from '../../../types/hash'
 import { getLRSPeople } from '../../../modules/lrs/people'
- 
+
 const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter()
   const { id, nodeId } = router.query
@@ -16,7 +16,19 @@ const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsTy
   if (!nodeData) {
     return (<div>Node não encontrado</div>)
   }
-  
+
+  let earlyCompletionIndex = 0
+  for (earlyCompletionIndex = 29; earlyCompletionIndex < statements.length; earlyCompletionIndex++) {
+    let earlyRecentStatements = statements.slice(earlyCompletionIndex - 29, earlyCompletionIndex + 1)
+    // console.log(earlyRecentStatements)
+    let earlyConceptErrorGrade = earlyRecentStatements.reduce(((p: number, c: TotaStatement) => p + (c.conceptErrorGrade > 0 ? 1 : 0)), 0.0) / earlyRecentStatements.length
+    // console.log(`${earlyCompletionIndex}(${new Date(statements[earlyCompletionIndex].timestamp)}): ${earlyConceptErrorGrade} ${earlyRecentStatements.length}`)
+    if (earlyRecentStatements.length === 30 && earlyConceptErrorGrade < 0.2) {
+      break;
+    }
+  }
+
+
   const recentStatements = statements.slice(-30)
   var timeStamp = Math.round(new Date().getTime() / 1000);
   var timeStampYesterday = new Date((timeStamp - (24 * 3600))*1000);
@@ -24,7 +36,7 @@ const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsTy
 
   const conceptErrorGrade = recentStatements.reduce(((p: number, c: TotaStatement) => p + (c.conceptErrorGrade > 0 ? 1 : 0)), 0) / recentStatements.length
   const nodeComplete = (recentStatements.length === 30 && conceptErrorGrade < 0.2)
-  
+
   const nodeWords = nodeData?.words
 
   return (
@@ -32,7 +44,7 @@ const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsTy
       <h3>{nodeData.title} - {id}</h3>
       <p>Conceitos: {JSON.stringify(nodeData.concepts)}</p>
       <p>Score de erros de conceito.: {conceptErrorGrade.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })}</p>
-      <p>Nó dominado?: { nodeComplete ? 'sim' : 'não'} - {statements.length} Apresentações de palavras</p>
+      <p>Nó dominado?: { nodeComplete ? 'sim' : 'não'} - {statements.length} Apresentações de palavras / Dominado em {earlyCompletionIndex + 1}</p>
       <p>Apresentações nas ultimas 24hs: {last24h.length}</p>
       <div>
         {nodeWords?.map((wordData) => (
@@ -54,7 +66,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const personId = Array.isArray(params.id) ? params.id[0] : params.id
   let resultStatements = await getLRSDataForPersonAndNode(personId, nodeId)
   var statementsPerWord: Hash<TotaStatement[]> = getStatementsPerWord(resultStatements)
-      
+
   // Pass data to the page via props
   return {
     props: {
@@ -68,8 +80,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 export async function getStaticPaths() {
   let paths = [] as { params: { id: string, nodeId: string } }[]
   // const people = await getLRSPeople()
-  // people.map((person) => { 
-  //   nodes.map((n) => { 
+  // people.map((person) => {
+  //   nodes.map((n) => {
   //     paths.push({ params: { id: `${person.id}`, nodeId: n._id } })
   //   })
   // })

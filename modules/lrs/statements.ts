@@ -7,7 +7,7 @@ import { TotaStatement, ErrorProfile } from '../../types/tota_statement'
 import { Hash } from '../../types/hash';
 import latinize from 'latinize';
 import { getLRSPeople } from '../lrs/people'
-  
+
 export const getLRSDataForPersonAndNode = async (personId: string, nodeID: string) => {
   const authorization = Buffer.from(`${process.env.LRS_LOGIN}:${process.env.LRS_PASSWORD}`).toString('base64')
 
@@ -101,7 +101,7 @@ export const getStatementsPerWord = (resultStatements: TotaStatement[]): Hash<To
   var statementsPerWord = new Proxy({} as Hash<TotaStatement[]>, {
     get: function(object, property) {
       if (typeof property !== 'string') {
-        return 
+        return
       }
 
       if (object.hasOwnProperty(property)) {
@@ -124,7 +124,7 @@ export const getStatementsPerWord = (resultStatements: TotaStatement[]): Hash<To
   resultStatements.forEach((statement, index, statements) => {
     let word = statement.word ?? ''
     statementsPerWord[word].unshift(statement)
-    
+
     let movingAverage5 = statementsPerWord[word].slice(0, 5)
     statements[index].ma5 = movingAverage5.reduce(((p: number, c: TotaStatement) => p + c.perf), 0) / movingAverage5.length
     statements[index].complete = (movingAverage5.reduce(((p: number, c: TotaStatement) => p + (c.correct ? 1 : 0)), 0) / 5.0) >= 0.8
@@ -178,7 +178,7 @@ const processStatements = (statements: Statement[]) => {
     totaStatement.perf = totaStatement.response.length / totaStatement.response.reduce(
       ((previousValue, currentValue) => previousValue + currentValue.length), 0)
     totaStatement.correct = (totaStatement.perf == 1 ? true : false)
-    
+
     totaStatement.errorsPerLetter = totaStatement.response.map((l, index) => {
       let errorsPerLetter = { } as ErrorProfile
       return l.slice(0, l.length - 1).reduce(((t, wrongLetter) => {
@@ -187,7 +187,7 @@ const processStatements = (statements: Statement[]) => {
         }
         let errorType = new ErrorType(word, index, wrongLetter)
         if (!t[errorType.errorType]) {
-          t[errorType.errorType] = { count: 0, occurrences: [] }          
+          t[errorType.errorType] = { count: 0, occurrences: [] }
         }
 
         // Prevents consecutive sequences of more than 2 occurences of same letter
@@ -201,10 +201,11 @@ const processStatements = (statements: Statement[]) => {
         return t
       }), errorsPerLetter)
     })
-    
+
     let newComponentId = idComponentInverseMap[totaStatement.objectId]
     let componentSourceData = components.find(c => c.id == totaStatement.objectId || c.id == newComponentId)
     let conceptErrorsWeights = componentSourceData?.concepts as { [key: string]: string }
+    const conceptErrorsWeightIsEmpty = Object.values(conceptErrorsWeights).map(Number).reduce((accumulator, curr) => { return (accumulator + curr) } ) === 0
     let componentData = wordConcepts[totaStatement.objectId] ?? wordConcepts[newComponentId]
     let currentWordData = componentData[word]
     if (!currentWordData?.conceptRange) {
@@ -217,7 +218,7 @@ const processStatements = (statements: Statement[]) => {
     totaStatement.conceptErrors = conceptRangeErrors.reduce(((t, errorsOnLetter) => {
       for (const errorType in errorsOnLetter) {
         if (!t[errorType]) {
-          t[errorType] = { count: 0, occurrences: [] }          
+          t[errorType] = { count: 0, occurrences: [] }
         }
         t[errorType].count += errorsOnLetter[errorType].count
       }
@@ -225,7 +226,10 @@ const processStatements = (statements: Statement[]) => {
     }), {} as ErrorProfile)
     if (totaStatement.conceptErrors && Object.keys(totaStatement.conceptErrors).length) {
       for (const error in conceptErrorsWeights) {
-        totaStatement.conceptErrorGrade +=  (totaStatement?.conceptErrors?.[error]?.count ?? 0) * Number(conceptErrorsWeights[error])
+        totaStatement.conceptErrorGrade += (totaStatement?.conceptErrors?.[error]?.count ?? 0) * Number(conceptErrorsWeights[error])
+      }
+      if (conceptErrorsWeightIsEmpty) {
+        totaStatement.conceptErrorGrade += 1;
       }
     }
 
