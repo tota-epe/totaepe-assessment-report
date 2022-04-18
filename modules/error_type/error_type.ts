@@ -31,7 +31,6 @@ export class ErrorType {
       V: ['F'],
       X: ['J', 'Z', 'S'],
       Z: ['S', 'J']
-
       // 'R' => ['L'],
       // 'I' => ['E'],
     },
@@ -70,8 +69,10 @@ export class ErrorType {
       N: ['M'],
       Q: ['K', 'C'],
       S: ['C', 'Z'],
+      W: ['U'],
       X: ['C', 'Z', 'S'], // CH
-      Z: ['S', 'X'],
+      Y: ['I'],
+      Z: ['S', 'X']
 
     },
     speech: {
