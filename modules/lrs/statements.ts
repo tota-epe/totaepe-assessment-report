@@ -40,7 +40,7 @@ export const getLRSDataForPersonAndNode = async (personId: string, nodeID: strin
   return processStatements(data.results[0].result.reverse())
 }
 
-export const getLRSDataForNode = async (personId: string, nodeID: string) => {
+export const getLRSDataForNode = async (personId: string, nodeID: string, recent: boolean) => {
   const authorization = Buffer.from(`${process.env.LRS_LOGIN}:${process.env.LRS_PASSWORD}`).toString('base64')
 
   let query = [`context.contextActivities.grouping.id=https://tota-app.lxp.io#/id/${nodeID}`]
@@ -52,7 +52,15 @@ export const getLRSDataForNode = async (personId: string, nodeID: string) => {
     'verb.name': '/answered/',
     query: query.join(' OR '),
     limit: 5000
+  } as { [key: string]: any }
+  if (recent) {
+    const today = new Date();
+    const recentDate = new Date(new Date().setDate(today.getDate() - 30));
+
+    requestData['dateField'] ='timestamp'
+    requestData['since'] = recentDate.toISOString()
   }
+
   const requestOptions = {
     method: 'POST',
     body: queryString.stringify(requestData),

@@ -17,10 +17,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   // Get data from current component and analyse
   // TODO: Adjust person id from service - Hardcoded for Maria Ines
-  let resultStatements = await getLRSDataForNode('211', nodeId)
+  let resultStatements = await getLRSDataForNode('211', nodeId, true)
   var statementsPerWord = getStatementsPerWord(resultStatements)
 
-  // Check if node should advance to next Node 
+  // Check if node should advance to next Node
   const recentStatements = resultStatements.slice(-30)
   const conceptErrorGrade = recentStatements.reduce(((p, c) => p + (c.conceptErrorGrade > 0 ? 1 : 0)), 0) / recentStatements.length
   const nodeComplete = (recentStatements.length === 30 && conceptErrorGrade < 0.2)
@@ -49,7 +49,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Keep at least 5 items on word array
     let numMissingItems = 5 - wordsForNode.length
     let wordsToAdd = completedWords.reverse().slice(0, numMissingItems)
-    wordsForNode = wordsForNode.concat(wordsToAdd)    
+    wordsForNode = wordsForNode.concat(wordsToAdd)
   }
 
   let newComponentState = {
@@ -59,7 +59,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   if (shouldWrite) {
-    await updateComponentState(newComponentState)  
+    await updateComponentState(newComponentState)
   }
 
   let nextNodeIndex = nodes.findIndex(n => n._id == nodeId) + 1
@@ -67,6 +67,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (nodeComplete && shouldUpdateStart && nextNodeId && shouldWrite) {
     await updateCourseState({ _startId: nextNodeId, _lxpMaestroTimestamp: Date() })
   }
-  
+
   res.status(200).json({ shouldWrite, nodeComplete, sortedWords, newComponentState, shouldUpdateStart, nextNodeId })
 }
