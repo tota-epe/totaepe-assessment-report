@@ -153,7 +153,7 @@ const processStatements = (statements: Statement[]) => {
       }
     }
   }
-  var wordConcepts: WordConceptMap = components.reduce(((map, component) => {
+  const wordConcepts: WordConceptMap = components.reduce(((map, component) => {
     map[component.id] = {}
     component.words.reduce(((componentMap, obj) => {
       componentMap[obj.word] = obj;
@@ -163,7 +163,7 @@ const processStatements = (statements: Statement[]) => {
     return map
   }), {} as WordConceptMap)
 
-  return statements.map(s => {
+  const totaStatements = statements.map(s => {
     let totaStatement: TotaStatement = {
       id: s.id,
       objectId: (s.object as Activity).id.replace('https://tota-app.lxp.io#/id/', ''),
@@ -243,4 +243,16 @@ const processStatements = (statements: Statement[]) => {
 
     return totaStatement
   })
+
+  let statementWindow: TotaStatement[] = [];
+  const windowSize = 30;
+  totaStatements.forEach((currentStatement, index: number) => {
+    statementWindow.push(currentStatement);
+    if (statementWindow.length > windowSize) {
+      statementWindow.shift();
+    }
+    currentStatement.conceptErrorScore = statementWindow.reduce(((p: number, c: TotaStatement) => p + (c.conceptErrorGrade > 0 ? 1 : 0)), 0.0) / statementWindow.length
+  })
+
+  return totaStatements;
 }

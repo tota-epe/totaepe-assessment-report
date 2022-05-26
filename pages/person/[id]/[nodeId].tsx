@@ -6,7 +6,25 @@ import { Word } from '../../../common/components/word/word'
 import { TotaStatement } from '../../../types/tota_statement'
 import { getLRSDataForPersonAndNode, getStatementsPerWord } from '../../../modules/lrs/statements';
 import { Hash } from '../../../types/hash'
-import { getLRSPeople } from '../../../modules/lrs/people'
+import { Line } from 'react-chartjs-2';
+import annotationPlugin from 'chartjs-plugin-annotation';
+import { Chart, CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend } from "chart.js";
+
+Chart.register(CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  annotationPlugin,
+  Legend
+);
 
 const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter()
@@ -17,17 +35,9 @@ const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsTy
     return (<div>Node não encontrado</div>)
   }
 
-  let earlyCompletionIndex = 0
-  for (earlyCompletionIndex = 29; earlyCompletionIndex < statements.length; earlyCompletionIndex++) {
-    let earlyRecentStatements = statements.slice(earlyCompletionIndex - 29, earlyCompletionIndex + 1)
-    // console.log(earlyRecentStatements)
-    let earlyConceptErrorGrade = earlyRecentStatements.reduce(((p: number, c: TotaStatement) => p + (c.conceptErrorGrade > 0 ? 1 : 0)), 0.0) / earlyRecentStatements.length
-    // console.log(`${earlyCompletionIndex}(${new Date(statements[earlyCompletionIndex].timestamp)}): ${earlyConceptErrorGrade} ${earlyRecentStatements.length}`)
-    if (earlyRecentStatements.length === 30 && earlyConceptErrorGrade < 0.2) {
-      break;
-    }
-  }
-
+  let earlyCompletionIndex = statements.findIndex((statement: TotaStatement, index: number) => {
+    return (index >= 29 && statement.conceptErrorScore && statement.conceptErrorScore < 0.2)
+  })
 
   const recentStatements = statements.slice(-30)
   var timeStamp = Math.round(new Date().getTime() / 1000);
@@ -39,6 +49,36 @@ const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsTy
 
   const nodeWords = nodeData?.words
 
+  let idx = 1;
+  const data = {
+    labels: statements.map((statement: TotaStatement) => { return idx++ }),
+    datasets: [
+      {
+        label: 'Score de erro',
+        borderColor: 'rgb(75, 192, 192)',
+        tension: 0.5,
+        pointRadius: 0,
+        data: statements.map((statement: TotaStatement) => { return statement.conceptErrorScore })
+      }
+    ]
+  };
+
+  const options = {
+    plugins: {
+      autocolors: false,
+      annotation: {
+        annotations: {
+          line1: {
+            yMin: 0.2,
+            yMax: 0.2,
+            borderColor: 'rgb(255, 99, 132)',
+            borderWidth: 2,
+          }
+        }
+      }
+    }
+  };
+
   return (
     <div>
       <h3>{nodeData.title} - {id}</h3>
@@ -46,6 +86,7 @@ const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsTy
       <p>Score de erros de conceito.: {conceptErrorGrade.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })}</p>
       <p>Nó dominado?: { nodeComplete ? 'sim' : 'não'} - {statements.length} Apresentações de palavras / Dominado em {earlyCompletionIndex + 1}</p>
       <p>Apresentações nas ultimas 24hs: {last24h.length}</p>
+      <Line data={data} options={options} />
       <div>
         {nodeWords?.map((wordData) => (
           <div key={wordData.word}>

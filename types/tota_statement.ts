@@ -5,7 +5,7 @@ export type ErrorProfile = {
   [key: string]: {
     count: number,
     occurrences: string[]
-  }  
+  }
 }
 
 export type TotaStatement = {
@@ -25,5 +25,6 @@ export type TotaStatement = {
   first?: boolean,
   errorsPerLetter?: ErrorProfile[],
   conceptErrors?: ErrorProfile,
+  conceptErrorScore?: number,
   conceptErrorGrade: number
 }
