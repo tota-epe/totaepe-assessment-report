@@ -6,6 +6,7 @@ import { components, idMap, idComponentInverseMap } from '../../common/models/to
 import { TotaStatement, ErrorProfile } from '../../types/tota_statement'
 import { Hash } from '../../types/hash';
 import latinize from 'latinize';
+import moment from 'moment';
 import { getLRSPeople } from '../lrs/people'
 
 export const getLRSDataForPersonAndNode = async (personId: string, nodeID: string) => {
@@ -251,7 +252,11 @@ const processStatements = (statements: Statement[]) => {
     if (statementWindow.length > windowSize) {
       statementWindow.shift();
     }
-    currentStatement.conceptErrorScore = statementWindow.reduce(((p: number, c: TotaStatement) => p + (c.conceptErrorGrade > 0 ? 1 : 0)), 0.0) / statementWindow.length
+    currentStatement.conceptErrorScore = 1 - (statementWindow.reduce(((p: number, c: TotaStatement) => p + (c.conceptErrorGrade > 0 ? 1 : 0)), 0.0) / statementWindow.length)
+  })
+
+  totaStatements.sort(function(x, y){
+    return moment(x.timestamp).unix() - moment(y.timestamp).unix();
   })
 
   return totaStatements;

@@ -8,7 +8,9 @@ import { getLRSDataForPersonAndNode, getStatementsPerWord } from '../../../modul
 import { Hash } from '../../../types/hash'
 import { Line } from 'react-chartjs-2';
 import annotationPlugin from 'chartjs-plugin-annotation';
+import 'chartjs-adapter-moment';
 import { Chart, CategoryScale,
+  TimeScale,
   LinearScale,
   PointElement,
   LineElement,
@@ -17,6 +19,7 @@ import { Chart, CategoryScale,
   Legend } from "chart.js";
 
 Chart.register(CategoryScale,
+  TimeScale,
   LinearScale,
   PointElement,
   LineElement,
@@ -36,7 +39,7 @@ const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsTy
   }
 
   let earlyCompletionIndex = statements.findIndex((statement: TotaStatement, index: number) => {
-    return (index >= 29 && statement.conceptErrorScore && statement.conceptErrorScore < 0.2)
+    return (index >= 29 && statement.conceptErrorScore && statement.conceptErrorScore > 0.8)
   })
 
   const recentStatements = statements.slice(-30)
@@ -51,12 +54,12 @@ const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsTy
 
   let idx = 1;
   const data = {
-    labels: statements.map((statement: TotaStatement) => { return idx++ }),
+    labels: statements.map((statement: TotaStatement) => { return statement.timestamp }),
     datasets: [
       {
         label: 'Score de erro',
         borderColor: 'rgb(75, 192, 192)',
-        tension: 0.5,
+        tension: 0.0,
         pointRadius: 0,
         data: statements.map((statement: TotaStatement) => { return statement.conceptErrorScore })
       }
@@ -64,13 +67,24 @@ const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsTy
   };
 
   const options = {
+    scales: {
+      xAxis: {
+        // The axis for this scale is determined from the first letter of the id as `'x'`
+        // It is recommended to specify `position` and / or `axis` explicitly.
+        // type: 'time',
+      },
+      yAxis: {
+        min: 0,
+        max: 1.0
+      }
+    },
     plugins: {
       autocolors: false,
       annotation: {
         annotations: {
           line1: {
-            yMin: 0.2,
-            yMax: 0.2,
+            scaleID: 'yAxis',
+            value: 0.8,
             borderColor: 'rgb(255, 99, 132)',
             borderWidth: 2,
           }
