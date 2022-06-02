@@ -1,7 +1,6 @@
 import React from "react";
 import { TotaStatement, ErrorProfile } from '../../../types/tota_statement'
 import { ErrorTypes } from "../../../modules/error_type/error_type";
-import * as V from 'victory';
 
 type WordProps = {
   wordData: { word: string; conceptRange: string; },
@@ -28,7 +27,7 @@ export class Word extends React.Component<WordProps, WordState> {
       showHideStatements: false
     }
     this.toggleStatements = this.toggleStatements.bind(this)
-    
+
     if (!this.props.statements) {
       return
     }
@@ -80,14 +79,14 @@ export class Word extends React.Component<WordProps, WordState> {
         let r = reducedStatements.letterData
         statement.errorsPerLetter.forEach((errorsOnLetter, index) => {
           if (Object.keys(errorsOnLetter).length == 0) { return }
-          
+
           // // Get error with most occurence on letter
           // let mainErrorOnLetter = Object.keys(errorsOnLetter).reduce((a, b) => errorsOnLetter[a].count > errorsOnLetter[b].count ? a : b)
           // if (!r[index][mainErrorOnLetter]) {
           //   r[index][mainErrorOnLetter] = {
           //     count: 0,
           //     occurrences: []
-          //   }            
+          //   }
           // }
           // r[index][mainErrorOnLetter].count += 1
           // r[index][mainErrorOnLetter].occurrences = r[index][mainErrorOnLetter].occurrences.concat(errorsOnLetter[mainErrorOnLetter].occurrences)
@@ -97,7 +96,7 @@ export class Word extends React.Component<WordProps, WordState> {
               r[index][error] = {
                 count: 0,
                 occurrences: []
-              }            
+              }
             }
             r[index][error].count += 1
             r[index][error].occurrences = r[index][error].occurrences.concat(errorsOnLetter[error].occurrences)
@@ -143,7 +142,7 @@ export class Word extends React.Component<WordProps, WordState> {
     }
     return errors
   }
-  
+
   render() {
     const { showHideStatements } = this.state;
     let statementsStyle = { display: 'none' }
@@ -189,22 +188,6 @@ export class Word extends React.Component<WordProps, WordState> {
             </tr>
           </tbody>
         </table>
-        {/* <V.VictoryChart
-          scale={{ x: "time" }}
-          containerComponent={<V.VictoryZoomContainer/>}
-          padding={{ top: 50, bottom: 50, right: 0, left: 50 }}
-        >
-          <V.VictoryAxis
-              // tickValues={this.chartData.map(d => d.n)}
-              tickFormat={(x) => new Date(x).getFullYear()}
-            />
-          <V.VictoryLine style={{
-            parent: { border: "1px solid #ccc"}
-          }}
-            domain={{y: [0, 1]}}
-            data={this.chartData}
-          />
-        </V.VictoryChart> */}
         <div style={{display: 'flex'}}>
           {this.word.split('').map((letter, index) => (
             <div key={index} style={{ flex: 1, border: '1px solid', padding: '10px' }}>
@@ -224,4 +207,4 @@ export class Word extends React.Component<WordProps, WordState> {
       </div>
     );
   }
-} 
+}
