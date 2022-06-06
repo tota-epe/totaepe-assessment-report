@@ -213,7 +213,7 @@ const processStatements = (statements: Statement[]) => {
 
     let newComponentId = idComponentInverseMap[totaStatement.objectId]
     let componentSourceData = components.find(c => c.id == totaStatement.objectId || c.id == newComponentId)
-    let conceptErrorsWeights = componentSourceData?.concepts as { [key: string]: string }
+    let conceptErrorsWeights = componentSourceData?.concepts as { [key: string]: number }
     const conceptErrorsWeightIsEmpty = Object.values(conceptErrorsWeights).map(Number).reduce((accumulator, curr) => { return (accumulator + curr) } ) === 0
     let componentData = wordConcepts[totaStatement.objectId] ?? wordConcepts[newComponentId]
     let currentWordData = componentData[word]
