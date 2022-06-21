@@ -17,6 +17,7 @@ import { Chart, CategoryScale,
   Title,
   Tooltip,
   Legend } from "chart.js";
+import moment from 'moment';
 
 Chart.register(CategoryScale,
   TimeScale,
@@ -54,10 +55,10 @@ const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsTy
 
   let idx = 1;
   const data = {
-    labels: statements.map((statement: TotaStatement) => { return statement.timestamp }),
+    labels: statements.map((statement: TotaStatement, index: number) => { return moment(statement.timestamp).format('DD/MM HH:mm') + ` (${index + 1})` }),
     datasets: [
       {
-        label: 'Score de erro',
+        label: 'Score de acerto',
         borderColor: 'rgb(75, 192, 192)',
         tension: 0.0,
         pointRadius: 0,
