@@ -191,7 +191,7 @@ const processStatements = (statements: Statement[]) => {
     totaStatement.errorsPerLetter = totaStatement.response.map((l, index) => {
       let errorsPerLetter = { } as ErrorProfile
       return l.slice(0, l.length - 1).reduce(((t, wrongLetter) => {
-        if (!wrongLetter.match(/[a-z]/i)) {
+        if (!wrongLetter.match(/[a-záéíóúàâêôãõç]/i)) {
           return t
         }
         let errorType = new ErrorType(word, index, wrongLetter)

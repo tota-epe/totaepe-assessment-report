@@ -7,11 +7,11 @@ export enum ErrorTypes {
   orthographic = 'orthographic',
   speech = 'speech',
   other = 'other'
-} 
+}
 
 export class ErrorType {
-  ERROR_TYPES: ErrorTypes[] = [ErrorTypes.phonic, ErrorTypes.graphic, ErrorTypes.omission, 
-                               ErrorTypes.intrusion, ErrorTypes.memory, ErrorTypes.orthographic, 
+  ERROR_TYPES: ErrorTypes[] = [ErrorTypes.phonic, ErrorTypes.graphic, ErrorTypes.omission,
+                               ErrorTypes.intrusion, ErrorTypes.memory, ErrorTypes.orthographic,
                                ErrorTypes.speech, ErrorTypes.other]
   ERRORS: { [key: string]: { [key: string]: string[] } } = {
     phonic: {
@@ -88,7 +88,7 @@ export class ErrorType {
   constructor(word: string, index: number, user_input: string) {
     let correct_letter = word[index]
     if (user_input == correct_letter) { return }
-    
+
     this.errorType = this.ERROR_TYPES.find(error => this[error](word, index, user_input)) ?? ErrorTypes.other
   }
 
