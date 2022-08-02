@@ -135,8 +135,8 @@
       },
       "_xapi": {
         "confirm": "OK",
-        "lrsConnectionErrorTitle": "LRS not available",
-        "lrsConnectionErrorMessage": "We were unable to connect to your Learning Record Store (LRS). This means that your progress cannot be recorded."
+        "lrsConnectionErrorTitle": "TOTAepe: Usuário de teste",
+        "lrsConnectionErrorMessage": "Este acesso deve ser utilizado somente para validação das estações. Nenhum progresso será registrado."
       }
     },
     "_menu": {

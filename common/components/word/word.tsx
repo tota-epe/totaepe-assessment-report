@@ -3,7 +3,7 @@ import { TotaStatement, ErrorProfile } from '../../../types/tota_statement'
 import { ErrorTypes } from "../../../modules/error_type/error_type";
 
 type WordProps = {
-  wordData: { word: string; conceptRange: string; },
+  wordData: { word: string; conceptRange: string; destinationNodeID?: string;},
   statements: TotaStatement[]
 }
 type WordState = { showHideStatements: boolean }
@@ -19,6 +19,7 @@ export class Word extends React.Component<WordProps, WordState> {
   correct: number[] = []
   withError: number[] = []
   withConceptError: number[] = []
+  destinationNodeID?: string = ''
 
   constructor(props: WordProps) {
     super(props)
@@ -40,6 +41,7 @@ export class Word extends React.Component<WordProps, WordState> {
     this.last24h = this.props.statements.filter(s => { return new Date(s.timestamp) >= timeStampYesterday })
     this.word = this.props.wordData.word
     this.conceptRange = this.props.wordData.conceptRange.split(',').map(Number)
+    this.destinationNodeID = this.props.wordData.destinationNodeID
 
     this.chartData = this.props.statements.map((statement) => {
       return { x: new Date(statement.timestamp), y: statement.ma5 }

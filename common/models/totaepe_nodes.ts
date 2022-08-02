@@ -3,6 +3,19 @@ import courseBlocks from '../course/en/blocks.json'
 import courseArticles from '../course/en/articles.json'
 import courseContentObjects from '../course/en/contentObjects.json'
 
+export type TotaEpeComponent = {
+  id: string,
+  title: string,
+  _parentId: string,
+  _placementTest: boolean,
+  concepts: any,
+  words: {
+    word: string,
+    conceptRange: string,
+    destinationNodeID?: string
+  }[]
+}
+
 export const idMap: { [key: string]: string[] } = {
   // Nodes
   '615368803f71e3dffca2c6ec': ['60708e3007adda001d321d23'],
@@ -45,9 +58,10 @@ export const components = courseComponents.map(component => {
     id: component._id,
     title: component.title,
     _parentId: component._parentId,
+    _placementTest: component._placementTest,
     concepts: component._concepts,
     words: component._words
-  }
+  } as TotaEpeComponent
 })
 
 export const blocks = courseBlocks.map(block => {
@@ -69,4 +83,9 @@ export const nodes = courseContentObjects.map(contentObject => {
     articles: articles.filter(article => article._parentId === contentObject._id),
     ...contentObject
   }
+})
+
+export const placementTestNode = nodes.find((n) => {
+  const componentsOnNode = n.articles.flatMap((a) => { return a.blocks.flatMap((b) => { return b.components })})
+  return componentsOnNode.find((c) => { return c._placementTest })
 })

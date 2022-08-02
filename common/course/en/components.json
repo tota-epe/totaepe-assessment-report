@@ -1,1 +1,4765 @@
-[{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"d3ba00cd524e39c07ebcf56a5bf68949","_parentId":"1a06eac11d10e69ae576156fcdc298a8","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":1,"graphic":1,"omission":1,"intrusion":1,"memory":1,"orthographic":1,"speech":1},"_wordLimit":"0","_resumable":true,"_words":[{"word":"RI","conceptRange":"0,1"},{"word":"LÁ","conceptRange":"0,1"},{"word":"NU","conceptRange":"0,1"},{"word":"DÁ","conceptRange":"0,1"},{"word":"PÉ","conceptRange":"0,1"},{"word":"VÓ","conceptRange":"0,1"},{"word":"BU","conceptRange":"0,1"},{"word":"JÁ","conceptRange":"0,1"},{"word":"SINO","conceptRange":"0,3"},{"word":"FACA","conceptRange":"0,3"},{"word":"GALO","conceptRange":"0,3"},{"word":"VILA","conceptRange":"0,3"},{"word":"XIXI","conceptRange":"0,3"},{"word":"ZONA","conceptRange":"0,3"},{"word":"RÃ","conceptRange":"0,1"},{"word":"LÃ","conceptRange":"0,1"},{"word":"LAMA","conceptRange":"0,3"},{"word":"CAMA","conceptRange":"0,3"},{"word":"GOTA","conceptRange":"0,3"},{"word":"UM","conceptRange":"0,1"},{"word":"AS","conceptRange":"0,1"},{"word":"IR","conceptRange":"0,1"},{"word":"AR","conceptRange":"0,1"},{"word":"RUA","conceptRange":"0,2"},{"word":"BOA","conceptRange":"0,2"},{"word":"DIA","conceptRange":"0,2"},{"word":"TIA","conceptRange":"0,2"},{"word":"FIO","conceptRange":"0,2"},{"word":"ANO","conceptRange":"0,2"},{"word":"GÁS","conceptRange":"0,2"},{"word":"PUS","conceptRange":"0,2"},{"word":"UMA","conceptRange":"0,2"},{"word":"ELA","conceptRange":"0,2"},{"word":"UVA","conceptRange":"0,2"},{"word":"OCA","conceptRange":"0,2"},{"word":"MAR","conceptRange":"0,2"},{"word":"TER","conceptRange":"0,2"},{"word":"OI","conceptRange":"0,1"},{"word":"AU","conceptRange":"0,1"},{"word":"OU","conceptRange":"0,1"},{"word":"ISCA","conceptRange":"0,3"},{"word":"ESTE","conceptRange":"0,3"},{"word":"ARCO","conceptRange":"0,3"},{"word":"IRMÃ","conceptRange":"0,3"},{"word":"URSO","conceptRange":"0,3"},{"word":"QUE","conceptRange":"0,2"},{"word":"PIANO","conceptRange":"0,4"},{"word":"MOEDA","conceptRange":"0,4"},{"word":"FAÍSCA","conceptRange":"0,5"},{"word":"NAVIO","conceptRange":"0,4"},{"word":"BUZINA","conceptRange":"0,5"},{"word":"BANANA","conceptRange":"0,5"},{"word":"BIGODE","conceptRange":"0,5"},{"word":"DOCE","conceptRange":"0,3"},{"word":"CIMA","conceptRange":"0,3"},{"word":"CEBOLA","conceptRange":"0,5"},{"word":"GELO","conceptRange":"0,3"},{"word":"PÁGINA","conceptRange":"0,5"},{"word":"CAIXA","conceptRange":"0,4"},{"word":"BEIJO","conceptRange":"0,4"},{"word":"CAUDA","conceptRange":"0,4"},{"word":"SIM","conceptRange":"0,2"},{"word":"COM","conceptRange":"0,2"},{"word":"TEM","conceptRange":"0,2"},{"word":"SOL","conceptRange":"0,2"},{"word":"MEL","conceptRange":"0,2"},{"word":"GOL","conceptRange":"0,2"},{"word":"FESTA","conceptRange":"0,4"},{"word":"CESTA","conceptRange":"0,4"},{"word":"ANJO","conceptRange":"0,3"},{"word":"INDIO","conceptRange":"0,4"},{"word":"ALTO","conceptRange":"0,3"},{"word":"ALFACE","conceptRange":"0,5"},{"word":"ÚLTIMO","conceptRange":"0,5"},{"word":"FUGIR","conceptRange":"0,4"},{"word":"SABOR","conceptRange":"0,4"},{"word":"FORTE","conceptRange":"0,4"},{"word":"GARFO","conceptRange":"0,4"},{"word":"CINCO","conceptRange":"0,4"},{"word":"TONTO","conceptRange":"0,4"},{"word":"AZUL","conceptRange":"0,3"},{"word":"PEDAL","conceptRange":"0,4"},{"word":"POLVO","conceptRange":"0,4"},{"word":"TALCO","conceptRange":"0,4"},{"word":"CAMPO","conceptRange":"0,4"},{"word":"BOMBOM","conceptRange":"0,5"},{"word":"FAMOSA","conceptRange":"0,5"},{"word":"RISOTO","conceptRange":"0,5"},{"word":"OSSO","conceptRange":"0,3"},{"word":"TOSSE","conceptRange":"0,4"},{"word":"CERA","conceptRange":"0,3"},{"word":"XÍCARA","conceptRange":"0,5"},{"word":"GARRAFA","conceptRange":"0,6"},{"word":"ESPIRRO","conceptRange":"0,6"},{"word":"MANHA","conceptRange":"0,4"},{"word":"SONHO","conceptRange":"0,4"},{"word":"HOJE","conceptRange":"0,3"},{"word":"HORA","conceptRange":"0,3"},{"word":"QUEIJO","conceptRange":"0,5"},{"word":"FOLHA","conceptRange":"0,4"},{"word":"CHÁ","conceptRange":"0,2"},{"word":"BLUSA","conceptRange":"0,4"},{"word":"MOÇO","conceptRange":"0,3"},{"word":"CABEÇA","conceptRange":"0,5"},{"word":"MAÇÃ","conceptRange":"0,3"},{"word":"PRATO","conceptRange":"0,4"},{"word":"BRUXA","conceptRange":"0,4"},{"word":"FOGUETE","conceptRange":"0,6"},{"word":"TÁXI","conceptRange":"0,3"},{"word":"DESCER","conceptRange":"0,5"},{"word":"EXISTE","conceptRange":"0,5"},{"word":"SEXTA","conceptRange":"0,4"},{"word":"KIT","conceptRange":"0,2"},{"word":"EXCELENTE","conceptRange":"0,8"},{"word":"YAKISOBA","conceptRange":"0,7"},{"word":"KIWI","conceptRange":"0,3"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"0dcd6173f08a584a4cd4c12a2e956982","_parentId":"594e2103919c7e5d9120ff79532347e6","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":1,"graphic":1,"omission":1,"intrusion":1,"memory":1,"orthographic":1,"speech":1},"_wordLimit":"5","_resumable":false,"_words":[{"word":"LÁ","conceptRange":"0,1"},{"word":"NA","conceptRange":"0,1"},{"word":"NU","conceptRange":"0,1"},{"word":"RÉ","conceptRange":"0,1"},{"word":"RI","conceptRange":"0,1"},{"word":"LU","conceptRange":"0,1"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"f9319d576ac87a8cf162515015144fa8","_parentId":"cc935b163850132bfc24ed76e92e2379","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":1,"graphic":1,"omission":1,"intrusion":1,"memory":1,"orthographic":1,"speech":1},"_wordLimit":"5","_resumable":false,"_words":[{"word":"TÁ","conceptRange":"0,1"},{"word":"DÁ","conceptRange":"0,1"},{"word":"CÁ","conceptRange":"0,1"},{"word":"FÉ","conceptRange":"0,1"},{"word":"JÁ","conceptRange":"0,1"},{"word":"PÁ","conceptRange":"0,1"},{"word":"PÉ","conceptRange":"0,1"},{"word":"PÓ","conceptRange":"0,1"},{"word":"SÓ","conceptRange":"0,1"},{"word":"MÁ","conceptRange":"0,1"},{"word":"VÓ","conceptRange":"0,1"},{"word":"TU","conceptRange":"0,1"},{"word":"XÔ","conceptRange":"0,1"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"3e176502294e7536739432d82f9d2d8d","_parentId":"bade1a5056de506c55fe08a286862901","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":1,"graphic":1,"omission":1,"intrusion":1,"memory":1,"orthographic":1,"speech":1},"_wordLimit":"5","_resumable":false,"_words":[{"word":"NELA","conceptRange":"0,3"},{"word":"ROLA","conceptRange":"0,3"},{"word":"RALO","conceptRange":"0,3"},{"word":"FADA","conceptRange":"0,3"},{"word":"BOLA","conceptRange":"0,3"},{"word":"PATO","conceptRange":"0,3"},{"word":"GALO","conceptRange":"0,3"},{"word":"MALA","conceptRange":"0,3"},{"word":"SINO","conceptRange":"0,3"},{"word":"SOLA","conceptRange":"0,3"},{"word":"SALA","conceptRange":"0,3"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"26914f85d50f6f31ef0b96050ea062a1","_parentId":"7843d7de6a8b1937bd1201f410643f6a","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":1,"graphic":0,"omission":0,"intrusion":0,"memory":0,"orthographic":0,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"NO","conceptRange":"1,1"},{"word":"LÊ","conceptRange":"1,1"},{"word":"RÃ","conceptRange":"1,1"},{"word":"DE","conceptRange":"1,1"},{"word":"ME","conceptRange":"1,1"},{"word":"SE","conceptRange":"1,1"},{"word":"TE","conceptRange":"1,1"},{"word":"VÊ","conceptRange":"1,1"},{"word":"DO","conceptRange":"1,1"},{"word":"FÃ","conceptRange":"1,1"},{"word":"LÃ","conceptRange":"1,1"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"fb22b4c18d1c504a2f8d6068e311df39","_parentId":"11ca3ea17896005075a424a75348fa77","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":1,"graphic":1,"omission":1,"intrusion":1,"memory":1,"orthographic":1,"speech":1},"_wordLimit":"5","_resumable":false,"_words":[{"word":"LAMA","conceptRange":"0,3"},{"word":"DAMA","conceptRange":"0,3"},{"word":"FAMA","conceptRange":"0,3"},{"word":"CAMA","conceptRange":"0,3"},{"word":"PANO","conceptRange":"0,3"},{"word":"REMO","conceptRange":"0,3"},{"word":"BOLO","conceptRange":"0,3"},{"word":"BOCA","conceptRange":"0,3"},{"word":"LOBO","conceptRange":"0,3"},{"word":"GOTA","conceptRange":"0,3"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"cb65e44291cb4a130b0c4e22936964a1","_parentId":"dc8dd05db8f7509b8a52cbe9bcb2e6f4","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":1,"graphic":1,"omission":1,"intrusion":1,"memory":1,"orthographic":1,"speech":1},"_wordLimit":"5","_resumable":false,"_words":[{"word":"OS","conceptRange":"0,1"},{"word":"AS","conceptRange":"0,1"},{"word":"UM","conceptRange":"0,1"},{"word":"EM","conceptRange":"0,1"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"1b9b7e0cd408765859b49bc8fa013a2a","_parentId":"24e44ea2ecf1ddc07b1c14bade066fd3","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":1,"graphic":1,"omission":1,"intrusion":1,"memory":1,"orthographic":1,"speech":1},"_wordLimit":"5","_resumable":false,"_words":[{"word":"IR","conceptRange":"0,1"},{"word":"AR","conceptRange":"0,1"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"5bf9f0bd4deb9ed058a5cd640b01f3c0","_parentId":"0683ce8444c9cff1509216ccad6195ab","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":0,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"RUA","conceptRange":"1,2"},{"word":"LUA","conceptRange":"1,2"},{"word":"SUA","conceptRange":"1,2"},{"word":"DIA","conceptRange":"1,2"},{"word":"BOA","conceptRange":"1,2"},{"word":"VOA","conceptRange":"1,2"},{"word":"FIO","conceptRange":"1,2"},{"word":"PIA","conceptRange":"1,2"},{"word":"TIA","conceptRange":"1,2"},{"word":"RIO","conceptRange":"1,2"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"ddd4126e95e67d799e05416a54ef204d","_parentId":"2f3731035964409c269cacfc40b9ea7c","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":0,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"MAS","conceptRange":"0,2"},{"word":"DAS","conceptRange":"0,2"},{"word":"GÁS","conceptRange":"0,2"},{"word":"NOS","conceptRange":"0,2"},{"word":"PÁS","conceptRange":"0,2"},{"word":"PÉS","conceptRange":"0,2"},{"word":"MÊS","conceptRange":"0,2"},{"word":"PUS","conceptRange":"0,2"},{"word":"FÃS","conceptRange":"0,2"},{"word":"RÃS","conceptRange":"0,2"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"ef902ee72acb2cbd7ef9c1ab5ea8b96a","_parentId":"bfcced2c80ce9c1fb2cd0b9995ea17df","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":0,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"UMA","conceptRange":"0,2"},{"word":"ELA","conceptRange":"0,2"},{"word":"ELE","conceptRange":"0,2"},{"word":"ALÔ","conceptRange":"0,2"},{"word":"AMO","conceptRange":"0,2"},{"word":"AVE","conceptRange":"0,2"},{"word":"OCA","conceptRange":"0,2"},{"word":"OVO","conceptRange":"0,2"},{"word":"OLÁ","conceptRange":"0,2"},{"word":"UVA","conceptRange":"0,2"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"791409a0924dcf480b6f8ea33098f493","_parentId":"5e13ccc7026b7e3aeae01e72c575c243","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":0,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"MAR","conceptRange":"0,2"},{"word":"VER","conceptRange":"0,2"},{"word":"TER","conceptRange":"0,2"},{"word":"COR","conceptRange":"0,2"},{"word":"PÔR","conceptRange":"0,2"},{"word":"DOR","conceptRange":"0,2"},{"word":"DAR","conceptRange":"0,2"},{"word":"PAR","conceptRange":"0,2"},{"word":"LAR","conceptRange":"0,2"},{"word":"RIR","conceptRange":"0,2"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"ffaa9da4eeafabff14793be854324882","_parentId":"c49589a62e995d8b29b8c5a195e8df73","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":1,"graphic":1,"omission":1,"intrusion":1,"memory":1,"orthographic":1,"speech":1},"_wordLimit":"5","_resumable":false,"_words":[{"word":"OI","conceptRange":"0,1"},{"word":"UI","conceptRange":"0,1"},{"word":"EU","conceptRange":"0,1"},{"word":"AI","conceptRange":"0,1"},{"word":"AU","conceptRange":"0,1"},{"word":"AO","conceptRange":"0,1"},{"word":"EI","conceptRange":"0,1"},{"word":"OU","conceptRange":"0,1"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"9b9e4a453649eb452ef5b80a3126222f","_parentId":"56ed0653c99c9653c05b969be774f3a6","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":1,"graphic":1,"omission":1,"intrusion":1,"memory":1,"orthographic":1,"speech":1},"_wordLimit":"5","_resumable":false,"_words":[{"word":"ESTE","conceptRange":"0,1"},{"word":"ESTA","conceptRange":"0,1"},{"word":"ASMA","conceptRange":"0,1"},{"word":"ISTO","conceptRange":"0,1"},{"word":"ISCA","conceptRange":"0,1"},{"word":"ASCO","conceptRange":"0,1"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"1b6be15b829de1b46ff60d4548aab97c","_parentId":"d571e17f911920c684a1fb54786e5761","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":1,"graphic":1,"omission":1,"intrusion":1,"memory":1,"orthographic":1,"speech":1},"_wordLimit":"5","_resumable":false,"_words":[{"word":"ARCO","conceptRange":"0,1"},{"word":"IRMÃ","conceptRange":"0,1"},{"word":"ARTE","conceptRange":"0,1"},{"word":"URSO","conceptRange":"0,1"},{"word":"ARCA","conceptRange":"0,1"},{"word":"ARDE","conceptRange":"0,1"},{"word":"ERVA","conceptRange":"0,1"},{"word":"ORCA","conceptRange":"0,1"},{"word":"ERGO","conceptRange":"0,1"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"3e5d85ca6cdf3c86c0ff1390793dfc8e","_parentId":"53f1274e16cb161c3dd3b6020c0f2a46","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":1,"graphic":1,"omission":1,"intrusion":1,"memory":1,"orthographic":1,"speech":1},"_wordLimit":"5","_resumable":false,"_words":[{"word":"QUE","conceptRange":"0,2"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"868d3ae3731f0eaa6d1672171d39c44b","_parentId":"9e8c1bcd3e6fe2f7d606a63534ddfc2d","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":0,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"PIANO","conceptRange":"1,2"},{"word":"LAGOA","conceptRange":"3,4"},{"word":"MOEDA","conceptRange":"1,2"},{"word":"SAÚDE","conceptRange":"1,2"},{"word":"NAVIO","conceptRange":"3,4"},{"word":"PIADA","conceptRange":"1,2"},{"word":"FAÍSCA","conceptRange":"1,2"},{"word":"SAÍDA","conceptRange":"1,2"},{"word":"POETA","conceptRange":"1,2"},{"word":"CUTIA","conceptRange":"3,4"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"07fc1a8a50225b25cd7bba6ca739011e","_parentId":"42f58ba8e330714ea5c0b387fe504333","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":0,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"MACACO","conceptRange":"0,5"},{"word":"BATATA","conceptRange":"0,5"},{"word":"BIGODE","conceptRange":"0,5"},{"word":"BEBIDA","conceptRange":"0,5"},{"word":"BUZINA","conceptRange":"0,5"},{"word":"CABELO","conceptRange":"0,5"},{"word":"CAFUNÉ","conceptRange":"0,5"},{"word":"COMIDA","conceptRange":"0,5"},{"word":"ESCOLA","conceptRange":"0,5"},{"word":"MÉDICO","conceptRange":"0,5"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"65ec92488888aede382fae2040629bd4","_parentId":"f9a253f9cf7d7a58127e835396f235b9","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":1,"graphic":1,"omission":1,"intrusion":1,"memory":1,"orthographic":1,"speech":1},"_wordLimit":"5","_resumable":false,"_words":[{"word":"DOCE","conceptRange":"2,3"},{"word":"CEBOLA","conceptRange":"0,1"},{"word":"CEDO","conceptRange":"0,1"},{"word":"VACINA","conceptRange":"2,3"},{"word":"BACIA","conceptRange":"2,3"},{"word":"CIMA","conceptRange":"0,1"},{"word":"CINEMA","conceptRange":"0,1"},{"word":"MACIO","conceptRange":"2,3"},{"word":"TECIDO","conceptRange":"2,3"},{"word":"VOCÊ","conceptRange":"2,3"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"af0d793cc2022559e839181b9eccadd2","_parentId":"76d7da31d7edee41cff99821bd66f598","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":1,"graphic":1,"omission":1,"intrusion":1,"memory":1,"orthographic":1,"speech":1},"_wordLimit":"5","_resumable":false,"_words":[{"word":"GELO","conceptRange":"0,1"},{"word":"GIBI","conceptRange":"0,1"},{"word":"GEMA","conceptRange":"0,1"},{"word":"TIGELA","conceptRange":"2,3"},{"word":"MÁGICO","conceptRange":"2,3"},{"word":"COLÉGIO","conceptRange":"4,5"},{"word":"PÁGINA","conceptRange":"2,3"},{"word":"RELÓGIO","conceptRange":"4,5"},{"word":"PEDÁGIO","conceptRange":"4,5"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"4dd2aeba007c1edfdb6d296537f86cb0","_parentId":"83340e057130763f2a3fa7aec59b1576","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":0,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"LEITE","conceptRange":"0,2"},{"word":"ÁGUA","conceptRange":"1,3"},{"word":"CAUDA","conceptRange":"0,2"},{"word":"CÉU","conceptRange":"0,2"},{"word":"FEIJÃO","conceptRange":"0,2"},{"word":"NOITE","conceptRange":"0,2"},{"word":"BEIJO","conceptRange":"0,2"},{"word":"MUITO","conceptRange":"0,2"},{"word":"POUCO","conceptRange":"0,2"},{"word":"CAIXA","conceptRange":"0,2"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"8b83f4d78415b86a662ce7ef6ecb19f1","_parentId":"b16c685c1a80b135a46b1d2b738d2edc","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":0,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"BOM","conceptRange":"0,2"},{"word":"SIM","conceptRange":"0,2"},{"word":"COM","conceptRange":"0,2"},{"word":"MIM","conceptRange":"0,2"},{"word":"BEM","conceptRange":"0,2"},{"word":"VEM","conceptRange":"0,2"},{"word":"NEM","conceptRange":"0,2"},{"word":"FIM","conceptRange":"0,2"},{"word":"TEM","conceptRange":"0,2"},{"word":"SEM","conceptRange":"0,2"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"ffef81436c0090a4bf289ad65e228778","_parentId":"f724f9b59d2f639f3478ce77b05b8705","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":0,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"SOL","conceptRange":"0,2"},{"word":"SAL","conceptRange":"0,2"},{"word":"GOL","conceptRange":"0,2"},{"word":"MEL","conceptRange":"0,2"},{"word":"MAL","conceptRange":"0,2"},{"word":"MIL","conceptRange":"0,2"},{"word":"TIL","conceptRange":"0,2"},{"word":"TAL","conceptRange":"0,2"},{"word":"CAL","conceptRange":"0,2"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"bfdde8b26c4a5def05fc7f8eae09999a","_parentId":"4b5f50aebf10e9922eeaf14f2ad7049d","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":0,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"FESTA","conceptRange":"0,4"},{"word":"GOSTO","conceptRange":"0,4"},{"word":"ROSCA","conceptRange":"0,4"},{"word":"POSTE","conceptRange":"0,4"},{"word":"ROSTO","conceptRange":"0,4"},{"word":"PASTA","conceptRange":"0,4"},{"word":"CASCA","conceptRange":"0,4"},{"word":"CESTA","conceptRange":"0,4"},{"word":"MOSCA","conceptRange":"0,4"},{"word":"TESTA","conceptRange":"0,4"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"f4a6d47ad60da640c76f58769197e7ef","_parentId":"0fa987503e2f6f288e78402366851c4a","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":1,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":0,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"ANDO","conceptRange":"0,1"},{"word":"ONDA","conceptRange":"0,1"},{"word":"ANJO","conceptRange":"0,1"},{"word":"ANTA","conceptRange":"0,1"},{"word":"ENJOO","conceptRange":"0,1"},{"word":"ÍNDIO","conceptRange":"0,1"},{"word":"ENFEITE","conceptRange":"0,1"},{"word":"ENTÃO","conceptRange":"0,1"},{"word":"INCÊNDIO","conceptRange":"0,1"},{"word":"ENSAIO","conceptRange":"0,1"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"fb1474c293446067ae2051e924d8b576","_parentId":"dc27ded641489bcd0f0bdfe4630feb6f","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":1,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"ALTO","conceptRange":"0,1"},{"word":"ALGO","conceptRange":"0,1"},{"word":"ALFACE","conceptRange":"0,1"},{"word":"OLFATO","conceptRange":"0,1"},{"word":"ALVO","conceptRange":"0,1"},{"word":"ELFO","conceptRange":"0,1"},{"word":"ALGA","conceptRange":"0,1"},{"word":"ÚLTIMO","conceptRange":"0,1"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"619dd1e3e604b31d3bda826f39cf93a3","_parentId":"89972d954ec11b98291f7ba971d935b7","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":0,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"CALOR","conceptRange":"2,4"},{"word":"AMOR","conceptRange":"1,3"},{"word":"FEDOR","conceptRange":"2,4"},{"word":"PULAR","conceptRange":"2,4"},{"word":"COMER","conceptRange":"2,4"},{"word":"PULAR","conceptRange":"2,4"},{"word":"BEBER","conceptRange":"2,4"},{"word":"FAZER","conceptRange":"2,4"},{"word":"MEXER","conceptRange":"2,4"},{"word":"JOGAR","conceptRange":"2,4"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"a31fc93993c536c33d8c226a7f2304d4","_parentId":"30f8572fff3a93d2291c29627c4307d9","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":0,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"BARCO","conceptRange":"0,2"},{"word":"PORTA","conceptRange":"0,2"},{"word":"PORCO","conceptRange":"0,2"},{"word":"CARTA","conceptRange":"0,2"},{"word":"BARBA","conceptRange":"0,2"},{"word":"CORDA","conceptRange":"0,2"},{"word":"FORTE","conceptRange":"0,2"},{"word":"GARFO","conceptRange":"0,2"},{"word":"CARNE","conceptRange":"0,2"},{"word":"PERNA","conceptRange":"0,2"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"da04ae9f15babc052e35dd1a381f1502","_parentId":"757891abd7865cc75f9795195b175a04","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":0,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"PONTE","conceptRange":"0,2"},{"word":"PENTE","conceptRange":"0,2"},{"word":"DENTE","conceptRange":"0,2"},{"word":"BANCO","conceptRange":"0,2"},{"word":"CINTO","conceptRange":"0,2"},{"word":"CINCO","conceptRange":"0,2"},{"word":"PINGO","conceptRange":"0,2"},{"word":"MANGA","conceptRange":"0,2"},{"word":"MUNDO","conceptRange":"0,2"},{"word":"TONTO","conceptRange":"0,2"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"105e4ed983b0cfb21a6e83e668eefd6f","_parentId":"408f08fc20d3f6f5719b3f8295fe7bda","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":0,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"ANEL","conceptRange":"1,3"},{"word":"ANIMAL","conceptRange":"3,5"},{"word":"AZUL","conceptRange":"1,3"},{"word":"NATAL","conceptRange":"2,4"},{"word":"FÁCIL","conceptRange":"2,4"},{"word":"FUTEBOL","conceptRange":"4,6"},{"word":"PAPEL","conceptRange":"2,4"},{"word":"DIFÍCIL","conceptRange":"4,6"},{"word":"JORNAL","conceptRange":"3,5"},{"word":"LEGAL","conceptRange":"2,4"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"1cfa9d7e2b769609b6fb3913c9ae1dbd","_parentId":"6b9187509524fba865f0cb0bd8fd10c7","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":0,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"BALDE","conceptRange":"0,2"},{"word":"CALMA","conceptRange":"0,2"},{"word":"FILME","conceptRange":"0,2"},{"word":"MOLDE","conceptRange":"0,2"},{"word":"BOLSA","conceptRange":"0,2"},{"word":"FALTA","conceptRange":"0,2"},{"word":"SALTO","conceptRange":"0,2"},{"word":"PALCO","conceptRange":"0,2"},{"word":"CALDA","conceptRange":"0,2"},{"word":"FALSO","conceptRange":"0,2"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"ae07616643813f0bf03bce46a4fcacad","_parentId":"3735bf41ffc2cae5479a030e0d87bb10","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":0,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"CAMPO","conceptRange":"0,2"},{"word":"TAMPA","conceptRange":"0,2"},{"word":"TOMBO","conceptRange":"0,2"},{"word":"LIMPO","conceptRange":"0,2"},{"word":"POMBO","conceptRange":"0,2"},{"word":"BOMBOM","conceptRange":"0,2"},{"word":"RAMPA","conceptRange":"0,2"},{"word":"LÂMPADA","conceptRange":"0,2"},{"word":"POMPOM","conceptRange":"0,2"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"2bda96fa880b13ec7f9e4ebba43bb25d","_parentId":"408bf76d5063cbdb324da38da72a6d88","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":1,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"CASA","conceptRange":"2,3"},{"word":"MESA","conceptRange":"2,3"},{"word":"PESO","conceptRange":"2,3"},{"word":"RASO","conceptRange":"2,3"},{"word":"ROSA","conceptRange":"2,3"},{"word":"VASO","conceptRange":"2,3"},{"word":"FAMOSA","conceptRange":"4,5"},{"word":"CASACO","conceptRange":"2,3"},{"word":"RISOTO","conceptRange":"2,3"},{"word":"CAMISA","conceptRange":"4,5"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"88022b4ef36510f1c0875b6416e1300d","_parentId":"f53a7924c9f3a8910983160f05fdc8fc","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":1,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"ISSO","conceptRange":"1,3"},{"word":"ASSADO","conceptRange":"1,3"},{"word":"ASSOBIO","conceptRange":"1,3"},{"word":"MASSA","conceptRange":"2,4"},{"word":"NOSSO","conceptRange":"2,4"},{"word":"OSSO","conceptRange":"1,3"},{"word":"GESSO","conceptRange":"2,4"},{"word":"PESSOA","conceptRange":"2,4"},{"word":"TOSSE","conceptRange":"2,4"},{"word":"PASSO","conceptRange":"2,4"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"53a540672d2fe9f37d86837427851506","_parentId":"2ef6a8bbb1c33c55e759cb45ed2893d9","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":0,"speech":1},"_wordLimit":"5","_resumable":false,"_words":[{"word":"CARA","conceptRange":"2,3"},{"word":"PAREDE","conceptRange":"2,3"},{"word":"CARECA","conceptRange":"2,3"},{"word":"FAROFA","conceptRange":"2,3"},{"word":"XAROPE","conceptRange":"2,3"},{"word":"NÚMERO","conceptRange":"4,5"},{"word":"PIRATA","conceptRange":"2,3"},{"word":"CERA","conceptRange":"2,3"},{"word":"GAROTO","conceptRange":"2,3"},{"word":"XÍCARA","conceptRange":"4,5"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"b0a7851c618d3864e4c17830f9fb33c5","_parentId":"8ffa60ddaf22b6ab9f76ff7a193a0019","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":0,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"TERRA","conceptRange":"2,4"},{"word":"CARRO","conceptRange":"2,4"},{"word":"MORRO","conceptRange":"2,4"},{"word":"ESPIRRO","conceptRange":"4,6"},{"word":"BARRIGA","conceptRange":"2,4"},{"word":"BARRACA","conceptRange":"2,4"},{"word":"CORRIDA","conceptRange":"2,4"},{"word":"FERRO","conceptRange":"2,4"},{"word":"GARRAFA","conceptRange":"2,4"},{"word":"TORRE","conceptRange":"2,4"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"129f0899ecb8f2321cc062b5319e3620","_parentId":"8458fffb430fdf28755fb8d28db87eeb","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":1,"graphic":1,"omission":1,"intrusion":1,"memory":1,"orthographic":1,"speech":1},"_wordLimit":"5","_resumable":false,"_words":[{"word":"MANHA","conceptRange":"2,4"},{"word":"SONHO","conceptRange":"2,4"},{"word":"NENHUM","conceptRange":"2,4"},{"word":"FARINHA","conceptRange":"4,6"},{"word":"DINHEIRO","conceptRange":"2,4"},{"word":"DESENHO","conceptRange":"4,6"},{"word":"UNHA","conceptRange":"1,3"},{"word":"ESPINHO","conceptRange":"4,6"},{"word":"GALINHA","conceptRange":"4,6"},{"word":"RAINHA","conceptRange":"3,5"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"efa071bfe0f3f6d3c2dbc31dbeffe60d","_parentId":"a01c9b9ccc33d1f357f27d7077941d9b","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":0,"orthographic":0,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"HOJE","conceptRange":"0,0"},{"word":"HOMEM","conceptRange":"0,0"},{"word":"HORA","conceptRange":"0,0"},{"word":"HERÓI","conceptRange":"0,0"},{"word":"HORTA","conceptRange":"0,0"},{"word":"HOTEL","conceptRange":"0,0"},{"word":"HINO","conceptRange":"0,0"},{"word":"HOSPITAL","conceptRange":"0,0"},{"word":"HISTÓRIA","conceptRange":"0,0"},{"word":"HIGIENE","conceptRange":"0,0"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"02909cf0bffcc87bf9c2ed5cf308b0e1","_parentId":"cfeb33a51eb414af6fd26b755daa3578","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":1,"graphic":1,"omission":1,"intrusion":1,"memory":1,"orthographic":1,"speech":1},"_wordLimit":"5","_resumable":false,"_words":[{"word":"QUEIJO","conceptRange":"0,2"},{"word":"QUEIXO","conceptRange":"0,2"},{"word":"AQUILO","conceptRange":"1,3"},{"word":"AQUELE","conceptRange":"1,3"},{"word":"QUEM","conceptRange":"0,2"},{"word":"QUERO","conceptRange":"0,2"},{"word":"QUINTA","conceptRange":"0,2"},{"word":"QUERIDO","conceptRange":"0,2"},{"word":"QUILO","conceptRange":"0,2"},{"word":"MÁQUINA","conceptRange":"2,4"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"10e9dbc07eb96e09c9199b478e971b77","_parentId":"3b2daa347f5aee98a4004fc9656e9dd8","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":1,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"MILHO","conceptRange":"2,4"},{"word":"BOLHA","conceptRange":"2,4"},{"word":"PALHA","conceptRange":"2,4"},{"word":"VELHO","conceptRange":"2,4"},{"word":"ABELHA","conceptRange":"3,5"},{"word":"COELHO","conceptRange":"3,5"},{"word":"FILHO","conceptRange":"2,4"},{"word":"FOLHA","conceptRange":"2,4"},{"word":"ILHA","conceptRange":"1,3"},{"word":"OLHO","conceptRange":"1,3"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"e48385ab83856b9af1c5f7f07517b23e","_parentId":"19881bbdcbfb4beb7c6b153b802a329a","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":1,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"CHÁ","conceptRange":"0,2"},{"word":"CHAVE","conceptRange":"0,2"},{"word":"CHUVA","conceptRange":"0,2"},{"word":"BICHO","conceptRange":"2,4"},{"word":"MOCHILA","conceptRange":"2,4"},{"word":"CHOCOLATE","conceptRange":"0,2"},{"word":"CHUCHU","conceptRange":"0,2"},{"word":"CHUTE","conceptRange":"0,2"},{"word":"MACHUCADO","conceptRange":"2,4"},{"word":"CACHORRO","conceptRange":"2,4"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"fd0bcf5be393f9bfc17e0a08db6e086a","_parentId":"d57389cec59d2f2297890917b3fdb3ef","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":0,"speech":1},"_wordLimit":"5","_resumable":false,"_words":[{"word":"CLUBE","conceptRange":"0,2"},{"word":"BLUSA","conceptRange":"0,2"},{"word":"GLOBO","conceptRange":"0,2"},{"word":"CLIMA","conceptRange":"0,2"},{"word":"BICICLETA","conceptRange":"4,6"},{"word":"TECLA","conceptRange":"2,4"},{"word":"CLIMA","conceptRange":"0,2"},{"word":"FLAUTA","conceptRange":"0,2"},{"word":"BLOCO","conceptRange":"0,2"},{"word":"DUPLA","conceptRange":"2,4"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"55310e64d5ccf7a112ffcea8c1a52e4c","_parentId":"72748de7c671575c98f8770f9caa7013","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":0,"intrusion":0,"memory":0,"orthographic":1,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"MOÇO","conceptRange":"2,3"},{"word":"POÇA","conceptRange":"2,3"},{"word":"AÇAÍ","conceptRange":"1,2"},{"word":"CABEÇA","conceptRange":"4,5"},{"word":"CAROÇO","conceptRange":"4,5"},{"word":"DANÇAR","conceptRange":"3,4"},{"word":"TAÇA","conceptRange":"2,3"},{"word":"ALMOÇO","conceptRange":"4,5"},{"word":"MAÇÃ","conceptRange":"2,3"},{"word":"NATAÇÃO","conceptRange":"4,5"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"9b43563ba7a9da15386a6955049115a3","_parentId":"ab247f2dd19cbb39a8007a954f1fe4ff","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":0,"speech":1},"_wordLimit":"5","_resumable":false,"_words":[{"word":"PRATO","conceptRange":"0,2"},{"word":"VIDRO","conceptRange":"2,4"},{"word":"LIVRO","conceptRange":"2,4"},{"word":"COBRA","conceptRange":"2,4"},{"word":"PEDRA","conceptRange":"2,4"},{"word":"BRUXA","conceptRange":"0,2"},{"word":"FRUTA","conceptRange":"0,2"},{"word":"FRIO","conceptRange":"0,2"},{"word":"BRAÇO","conceptRange":"0,2"},{"word":"BRASIL","conceptRange":"0,2"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"a22b7062b760439f3188de95d620b665","_parentId":"ce2a15d4244a137d7bfad482aef5af3a","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":1,"orthographic":0,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"GUERRA","conceptRange":"0,2"},{"word":"SANGUE","conceptRange":"3,5"},{"word":"FOGUETE","conceptRange":"2,4"},{"word":"ALGUÉM","conceptRange":"2,4"},{"word":"GUITARRA","conceptRange":"0,2"},{"word":"SEGUINTE","conceptRange":"2,4"},{"word":"PREGUIÇA","conceptRange":"3,5"},{"word":"FOGUEIRA","conceptRange":"2,4"},{"word":"MANGUEIRA","conceptRange":"3,5"},{"word":"ÁGUIA","conceptRange":"1,3"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"e9269ea84745f10a3419c831494edd27","_parentId":"0b13e705314b8a2312cb84eb35412104","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":1,"graphic":1,"omission":1,"intrusion":1,"memory":1,"orthographic":1,"speech":1},"_wordLimit":"5","_resumable":false,"_words":[{"word":"TÁXI","conceptRange":"2,2"},{"word":"BOXE","conceptRange":"2,2"},{"word":"SAXOFONE","conceptRange":"2,2"},{"word":"DUREX","conceptRange":"4,4"},{"word":"REFLEXO","conceptRange":"5,5"},{"word":"OXIGÊNIO","conceptRange":"1,1"},{"word":"TÓXICO","conceptRange":"2,2"},{"word":"FLUXO","conceptRange":"3,3"},{"word":"AXILA","conceptRange":"1,1"},{"word":"FIXO","conceptRange":"2,2"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"609cc40254958b6f691c74d0b63043dd","_parentId":"a46f71795b9d405d6e8f77f408fc1269","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":0,"orthographic":1,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"DESCER","conceptRange":"2,3"},{"word":"CRESCER","conceptRange":"3,4"},{"word":"NASCER","conceptRange":"2,3"},{"word":"PISCINA","conceptRange":"2,3"},{"word":"ADOLESCENTE","conceptRange":"5,6"},{"word":"DISCIPLINA","conceptRange":"2,3"},{"word":"FLORESCER","conceptRange":"5,6"},{"word":"CRESCIMENTO","conceptRange":"3,4"},{"word":"DESCIDA","conceptRange":"2,3"},{"word":"NASCIMENTO","conceptRange":"2,3"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"3c0b377027e43f8a4c55ddb85d2955b8","_parentId":"e99f43ed59f0abc18ee3f0b906f49814","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":0,"intrusion":0,"memory":0,"orthographic":1,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"EXISTE","conceptRange":"1,1"},{"word":"EXAGERO","conceptRange":"1,1"},{"word":"EXAME","conceptRange":"1,1"},{"word":"EXATO","conceptRange":"1,1"},{"word":"EXEMPLO","conceptRange":"1,1"},{"word":"EXERCÍCIO","conceptRange":"1,1"},{"word":"EXIGENTE","conceptRange":"1,1"},{"word":"EXÓTICO","conceptRange":"1,1"},{"word":"EXÉRCITO","conceptRange":"1,1"},{"word":"EXIBIR","conceptRange":"1,1"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"9fe1786a202b4c135422b747066daea5","_parentId":"2eb3b787856d588b63b1be3026225015","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":0,"intrusion":0,"memory":0,"orthographic":1,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"SEXTA","conceptRange":"2,2"},{"word":"TEXTO","conceptRange":"2,2"},{"word":"EXPLICAR","conceptRange":"1,1"},{"word":"EXPLOSÃO","conceptRange":"1,1"},{"word":"EXCURSÃO","conceptRange":"1,1"},{"word":"EXCLUIR","conceptRange":"1,1"},{"word":"EXTERIOR","conceptRange":"1,1"},{"word":"EXTINÇÃO","conceptRange":"1,1"},{"word":"EXPRESSO","conceptRange":"1,1"},{"word":"EXTRAIR","conceptRange":"1,1"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"356ce35af5abe2d5be54e64e6cbb6edf","_parentId":"37199edc08118d254793d2a9933443bf","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":1,"graphic":1,"omission":1,"intrusion":1,"memory":1,"orthographic":1,"speech":1},"_wordLimit":"5","_resumable":false,"_words":[{"word":"KIT","conceptRange":"0,0"},{"word":"KARAOKÊ","conceptRange":"0,0"},{"word":"KETCHUP","conceptRange":"0,0"},{"word":"LINK","conceptRange":"3,3"},{"word":"KART","conceptRange":"0,0"},{"word":"DESKTOP","conceptRange":"3,3"},{"word":"SKATE","conceptRange":"1,1"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"bc834d11b862dac063558138d83df89b","_parentId":"229f1322c5c7fdcbef0c39f6ea8c2e6a","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":0,"orthographic":1,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"EXCELENTE","conceptRange":"1,2"},{"word":"EXCESSO","conceptRange":"1,2"},{"word":"EXCETO","conceptRange":"1,2"},{"word":"EXCITAÇÃO","conceptRange":"1,2"},{"word":"EXCEDENTE","conceptRange":"1,2"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"d7c7c39f6bddbb948efa0e4504bd43ae","_parentId":"846faf4d00c889d774c8fabe61f6f818","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":0,"orthographic":1,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"YOGA","conceptRange":"0,0"},{"word":"YAKISOBA","conceptRange":"0,0"},{"word":"PLAY","conceptRange":"3,3"},{"word":"MOTOBOY","conceptRange":"6,6"},{"word":"DELIVERY","conceptRange":"7,7"},{"word":"YOUTUBE","conceptRange":"0,0"},{"word":"REPLAY","conceptRange":"5,5"}]},{"_component":"totaApp","_classes":"","_isOptional":false,"_isAvailable":true,"_isHidden":false,"_isVisible":true,"_isResetOnRevisit":"false","_ariaLevel":0,"_disableAccessibilityState":false,"title":"","displayTitle":"","body":"","_id":"31057ed4357b19a9c5155b9baf935b18","_parentId":"440144af9c5730fcfcb42b65c96024e6","_type":"component","_layout":"full","_onScreen":{"_isEnabled":false,"_classes":"","_percentInviewVertical":50},"_pageLevelProgress":{"_isEnabled":true,"_isCompletionIndicatorEnabled":false},"_concepts":{"phonic":0,"graphic":0,"omission":1,"intrusion":0,"memory":0,"orthographic":1,"speech":0},"_wordLimit":"5","_resumable":false,"_words":[{"word":"KIWI","conceptRange":"2,2"},{"word":"WI-FI","conceptRange":"0,0"},{"word":"WEBCAM","conceptRange":"0,0"},{"word":"WAFFLE?","conceptRange":"0,0"},{"word":"BROWNIE?","conceptRange":"3,3"},{"word":"SHOW","conceptRange":"3,3"}]}]
+[
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "d3ba00cd524e39c07ebcf56a5bf68949",
+    "_parentId": "1a06eac11d10e69ae576156fcdc298a8",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 1,
+      "graphic": 1,
+      "omission": 1,
+      "intrusion": 1,
+      "memory": 1,
+      "orthographic": 1,
+      "speech": 1
+    },
+    "_wordLimit": "0",
+    "_placementTest": true,
+    "_resumable": true,
+    "_words": [
+      {
+        "word": "RI",
+        "conceptRange": "0,1",
+        "destinationNodeID": "30bc93c6e5fb81fc894780d053feff40"
+      },
+      {
+        "word": "LÁ",
+        "conceptRange": "0,1",
+        "destinationNodeID": "30bc93c6e5fb81fc894780d053feff40"
+      },
+      {
+        "word": "NU",
+        "conceptRange": "0,1",
+        "destinationNodeID": "30bc93c6e5fb81fc894780d053feff40"
+      },
+      {
+        "word": "DÁ",
+        "conceptRange": "0,1",
+        "destinationNodeID": "a4295bcb96178a806351207b1e66196c"
+      },
+      {
+        "word": "PÉ",
+        "conceptRange": "0,1",
+        "destinationNodeID": "a4295bcb96178a806351207b1e66196c"
+      },
+      {
+        "word": "VÓ",
+        "conceptRange": "0,1",
+        "destinationNodeID": "a4295bcb96178a806351207b1e66196c"
+      },
+      {
+        "word": "BU",
+        "conceptRange": "0,1",
+        "destinationNodeID": "a4295bcb96178a806351207b1e66196c"
+      },
+      {
+        "word": "JÁ",
+        "conceptRange": "0,1",
+        "destinationNodeID": "a4295bcb96178a806351207b1e66196c"
+      },
+      {
+        "word": "SINO",
+        "conceptRange": "0,3",
+        "destinationNodeID": "2557200ee60cdffbde53be787e0139f6"
+      },
+      {
+        "word": "FACA",
+        "conceptRange": "0,3",
+        "destinationNodeID": "2557200ee60cdffbde53be787e0139f6"
+      },
+      {
+        "word": "GALO",
+        "conceptRange": "0,3",
+        "destinationNodeID": "2557200ee60cdffbde53be787e0139f6"
+      },
+      {
+        "word": "XIXI",
+        "conceptRange": "0,3",
+        "destinationNodeID": "2557200ee60cdffbde53be787e0139f6"
+      },
+      {
+        "word": "RÃ",
+        "conceptRange": "0,1",
+        "destinationNodeID": "293b56b4d2e797c84dfe44d39f904db0"
+      },
+      {
+        "word": "LÃ",
+        "conceptRange": "0,1",
+        "destinationNodeID": "293b56b4d2e797c84dfe44d39f904db0"
+      },
+      {
+        "word": "LAMA",
+        "conceptRange": "0,3",
+        "destinationNodeID": "7a52212043fab9e7f82cf8f258170e18"
+      },
+      {
+        "word": "CAMA",
+        "conceptRange": "0,3",
+        "destinationNodeID": "7a52212043fab9e7f82cf8f258170e18"
+      },
+      {
+        "word": "GOTA",
+        "conceptRange": "0,3",
+        "destinationNodeID": "7a52212043fab9e7f82cf8f258170e18"
+      },
+      {
+        "word": "ZONA",
+        "conceptRange": "0,3",
+        "destinationNodeID": "7a52212043fab9e7f82cf8f258170e18"
+      },
+      {
+        "word": "UM",
+        "conceptRange": "0,1",
+        "destinationNodeID": "80b10b2ff1b19319fcf0a9e2084712a0"
+      },
+      {
+        "word": "AS",
+        "conceptRange": "0,1",
+        "destinationNodeID": "80b10b2ff1b19319fcf0a9e2084712a0"
+      },
+      {
+        "word": "IR",
+        "conceptRange": "0,1",
+        "destinationNodeID": "2379bce33b24a7a6b068b850aa7a0a95"
+      },
+      {
+        "word": "AR",
+        "conceptRange": "0,1",
+        "destinationNodeID": "2379bce33b24a7a6b068b850aa7a0a95"
+      },
+      {
+        "word": "RUA",
+        "conceptRange": "0,2",
+        "destinationNodeID": "7dda0202e4da010ccbab58ec5dee9a3b"
+      },
+      {
+        "word": "BOA",
+        "conceptRange": "0,2",
+        "destinationNodeID": "7dda0202e4da010ccbab58ec5dee9a3b"
+      },
+      {
+        "word": "DIA",
+        "conceptRange": "0,2",
+        "destinationNodeID": "7dda0202e4da010ccbab58ec5dee9a3b"
+      },
+      {
+        "word": "TIA",
+        "conceptRange": "0,2",
+        "destinationNodeID": "7dda0202e4da010ccbab58ec5dee9a3b"
+      },
+      {
+        "word": "FIO",
+        "conceptRange": "0,2",
+        "destinationNodeID": "7dda0202e4da010ccbab58ec5dee9a3b"
+      },
+      {
+        "word": "ANO",
+        "conceptRange": "0,2",
+        "destinationNodeID": "7dda0202e4da010ccbab58ec5dee9a3b"
+      },
+      {
+        "word": "GÁS",
+        "conceptRange": "0,2",
+        "destinationNodeID": "ef8ea8553842060e66ab2da12736babf"
+      },
+      {
+        "word": "PUS",
+        "conceptRange": "0,2",
+        "destinationNodeID": "ef8ea8553842060e66ab2da12736babf"
+      },
+      {
+        "word": "UMA",
+        "conceptRange": "0,2",
+        "destinationNodeID": "b7ed85f68b78b0307822d970c0d29932"
+      },
+      {
+        "word": "ELA",
+        "conceptRange": "0,2",
+        "destinationNodeID": "b7ed85f68b78b0307822d970c0d29932"
+      },
+      {
+        "word": "UVA",
+        "conceptRange": "0,2",
+        "destinationNodeID": "b7ed85f68b78b0307822d970c0d29932"
+      },
+      {
+        "word": "OCA",
+        "conceptRange": "0,2",
+        "destinationNodeID": "b7ed85f68b78b0307822d970c0d29932"
+      },
+      {
+        "word": "MAR",
+        "conceptRange": "0,2",
+        "destinationNodeID": "937682bf6be88859513998401c77c906"
+      },
+      {
+        "word": "TER",
+        "conceptRange": "0,2",
+        "destinationNodeID": "937682bf6be88859513998401c77c906"
+      },
+      {
+        "word": "OI",
+        "conceptRange": "0,1",
+        "destinationNodeID": "78f4a6ffdc737dfe3f657023db352757"
+      },
+      {
+        "word": "AU",
+        "conceptRange": "0,1",
+        "destinationNodeID": "78f4a6ffdc737dfe3f657023db352757"
+      },
+      {
+        "word": "OU",
+        "conceptRange": "0,1",
+        "destinationNodeID": "78f4a6ffdc737dfe3f657023db352757"
+      },
+      {
+        "word": "ISCA",
+        "conceptRange": "0,3",
+        "destinationNodeID": "ad3a53c38087568e8e40e9293d3de70c"
+      },
+      {
+        "word": "ESTE",
+        "conceptRange": "0,3",
+        "destinationNodeID": "ad3a53c38087568e8e40e9293d3de70c"
+      },
+      {
+        "word": "ARCO",
+        "conceptRange": "0,3",
+        "destinationNodeID": "ec5ea4077b327ffbab15161c74a6bb4b"
+      },
+      {
+        "word": "IRMÃ",
+        "conceptRange": "0,3",
+        "destinationNodeID": "ec5ea4077b327ffbab15161c74a6bb4b"
+      },
+      {
+        "word": "URSO",
+        "conceptRange": "0,3",
+        "destinationNodeID": "ec5ea4077b327ffbab15161c74a6bb4b"
+      },
+      {
+        "word": "QUE",
+        "conceptRange": "0,2",
+        "destinationNodeID": "b2b389c232ffe854b8cf899c09ed085e"
+      },
+      {
+        "word": "PIANO",
+        "conceptRange": "0,4",
+        "destinationNodeID": "60e09a4f567e94ee0ae17b8b8e417771"
+      },
+      {
+        "word": "MOEDA",
+        "conceptRange": "0,4",
+        "destinationNodeID": "60e09a4f567e94ee0ae17b8b8e417771"
+      },
+      {
+        "word": "FAÍSCA",
+        "conceptRange": "0,5",
+        "destinationNodeID": "60e09a4f567e94ee0ae17b8b8e417771"
+      },
+      {
+        "word": "NAVIO",
+        "conceptRange": "0,4",
+        "destinationNodeID": "60e09a4f567e94ee0ae17b8b8e417771"
+      },
+      {
+        "word": "BUZINA",
+        "conceptRange": "0,5",
+        "destinationNodeID": "7905fee7cd2d2ba8bef78e904993cdab"
+      },
+      {
+        "word": "BANANA",
+        "conceptRange": "0,5",
+        "destinationNodeID": "7905fee7cd2d2ba8bef78e904993cdab"
+      },
+      {
+        "word": "BIGODE",
+        "conceptRange": "0,5",
+        "destinationNodeID": "7905fee7cd2d2ba8bef78e904993cdab"
+      },
+      {
+        "word": "DOCE",
+        "conceptRange": "0,3",
+        "destinationNodeID": "c57ad9b8843ecd931fb621b8f64528e7"
+      },
+      {
+        "word": "CIMA",
+        "conceptRange": "0,3",
+        "destinationNodeID": "c57ad9b8843ecd931fb621b8f64528e7"
+      },
+      {
+        "word": "CEBOLA",
+        "keyboardExceptions": {
+          "exclude": [
+            "s"
+          ]
+        },
+        "conceptRange": "0,5",
+        "destinationNodeID": "c57ad9b8843ecd931fb621b8f64528e7"
+      },
+      {
+        "word": "GELO",
+        "conceptRange": "0,3",
+        "destinationNodeID": "741dc849a7fef150c578c8542b32aa84"
+      },
+      {
+        "word": "PÁGINA",
+        "keyboardExceptions": {
+          "exclude": [
+            "j"
+          ]
+        },
+        "conceptRange": "0,5",
+        "destinationNodeID": "741dc849a7fef150c578c8542b32aa84"
+      },
+      {
+        "word": "CAIXA",
+        "conceptRange": "0,4",
+        "destinationNodeID": "0458f05b7e521312fae20aa2e404b4b1"
+      },
+      {
+        "word": "BEIJO",
+        "conceptRange": "0,4",
+        "destinationNodeID": "0458f05b7e521312fae20aa2e404b4b1"
+      },
+      {
+        "word": "CAUDA",
+        "conceptRange": "0,4",
+        "destinationNodeID": "0458f05b7e521312fae20aa2e404b4b1"
+      },
+      {
+        "word": "SIM",
+        "conceptRange": "0,2",
+        "destinationNodeID": "19bf67e4040eb8f7d416d1b12decef5d"
+      },
+      {
+        "word": "COM",
+        "conceptRange": "0,2",
+        "destinationNodeID": "19bf67e4040eb8f7d416d1b12decef5d"
+      },
+      {
+        "word": "TEM",
+        "conceptRange": "0,2",
+        "destinationNodeID": "19bf67e4040eb8f7d416d1b12decef5d"
+      },
+      {
+        "word": "SOL",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        },
+        "conceptRange": "0,2",
+        "destinationNodeID": "51ba4bf0fe4452330120dbcab6583f64"
+      },
+      {
+        "word": "MEL",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        },
+        "conceptRange": "0,2",
+        "destinationNodeID": "51ba4bf0fe4452330120dbcab6583f64"
+      },
+      {
+        "word": "GOL",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        },
+        "conceptRange": "0,2",
+        "destinationNodeID": "51ba4bf0fe4452330120dbcab6583f64"
+      },
+      {
+        "word": "FESTA",
+        "conceptRange": "0,4",
+        "destinationNodeID": "c4261afece3a914ddf27aa76c93446cf"
+      },
+      {
+        "word": "CESTA",
+        "conceptRange": "0,4",
+        "destinationNodeID": "c4261afece3a914ddf27aa76c93446cf"
+      },
+      {
+        "word": "ANJO",
+        "conceptRange": "0,3",
+        "destinationNodeID": "9c57df2c81769d2ecbdb7acdad9128e8"
+      },
+      {
+        "word": "INDIO",
+        "conceptRange": "0,4",
+        "destinationNodeID": "9c57df2c81769d2ecbdb7acdad9128e8"
+      },
+      {
+        "word": "ALTO",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        },
+        "conceptRange": "0,3",
+        "destinationNodeID": "b231d5f29688cb240b379ece8b8940c9"
+      },
+      {
+        "word": "ALFACE",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        },
+        "conceptRange": "0,5",
+        "destinationNodeID": "b231d5f29688cb240b379ece8b8940c9"
+      },
+      {
+        "word": "ÚLTIMO",
+        "conceptRange": "0,5",
+        "destinationNodeID": "b231d5f29688cb240b379ece8b8940c9"
+      },
+      {
+        "word": "FUGIR",
+        "conceptRange": "0,4",
+        "destinationNodeID": "2d40c4599c5a39a7e2ad70b40a2f4144"
+      },
+      {
+        "word": "SABOR",
+        "conceptRange": "0,4",
+        "destinationNodeID": "2d40c4599c5a39a7e2ad70b40a2f4144"
+      },
+      {
+        "word": "FORTE",
+        "conceptRange": "0,4",
+        "destinationNodeID": "821ec287dd0e0ce7dd7771ffe28f5388"
+      },
+      {
+        "word": "GARFO",
+        "conceptRange": "0,4",
+        "destinationNodeID": "821ec287dd0e0ce7dd7771ffe28f5388"
+      },
+      {
+        "word": "CINCO",
+        "conceptRange": "0,4",
+        "destinationNodeID": "b97c3b6e0c0d4d0bdff21de38d0b2a61"
+      },
+      {
+        "word": "TONTO",
+        "conceptRange": "0,4",
+        "destinationNodeID": "b97c3b6e0c0d4d0bdff21de38d0b2a61"
+      },
+      {
+        "word": "AZUL",
+        "conceptRange": "0,3",
+        "destinationNodeID": "dcc743870d06c465e56bf66a99e90faa"
+      },
+      {
+        "word": "PEDAL",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        },
+        "conceptRange": "0,4",
+        "destinationNodeID": "dcc743870d06c465e56bf66a99e90faa"
+      },
+      {
+        "word": "POLVO",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        },
+        "conceptRange": "0,4",
+        "destinationNodeID": "755a17ecba39d99908883416da841275"
+      },
+      {
+        "word": "TALCO",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        },
+        "conceptRange": "0,4",
+        "destinationNodeID": "755a17ecba39d99908883416da841275"
+      },
+      {
+        "word": "CAMPO",
+        "conceptRange": "0,4",
+        "destinationNodeID": "2816010c59d4770bf1d1ed734e00bc0f"
+      },
+      {
+        "word": "BOMBOM",
+        "conceptRange": "0,5",
+        "destinationNodeID": "2816010c59d4770bf1d1ed734e00bc0f"
+      },
+      {
+        "word": "FAMOSA",
+        "conceptRange": "0,5",
+        "destinationNodeID": "4950325abb0351138f219fe9d2ef78d5"
+      },
+      {
+        "word": "RISOTO",
+        "keyboardExceptions": {
+          "exclude": [
+            "z"
+          ]
+        },
+        "conceptRange": "0,5",
+        "destinationNodeID": "4950325abb0351138f219fe9d2ef78d5"
+      },
+      {
+        "word": "OSSO",
+        "keyboardExceptions": {
+          "exclude": [
+            "c"
+          ]
+        },
+        "conceptRange": "0,3",
+        "destinationNodeID": "970304de1a783bff226b3455fa01c968"
+      },
+      {
+        "word": "TOSSE",
+        "keyboardExceptions": {
+          "exclude": [
+            "c"
+          ]
+        },
+        "conceptRange": "0,4",
+        "destinationNodeID": "970304de1a783bff226b3455fa01c968"
+      },
+      {
+        "word": "CERA",
+        "keyboardExceptions": {
+          "exclude": [
+            "s"
+          ]
+        },
+        "conceptRange": "0,3",
+        "destinationNodeID": "8f5f8228ce072f3fc17ae44808142128"
+      },
+      {
+        "word": "XÍCARA",
+        "keyboardExceptions": {
+          "exclude": [
+            "c"
+          ]
+        },
+        "conceptRange": "0,5",
+        "destinationNodeID": "8f5f8228ce072f3fc17ae44808142128"
+      },
+      {
+        "word": "GARRAFA",
+        "conceptRange": "0,6",
+        "destinationNodeID": "66c3a229667125309421cc67fba4df04"
+      },
+      {
+        "word": "ESPIRRO",
+        "conceptRange": "0,6",
+        "destinationNodeID": "66c3a229667125309421cc67fba4df04"
+      },
+      {
+        "word": "MANHA",
+        "conceptRange": "0,4",
+        "destinationNodeID": "a6b7e2c44efe66e9fa8af6706b10a442"
+      },
+      {
+        "word": "SONHO",
+        "conceptRange": "0,4",
+        "destinationNodeID": "a6b7e2c44efe66e9fa8af6706b10a442"
+      },
+      {
+        "word": "HOJE",
+        "conceptRange": "0,3",
+        "destinationNodeID": "26507b306841f1976d8f394411654777"
+      },
+      {
+        "word": "HORA",
+        "conceptRange": "0,3",
+        "destinationNodeID": "26507b306841f1976d8f394411654777"
+      },
+      {
+        "word": "QUEIJO",
+        "conceptRange": "0,5",
+        "destinationNodeID": "b20107123ff4d18d205b6b8ac720c160"
+      },
+      {
+        "word": "FOLHA",
+        "conceptRange": "0,4",
+        "destinationNodeID": "2bfdd7bc94bbba9dcf9160638bb90e7c"
+      },
+      {
+        "word": "CHÁ",
+        "keyboardExceptions": {
+          "exclude": [
+            "x"
+          ]
+        },
+        "conceptRange": "0,2",
+        "destinationNodeID": "6a9cdcac9f9f17d49799c257a08937f0"
+      },
+      {
+        "word": "BLUSA",
+        "keyboardExceptions": {
+          "exclude": [
+            "z"
+          ]
+        },
+        "conceptRange": "0,4",
+        "destinationNodeID": "dbf1ba0916d9a22229231eb3a0d0792a"
+      },
+      {
+        "word": "MOÇO",
+        "keyboardExceptions": {
+          "exclude": [
+            "s"
+          ]
+        },
+        "conceptRange": "0,3",
+        "destinationNodeID": "8a4466c6ee4cad6f7af5b48e2a51b0fb"
+      },
+      {
+        "word": "CABEÇA",
+        "keyboardExceptions": {
+          "exclude": [
+            "s"
+          ]
+        },
+        "conceptRange": "0,5",
+        "destinationNodeID": "8a4466c6ee4cad6f7af5b48e2a51b0fb"
+      },
+      {
+        "word": "MAÇÃ",
+        "keyboardExceptions": {
+          "exclude": [
+            "s"
+          ]
+        },
+        "conceptRange": "0,3",
+        "destinationNodeID": "8a4466c6ee4cad6f7af5b48e2a51b0fb"
+      },
+      {
+        "word": "PRATO",
+        "conceptRange": "0,4",
+        "destinationNodeID": "b79720ee9120634a2a538718a616ad32"
+      },
+      {
+        "word": "BRUXA",
+        "keyboardExceptions": {
+          "exclude": [
+            "c"
+          ]
+        },
+        "conceptRange": "0,4",
+        "destinationNodeID": "b79720ee9120634a2a538718a616ad32"
+      },
+      {
+        "word": "FOGUETE",
+        "conceptRange": "0,6",
+        "destinationNodeID": "f2b7f4dbf11ff695d9ee7992420f320a"
+      },
+      {
+        "word": "TÁXI",
+        "keyboardExceptions": {
+          "exclude": [
+            "c"
+          ]
+        },
+        "conceptRange": "0,3",
+        "destinationNodeID": "294157a16ff651989736456cbd448109"
+      },
+      {
+        "word": "DESCER",
+        "keyboardExceptions": {
+          "exclude": [
+            "s"
+          ]
+        },
+        "conceptRange": "0,5",
+        "destinationNodeID": "4df6686a8edd8055e4e970607c90f4ed"
+      },
+      {
+        "word": "EXISTE",
+        "keyboardExceptions": {
+          "exclude": [
+            "z"
+          ]
+        },
+        "conceptRange": "0,5",
+        "destinationNodeID": "2fa3f14b837c1fd00b7ba5f912f61cc5"
+      },
+      {
+        "word": "SEXTA",
+        "keyboardExceptions": {
+          "exclude": [
+            "x"
+          ]
+        },
+        "conceptRange": "0,4",
+        "destinationNodeID": "fc0ee82790b44007381314c1b0151742"
+      },
+      {
+        "word": "KIT",
+        "keyboardExceptions": {
+          "exclude": [
+            "q"
+          ]
+        },
+        "conceptRange": "0,2",
+        "destinationNodeID": "984e189bcfa339d1a1de43a0cd821324"
+      },
+      {
+        "word": "EXCELENTE",
+        "keyboardExceptions": {
+          "exclude": [
+            "s",
+            "c"
+          ]
+        },
+        "conceptRange": "0,8",
+        "destinationNodeID": "c032b47ad0ce89876e684e6c06178830"
+      },
+      {
+        "word": "YAKISOBA",
+        "keyboardExceptions": {
+          "exclude": [
+            "i"
+          ]
+        },
+        "conceptRange": "0,7",
+        "destinationNodeID": "3bd433f354cd10fdcc7189b9eb663cfe"
+      },
+      {
+        "word": "KIWI",
+        "keyboardExceptions": {
+          "exclude": [
+            "q",
+            "u"
+          ]
+        },
+        "conceptRange": "0,3",
+        "destinationNodeID": "bcc742f91f7cfd131b64cdf370cac24d"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "0dcd6173f08a584a4cd4c12a2e956982",
+    "_parentId": "594e2103919c7e5d9120ff79532347e6",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 1,
+      "graphic": 1,
+      "omission": 1,
+      "intrusion": 1,
+      "memory": 1,
+      "orthographic": 1,
+      "speech": 1
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "LÁ",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "NU",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "RÉ",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "RI",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "LU",
+        "conceptRange": "0,1"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "f9319d576ac87a8cf162515015144fa8",
+    "_parentId": "cc935b163850132bfc24ed76e92e2379",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 1,
+      "graphic": 1,
+      "omission": 1,
+      "intrusion": 1,
+      "memory": 1,
+      "orthographic": 1,
+      "speech": 1
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "DÁ",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "CÁ",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "FÉ",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "JÁ",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "PÓ",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "SÓ",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "MÁ",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "VÓ",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "TU",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "PÁ",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "PÉ",
+        "conceptRange": "0,1"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "3e176502294e7536739432d82f9d2d8d",
+    "_parentId": "bade1a5056de506c55fe08a286862901",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 1,
+      "graphic": 1,
+      "omission": 1,
+      "intrusion": 1,
+      "memory": 1,
+      "orthographic": 1,
+      "speech": 1
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "COPO",
+        "conceptRange": "0,3"
+      },
+      {
+        "word": "JATO",
+        "conceptRange": "0,3"
+      },
+      {
+        "word": "ROLA",
+        "conceptRange": "0,3"
+      },
+      {
+        "word": "RALO",
+        "conceptRange": "0,3"
+      },
+      {
+        "word": "FADA",
+        "conceptRange": "0,3"
+      },
+      {
+        "word": "BOLA",
+        "conceptRange": "0,3"
+      },
+      {
+        "word": "PATO",
+        "conceptRange": "0,3"
+      },
+      {
+        "word": "GALO",
+        "conceptRange": "0,3"
+      },
+      {
+        "word": "MALA",
+        "conceptRange": "0,3"
+      },
+      {
+        "word": "SINO",
+        "conceptRange": "0,3"
+      },
+      {
+        "word": "VAZA",
+        "conceptRange": "0,3"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "26914f85d50f6f31ef0b96050ea062a1",
+    "_parentId": "7843d7de6a8b1937bd1201f410643f6a",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 1,
+      "graphic": 0,
+      "omission": 0,
+      "intrusion": 0,
+      "memory": 0,
+      "orthographic": 0,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "LÊ",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "RÃ",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "ME",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "SE",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "TE",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "VÊ",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "DO",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "FÃ",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "LÃ",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "XÔ",
+        "conceptRange": "1,1"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "fb22b4c18d1c504a2f8d6068e311df39",
+    "_parentId": "11ca3ea17896005075a424a75348fa77",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 1,
+      "graphic": 1,
+      "omission": 1,
+      "intrusion": 1,
+      "memory": 1,
+      "orthographic": 1,
+      "speech": 1
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "LAMA",
+        "conceptRange": "0,3"
+      },
+      {
+        "word": "DAMA",
+        "conceptRange": "0,3"
+      },
+      {
+        "word": "FAMA",
+        "conceptRange": "0,3"
+      },
+      {
+        "word": "CAMA",
+        "conceptRange": "0,3"
+      },
+      {
+        "word": "PANO",
+        "conceptRange": "0,3"
+      },
+      {
+        "word": "REMO",
+        "conceptRange": "0,3"
+      },
+      {
+        "word": "DEDO",
+        "conceptRange": "0,3"
+      },
+      {
+        "word": "BOCA",
+        "conceptRange": "0,3"
+      },
+      {
+        "word": "LOBO",
+        "conceptRange": "0,3"
+      },
+      {
+        "word": "GOTA",
+        "conceptRange": "0,3"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "cb65e44291cb4a130b0c4e22936964a1",
+    "_parentId": "dc8dd05db8f7509b8a52cbe9bcb2e6f4",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 1,
+      "graphic": 1,
+      "omission": 1,
+      "intrusion": 1,
+      "memory": 1,
+      "orthographic": 1,
+      "speech": 1
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "OS",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "AS",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "UM",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "EM",
+        "conceptRange": "0,1"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "1b9b7e0cd408765859b49bc8fa013a2a",
+    "_parentId": "24e44ea2ecf1ddc07b1c14bade066fd3",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 1,
+      "graphic": 1,
+      "omission": 1,
+      "intrusion": 1,
+      "memory": 1,
+      "orthographic": 1,
+      "speech": 1
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "IR",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "AR",
+        "conceptRange": "0,1"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "5bf9f0bd4deb9ed058a5cd640b01f3c0",
+    "_parentId": "0683ce8444c9cff1509216ccad6195ab",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 0,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "RUA",
+        "conceptRange": "1,2"
+      },
+      {
+        "word": "LUA",
+        "conceptRange": "1,2"
+      },
+      {
+        "word": "DIA",
+        "conceptRange": "1,2"
+      },
+      {
+        "word": "BOA",
+        "conceptRange": "1,2"
+      },
+      {
+        "word": "VOA",
+        "conceptRange": "1,2"
+      },
+      {
+        "word": "FIO",
+        "conceptRange": "1,2"
+      },
+      {
+        "word": "PIA",
+        "conceptRange": "1,2"
+      },
+      {
+        "word": "TIA",
+        "conceptRange": "1,2"
+      },
+      {
+        "word": "RIO",
+        "conceptRange": "1,2"
+      },
+      {
+        "word": "SUA",
+        "conceptRange": "1,2"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "ddd4126e95e67d799e05416a54ef204d",
+    "_parentId": "2f3731035964409c269cacfc40b9ea7c",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 0,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "GÁS",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "NÓS",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "PÁS",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "PÉS",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "MÊS",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "PUS",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "FÃS",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "RÃS",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "DAS",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "MAS",
+        "conceptRange": "0,2"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "ef902ee72acb2cbd7ef9c1ab5ea8b96a",
+    "_parentId": "bfcced2c80ce9c1fb2cd0b9995ea17df",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 0,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "UMA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "ELA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "ELE",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "ALÔ",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "AMO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "AVE",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "OCA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "OVO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "OLÁ",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "UVA",
+        "conceptRange": "0,2"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "791409a0924dcf480b6f8ea33098f493",
+    "_parentId": "5e13ccc7026b7e3aeae01e72c575c243",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 0,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "MAR",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "VER",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "TER",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "COR",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "PÔR",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "DOR",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "DAR",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "PAR",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "LAR",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "RIR",
+        "conceptRange": "0,2"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "ffaa9da4eeafabff14793be854324882",
+    "_parentId": "c49589a62e995d8b29b8c5a195e8df73",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 1,
+      "graphic": 1,
+      "omission": 1,
+      "intrusion": 1,
+      "memory": 1,
+      "orthographic": 1,
+      "speech": 1
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "OI",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "UI",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "EU",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "AI",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "AU",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "AO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "EI",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "OU",
+        "conceptRange": "0,1"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "9b9e4a453649eb452ef5b80a3126222f",
+    "_parentId": "56ed0653c99c9653c05b969be774f3a6",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 1,
+      "graphic": 1,
+      "omission": 1,
+      "intrusion": 1,
+      "memory": 1,
+      "orthographic": 1,
+      "speech": 1
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "ESTE",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ESTA",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ASMA",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ISTO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ISCA",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ASCO",
+        "conceptRange": "0,1"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "1b6be15b829de1b46ff60d4548aab97c",
+    "_parentId": "d571e17f911920c684a1fb54786e5761",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 1,
+      "graphic": 1,
+      "omission": 1,
+      "intrusion": 1,
+      "memory": 1,
+      "orthographic": 1,
+      "speech": 1
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "ARCO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "IRMÃ",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ARTE",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "URSO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ARCA",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ARDE",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ERVA",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ORCA",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ERGO",
+        "conceptRange": "0,1"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "3e5d85ca6cdf3c86c0ff1390793dfc8e",
+    "_parentId": "53f1274e16cb161c3dd3b6020c0f2a46",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 1,
+      "graphic": 1,
+      "omission": 1,
+      "intrusion": 1,
+      "memory": 1,
+      "orthographic": 1,
+      "speech": 1
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "QUE",
+        "conceptRange": "0,2"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "868d3ae3731f0eaa6d1672171d39c44b",
+    "_parentId": "9e8c1bcd3e6fe2f7d606a63534ddfc2d",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 0,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "PIANO",
+        "conceptRange": "1,2"
+      },
+      {
+        "word": "LAGOA",
+        "conceptRange": "3,4"
+      },
+      {
+        "word": "MOEDA",
+        "conceptRange": "1,2"
+      },
+      {
+        "word": "SAÚDE",
+        "conceptRange": "1,2"
+      },
+      {
+        "word": "NAVIO",
+        "conceptRange": "3,4"
+      },
+      {
+        "word": "PIADA",
+        "conceptRange": "1,2"
+      },
+      {
+        "word": "FAÍSCA",
+        "conceptRange": "1,2"
+      },
+      {
+        "word": "SAÍDA",
+        "conceptRange": "1,2"
+      },
+      {
+        "word": "POETA",
+        "conceptRange": "1,2"
+      },
+      {
+        "word": "CUTIA",
+        "conceptRange": "3,4"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "07fc1a8a50225b25cd7bba6ca739011e",
+    "_parentId": "42f58ba8e330714ea5c0b387fe504333",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 0,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "MACACO",
+        "conceptRange": "0,5"
+      },
+      {
+        "word": "BATATA",
+        "conceptRange": "0,5"
+      },
+      {
+        "word": "BIGODE",
+        "conceptRange": "0,5"
+      },
+      {
+        "word": "BEBIDA",
+        "conceptRange": "0,5"
+      },
+      {
+        "word": "BUZINA",
+        "conceptRange": "0,5"
+      },
+      {
+        "word": "CABELO",
+        "conceptRange": "0,5"
+      },
+      {
+        "word": "CAFUNÉ",
+        "conceptRange": "0,5"
+      },
+      {
+        "word": "COMIDA",
+        "conceptRange": "0,5"
+      },
+      {
+        "word": "ESCOLA",
+        "conceptRange": "0,5"
+      },
+      {
+        "word": "MÉDICO",
+        "conceptRange": "0,5"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "65ec92488888aede382fae2040629bd4",
+    "_parentId": "f9a253f9cf7d7a58127e835396f235b9",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 1,
+      "graphic": 1,
+      "omission": 1,
+      "intrusion": 1,
+      "memory": 1,
+      "orthographic": 1,
+      "speech": 1
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "DOCE",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "CEBOLA",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "CEDO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "VACINA",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "BACIA",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "CIMA",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "CINEMA",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "MACIO",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "TECIDO",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "VOCÊ",
+        "conceptRange": "2,3"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "af0d793cc2022559e839181b9eccadd2",
+    "_parentId": "76d7da31d7edee41cff99821bd66f598",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 1,
+      "graphic": 1,
+      "omission": 1,
+      "intrusion": 1,
+      "memory": 1,
+      "orthographic": 1,
+      "speech": 1
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "GELO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "GIBI",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "GEMA",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "TIGELA",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "MÁGICO",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "COLÉGIO",
+        "conceptRange": "4,5"
+      },
+      {
+        "word": "PÁGINA",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "RELÓGIO",
+        "conceptRange": "4,5"
+      },
+      {
+        "word": "PEDÁGIO",
+        "conceptRange": "4,5"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "4dd2aeba007c1edfdb6d296537f86cb0",
+    "_parentId": "83340e057130763f2a3fa7aec59b1576",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 0,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "LEITE",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "ÁGUA",
+        "conceptRange": "1,3"
+      },
+      {
+        "word": "CAUDA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "CÉU",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "FEIJÃO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "NOITE",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "BEIJO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "MUITO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "POUCO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "CAIXA",
+        "conceptRange": "0,2"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "8b83f4d78415b86a662ce7ef6ecb19f1",
+    "_parentId": "b16c685c1a80b135a46b1d2b738d2edc",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 0,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "BOM",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "SIM",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "COM",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "MIM",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "BEM",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "VEM",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "NEM",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "FIM",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "TEM",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "SEM",
+        "conceptRange": "0,2"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "ffef81436c0090a4bf289ad65e228778",
+    "_parentId": "f724f9b59d2f639f3478ce77b05b8705",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 0,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "SOL",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "SAL",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "GOL",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "MEL",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "MAL",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "MIL",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "TIL",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "TAL",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "CAL",
+        "conceptRange": "0,2"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "bfdde8b26c4a5def05fc7f8eae09999a",
+    "_parentId": "4b5f50aebf10e9922eeaf14f2ad7049d",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 0,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "FESTA",
+        "conceptRange": "0,4"
+      },
+      {
+        "word": "GOSTO",
+        "conceptRange": "0,4"
+      },
+      {
+        "word": "ROSCA",
+        "conceptRange": "0,4"
+      },
+      {
+        "word": "POSTE",
+        "conceptRange": "0,4"
+      },
+      {
+        "word": "ROSTO",
+        "conceptRange": "0,4"
+      },
+      {
+        "word": "PASTA",
+        "conceptRange": "0,4"
+      },
+      {
+        "word": "CASCA",
+        "conceptRange": "0,4"
+      },
+      {
+        "word": "CESTA",
+        "conceptRange": "0,4"
+      },
+      {
+        "word": "MOSCA",
+        "conceptRange": "0,4"
+      },
+      {
+        "word": "TESTA",
+        "conceptRange": "0,4"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "f4a6d47ad60da640c76f58769197e7ef",
+    "_parentId": "0fa987503e2f6f288e78402366851c4a",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 1,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 0,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "ANDO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ONDA",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ANJO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ANTA",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ENJOO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ÍNDIO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ENFEITE",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ENTÃO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "INCÊNDIO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ENSAIO",
+        "conceptRange": "0,1"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "fb1474c293446067ae2051e924d8b576",
+    "_parentId": "dc27ded641489bcd0f0bdfe4630feb6f",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 1,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "ALTO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ALGO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ALFACE",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "OLFATO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ALVO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ELFO",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ALGA",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "ÚLTIMO",
+        "conceptRange": "0,1"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "619dd1e3e604b31d3bda826f39cf93a3",
+    "_parentId": "89972d954ec11b98291f7ba971d935b7",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 0,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "CALOR",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "AMOR",
+        "conceptRange": "1,3"
+      },
+      {
+        "word": "FEDOR",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "PULAR",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "COMER",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "PULAR",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "BEBER",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "FAZER",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "MEXER",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "JOGAR",
+        "conceptRange": "2,4"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "a31fc93993c536c33d8c226a7f2304d4",
+    "_parentId": "30f8572fff3a93d2291c29627c4307d9",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 0,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "BARCO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "PORTA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "PORCO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "CARTA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "BARBA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "CORDA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "FORTE",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "GARFO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "CARNE",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "PERNA",
+        "conceptRange": "0,2"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "da04ae9f15babc052e35dd1a381f1502",
+    "_parentId": "757891abd7865cc75f9795195b175a04",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 0,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "PONTE",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "PENTE",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "DENTE",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "BANCO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "CINTO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "CINCO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "PINGO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "MANGA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "MUNDO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "TONTO",
+        "conceptRange": "0,2"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "105e4ed983b0cfb21a6e83e668eefd6f",
+    "_parentId": "408f08fc20d3f6f5719b3f8295fe7bda",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 0,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "ANEL",
+        "conceptRange": "1,3"
+      },
+      {
+        "word": "ANIMAL",
+        "conceptRange": "3,5"
+      },
+      {
+        "word": "AZUL",
+        "conceptRange": "1,3"
+      },
+      {
+        "word": "NATAL",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "FÁCIL",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "FUTEBOL",
+        "conceptRange": "4,6"
+      },
+      {
+        "word": "PAPEL",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "DIFÍCIL",
+        "conceptRange": "4,6"
+      },
+      {
+        "word": "JORNAL",
+        "conceptRange": "3,5"
+      },
+      {
+        "word": "LEGAL",
+        "conceptRange": "2,4"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "1cfa9d7e2b769609b6fb3913c9ae1dbd",
+    "_parentId": "6b9187509524fba865f0cb0bd8fd10c7",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 0,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "BALDE",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "CALMA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "FILME",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "MOLDE",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "BOLSA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "FALTA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "SALTO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "PALCO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "CALDA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "FALSO",
+        "conceptRange": "0,2"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "ae07616643813f0bf03bce46a4fcacad",
+    "_parentId": "3735bf41ffc2cae5479a030e0d87bb10",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 0,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "CAMPO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "TAMPA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "TOMBO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "LIMPO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "POMBO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "BOMBOM",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "RAMPA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "LÂMPADA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "POMPOM",
+        "conceptRange": "0,2"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "2bda96fa880b13ec7f9e4ebba43bb25d",
+    "_parentId": "408bf76d5063cbdb324da38da72a6d88",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 1,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "CASA",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "MESA",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "PESO",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "RASO",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "ROSA",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "VASO",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "FAMOSA",
+        "conceptRange": "4,5"
+      },
+      {
+        "word": "CASACO",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "RISOTO",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "CAMISA",
+        "conceptRange": "4,5"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "88022b4ef36510f1c0875b6416e1300d",
+    "_parentId": "f53a7924c9f3a8910983160f05fdc8fc",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 1,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "ISSO",
+        "conceptRange": "1,3"
+      },
+      {
+        "word": "ASSADO",
+        "conceptRange": "1,3"
+      },
+      {
+        "word": "ASSOBIO",
+        "conceptRange": "1,3"
+      },
+      {
+        "word": "MASSA",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "NOSSO",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "OSSO",
+        "conceptRange": "1,3"
+      },
+      {
+        "word": "GESSO",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "PESSOA",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "TOSSE",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "PASSO",
+        "conceptRange": "2,4"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "53a540672d2fe9f37d86837427851506",
+    "_parentId": "2ef6a8bbb1c33c55e759cb45ed2893d9",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 0,
+      "speech": 1
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "CARA",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "PAREDE",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "CARECA",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "FAROFA",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "XAROPE",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "NÚMERO",
+        "conceptRange": "4,5"
+      },
+      {
+        "word": "PIRATA",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "CERA",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "GAROTO",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "XÍCARA",
+        "conceptRange": "4,5"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "b0a7851c618d3864e4c17830f9fb33c5",
+    "_parentId": "8ffa60ddaf22b6ab9f76ff7a193a0019",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 0,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "TERRA",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "CARRO",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "MORRO",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "ESPIRRO",
+        "conceptRange": "4,6"
+      },
+      {
+        "word": "BARRIGA",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "BARRACA",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "CORRIDA",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "FERRO",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "GARRAFA",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "TORRE",
+        "conceptRange": "2,4"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "129f0899ecb8f2321cc062b5319e3620",
+    "_parentId": "8458fffb430fdf28755fb8d28db87eeb",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 1,
+      "graphic": 1,
+      "omission": 1,
+      "intrusion": 1,
+      "memory": 1,
+      "orthographic": 1,
+      "speech": 1
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "MANHA",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "SONHO",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "NENHUM",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "FARINHA",
+        "conceptRange": "4,6"
+      },
+      {
+        "word": "DINHEIRO",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "DESENHO",
+        "conceptRange": "4,6"
+      },
+      {
+        "word": "UNHA",
+        "conceptRange": "1,3"
+      },
+      {
+        "word": "ESPINHO",
+        "conceptRange": "4,6"
+      },
+      {
+        "word": "GALINHA",
+        "conceptRange": "4,6"
+      },
+      {
+        "word": "RAINHA",
+        "conceptRange": "3,5"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "efa071bfe0f3f6d3c2dbc31dbeffe60d",
+    "_parentId": "a01c9b9ccc33d1f357f27d7077941d9b",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 0,
+      "orthographic": 0,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "HOJE",
+        "conceptRange": "0,0"
+      },
+      {
+        "word": "HOMEM",
+        "conceptRange": "0,0"
+      },
+      {
+        "word": "HORA",
+        "conceptRange": "0,0"
+      },
+      {
+        "word": "HERÓI",
+        "conceptRange": "0,0"
+      },
+      {
+        "word": "HORTA",
+        "conceptRange": "0,0"
+      },
+      {
+        "word": "HOTEL",
+        "conceptRange": "0,0"
+      },
+      {
+        "word": "HINO",
+        "conceptRange": "0,0"
+      },
+      {
+        "word": "HOSPITAL",
+        "conceptRange": "0,0"
+      },
+      {
+        "word": "HISTÓRIA",
+        "conceptRange": "0,0"
+      },
+      {
+        "word": "HIGIENE",
+        "conceptRange": "0,0"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "02909cf0bffcc87bf9c2ed5cf308b0e1",
+    "_parentId": "cfeb33a51eb414af6fd26b755daa3578",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 1,
+      "graphic": 1,
+      "omission": 1,
+      "intrusion": 1,
+      "memory": 1,
+      "orthographic": 1,
+      "speech": 1
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "QUEIJO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "QUEIXO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "AQUILO",
+        "conceptRange": "1,3"
+      },
+      {
+        "word": "AQUELE",
+        "conceptRange": "1,3"
+      },
+      {
+        "word": "QUEM",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "QUERO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "QUINTA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "QUERIDO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "QUILO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "MÁQUINA",
+        "conceptRange": "2,4"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "10e9dbc07eb96e09c9199b478e971b77",
+    "_parentId": "3b2daa347f5aee98a4004fc9656e9dd8",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 1,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "MILHO",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "BOLHA",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "PALHA",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "VELHO",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "ABELHA",
+        "conceptRange": "3,5"
+      },
+      {
+        "word": "COELHO",
+        "conceptRange": "3,5"
+      },
+      {
+        "word": "FILHO",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "FOLHA",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "ILHA",
+        "conceptRange": "1,3"
+      },
+      {
+        "word": "OLHO",
+        "conceptRange": "1,3"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "e48385ab83856b9af1c5f7f07517b23e",
+    "_parentId": "19881bbdcbfb4beb7c6b153b802a329a",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 1,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "CHÁ",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "CHAVE",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "CHUVA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "BICHO",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "MOCHILA",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "CHOCOLATE",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "CHUCHU",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "CHUTE",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "MACHUCADO",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "CACHORRO",
+        "conceptRange": "2,4"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "fd0bcf5be393f9bfc17e0a08db6e086a",
+    "_parentId": "d57389cec59d2f2297890917b3fdb3ef",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 0,
+      "speech": 1
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "CLUBE",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "BLUSA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "GLOBO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "CLIMA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "BICICLETA",
+        "conceptRange": "4,6"
+      },
+      {
+        "word": "TECLA",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "CLIMA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "FLAUTA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "BLOCO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "DUPLA",
+        "conceptRange": "2,4"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "55310e64d5ccf7a112ffcea8c1a52e4c",
+    "_parentId": "72748de7c671575c98f8770f9caa7013",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 0,
+      "intrusion": 0,
+      "memory": 0,
+      "orthographic": 1,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "MOÇO",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "POÇA",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "AÇAÍ",
+        "conceptRange": "1,2"
+      },
+      {
+        "word": "CABEÇA",
+        "conceptRange": "4,5"
+      },
+      {
+        "word": "CAROÇO",
+        "conceptRange": "4,5"
+      },
+      {
+        "word": "DANÇAR",
+        "conceptRange": "3,4"
+      },
+      {
+        "word": "TAÇA",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "ALMOÇO",
+        "conceptRange": "4,5"
+      },
+      {
+        "word": "MAÇÃ",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "NATAÇÃO",
+        "conceptRange": "4,5"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "9b43563ba7a9da15386a6955049115a3",
+    "_parentId": "ab247f2dd19cbb39a8007a954f1fe4ff",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 0,
+      "speech": 1
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "PRATO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "VIDRO",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "LIVRO",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "COBRA",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "PEDRA",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "BRUXA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "FRUTA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "FRIO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "BRAÇO",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "BRASIL",
+        "conceptRange": "0,2"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "a22b7062b760439f3188de95d620b665",
+    "_parentId": "ce2a15d4244a137d7bfad482aef5af3a",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 1,
+      "orthographic": 0,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "GUERRA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "SANGUE",
+        "conceptRange": "3,5"
+      },
+      {
+        "word": "FOGUETE",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "ALGUÉM",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "GUITARRA",
+        "conceptRange": "0,2"
+      },
+      {
+        "word": "SEGUINTE",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "PREGUIÇA",
+        "conceptRange": "3,5"
+      },
+      {
+        "word": "FOGUEIRA",
+        "conceptRange": "2,4"
+      },
+      {
+        "word": "MANGUEIRA",
+        "conceptRange": "3,5"
+      },
+      {
+        "word": "ÁGUIA",
+        "conceptRange": "1,3"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "e9269ea84745f10a3419c831494edd27",
+    "_parentId": "0b13e705314b8a2312cb84eb35412104",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 1,
+      "graphic": 1,
+      "omission": 1,
+      "intrusion": 1,
+      "memory": 1,
+      "orthographic": 1,
+      "speech": 1
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "TÁXI",
+        "conceptRange": "2,2"
+      },
+      {
+        "word": "BOXE",
+        "conceptRange": "2,2"
+      },
+      {
+        "word": "SAXOFONE",
+        "conceptRange": "2,2"
+      },
+      {
+        "word": "DUREX",
+        "conceptRange": "4,4"
+      },
+      {
+        "word": "REFLEXO",
+        "conceptRange": "5,5"
+      },
+      {
+        "word": "OXIGÊNIO",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "TÓXICO",
+        "conceptRange": "2,2"
+      },
+      {
+        "word": "FLUXO",
+        "conceptRange": "3,3"
+      },
+      {
+        "word": "AXILA",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "FIXO",
+        "conceptRange": "2,2"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "609cc40254958b6f691c74d0b63043dd",
+    "_parentId": "a46f71795b9d405d6e8f77f408fc1269",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 0,
+      "orthographic": 1,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "DESCER",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "CRESCER",
+        "conceptRange": "3,4"
+      },
+      {
+        "word": "NASCER",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "PISCINA",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "ADOLESCENTE",
+        "conceptRange": "5,6"
+      },
+      {
+        "word": "DISCIPLINA",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "FLORESCER",
+        "conceptRange": "5,6"
+      },
+      {
+        "word": "CRESCIMENTO",
+        "conceptRange": "3,4"
+      },
+      {
+        "word": "DESCIDA",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "NASCIMENTO",
+        "conceptRange": "2,3"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "3c0b377027e43f8a4c55ddb85d2955b8",
+    "_parentId": "e99f43ed59f0abc18ee3f0b906f49814",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 0,
+      "intrusion": 0,
+      "memory": 0,
+      "orthographic": 1,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "EXISTE",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "EXAGERO",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "EXAME",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "EXATO",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "EXEMPLO",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "EXERCÍCIO",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "EXIGENTE",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "EXÓTICO",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "EXÉRCITO",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "EXIBIR",
+        "conceptRange": "1,1"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "9fe1786a202b4c135422b747066daea5",
+    "_parentId": "2eb3b787856d588b63b1be3026225015",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 0,
+      "intrusion": 0,
+      "memory": 0,
+      "orthographic": 1,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "SEXTA",
+        "conceptRange": "2,2"
+      },
+      {
+        "word": "TEXTO",
+        "conceptRange": "2,2"
+      },
+      {
+        "word": "EXPLICAR",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "EXPLOSÃO",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "EXCURSÃO",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "EXCLUIR",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "EXTERIOR",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "EXTINÇÃO",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "EXPRESSO",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "EXTRAIR",
+        "conceptRange": "1,1"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "356ce35af5abe2d5be54e64e6cbb6edf",
+    "_parentId": "37199edc08118d254793d2a9933443bf",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 1,
+      "graphic": 1,
+      "omission": 1,
+      "intrusion": 1,
+      "memory": 1,
+      "orthographic": 1,
+      "speech": 1
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "KIT",
+        "conceptRange": "0,0"
+      },
+      {
+        "word": "KARAOKÊ",
+        "conceptRange": "0,0"
+      },
+      {
+        "word": "KETCHUP",
+        "conceptRange": "0,0"
+      },
+      {
+        "word": "LINK",
+        "conceptRange": "3,3"
+      },
+      {
+        "word": "KART",
+        "conceptRange": "0,0"
+      },
+      {
+        "word": "DESKTOP",
+        "conceptRange": "3,3"
+      },
+      {
+        "word": "SKATE",
+        "conceptRange": "1,1"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "bc834d11b862dac063558138d83df89b",
+    "_parentId": "229f1322c5c7fdcbef0c39f6ea8c2e6a",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 0,
+      "orthographic": 1,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "EXCELENTE",
+        "conceptRange": "1,2"
+      },
+      {
+        "word": "EXCESSO",
+        "conceptRange": "1,2"
+      },
+      {
+        "word": "EXCETO",
+        "conceptRange": "1,2"
+      },
+      {
+        "word": "EXCITAÇÃO",
+        "conceptRange": "1,2"
+      },
+      {
+        "word": "EXCEDENTE",
+        "conceptRange": "1,2"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "d7c7c39f6bddbb948efa0e4504bd43ae",
+    "_parentId": "846faf4d00c889d774c8fabe61f6f818",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 0,
+      "orthographic": 1,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "YOGA",
+        "conceptRange": "0,0"
+      },
+      {
+        "word": "YAKISOBA",
+        "conceptRange": "0,0"
+      },
+      {
+        "word": "PLAY",
+        "conceptRange": "3,3"
+      },
+      {
+        "word": "MOTOBOY",
+        "conceptRange": "6,6"
+      },
+      {
+        "word": "DELIVERY",
+        "conceptRange": "7,7"
+      },
+      {
+        "word": "YOUTUBE",
+        "conceptRange": "0,0"
+      },
+      {
+        "word": "REPLAY",
+        "conceptRange": "5,5"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "31057ed4357b19a9c5155b9baf935b18",
+    "_parentId": "440144af9c5730fcfcb42b65c96024e6",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": 0,
+      "graphic": 0,
+      "omission": 1,
+      "intrusion": 0,
+      "memory": 0,
+      "orthographic": 1,
+      "speech": 0
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "KIWI",
+        "conceptRange": "2,2"
+      },
+      {
+        "word": "WI-FI",
+        "conceptRange": "0,0"
+      },
+      {
+        "word": "WEBCAM",
+        "conceptRange": "0,0"
+      },
+      {
+        "word": "WAFFLE?",
+        "conceptRange": "0,0"
+      },
+      {
+        "word": "BROWNIE?",
+        "conceptRange": "3,3"
+      },
+      {
+        "word": "SHOW",
+        "conceptRange": "3,3"
+      }
+    ]
+  }
+]

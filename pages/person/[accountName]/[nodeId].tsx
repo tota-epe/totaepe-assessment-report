@@ -114,13 +114,13 @@ const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsTy
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  if (!params || !params['id'] || !params['nodeId']) {
+  if (!params || !params['accountName'] || !params['nodeId']) {
     return { props: { }, revalidate: 1 }
   }
 
   const nodeId = Array.isArray(params.nodeId) ? params.nodeId[0] : params.nodeId
-  const personId = Array.isArray(params.id) ? params.id[0] : params.id
-  let resultStatements = await getLRSDataForPersonAndNode(personId, nodeId)
+  const accountName = Array.isArray(params.accountName) ? params.accountName[0] : params.accountName
+  let resultStatements = await getLRSDataForPersonAndNode(accountName, nodeId)
   var statementsPerWord: Hash<TotaStatement[]> = getStatementsPerWord(resultStatements)
 
   // Pass data to the page via props
@@ -134,7 +134,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 export async function getStaticPaths() {
-  let paths = [] as { params: { id: string, nodeId: string } }[]
+  let paths = [] as { params: { accountName: string, nodeId: string } }[]
   // const people = await getLRSPeople()
   // people.map((person) => {
   //   nodes.map((n) => {
