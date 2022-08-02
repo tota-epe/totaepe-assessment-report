@@ -3,7 +3,7 @@ import { TotaStatement, ErrorProfile } from '../../../types/tota_statement'
 import { ErrorTypes } from "../../../modules/error_type/error_type";
 
 type WordProps = {
-  wordData: { word: string; conceptRange: string; destinationNodeID: string;},
+  wordData: { word: string; conceptRange: string; destinationNodeID?: string;},
   statements: TotaStatement[]
 }
 type WordState = { showHideStatements: boolean }
@@ -19,7 +19,7 @@ export class Word extends React.Component<WordProps, WordState> {
   correct: number[] = []
   withError: number[] = []
   withConceptError: number[] = []
-  destinationNodeID: string = ''
+  destinationNodeID?: string = ''
 
   constructor(props: WordProps) {
     super(props)

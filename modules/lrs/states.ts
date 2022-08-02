@@ -12,18 +12,18 @@ type CourseState = {
   _lxpMaestroTimestamp?: string
 }
 
-export const getCourseState = async () => {
-  const res = await fetch(LRSStateURL('course').toString(), requestOptions())
+export const getCourseState = async (accountName: string) => {
+  const res = await fetch(LRSStateURL(accountName, 'course').toString(), requestOptions())
   return await res.json() as CourseState
 }
 
-export const getComponentState = async () => {
-  const res = await fetch(LRSStateURL('components').toString(), requestOptions())
+export const getComponentState = async (accountName: string) => {
+  const res = await fetch(LRSStateURL(accountName, 'components').toString(), requestOptions())
   return await res.json() as ComponentState[]
 }
 
-export const updateComponentState = async (newState: ComponentState) => {
-  let componentState = await getComponentState()
+export const updateComponentState = async (accountName: string, newState: ComponentState) => {
+  let componentState = await getComponentState(accountName)
   let currentComponentState = componentState.find(c => c._id === newState._id)
   if (!currentComponentState) {
     componentState.push(newState)
@@ -38,14 +38,15 @@ export const updateComponentState = async (newState: ComponentState) => {
   }
   requestOptionsPut.headers.set('Content-Type', 'application/json')
 
-  return await fetch(LRSStateURL('components').toString(), requestOptionsPut)
+  return await fetch(LRSStateURL(accountName, 'components').toString(), requestOptionsPut)
 }
 
-export const updateCourseState = async (newState: CourseState) => {
-  let courseState = await getCourseState()
+export const updateCourseState = async (accountName: string, newState: CourseState) => {
+  let courseState = await getCourseState(accountName)
   let currentCourseState = {
     ...courseState,
-    ...newState
+    ...newState,
+    _id: 'course'
   }
 
   let requestOptionsPut = {
@@ -55,7 +56,7 @@ export const updateCourseState = async (newState: CourseState) => {
   }
   requestOptionsPut.headers.set('Content-Type', 'application/json')
 
-  const res = await fetch(LRSStateURL('course').toString(), requestOptionsPut)
+  const res = await fetch(LRSStateURL(accountName, 'course').toString(), requestOptionsPut)
 }
 
 const requestOptions = () => {
@@ -69,14 +70,13 @@ const requestOptions = () => {
   }
 }
 
-const LRSStateURL = (stateId: string) => {
+const LRSStateURL = (accountName: string, stateId: string) => {
   let url = new URL('https://watershedlrs.com/api/organizations/15733/lrs/activities/state')
   let agent = {
     objectType: 'Agent',
     account: {
-      homePage: 'http://cloud.scorm.com',
-      // name: '2BNE75KTBT|rmello@gmail.com'
-      name: '2BNE75KTBT|teste_ninoca@mailinator.com'
+      homePage: 'https://totaepe.global',
+      name: accountName
     }
   }
   url.search = new URLSearchParams({

@@ -7,9 +7,8 @@ import { TotaStatement, ErrorProfile } from '../../types/tota_statement'
 import { Hash } from '../../types/hash';
 import latinize from 'latinize';
 import moment from 'moment';
-import { getLRSPeople } from '../lrs/people'
 
-export const getLRSDataForPersonAndNode = async (personId: string, nodeID: string) => {
+export const getLRSDataForPersonAndNode = async (accountName: string, nodeID: string) => {
   const authorization = Buffer.from(`${process.env.LRS_LOGIN}:${process.env.LRS_PASSWORD}`).toString('base64')
 
   let query = [`context.contextActivities.grouping.id=https://tota-app.lxp.io#/id/${nodeID}`]
@@ -17,11 +16,8 @@ export const getLRSDataForPersonAndNode = async (personId: string, nodeID: strin
     idMap[nodeID].map(o => { query.push(`context.contextActivities.grouping.id=https://tota-app.lxp.io#/id/${o}`) })
   }
 
-  const people = await getLRSPeople()
-  const person = people.filter(person => person.id === parseInt(personId))[0]
-
   const requestData = {
-    'agent.account.name': person.acountName,
+    'agent.account.name': accountName,
     'verb.name': '/answered/',
     query: query.join(' OR '),
     limit: 5000
@@ -41,7 +37,7 @@ export const getLRSDataForPersonAndNode = async (personId: string, nodeID: strin
   return processStatements(data.results[0].result.reverse())
 }
 
-export const getLRSDataForNode = async (personId: string, nodeID: string, recent: boolean) => {
+export const getLRSDataForNode = async (accountName: string, nodeID: string, recent: boolean) => {
   const authorization = Buffer.from(`${process.env.LRS_LOGIN}:${process.env.LRS_PASSWORD}`).toString('base64')
 
   let query = [`context.contextActivities.grouping.id=https://tota-app.lxp.io#/id/${nodeID}`]
@@ -49,7 +45,8 @@ export const getLRSDataForNode = async (personId: string, nodeID: string, recent
     idMap[nodeID].map(o => { query.push(`context.contextActivities.grouping.id=https://tota-app.lxp.io#/id/${o}`) })
   }
   const requestData = {
-    'agent.account.name': '/.*teste_ninoca@mailinator.*/',
+    'agent.account.homePage': 'https://totaepe.global',
+    'agent.account.name': accountName,
     'verb.name': '/answered/',
     query: query.join(' OR '),
     limit: 5000
@@ -77,7 +74,7 @@ export const getLRSDataForNode = async (personId: string, nodeID: string, recent
   return processStatements(data.results[0].result.reverse())
 }
 
-export const getLRSDataForComponent = async (objectID: string) => {
+export const getLRSDataForComponent = async (accountName: string, objectID: string) => {
   const authorization = Buffer.from(`${process.env.LRS_LOGIN}:${process.env.LRS_PASSWORD}`).toString('base64')
 
   let query = [`object.id=https://tota-app.lxp.io#/id/${objectID}`]
@@ -85,7 +82,8 @@ export const getLRSDataForComponent = async (objectID: string) => {
     idMap[objectID].map(o => { query.push(`object.id=https://tota-app.lxp.io#/id/${o}`) })
   }
   const requestData = {
-    'agent.account.name': '/.*teste_ninoca@mailinator.*/',
+    'agent.account.homePage': 'https://totaepe.global',
+    'agent.account.name': accountName,
     'verb.name': '/answered/',
     query: query.join(' OR '),
     limit: 5000
