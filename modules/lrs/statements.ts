@@ -181,17 +181,9 @@ const processStatements = (statements: Statement[]) => {
 
         t[errorType.errorType].count += 1
         t[errorType.errorType].occurrences.unshift(wrongLetter)
-        if (word === 'GARFO') {
-          console.log(t)
-        }
         return t
       }), errorsPerLetter)
     })
-    if (word === 'GARFO') {
-      console.log("------")
-      console.dir(totaStatement.errorsPerLetter, { depth: null });
-      console.log("------")
-    }
 
     let newComponentId = idComponentInverseMap[totaStatement.objectId]
     let componentSourceData = components.find(c => c.id == totaStatement.objectId || c.id == newComponentId)
@@ -222,13 +214,6 @@ const processStatements = (statements: Statement[]) => {
       if (conceptErrorsWeightIsEmpty) {
         totaStatement.conceptErrorGrade += 1;
       }
-    }
-
-    if (word === 'GARFO') {
-      console.log("********")
-      console.log(totaStatement.conceptErrors)
-      console.log("********")
-      console.log(totaStatement.conceptErrorGrade)
     }
 
     return totaStatement
