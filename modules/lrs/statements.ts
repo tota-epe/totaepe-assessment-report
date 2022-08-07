@@ -8,50 +8,52 @@ import { Hash } from '../../types/hash';
 import latinize from 'latinize';
 import moment from 'moment';
 
-export const getLRSDataForPersonAndNode = async (accountName: string, nodeID: string) => {
-  const authorization = Buffer.from(`${process.env.LRS_LOGIN}:${process.env.LRS_PASSWORD}`).toString('base64')
 
-  let query = [`context.contextActivities.grouping.id=https://tota-app.lxp.io#/id/${nodeID}`]
-  if (idMap[nodeID]) {
-    idMap[nodeID].map(o => { query.push(`context.contextActivities.grouping.id=https://tota-app.lxp.io#/id/${o}`) })
-  }
-
-  const requestData = {
-    'agent.account.name': accountName,
-    'verb.name': '/answered/',
-    query: query.join(' OR '),
-    limit: 5000
-  }
-  const requestOptions = {
-    method: 'POST',
-    body: queryString.stringify(requestData),
-    headers: new Headers({
-      'Content-Type': 'application/x-www-form-urlencoded',
-      'Authorization': `Basic ${authorization}`
-    })
-  };
-
-  // Fetch data from external API
-  const res = await fetch('https://watershedlrs.com/api/organizations/15733/interactions/search', requestOptions)
-  const data = await res.json() as { results: { result: Statement[] }[] }
-  return processStatements(data.results[0].result.reverse())
+type LrsGetDataOptions = {
+  accountName: string,
+  nodeId?: string,
+  onlyRecents?: boolean,
+  objectId?: string,
 }
 
-export const getLRSDataForNode = async (accountName: string, nodeID: string, recent: boolean) => {
-  const authorization = Buffer.from(`${process.env.LRS_LOGIN}:${process.env.LRS_PASSWORD}`).toString('base64')
+export const getLRSDataForPersonAndNode = async (accountName: string, nodeId: string) => {
+  return getLRSData({accountName: accountName, nodeId: nodeId})
+}
 
-  let query = [`context.contextActivities.grouping.id=https://tota-app.lxp.io#/id/${nodeID}`]
-  if (idMap[nodeID]) {
-    idMap[nodeID].map(o => { query.push(`context.contextActivities.grouping.id=https://tota-app.lxp.io#/id/${o}`) })
+export const getLRSDataForNode = async (accountName: string, nodeId: string, onlyRecents: boolean) => {
+  return getLRSData({accountName: accountName, nodeId: nodeId, onlyRecents: onlyRecents})
+}
+
+export const getLRSDataForComponent = async (accountName: string, objectId: string) => {
+  return getLRSData({accountName: accountName, objectId: objectId})
+}
+
+export const getLRSData = async (options: LrsGetDataOptions) => {
+  const authorization = Buffer.from(`${process.env.LRS_LOGIN}:${process.env.LRS_PASSWORD}`).toString('base64')
+  const { accountName, nodeId, objectId, onlyRecents} = options
+
+  let query = []
+  if (nodeId) {
+    query.push(`context.contextActivities.grouping.id=https://tota-app.lxp.io#/id/${nodeId}`)
+    if (idMap[nodeId]) {
+      idMap[nodeId].map(o => { query.push(`context.contextActivities.grouping.id=https://tota-app.lxp.io#/id/${o}`) })
+    }
   }
+
+  if (objectId) {
+    query.push(`object.id=https://tota-app.lxp.io#/id/${objectId}`)
+    if (idMap[objectId]) {
+      idMap[objectId].map(o => { query.push(`object.id=https://tota-app.lxp.io#/id/${o}`) })
+    }
+  }
+
   const requestData = {
-    'agent.account.homePage': 'https://totaepe.global',
     'agent.account.name': accountName,
     'verb.name': '/answered/',
-    query: query.join(' OR '),
     limit: 5000
   } as { [key: string]: any }
-  if (recent) {
+
+  if (onlyRecents) {
     const today = new Date();
     const recentDate = new Date(new Date().setDate(today.getDate() - 30));
 
@@ -59,6 +61,10 @@ export const getLRSDataForNode = async (accountName: string, nodeID: string, rec
     requestData['since'] = recentDate.toISOString()
   }
 
+  if (query.length > 0) {
+    requestData['query'] = query.join(' OR ')
+  }
+
   const requestOptions = {
     method: 'POST',
     body: queryString.stringify(requestData),
@@ -71,36 +77,6 @@ export const getLRSDataForNode = async (accountName: string, nodeID: string, rec
   // Fetch data from external API
   const res = await fetch('https://watershedlrs.com/api/organizations/15733/interactions/search', requestOptions)
   const data = await res.json() as { results: { result: Statement[] }[] }
-  return processStatements(data.results[0].result.reverse())
-}
-
-export const getLRSDataForComponent = async (accountName: string, objectID: string) => {
-  const authorization = Buffer.from(`${process.env.LRS_LOGIN}:${process.env.LRS_PASSWORD}`).toString('base64')
-
-  let query = [`object.id=https://tota-app.lxp.io#/id/${objectID}`]
-  if (idMap[objectID]) {
-    idMap[objectID].map(o => { query.push(`object.id=https://tota-app.lxp.io#/id/${o}`) })
-  }
-  const requestData = {
-    'agent.account.homePage': 'https://totaepe.global',
-    'agent.account.name': accountName,
-    'verb.name': '/answered/',
-    query: query.join(' OR '),
-    limit: 5000
-  }
-  const requestOptions = {
-    method: 'POST',
-    body: queryString.stringify(requestData),
-    headers: new Headers({
-      'Content-Type': 'application/x-www-form-urlencoded',
-      'Authorization': `Basic ${authorization}`
-    })
-  };
-
-  // Fetch data from external API
-  const res = await fetch('https://watershedlrs.com/api/organizations/15733/interactions/search', requestOptions)
-  const data = await res.json() as { results: { result: Statement[] }[] }
-
   return processStatements(data.results[0].result.reverse())
 }
 
@@ -205,9 +181,17 @@ const processStatements = (statements: Statement[]) => {
 
         t[errorType.errorType].count += 1
         t[errorType.errorType].occurrences.unshift(wrongLetter)
+        if (word === 'GARFO') {
+          console.log(t)
+        }
         return t
       }), errorsPerLetter)
     })
+    if (word === 'GARFO') {
+      console.log("------")
+      console.dir(totaStatement.errorsPerLetter, { depth: null });
+      console.log("------")
+    }
 
     let newComponentId = idComponentInverseMap[totaStatement.objectId]
     let componentSourceData = components.find(c => c.id == totaStatement.objectId || c.id == newComponentId)
@@ -238,6 +222,13 @@ const processStatements = (statements: Statement[]) => {
       if (conceptErrorsWeightIsEmpty) {
         totaStatement.conceptErrorGrade += 1;
       }
+    }
+
+    if (word === 'GARFO') {
+      console.log("********")
+      console.log(totaStatement.conceptErrors)
+      console.log("********")
+      console.log(totaStatement.conceptErrorGrade)
     }
 
     return totaStatement
