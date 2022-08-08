@@ -79,6 +79,12 @@ const LRSStateURL = (accountName: string, stateId: string) => {
       name: accountName
     }
   }
+
+  // Maria Ines has a user tied to cloud.scorm
+  if (accountName === '2BNE75KTBT|teste_ninoca@mailinator.com') {
+    agent.account.homePage = 'http://cloud.scorm.com';
+  }
+
   url.search = new URLSearchParams({
     activityId: 'https://tota-app.lxp.io',
     stateId: stateId,
