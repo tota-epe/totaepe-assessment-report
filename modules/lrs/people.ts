@@ -32,5 +32,9 @@ export const getLRSPeople = async () => {
       accountName: person.personas[0].account.name,
     }
   })
-  return totaepePeople
+  const uniquePeople = totaepePeople.reduce((p, c) => {
+    p[c.accountName] = c
+    return p
+  }, {} as { [key: string]: any})
+  return Object.values(uniquePeople)
 }
