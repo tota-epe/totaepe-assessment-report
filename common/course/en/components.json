@@ -26,13 +26,28 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 1,
-      "graphic": 1,
-      "omission": 1,
-      "intrusion": 1,
-      "memory": 1,
-      "orthographic": 1,
-      "speech": 1
+      "phonic": {
+        "weight": 1
+      },
+      "graphic": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      },
+      "intrusion": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "speech": {
+        "weight": 1
+      }
     },
     "_wordLimit": "0",
     "_placementTest": true,
@@ -789,13 +804,28 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 1,
-      "graphic": 1,
-      "omission": 1,
-      "intrusion": 1,
-      "memory": 1,
-      "orthographic": 1,
-      "speech": 1
+      "phonic": {
+        "weight": 1
+      },
+      "graphic": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      },
+      "intrusion": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "speech": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -850,13 +880,28 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 1,
-      "graphic": 1,
-      "omission": 1,
-      "intrusion": 1,
-      "memory": 1,
-      "orthographic": 1,
-      "speech": 1
+      "phonic": {
+        "weight": 1
+      },
+      "graphic": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      },
+      "intrusion": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "speech": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -935,13 +980,28 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 1,
-      "graphic": 1,
-      "omission": 1,
-      "intrusion": 1,
-      "memory": 1,
-      "orthographic": 1,
-      "speech": 1
+      "phonic": {
+        "weight": 1
+      },
+      "graphic": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      },
+      "intrusion": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "speech": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -1020,13 +1080,9 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 1,
-      "graphic": 0,
-      "omission": 0,
-      "intrusion": 0,
-      "memory": 0,
-      "orthographic": 0,
-      "speech": 0
+      "phonic": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -1101,13 +1157,28 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 1,
-      "graphic": 1,
-      "omission": 1,
-      "intrusion": 1,
-      "memory": 1,
-      "orthographic": 1,
-      "speech": 1
+      "phonic": {
+        "weight": 1
+      },
+      "graphic": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      },
+      "intrusion": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "speech": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -1182,13 +1253,28 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 1,
-      "graphic": 1,
-      "omission": 1,
-      "intrusion": 1,
-      "memory": 1,
-      "orthographic": 1,
-      "speech": 1
+      "phonic": {
+        "weight": 1
+      },
+      "graphic": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      },
+      "intrusion": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "speech": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -1239,13 +1325,28 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 1,
-      "graphic": 1,
-      "omission": 1,
-      "intrusion": 1,
-      "memory": 1,
-      "orthographic": 1,
-      "speech": 1
+      "phonic": {
+        "weight": 1
+      },
+      "graphic": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      },
+      "intrusion": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "speech": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -1288,13 +1389,12 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 0,
-      "speech": 0
+      "omission": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -1369,13 +1469,36 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 0,
-      "speech": 0
+      "omission": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "S": {
+        "phonic": {
+          "weight": 1
+        },
+        "graphic": {
+          "weight": 1
+        },
+        "omission": {
+          "weight": 1
+        },
+        "intrusion": {
+          "weight": 1
+        },
+        "memory": {
+          "weight": 1
+        },
+        "orthographic": {
+          "weight": 1,
+          "minIteraction": 2
+        },
+        "speech": {
+          "weight": 1
+        }
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -1450,13 +1573,12 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 0,
-      "speech": 0
+      "omission": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -1531,13 +1653,36 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 0,
-      "speech": 0
+      "omission": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "R": {
+        "phonic": {
+          "weight": 1
+        },
+        "graphic": {
+          "weight": 1
+        },
+        "omission": {
+          "weight": 1
+        },
+        "intrusion": {
+          "weight": 1
+        },
+        "memory": {
+          "weight": 1
+        },
+        "orthographic": {
+          "weight": 1,
+          "minIteraction": 2
+        },
+        "speech": {
+          "weight": 1
+        }
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -1612,13 +1757,28 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 1,
-      "graphic": 1,
-      "omission": 1,
-      "intrusion": 1,
-      "memory": 1,
-      "orthographic": 1,
-      "speech": 1
+      "phonic": {
+        "weight": 1
+      },
+      "graphic": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      },
+      "intrusion": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "speech": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -1685,13 +1845,28 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 1,
-      "graphic": 1,
-      "omission": 1,
-      "intrusion": 1,
-      "memory": 1,
-      "orthographic": 1,
-      "speech": 1
+      "phonic": {
+        "weight": 1
+      },
+      "graphic": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      },
+      "intrusion": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "speech": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -1750,13 +1925,28 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 1,
-      "graphic": 1,
-      "omission": 1,
-      "intrusion": 1,
-      "memory": 1,
-      "orthographic": 1,
-      "speech": 1
+      "phonic": {
+        "weight": 1
+      },
+      "graphic": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      },
+      "intrusion": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "speech": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -1827,13 +2017,28 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 1,
-      "graphic": 1,
-      "omission": 1,
-      "intrusion": 1,
-      "memory": 1,
-      "orthographic": 1,
-      "speech": 1
+      "phonic": {
+        "weight": 1
+      },
+      "graphic": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      },
+      "intrusion": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "speech": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -1872,13 +2077,12 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 0,
-      "speech": 0
+      "omission": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -1906,10 +2110,6 @@
       },
       {
         "word": "PIADA",
-        "conceptRange": "1,2"
-      },
-      {
-        "word": "FAÍSCA",
         "conceptRange": "1,2"
       },
       {
@@ -1953,13 +2153,12 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 0,
-      "speech": 0
+      "omission": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -2034,13 +2233,28 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 1,
-      "graphic": 1,
-      "omission": 1,
-      "intrusion": 1,
-      "memory": 1,
-      "orthographic": 1,
-      "speech": 1
+      "phonic": {
+        "weight": 1
+      },
+      "graphic": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      },
+      "intrusion": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "speech": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -2115,13 +2329,28 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 1,
-      "graphic": 1,
-      "omission": 1,
-      "intrusion": 1,
-      "memory": 1,
-      "orthographic": 1,
-      "speech": 1
+      "phonic": {
+        "weight": 1
+      },
+      "graphic": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      },
+      "intrusion": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "speech": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -2192,13 +2421,12 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 0,
-      "speech": 0
+      "omission": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -2273,13 +2501,36 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 0,
-      "speech": 0
+      "omission": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "M": {
+        "phonic": {
+          "weight": 1
+        },
+        "graphic": {
+          "weight": 1
+        },
+        "omission": {
+          "weight": 1
+        },
+        "intrusion": {
+          "weight": 1
+        },
+        "memory": {
+          "weight": 1
+        },
+        "orthographic": {
+          "weight": 1,
+          "minIteraction": 2
+        },
+        "speech": {
+          "weight": 1
+        }
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -2354,13 +2605,36 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 0,
-      "speech": 0
+      "omission": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "L": {
+        "phonic": {
+          "weight": 1
+        },
+        "graphic": {
+          "weight": 1
+        },
+        "omission": {
+          "weight": 1
+        },
+        "intrusion": {
+          "weight": 1
+        },
+        "memory": {
+          "weight": 1
+        },
+        "orthographic": {
+          "weight": 1,
+          "minIteraction": 2
+        },
+        "speech": {
+          "weight": 1
+        }
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -2431,13 +2705,36 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 0,
-      "speech": 0
+      "omission": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "S": {
+        "phonic": {
+          "weight": 1
+        },
+        "graphic": {
+          "weight": 1
+        },
+        "omission": {
+          "weight": 1
+        },
+        "intrusion": {
+          "weight": 1
+        },
+        "memory": {
+          "weight": 1
+        },
+        "orthographic": {
+          "weight": 1,
+          "minIteraction": 2
+        },
+        "speech": {
+          "weight": 1
+        }
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -2445,43 +2742,43 @@
     "_words": [
       {
         "word": "FESTA",
-        "conceptRange": "0,4"
+        "conceptRange": "0,2"
       },
       {
         "word": "GOSTO",
-        "conceptRange": "0,4"
+        "conceptRange": "0,2"
       },
       {
         "word": "ROSCA",
-        "conceptRange": "0,4"
+        "conceptRange": "0,2"
       },
       {
         "word": "POSTE",
-        "conceptRange": "0,4"
+        "conceptRange": "0,2"
       },
       {
         "word": "ROSTO",
-        "conceptRange": "0,4"
+        "conceptRange": "0,2"
       },
       {
         "word": "PASTA",
-        "conceptRange": "0,4"
+        "conceptRange": "0,2"
       },
       {
         "word": "CASCA",
-        "conceptRange": "0,4"
+        "conceptRange": "0,2"
       },
       {
         "word": "CESTA",
-        "conceptRange": "0,4"
+        "conceptRange": "0,2"
       },
       {
         "word": "MOSCA",
-        "conceptRange": "0,4"
+        "conceptRange": "0,2"
       },
       {
         "word": "TESTA",
-        "conceptRange": "0,4"
+        "conceptRange": "0,2"
       }
     ]
   },
@@ -2512,13 +2809,15 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 1,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 0,
-      "speech": 0
+      "phonic": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -2593,13 +2892,16 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 1,
-      "speech": 0
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "omission": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -2666,13 +2968,12 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 0,
-      "speech": 0
+      "omission": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -2747,13 +3048,12 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 0,
-      "speech": 0
+      "omission": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -2828,13 +3128,36 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 0,
-      "speech": 0
+      "omission": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "N": {
+        "phonic": {
+          "weight": 1
+        },
+        "graphic": {
+          "weight": 1
+        },
+        "omission": {
+          "weight": 1
+        },
+        "intrusion": {
+          "weight": 1
+        },
+        "memory": {
+          "weight": 1
+        },
+        "orthographic": {
+          "weight": 1,
+          "minIteraction": 2
+        },
+        "speech": {
+          "weight": 1
+        }
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -2909,13 +3232,36 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 0,
-      "speech": 0
+      "omission": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "L": {
+        "phonic": {
+          "weight": 1
+        },
+        "graphic": {
+          "weight": 1
+        },
+        "omission": {
+          "weight": 1
+        },
+        "intrusion": {
+          "weight": 1
+        },
+        "memory": {
+          "weight": 1
+        },
+        "orthographic": {
+          "weight": 1,
+          "minIteraction": 2
+        },
+        "speech": {
+          "weight": 1
+        }
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -2990,13 +3336,36 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 0,
-      "speech": 0
+      "omission": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "L": {
+        "phonic": {
+          "weight": 1
+        },
+        "graphic": {
+          "weight": 1
+        },
+        "omission": {
+          "weight": 1
+        },
+        "intrusion": {
+          "weight": 1
+        },
+        "memory": {
+          "weight": 1
+        },
+        "orthographic": {
+          "weight": 1,
+          "minIteraction": 2
+        },
+        "speech": {
+          "weight": 1
+        }
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -3071,13 +3440,36 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 0,
-      "speech": 0
+      "omission": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "M": {
+        "phonic": {
+          "weight": 1
+        },
+        "graphic": {
+          "weight": 1
+        },
+        "omission": {
+          "weight": 1
+        },
+        "intrusion": {
+          "weight": 1
+        },
+        "memory": {
+          "weight": 1
+        },
+        "orthographic": {
+          "weight": 1,
+          "minIteraction": 2
+        },
+        "speech": {
+          "weight": 1
+        }
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -3148,13 +3540,16 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 1,
-      "speech": 0
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "omission": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -3229,13 +3624,16 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 1,
-      "speech": 0
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "omission": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -3310,13 +3708,15 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 0,
-      "speech": 1
+      "speech": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -3391,13 +3791,12 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 0,
-      "speech": 0
+      "memory": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -3472,13 +3871,38 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 1,
-      "graphic": 1,
-      "omission": 1,
-      "intrusion": 1,
-      "memory": 1,
-      "orthographic": 1,
-      "speech": 1
+      "phonic": {
+        "weight": 1
+      },
+      "graphic": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      },
+      "intrusion": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "speech": {
+        "weight": 1
+      },
+      "E": {
+        "speech": {
+          "weight": 0
+        }
+      },
+      "O": {
+        "speech": {
+          "weight": 0
+        }
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -3553,13 +3977,9 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 0,
-      "orthographic": 0,
-      "speech": 0
+      "omission": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -3634,13 +4054,28 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 1,
-      "graphic": 1,
-      "omission": 1,
-      "intrusion": 1,
-      "memory": 1,
-      "orthographic": 1,
-      "speech": 1
+      "phonic": {
+        "weight": 1
+      },
+      "graphic": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      },
+      "intrusion": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "speech": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -3715,13 +4150,16 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 1,
-      "speech": 0
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "omission": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -3796,13 +4234,16 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 1,
-      "speech": 0
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "omission": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -3877,13 +4318,15 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 0,
-      "speech": 1
+      "omission": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "speech": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -3958,13 +4401,10 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 0,
-      "intrusion": 0,
-      "memory": 0,
-      "orthographic": 1,
-      "speech": 0
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -4039,13 +4479,15 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 0,
-      "speech": 1
+      "omission": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "speech": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -4120,13 +4562,12 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 1,
-      "orthographic": 0,
-      "speech": 0
+      "memory": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -4201,13 +4642,28 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 1,
-      "graphic": 1,
-      "omission": 1,
-      "intrusion": 1,
-      "memory": 1,
-      "orthographic": 1,
-      "speech": 1
+      "phonic": {
+        "weight": 1
+      },
+      "graphic": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      },
+      "intrusion": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "speech": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -4282,13 +4738,13 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 0,
-      "orthographic": 1,
-      "speech": 0
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "omission": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -4363,13 +4819,10 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 0,
-      "intrusion": 0,
-      "memory": 0,
-      "orthographic": 1,
-      "speech": 0
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -4444,13 +4897,10 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 0,
-      "intrusion": 0,
-      "memory": 0,
-      "orthographic": 1,
-      "speech": 0
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -4525,13 +4975,28 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 1,
-      "graphic": 1,
-      "omission": 1,
-      "intrusion": 1,
-      "memory": 1,
-      "orthographic": 1,
-      "speech": 1
+      "phonic": {
+        "weight": 1
+      },
+      "graphic": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      },
+      "intrusion": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "speech": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -4594,13 +5059,13 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 0,
-      "orthographic": 1,
-      "speech": 0
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "omission": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -4655,13 +5120,13 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 0,
-      "orthographic": 1,
-      "speech": 0
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "omission": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,
@@ -4724,13 +5189,13 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": 0,
-      "graphic": 0,
-      "omission": 1,
-      "intrusion": 0,
-      "memory": 0,
-      "orthographic": 1,
-      "speech": 0
+      "orthographic": {
+        "weight": 1,
+        "minIteraction": 2
+      },
+      "omission": {
+        "weight": 1
+      }
     },
     "_wordLimit": "5",
     "_placementTest": false,

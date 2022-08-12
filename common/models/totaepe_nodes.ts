@@ -8,7 +8,31 @@ export type TotaEpeComponent = {
   title: string,
   _parentId: string,
   _placementTest: boolean,
-  concepts: any,
+  concepts: {
+    [key: string]: {  weight: number };
+    phonic: {
+      weight: number
+    },
+    graphic: {
+      weight: number
+    },
+    omission: {
+      weight: number
+    },
+    intrusion: {
+      weight: number
+    },
+    memory: {
+      weight: number
+    },
+    orthographic: {
+      weight: number,
+      minIteraction?: number
+    },
+    speech: {
+      weight: number
+    }
+  },
   words: {
     word: string,
     conceptRange: string,

@@ -187,8 +187,9 @@ const processStatements = (statements: Statement[]) => {
 
     let newComponentId = idComponentInverseMap[totaStatement.objectId]
     let componentSourceData = components.find(c => c.id == totaStatement.objectId || c.id == newComponentId)
-    let conceptErrorsWeights = componentSourceData?.concepts as { [key: string]: number }
-    const conceptErrorsWeightIsEmpty = Object.values(conceptErrorsWeights).map(Number).reduce((accumulator, curr) => { return (accumulator + curr) } ) === 0
+    let conceptErrorsWeights = componentSourceData?.concepts
+    const conceptErrorsWeightIsEmpty = conceptErrorsWeights &&
+                                       Object.values(conceptErrorsWeights).reduce((accumulator, curr) => { return (accumulator + curr.weight) }, 0) === 0
     let componentData = wordConcepts[totaStatement.objectId] ?? wordConcepts[newComponentId]
     let currentWordData = componentData[word]
     if (!currentWordData?.conceptRange) {
@@ -209,7 +210,8 @@ const processStatements = (statements: Statement[]) => {
     }), {} as ErrorProfile)
     if (totaStatement.conceptErrors && Object.keys(totaStatement.conceptErrors).length) {
       for (const error in conceptErrorsWeights) {
-        totaStatement.conceptErrorGrade += (totaStatement?.conceptErrors?.[error]?.count ?? 0) * Number(conceptErrorsWeights[error])
+        const weightForError = Number(conceptErrorsWeights[error]?.weight);
+        totaStatement.conceptErrorGrade += (totaStatement?.conceptErrors?.[error]?.count ?? 0) * weightForError;
       }
       if (conceptErrorsWeightIsEmpty) {
         totaStatement.conceptErrorGrade += 1;
