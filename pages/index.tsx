@@ -21,7 +21,7 @@ const Home: NextPage = ({people}: InferGetStaticPropsType<typeof getStaticProps>
 // This also gets called at build time
 export const getStaticProps: GetStaticProps = async () => {
   const people = await getLRSPeople()
-  return { props: { people: people } }
+  return { props: { people: people }, revalidate: 60 * 60 }
 }
 
 export default Home
