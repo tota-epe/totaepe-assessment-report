@@ -10,7 +10,7 @@ export enum ErrorTypes {
 }
 
 export class ErrorType {
-  ERROR_TYPES: ErrorTypes[] = [ErrorTypes.phonic, ErrorTypes.graphic, ErrorTypes.omission,
+  ERROR_TYPES: ErrorTypes[] = [ErrorTypes.phonic, ErrorTypes.omission, ErrorTypes.graphic,
                                ErrorTypes.intrusion, ErrorTypes.memory, ErrorTypes.orthographic,
                                ErrorTypes.speech, ErrorTypes.other]
   ERRORS: { [key: string]: { [key: string]: string[] } } = {
