@@ -1487,8 +1487,7 @@
           "weight": 1
         },
         "orthographic": {
-          "weight": 1,
-          "minIteraction": 2
+          "weight": 1
         },
         "speech": {
           "weight": 1
@@ -1671,8 +1670,7 @@
           "weight": 1
         },
         "orthographic": {
-          "weight": 1,
-          "minIteraction": 2
+          "weight": 1
         },
         "speech": {
           "weight": 1
@@ -2649,8 +2647,7 @@
           "weight": 1
         },
         "orthographic": {
-          "weight": 1,
-          "minIteraction": 2
+          "weight": 1
         },
         "speech": {
           "weight": 1
@@ -3068,8 +3065,7 @@
           "weight": 1
         },
         "orthographic": {
-          "weight": 1,
-          "minIteraction": 2
+          "weight": 1
         },
         "speech": {
           "weight": 1
@@ -3172,8 +3168,7 @@
           "weight": 1
         },
         "orthographic": {
-          "weight": 1,
-          "minIteraction": 2
+          "weight": 1
         },
         "speech": {
           "weight": 1
@@ -3326,8 +3321,7 @@
           "weight": 1
         },
         "orthographic": {
-          "weight": 1,
-          "minIteraction": 2
+          "weight": 1
         },
         "speech": {
           "weight": 1
@@ -3480,8 +3474,7 @@
           "weight": 1
         },
         "orthographic": {
-          "weight": 1,
-          "minIteraction": 2
+          "weight": 1
         },
         "speech": {
           "weight": 1
@@ -3558,8 +3551,7 @@
     },
     "_concepts": {
       "orthographic": {
-        "weight": 1,
-        "minIteraction": 2
+        "weight": 1
       },
       "omission": {
         "weight": 1
@@ -3642,8 +3634,7 @@
     },
     "_concepts": {
       "orthographic": {
-        "weight": 1,
-        "minIteraction": 2
+        "weight": 1
       },
       "omission": {
         "weight": 1
@@ -4168,8 +4159,7 @@
     },
     "_concepts": {
       "orthographic": {
-        "weight": 1,
-        "minIteraction": 2
+        "weight": 1
       },
       "omission": {
         "weight": 1
@@ -4252,8 +4242,7 @@
     },
     "_concepts": {
       "orthographic": {
-        "weight": 1,
-        "minIteraction": 2
+        "weight": 1
       },
       "omission": {
         "weight": 1
@@ -4419,8 +4408,7 @@
     },
     "_concepts": {
       "orthographic": {
-        "weight": 1,
-        "minIteraction": 2
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -4756,8 +4744,7 @@
     },
     "_concepts": {
       "orthographic": {
-        "weight": 1,
-        "minIteraction": 2
+        "weight": 1
       },
       "omission": {
         "weight": 1
@@ -4837,8 +4824,7 @@
     },
     "_concepts": {
       "orthographic": {
-        "weight": 1,
-        "minIteraction": 2
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -4915,8 +4901,7 @@
     },
     "_concepts": {
       "orthographic": {
-        "weight": 1,
-        "minIteraction": 2
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -5077,8 +5062,7 @@
     },
     "_concepts": {
       "orthographic": {
-        "weight": 1,
-        "minIteraction": 2
+        "weight": 1
       },
       "omission": {
         "weight": 1
@@ -5138,8 +5122,7 @@
     },
     "_concepts": {
       "orthographic": {
-        "weight": 1,
-        "minIteraction": 2
+        "weight": 1
       },
       "omission": {
         "weight": 1
@@ -5207,8 +5190,7 @@
     },
     "_concepts": {
       "orthographic": {
-        "weight": 1,
-        "minIteraction": 2
+        "weight": 1
       },
       "omission": {
         "weight": 1
@@ -5223,7 +5205,7 @@
         "conceptRange": "2,2"
       },
       {
-        "word": "WI-FI",
+        "word": "WIFI",
         "conceptRange": "0,0"
       },
       {
@@ -5231,11 +5213,11 @@
         "conceptRange": "0,0"
       },
       {
-        "word": "WAFFLE?",
+        "word": "WAFFLE",
         "conceptRange": "0,0"
       },
       {
-        "word": "BROWNIE?",
+        "word": "BROWNIE",
         "conceptRange": "3,3"
       },
       {
