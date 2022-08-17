@@ -139,7 +139,7 @@
         "destinationNodeID": "7a52212043fab9e7f82cf8f258170e18"
       },
       {
-        "word": "ZONA",
+        "word": "VAZA",
         "conceptRange": "0,3",
         "destinationNodeID": "7a52212043fab9e7f82cf8f258170e18"
       },
@@ -286,11 +286,6 @@
       {
         "word": "MOEDA",
         "conceptRange": "0,4",
-        "destinationNodeID": "60e09a4f567e94ee0ae17b8b8e417771"
-      },
-      {
-        "word": "FAÍSCA",
-        "conceptRange": "0,5",
         "destinationNodeID": "60e09a4f567e94ee0ae17b8b8e417771"
       },
       {
@@ -2233,26 +2228,13 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
-      "graphic": {
-        "weight": 1
-      },
       "omission": {
-        "weight": 1
-      },
-      "intrusion": {
         "weight": 1
       },
       "memory": {
         "weight": 1
       },
-      "orthographic": {
-        "weight": 1,
-        "minIteraction": 2
-      },
-      "speech": {
+      "phonic": {
         "weight": 1
       }
     },
@@ -2329,26 +2311,13 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
-      "graphic": {
-        "weight": 1
-      },
       "omission": {
-        "weight": 1
-      },
-      "intrusion": {
         "weight": 1
       },
       "memory": {
         "weight": 1
       },
-      "orthographic": {
-        "weight": 1,
-        "minIteraction": 2
-      },
-      "speech": {
+      "phonic": {
         "weight": 1
       }
     },
@@ -2506,30 +2475,6 @@
       },
       "memory": {
         "weight": 1
-      },
-      "M": {
-        "phonic": {
-          "weight": 1
-        },
-        "graphic": {
-          "weight": 1
-        },
-        "omission": {
-          "weight": 1
-        },
-        "intrusion": {
-          "weight": 1
-        },
-        "memory": {
-          "weight": 1
-        },
-        "orthographic": {
-          "weight": 1,
-          "minIteraction": 2
-        },
-        "speech": {
-          "weight": 1
-        }
       }
     },
     "_wordLimit": "5",
@@ -2610,30 +2555,6 @@
       },
       "memory": {
         "weight": 1
-      },
-      "L": {
-        "phonic": {
-          "weight": 1
-        },
-        "graphic": {
-          "weight": 1
-        },
-        "omission": {
-          "weight": 1
-        },
-        "intrusion": {
-          "weight": 1
-        },
-        "memory": {
-          "weight": 1
-        },
-        "orthographic": {
-          "weight": 1,
-          "minIteraction": 2
-        },
-        "speech": {
-          "weight": 1
-        }
       }
     },
     "_wordLimit": "5",
@@ -2892,10 +2813,6 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "orthographic": {
-        "weight": 1,
-        "minIteraction": 2
-      },
       "omission": {
         "weight": 1
       },
@@ -3269,43 +3186,93 @@
     "_words": [
       {
         "word": "ANEL",
-        "conceptRange": "1,3"
+        "conceptRange": "1,3",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        }
       },
       {
         "word": "ANIMAL",
-        "conceptRange": "3,5"
+        "conceptRange": "3,5",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        }
       },
       {
         "word": "AZUL",
-        "conceptRange": "1,3"
+        "conceptRange": "1,3",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        }
       },
       {
         "word": "NATAL",
-        "conceptRange": "2,4"
+        "conceptRange": "2,4",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        }
       },
       {
         "word": "FÁCIL",
-        "conceptRange": "2,4"
+        "conceptRange": "2,4",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        }
       },
       {
         "word": "FUTEBOL",
-        "conceptRange": "4,6"
+        "conceptRange": "4,6",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        }
       },
       {
         "word": "PAPEL",
-        "conceptRange": "2,4"
+        "conceptRange": "2,4",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        }
       },
       {
         "word": "DIFÍCIL",
-        "conceptRange": "4,6"
+        "conceptRange": "4,6",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        }
       },
       {
         "word": "JORNAL",
-        "conceptRange": "3,5"
+        "conceptRange": "3,5",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        }
       },
       {
         "word": "LEGAL",
-        "conceptRange": "2,4"
+        "conceptRange": "2,4",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        }
       }
     ]
   },
@@ -3373,43 +3340,93 @@
     "_words": [
       {
         "word": "BALDE",
-        "conceptRange": "0,2"
+        "conceptRange": "0,2",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        }
       },
       {
         "word": "CALMA",
-        "conceptRange": "0,2"
+        "conceptRange": "0,2",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        }
       },
       {
         "word": "FILME",
-        "conceptRange": "0,2"
+        "conceptRange": "0,2",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        }
       },
       {
         "word": "MOLDE",
-        "conceptRange": "0,2"
+        "conceptRange": "0,2",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        }
       },
       {
         "word": "BOLSA",
-        "conceptRange": "0,2"
+        "conceptRange": "0,2",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        }
       },
       {
         "word": "FALTA",
-        "conceptRange": "0,2"
+        "conceptRange": "0,2",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        }
       },
       {
         "word": "SALTO",
-        "conceptRange": "0,2"
+        "conceptRange": "0,2",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        }
       },
       {
         "word": "PALCO",
-        "conceptRange": "0,2"
+        "conceptRange": "0,2",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        }
       },
       {
         "word": "CALDA",
-        "conceptRange": "0,2"
+        "conceptRange": "0,2",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        }
       },
       {
         "word": "FALSO",
-        "conceptRange": "0,2"
+        "conceptRange": "0,2",
+        "keyboardExceptions": {
+          "exclude": [
+            "u"
+          ]
+        }
       }
     ]
   },
@@ -4357,7 +4374,7 @@
         "conceptRange": "2,4"
       },
       {
-        "word": "CLIMA",
+        "word": "PLANTA",
         "conceptRange": "0,2"
       },
       {
