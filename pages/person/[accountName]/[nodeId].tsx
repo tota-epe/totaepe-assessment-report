@@ -5,6 +5,7 @@ import React from 'react';
 import { Word } from '../../../common/components/word/word'
 import { TotaStatement } from '../../../types/tota_statement'
 import { getLRSDataForPersonAndNode, getStatementsPerWord } from '../../../modules/lrs/statements';
+import { getErrorLetterGrades } from '../../../modules/error_letter/error_letter';
 import { Hash } from '../../../types/hash'
 import { Line } from 'react-chartjs-2';
 import annotationPlugin from 'chartjs-plugin-annotation';
@@ -30,7 +31,7 @@ Chart.register(CategoryScale,
   Legend
 );
 
-const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Page: NextPage = ({ statements, statementsPerWord, errorLetterGrades }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter()
   const { id, nodeId } = router.query
   let node = nodes.find(node => node._id === nodeId)
@@ -101,6 +102,41 @@ const Page: NextPage = ({ statements, statementsPerWord }: InferGetStaticPropsTy
       <p>Score de erros de conceito.: {conceptErrorGrade.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })}</p>
       <p>Nó dominado?: { nodeComplete ? 'sim' : 'não'} - {statements.length} Apresentações de palavras / Dominado em {earlyCompletionIndex + 1}</p>
       <p>Apresentações nas ultimas 24hs: {last24h.length}</p>
+      <div>
+        <h2>Percental de erro em cada letra das palavras do Nó</h2>
+        <ul>
+          {Object.keys(errorLetterGrades).sort().map(letter => {
+            const errorWords = errorLetterGrades[letter].errors.map(error => { return error.word })
+            return (
+              <li key={letter}>
+                <div>
+                  <h3>Letra: {letter}</h3>
+                  <p>
+                    <strong>Palavras onde teve erro:</strong> 
+                    {errorWords.filter((word, index)=> errorWords.indexOf(word) === index).join(', ')}
+                  </p>
+                  <p>
+                    <strong>Total de palavras onde a letra aparece</strong>:
+                    {errorLetterGrades[letter].totalWords}
+                  </p>
+                  <p>
+                    <strong>Total interação nas palavras</strong>:
+                    {errorLetterGrades[letter].totalWordsInteractions}
+                  </p>
+                  <p>
+                    <strong>Total errors nas interação das palavras</strong>:
+                    {errorLetterGrades[letter].errors.length}
+                  </p>
+                  <p>
+                    <strong>Porcentagem de erro(total de interação / errors nas interações): 
+                    {errorLetterGrades[letter].errorPercent}%</strong>
+                  </p>
+                </div>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
       <Line data={data} options={options} />
       <div>
         {nodeWords?.map((wordData) => (
@@ -127,7 +163,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       statements: resultStatements,
-      statementsPerWord: statementsPerWord
+      statementsPerWord: statementsPerWord,
+      errorLetterGrades: getErrorLetterGrades(resultStatements)
     },
     revalidate: 5 * 60
   }
