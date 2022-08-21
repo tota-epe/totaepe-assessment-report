@@ -2,8 +2,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getCourseState, updateComponentState, updateCourseState } from '../../../modules/lrs/states'
 import { nodes, placementTestNode, TotaEpeComponent } from '../../../common/models/totaepe_nodes'
-import { getLRSDataForNode, getStatementsPerWord } from '../../../modules/lrs/statements';
-import { TotaStatement } from '../../../types/tota_statement';
+import { getLRSDataForNode, getStatementsPerWord, getLRSData } from '../../../modules/lrs/statements';
+import { getErrorLetterGrades } from '../../../modules/error_letter/error_letter';
+import { TotaStatement } from '../../../types/tota_statement'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const shouldWrite = (req.method === 'POST')
@@ -78,6 +79,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   let nextNodeIndex = nodes.findIndex(n => n._id == nodeId) + 1
+  if (nextNodeIndex > 10) { // get Letters Grade to check if should redirect user to Letter Nodes Axis
+    const allUserStatements = await getLRSData({accountName: accountName});
+    const errorLetterGrades = getErrorLetterGrades(allUserStatements);
+    let shouldRedirectToLetter = null;
+    Object.keys(errorLetterGrades).forEach(letter => {
+      if (errorLetterGrades[letter].errorPercent >= 20) {
+        shouldRedirectToLetter = letter
+      }
+    })
+    //TODO: FIND NODE FOR SPECIFIC LETTER
+  }
   let nextNodeId = nodes[nextNodeIndex]?._id
   if (nodeComplete && shouldUpdateStart && nextNodeId && shouldWrite) {
     await updateCourseState(accountName, { _startId: nextNodeId, _lxpMaestroTimestamp: Date() })
