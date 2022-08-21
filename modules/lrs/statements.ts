@@ -161,7 +161,6 @@ const processStatements = (statements: Statement[]) => {
     totaStatement.perf = totaStatement.response.length / totaStatement.response.reduce(
       ((previousValue, currentValue) => previousValue + currentValue.length), 0)
     totaStatement.correct = (totaStatement.perf == 1 ? true : false)
-
     totaStatement.errorsPerLetter = totaStatement.response.map((l, index) => {
       let errorsPerLetter = { } as ErrorProfile
       return l.slice(0, l.length - 1).reduce(((t, wrongLetter) => {
@@ -185,7 +184,10 @@ const processStatements = (statements: Statement[]) => {
       }), errorsPerLetter)
     })
 
-    let newComponentId = idComponentInverseMap[totaStatement.objectId]
+    let newComponentId = idComponentInverseMap[totaStatement.objectId] //idComponentInverseMap IS IT REALLY NECESSARY?
+    if (newComponentId === undefined) {
+      return totaStatement
+    }
     let componentSourceData = components.find(c => c.id == totaStatement.objectId || c.id == newComponentId)
     let conceptErrorsWeights = componentSourceData?.concepts
     const conceptErrorsWeightIsEmpty = conceptErrorsWeights &&
