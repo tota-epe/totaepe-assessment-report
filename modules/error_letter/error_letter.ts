@@ -19,7 +19,8 @@ export const getErrorLetterGrades = (statements: TotaStatement[]) => {
   const uniqWordWithLetter = {} as { [key: string]: boolean}
   statements.forEach(statement => {
     statement.word?.split("").forEach((letter, letterWordIndex) => {
-      letter = latinizeLetter(letter)
+      //C and Cedil have to check separated (Maria Antoria Order)
+      letter = ['c','ç','Ç','C'].includes(letter) ? letter : latinizeLetter(letter)
       if (errorsGrades[letter] === undefined) {
         errorsGrades[letter] = {
           totalWords: 0, 
