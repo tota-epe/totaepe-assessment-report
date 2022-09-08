@@ -5,7 +5,7 @@ import React from 'react';
 import { Word } from '../../../common/components/word/word'
 import { TotaStatement } from '../../../types/tota_statement'
 import { getLRSDataForPersonAndNode, getStatementsPerWord } from '../../../modules/lrs/statements';
-import { getErrorLetterGrades } from '../../../modules/error_letter/error_letter';
+import { getErrorLetterGrades, ErrorGrades } from '../../../modules/error_letter/error_letter';
 import { Hash } from '../../../types/hash'
 import { Line } from 'react-chartjs-2';
 import annotationPlugin from 'chartjs-plugin-annotation';
@@ -106,13 +106,13 @@ const Page: NextPage = ({ statements, statementsPerWord, errorLetterGrades }: In
         <h2>Percental de erro em cada letra das palavras do Nó</h2>
         <ul>
           {Object.keys(errorLetterGrades).sort().map(letter => {
-            const errorWords = errorLetterGrades[letter].errors.map(error => { return error.word })
+            const errorWords = (errorLetterGrades as ErrorGrades)[letter].errors.map(error => { return error.word })
             return (
               <li key={letter}>
                 <div>
                   <h3>Letra: {letter}</h3>
                   <p>
-                    <strong>Palavras onde teve erro:</strong> 
+                    <strong>Palavras onde teve erro:</strong>
                     {errorWords.filter((word, index)=> errorWords.indexOf(word) === index).join(', ')}
                   </p>
                   <p>
@@ -124,11 +124,11 @@ const Page: NextPage = ({ statements, statementsPerWord, errorLetterGrades }: In
                     {errorLetterGrades[letter].totalWordsInteractions}
                   </p>
                   <p>
-                    <strong>Total errors nas interação das palavras</strong>:
+                    <strong>Total erros nas interação das palavras</strong>:
                     {errorLetterGrades[letter].errors.length}
                   </p>
                   <p>
-                    <strong>Porcentagem de erro(total de interação / errors nas interações): 
+                    <strong>Porcentagem de erro(total de interação / errors nas interações):
                     {errorLetterGrades[letter].errorPercent}%</strong>
                   </p>
                 </div>

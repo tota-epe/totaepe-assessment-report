@@ -1,5 +1,8 @@
 import { TotaStatement } from '../../types/tota_statement'
-import { latinizeLetter} from '../../modules/latinize/latinize_letter';
+import latinize from 'latinize';
+const extend = require('extend');
+//Cedil should not be treated as accented letters (Maria Antoria Order)
+extend(latinize.characters, { ç: 'ç', Ç: 'Ç' })
 
 type ErrorGradeErrorsListType = {
   type: string,
@@ -8,24 +11,27 @@ type ErrorGradeErrorsListType = {
   letters: string[]
 }
 
-export const getErrorLetterGrades = (statements: TotaStatement[]) => {
-  const errorsGrades = {} as { [key: string]: {
-    totalWords: number, 
-    totalWordsInteractions: number, 
-    totalWordsInteractionsError: number, 
-    errorPercent: number, 
-    errors: ErrorGradeErrorsListType[]} 
+export type ErrorGrades = {
+  [key: string]: {
+    totalWords: number,
+    totalWordsInteractions: number,
+    totalWordsInteractionsError: number,
+    errorPercent: number,
+    errors: ErrorGradeErrorsListType[]
   }
+}
+
+export const getErrorLetterGrades = (statements: TotaStatement[]): ErrorGrades => {
+  const errorsGrades: ErrorGrades = {}
   const uniqWordWithLetter = {} as { [key: string]: boolean}
   statements.forEach(statement => {
     statement.word?.split("").forEach((letter, letterWordIndex) => {
-      //C and Cedil have to check separated (Maria Antoria Order)
-      letter = ['c','ç','Ç','C'].includes(letter) ? letter : latinizeLetter(letter)
+      letter = latinize(letter)
       if (errorsGrades[letter] === undefined) {
         errorsGrades[letter] = {
-          totalWords: 0, 
-          totalWordsInteractions: 0, 
-          errorPercent: 0, 
+          totalWords: 0,
+          totalWordsInteractions: 0,
+          errorPercent: 0,
           totalWordsInteractionsError: 0,
           errors: []
         }
@@ -37,8 +43,8 @@ export const getErrorLetterGrades = (statements: TotaStatement[]) => {
         uniqWordWithLetter[uniqWordWithLetterKey] = true;
         errorsGrades[letter].totalWords += 1;
       }
-      const letterError = statement.errorsPerLetter?.at(letterWordIndex)
-      if (letterError) {
+      if (statement.errorsPerLetter && statement.errorsPerLetter[letterWordIndex]) {
+        const letterError = statement.errorsPerLetter[letterWordIndex]
         const letterErrorTypes = Object.keys(letterError);
         const errorsList = letterErrorTypes.map(type => {
           return {
@@ -46,7 +52,7 @@ export const getErrorLetterGrades = (statements: TotaStatement[]) => {
             word: statement.word,
             position: letterWordIndex,
             letters: letterError[type].occurrences
-          }
+          } as ErrorGradeErrorsListType
         })
         if (errorsList.length > 0) {
           errorsGrades[letter].errors.push(...errorsList)

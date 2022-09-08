@@ -184,16 +184,12 @@ const processStatements = (statements: Statement[]) => {
       }), errorsPerLetter)
     })
 
-    let newComponentId = idComponentInverseMap[totaStatement.objectId] //idComponentInverseMap IS IT REALLY NECESSARY?
-    if (newComponentId === undefined) {
-      return totaStatement
-    }
-    let componentSourceData = components.find(c => c.id == totaStatement.objectId || c.id == newComponentId)
+    let newComponentId = (idComponentInverseMap[totaStatement.objectId] || totaStatement.objectId)
+    let componentSourceData = components.find(c => c.id == newComponentId)
     let conceptErrorsWeights = componentSourceData?.concepts
     const conceptErrorsWeightIsEmpty = conceptErrorsWeights &&
                                        Object.values(conceptErrorsWeights).reduce((accumulator, curr) => { return (accumulator + curr.weight) }, 0) === 0
-    let componentData = wordConcepts[totaStatement.objectId] ?? wordConcepts[newComponentId]
-    let currentWordData = componentData[word]
+    let currentWordData = wordConcepts?.[newComponentId]?.[word]
     if (!currentWordData?.conceptRange) {
       return totaStatement
     }
