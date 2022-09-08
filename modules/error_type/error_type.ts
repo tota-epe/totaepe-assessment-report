@@ -1,3 +1,5 @@
+import latinize from 'latinize';
+
 export enum ErrorTypes {
   phonic = 'phonic',
   graphic = 'graphic',
@@ -113,7 +115,10 @@ export class ErrorType {
     }
     let startIndex = (index > 2 ? index - 2 : 0)
 
-    return word.split('').slice(startIndex, index).includes(user_input)
+    let memoryLetters = word.split('').slice(startIndex, index);
+    memoryLetters.push(...latinize(word).split('').slice(startIndex, index))
+
+    return memoryLetters.includes(user_input)
   }
 
   intrusion(word: string, index: number, user_input: string) {
@@ -126,7 +131,10 @@ export class ErrorType {
   }
 
   omission(word: string, index: number, user_input: string) {
-    return word.split('').slice(index + 1, index + 3).includes(user_input)
+    let omissionLetters = word.split('').slice(index + 1, index + 3);
+    omissionLetters.push(...latinize(word).split('').slice(index + 1, index + 3))
+
+    return omissionLetters.includes(user_input)
   }
 
   other(word: string, index: number, user_input: string) {
