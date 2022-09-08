@@ -18,6 +18,7 @@ export class ErrorType {
   ERRORS: { [key: string]: { [key: string]: string[] } } = {
     phonic: {
       A: ['E'],
+      Ã: ['E'],
       B: ['M', 'P'],
       C: ['G'],
       D: ['T'],
