@@ -1650,8 +1650,8 @@
     }
   },
   {
-    "title": "Nó 22 - segundo fonema do C (sal)",
-    "displayTitle": "Nó 22 - segundo fonema do C (sal)",
+    "title": "Nó 22 - segundo fonema do L (sal)",
+    "displayTitle": "Nó 22 - segundo fonema do L (sal)",
     "body": "",
     "_classes": "",
     "subtitle": "",
@@ -3919,6 +3919,81 @@
     "_requireCompletionOf": -1,
     "_ariaLevel": 0,
     "_id": "bcc742f91f7cfd131b64cdf370cac24d",
+    "_parentId": "course",
+    "_type": "page",
+    "_graphic": {
+      "alt": "",
+      "src": ""
+    },
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_showPageCompletion": true,
+      "_isCompletionIndicatorEnabled": false,
+      "_excludeAssessments": false
+    },
+    "_boxMenu": {
+      "_renderAsGroup": false
+    },
+    "_vanilla": {
+      "_backgroundImage": {
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_backgroundStyles": {
+        "_backgroundRepeat": "repeat",
+        "_backgroundSize": "auto",
+        "_backgroundPosition": "left top"
+      },
+      "_responsiveClasses": {
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_pageHeader": {
+        "_backgroundImage": {
+          "_large": "",
+          "_medium": "",
+          "_small": ""
+        },
+        "_backgroundStyles": {
+          "_backgroundRepeat": "repeat",
+          "_backgroundSize": "auto",
+          "_backgroundPosition": "left top"
+        },
+        "_minimumHeights": {
+          "_large": null,
+          "_medium": null,
+          "_small": null
+        }
+      }
+    }
+  },
+  {
+    "title": "Nó 46b - dígrafo SC (piscina)",
+    "displayTitle": "Nó 46b - dígrafo SC (piscina)",
+    "body": "",
+    "_classes": "",
+    "subtitle": "",
+    "pageBody": "",
+    "instruction": "",
+    "_htmlClasses": "",
+    "linkText": "View",
+    "duration": "",
+    "_lockedBy": [],
+    "_lockType": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_requireCompletionOf": -1,
+    "_ariaLevel": 0,
+    "_id": "795196e58c54bf30f1785df6f41a37ad",
     "_parentId": "course",
     "_type": "page",
     "_graphic": {

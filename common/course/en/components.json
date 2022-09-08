@@ -2241,6 +2241,10 @@
     "_resumable": false,
     "_words": [
       {
+        "word": "VOCÊ",
+        "conceptRange": "2,3"
+      },
+      {
         "word": "DOCE",
         "conceptRange": "2,3"
       },
@@ -2274,10 +2278,6 @@
       },
       {
         "word": "TECIDO",
-        "conceptRange": "2,3"
-      },
-      {
-        "word": "VOCÊ",
         "conceptRange": "2,3"
       }
     ]
@@ -4743,9 +4743,6 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "orthographic": {
-        "weight": 1
-      },
       "omission": {
         "weight": 1
       }
@@ -5213,16 +5210,88 @@
         "conceptRange": "0,0"
       },
       {
-        "word": "WAFFLE",
-        "conceptRange": "0,0"
-      },
-      {
-        "word": "BROWNIE",
-        "conceptRange": "3,3"
-      },
-      {
         "word": "SHOW",
         "conceptRange": "3,3"
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
+    "_id": "ef53a574491dbcdcd7ec354447829713",
+    "_parentId": "b0937fd7d2e32a69786ed4db74160c5e",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "orthographic": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      }
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "DESCER",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "CRESCER",
+        "conceptRange": "3,4"
+      },
+      {
+        "word": "NASCER",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "PISCINA",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "ADOLESCENTE",
+        "conceptRange": "5,6"
+      },
+      {
+        "word": "DISCIPLINA",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "FLORESCER",
+        "conceptRange": "5,6"
+      },
+      {
+        "word": "CRESCIMENTO",
+        "conceptRange": "3,4"
+      },
+      {
+        "word": "DESCIDA",
+        "conceptRange": "2,3"
+      },
+      {
+        "word": "NASCIMENTO",
+        "conceptRange": "2,3"
       }
     ]
   }
