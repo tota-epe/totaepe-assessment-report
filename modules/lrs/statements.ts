@@ -112,7 +112,7 @@ export const getStatementsPerWord = (resultStatements: TotaStatement[]): Hash<To
     statements[index].ma5 = movingAverage5.reduce(((p: number, c: TotaStatement) => p + c.perf), 0) / movingAverage5.length
     statements[index].complete = (movingAverage5.reduce(((p: number, c: TotaStatement) => p + (c.correct ? 1 : 0)), 0) / 5.0) >= 0.8
     statements[index].occurrence = statementsPerWord[word].length
-    statements[index].first = (statementsPerWord[word].length == 0 ? true : false)
+    statements[index].first = (statementsPerWord[word].length == 1 ? true : false)
   })
 
   return statementsPerWord

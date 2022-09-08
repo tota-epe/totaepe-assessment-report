@@ -83,17 +83,39 @@ const Page: NextPage = ({ statements, statementsPerWord, errorLetterGrades }: In
     plugins: {
       autocolors: false,
       annotation: {
-        annotations: {
-          line1: {
+        annotations: [
+          {
             scaleID: 'yAxis',
             value: 0.8,
             borderColor: 'rgb(255, 99, 132)',
             borderWidth: 2,
           }
-        }
+        ]
       }
     }
   };
+
+  const newWordLines = statements.map((statement: TotaStatement, index: number) => {
+    if (!statement.first) {
+      return null;
+    }
+
+    return {
+      type: "line",
+      mode: "vertical",
+      scaleID: "xAxis",
+      value: moment(statement.timestamp).format('DD/MM HH:mm') + ` (${index + 1})`,
+      borderColor: "red",
+      label: {
+        content: statement.word,
+        enabled: true,
+        position: "start",
+        rotation: -45,
+        padding: 4
+      }
+    }
+  }).filter((statement: TotaStatement) => { return statement != null })
+  options.plugins.annotation.annotations.push(...newWordLines)
 
   return (
     <div>
