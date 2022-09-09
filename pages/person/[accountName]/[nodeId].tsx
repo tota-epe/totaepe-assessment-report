@@ -19,7 +19,7 @@ import { Chart, CategoryScale,
   Legend,
   TimeSeriesScale} from "chart.js";
 import moment from 'moment';
-import { Tabs } from '@mantine/core';
+import { Center, Loader, Tabs } from '@mantine/core';
 import { getLRSPeople } from '../../../modules/lrs/people';
 
 Chart.register(CategoryScale,
@@ -36,7 +36,7 @@ Chart.register(CategoryScale,
 
 const Page: NextPage = ({ nodeId, statements, statementsPerWord, errorLetterGrades }: InferGetStaticPropsType<typeof getStaticProps>) => {
   if (!nodeId) {
-    return (<div>Node não encontrado</div>)
+    return (<Center sx={{ height: '100vh'}}><Loader variant="dots"/></Center>)
   }
 
   let node = nodes.find(node => node._id === nodeId)

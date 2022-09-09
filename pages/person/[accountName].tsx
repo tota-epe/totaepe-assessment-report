@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { nodes } from '../../common/models/totaepe_nodes'
 import { getLRSPeople } from '../../modules/lrs/people'
-import { Grid, Box, Anchor, createStyles, ThemeIcon, Progress, Text, Group, Badge, Paper, Button } from '@mantine/core'
+import { Grid, Box, Anchor, createStyles, ThemeIcon, Progress, Text, Group, Badge, Paper, Button, Center, Loader } from '@mantine/core'
 import { NodeNextRequest } from 'next/dist/server/base-http/node'
 
 const ICON_SIZE = 60;
@@ -33,7 +33,7 @@ const Page: NextPage = ({person}: InferGetStaticPropsType<typeof getStaticProps>
   const router = useRouter()
   const { accountName } = router.query
   if (!person) {
-    return (<div>Usuário não encontrado</div>)
+    return ((<Center sx={{ height: '100vh'}}><Loader variant="dots"/></Center>))
   }
 
   const renderNode = (node: any) => {
