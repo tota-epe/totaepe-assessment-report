@@ -95,6 +95,16 @@ const Page: NextPage = ({ statements, statementsPerWord, errorLetterGrades }: In
     }
   };
 
+  const toggleLabel = (context: any, event: any) => {
+    const chart = context.chart;
+    const labelWord = context.element.options.label.content;
+    const annotationOpts = chart.options.plugins.annotation.annotations
+      .find((a: any) => { return a.label.content === labelWord });
+    annotationOpts.label.enabled = !annotationOpts.label.enabled;
+    annotationOpts.label.position = (event.y / context.chart.chartArea.height * 100) + '%';
+    chart.update();
+  }
+
   const newWordLines = statements.map((statement: TotaStatement, index: number) => {
     if (!statement.first) {
       return null;
@@ -106,11 +116,11 @@ const Page: NextPage = ({ statements, statementsPerWord, errorLetterGrades }: In
       scaleID: "xAxis",
       value: moment(statement.timestamp).format('DD/MM HH:mm') + ` (${index + 1})`,
       borderColor: "red",
+      enter: toggleLabel,
+      leave: toggleLabel,
       label: {
         content: statement.word,
-        enabled: true,
-        position: "start",
-        rotation: -45,
+        enabled: false,
         padding: 4
       }
     }
