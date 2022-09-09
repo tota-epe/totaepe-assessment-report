@@ -127,6 +127,10 @@ const Page: NextPage = ({ statements, statementsPerWord, errorLetterGrades }: In
   }).filter((statement: TotaStatement) => { return statement != null })
   options.plugins.annotation.annotations.push(...newWordLines)
 
+  const renderWord = (wordData: any) => {
+    return (<Word wordData={wordData} statements={statementsPerWord[wordData.word]}/>)
+  }
+
   return (
     <div>
       <h3>{nodeData.title} - {id}</h3>
@@ -134,7 +138,7 @@ const Page: NextPage = ({ statements, statementsPerWord, errorLetterGrades }: In
       <p>Score de erros de conceito.: {conceptErrorGrade.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })}</p>
       <p>Nó dominado?: { nodeComplete ? 'sim' : 'não'} - {statements.length} Apresentações de palavras / Dominado em {earlyCompletionIndex + 1}</p>
       <p>Apresentações nas ultimas 24hs: {last24h.length}</p>
-      <div>
+      {true && <div>
         <h2>Percental de erro em cada letra das palavras do Nó</h2>
         <ul>
           {Object.keys(errorLetterGrades).sort().map(letter => {
@@ -168,15 +172,9 @@ const Page: NextPage = ({ statements, statementsPerWord, errorLetterGrades }: In
             )
           })}
         </ul>
-      </div>
+      </div>}
       <Line data={data} options={options} />
-      <div>
-        {nodeWords?.map((wordData) => (
-          <div key={wordData.word}>
-            <Word wordData={wordData} statements={statementsPerWord[wordData.word]}/>
-          </div>
-        ))}
-      </div>
+      {nodeWords?.map(renderWord)}
     </div>
   )
 }

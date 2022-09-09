@@ -1,138 +1,104 @@
-import React from "react";
+import React, { useState } from "react";
+import { Button, Table } from '@mantine/core';
 import { TotaStatement, ErrorProfile } from '../../../types/tota_statement'
-import { ErrorTypes } from "../../../modules/error_type/error_type";
 
 type WordProps = {
   wordData: { word: string; conceptRange: string; destinationNodeID?: string;},
   statements: TotaStatement[]
 }
-type WordState = { showHideStatements: boolean }
 
-export class Word extends React.Component<WordProps, WordState> {
-  conceptRange: number[] = [0,0]
-  word: string = ''
-  letterData: ErrorProfile[] = []
-  statements: TotaStatement[] = []
-  recentStatements: TotaStatement[] = []
-  last24h: TotaStatement[] = []
-  chartData: { x?: Date, y?: number }[] = []
-  correct: number[] = []
-  withError: number[] = []
-  withConceptError: number[] = []
-  destinationNodeID?: string = ''
-  rawErrorCount: JSX.Element[] = []
+export const Word = (props: WordProps) => {
+  const [showHideStatements, setShowHideStatements] = useState(false);
 
-  constructor(props: WordProps) {
-    super(props)
+  if (!props.statements) {
+    return null
+  }
 
-    this.state = {
-      showHideStatements: false
+  let conceptRange = props.wordData.conceptRange.split(',').map(Number)
+  let word = props.wordData.word
+
+  let statements = props.statements
+  let recentStatements = props.statements.slice(0,10)
+
+  let timeStamp = Math.round(new Date().getTime() / 1000);
+  let timeStampYesterday = new Date((timeStamp - (24 * 3600))*1000);
+  let last24h = props.statements.filter(s => { return new Date(s.timestamp) >= timeStampYesterday })
+
+  const chartData = props.statements.map((statement) => {
+    return { x: new Date(statement.timestamp), y: statement.ma5 }
+  })
+
+  let reducedStatements = {
+    correct: [0, 0],
+    withError: [0, 0],
+    withConceptError: [0, 0],
+    letterData: word.split('').map(letter => { return { } as ErrorProfile }),
+    rawErrorCount: [] as number[], // Marks total count of error on each letter
+    chartData: []
+  }
+
+  statements.reduce(((t, statement) => {
+    if (statement.correct) {
+      t.correct[0] += 1
+    } else {
+      t.withError[0] += 1
     }
-    this.toggleStatements = this.toggleStatements.bind(this)
-
-    if (!this.props.statements) {
-      return
-    }
-
-    this.statements = this.props.statements
-    this.recentStatements = this.props.statements.slice(0,10)
-
-    var timeStamp = Math.round(new Date().getTime() / 1000);
-    var timeStampYesterday = new Date((timeStamp - (24 * 3600))*1000);
-    this.last24h = this.props.statements.filter(s => { return new Date(s.timestamp) >= timeStampYesterday })
-    this.word = this.props.wordData.word
-    this.conceptRange = this.props.wordData.conceptRange.split(',').map(Number)
-    this.destinationNodeID = this.props.wordData.destinationNodeID
-
-    this.chartData = this.props.statements.map((statement) => {
-      return { x: new Date(statement.timestamp), y: statement.ma5 }
-    })
-
-    let reducedStatements = {
-      correct: [0, 0],
-      withError: [0, 0],
-      withConceptError: [0, 0],
-      letterData: this.word.split('').map(letter => { return { } as ErrorProfile }),
-      rawErrorCount: [] as number[], // Marks total count of error on each letter
-      chartData: []
+    if (statement.conceptErrorGrade > 0) {
+      t.withConceptError[0] += 1
     }
 
-    this.props.statements.reduce(((t, statement) => {
-      if (statement.correct) {
-        t.correct[0] += 1
-      } else {
-        t.withError[0] += 1
-      }
-      if (statement.conceptErrorGrade > 0) {
-        t.withConceptError[0] += 1
-      }
+    return reducedStatements
+  }), reducedStatements)
 
-      return reducedStatements
-    }), reducedStatements)
+  recentStatements.reduce(((t, statement) => {
+    if (statement.correct) {
+      t.correct[1] += 1
+    } else {
+      t.withError[1] += 1
+    }
+    if (statement.conceptErrorGrade > 0) {
+      t.withConceptError[1] += 1
+    }
+    if (statement.errorsPerLetter) {
+      let r = reducedStatements.letterData
+      statement.errorsPerLetter.forEach((errorsOnLetter, index) => {
+        if (Object.keys(errorsOnLetter).length == 0) { return }
 
-    this.recentStatements.reduce(((t, statement) => {
-      if (statement.correct) {
-        t.correct[1] += 1
-      } else {
-        t.withError[1] += 1
-      }
-      if (statement.conceptErrorGrade > 0) {
-        t.withConceptError[1] += 1
-      }
-      if (statement.errorsPerLetter) {
-        let r = reducedStatements.letterData
-        statement.errorsPerLetter.forEach((errorsOnLetter, index) => {
-          if (Object.keys(errorsOnLetter).length == 0) { return }
+        // // Get error with most occurence on letter
+        // let mainErrorOnLetter = Object.keys(errorsOnLetter).reduce((a, b) => errorsOnLetter[a].count > errorsOnLetter[b].count ? a : b)
+        // if (!r[index][mainErrorOnLetter]) {
+        //   r[index][mainErrorOnLetter] = {
+        //     count: 0,
+        //     occurrences: []
+        //   }
+        // }
+        // r[index][mainErrorOnLetter].count += 1
+        // r[index][mainErrorOnLetter].occurrences = r[index][mainErrorOnLetter].occurrences.concat(errorsOnLetter[mainErrorOnLetter].occurrences)
 
-          // // Get error with most occurence on letter
-          // let mainErrorOnLetter = Object.keys(errorsOnLetter).reduce((a, b) => errorsOnLetter[a].count > errorsOnLetter[b].count ? a : b)
-          // if (!r[index][mainErrorOnLetter]) {
-          //   r[index][mainErrorOnLetter] = {
-          //     count: 0,
-          //     occurrences: []
-          //   }
-          // }
-          // r[index][mainErrorOnLetter].count += 1
-          // r[index][mainErrorOnLetter].occurrences = r[index][mainErrorOnLetter].occurrences.concat(errorsOnLetter[mainErrorOnLetter].occurrences)
-
-          for (const error in errorsOnLetter) {
-            if (!r[index][error]) {
-              r[index][error] = {
-                count: 0,
-                occurrences: []
-              }
+        for (const error in errorsOnLetter) {
+          if (!r[index][error]) {
+            r[index][error] = {
+              count: 0,
+              occurrences: []
             }
-            r[index][error].count += 1
-            r[index][error].occurrences = r[index][error].occurrences.concat(errorsOnLetter[error].occurrences)
-            break; // Consider only the first error on each letter & interaction
           }
-        })
-      }
-      statement.response.forEach(element => {
-        let rawErrorCount = element.length - 1;
-        if (rawErrorCount > 2) {
-          rawErrorCount = 3;
+          r[index][error].count += 1
+          r[index][error].occurrences = r[index][error].occurrences.concat(errorsOnLetter[error].occurrences)
+          break; // Consider only the first error on each letter & interaction
         }
-        reducedStatements.rawErrorCount[rawErrorCount] = (reducedStatements.rawErrorCount[rawErrorCount] || 0) + 1
-      });
-      return reducedStatements
-    }), reducedStatements)
+      })
+    }
+    statement.response.forEach(element => {
+      let rawErrorCount = element.length - 1;
+      if (rawErrorCount > 2) {
+        rawErrorCount = 3;
+      }
+      reducedStatements.rawErrorCount[rawErrorCount] = (reducedStatements.rawErrorCount[rawErrorCount] || 0) + 1
+    });
+    return reducedStatements
+  }), reducedStatements)
 
-    this.letterData = reducedStatements.letterData
-    this.withError = reducedStatements.withError
-    this.withConceptError = reducedStatements.withConceptError
-    this.correct = reducedStatements.correct
-    const totalAttempts = reducedStatements.rawErrorCount.reduce((s, a) => s + a, 0);
-    this.rawErrorCount = reducedStatements.rawErrorCount.map((e, index) => {
-      return this.numberWithPercent(e, totalAttempts)
-    })
-  }
-
-  toggleStatements() {
-    this.setState({ showHideStatements: !this.state.showHideStatements });
-  }
-
-  numberWithPercent(n: number, total: number) {
+  const numberWithPercent = (n: number, total: number) => {
     return (
       <span>
         <span>{ n }</span> ({(n / total).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })})
@@ -140,7 +106,16 @@ export class Word extends React.Component<WordProps, WordState> {
     )
   }
 
-  errorsOnLetter(errorProfile: ErrorProfile) {
+  let letterData = reducedStatements.letterData
+  let withError = reducedStatements.withError
+  let withConceptError = reducedStatements.withConceptError
+  let correct = reducedStatements.correct
+  const totalAttempts = reducedStatements.rawErrorCount.reduce((s, a) => s + a, 0);
+  let rawErrorCount = reducedStatements.rawErrorCount.map((e, index) => {
+    return numberWithPercent(e, totalAttempts)
+  })
+
+  const errorsOnLetter = (errorProfile: ErrorProfile) => {
     let errors = []
     for (const errorType in errorProfile) {
       let elementsCount = errorProfile[errorType].occurrences.reduce((t, letter) => {
@@ -159,74 +134,65 @@ export class Word extends React.Component<WordProps, WordState> {
     return errors
   }
 
-  render() {
-    const { showHideStatements } = this.state;
-    let statementsStyle = { display: 'none' }
-    if (showHideStatements) {
-      statementsStyle = { display: 'block' }
-    }
-   if (!this.statements) {
-      return (
-        <div>Sem dados</div>
-      )
-    }
-    return (
-      <div>
-        <h4>{this.word} - grupo conceito: {this.word.slice(this.conceptRange[0], this.conceptRange[1] + 1)}</h4>
-        <p>Media Móvel 5 ultimas {this.statements[0]?.ma5?.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })}</p>
-        <p>Perfil de acertos pelo total de letras digitadas:
-        { this.rawErrorCount[0] && (<p>Sem erros: {this.rawErrorCount[0]}</p>) }
-        { this.rawErrorCount[1] && (<p>Segunda tentativa: {this.rawErrorCount[1]}</p>) }
-        { this.rawErrorCount[2] && (<p>Terceira tentativa: {this.rawErrorCount[2]}</p>) }
-        { this.rawErrorCount[3] && (<p>Com 3+ tentativas: {this.rawErrorCount[3]}</p>) }
-        </p>
-        <table>
-          <thead>
-            <tr><td></td><td>Total</td><td>Mais recentes</td><td>Ultimas 24hs</td></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Apresentações:</td><td>{this.statements.length}</td>
-              <td>{this.recentStatements.length}</td>
-              <td>{this.last24h.length}</td>
-            </tr>
-            <tr>
-              <td>Corretas:</td>
-              <td>{this.numberWithPercent(this.correct[0], this.statements.length)}</td>
-              <td>{this.numberWithPercent(this.correct[1], this.recentStatements.length)}</td>
-              <td></td>
-             </tr>
-            <tr>
-              <td>Com erro:</td>
-              <td>{this.numberWithPercent(this.withError[0], this.statements.length)}</td>
-              <td>{this.numberWithPercent(this.withError[1], this.recentStatements.length)}</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Com erro no conceito:</td>
-              <td>{this.numberWithPercent(this.withConceptError[0], this.statements.length)}</td>
-              <td>{this.numberWithPercent(this.withConceptError[1], this.recentStatements.length)}</td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-        <div style={{display: 'flex'}}>
-          {this.word.split('').map((letter, index) => (
-            <div key={index} style={{ flex: 1, border: '1px solid', padding: '10px' }}>
-              <p>Letra: {letter}</p>
-              <ul>
-                {this.errorsOnLetter(this.letterData[index]).map((e, i) => <li key={i}>{e}</li>)}
-              </ul>
-            </div>
-          ))}
-        </div>
-        <button onClick={() => this.toggleStatements()}>Dados brutos</button>
-        <ul style={statementsStyle}>
-          {this.statements.map((statement) => (
-            <li key={statement.id}>{JSON.stringify(statement)}</li>
-          ))}
-        </ul>
+  return (
+    <div key={word}>
+      <h4>{word} - grupo conceito: <b>{word.slice(conceptRange[0], conceptRange[1] + 1)}</b></h4>
+      <p>Media Móvel 5 ultimas {statements[0]?.ma5?.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })}</p>
+      <p>Perfil de acertos pelo total de letras digitadas:
+      { rawErrorCount[0] && (<p>Sem erros: {rawErrorCount[0]}</p>) }
+      { rawErrorCount[1] && (<p>Segunda tentativa: {rawErrorCount[1]}</p>) }
+      { rawErrorCount[2] && (<p>Terceira tentativa: {rawErrorCount[2]}</p>) }
+      { rawErrorCount[3] && (<p>Com 3+ tentativas: {rawErrorCount[3]}</p>) }
+      </p>
+      <Table>
+        <thead>
+          <tr><td></td><td>Total</td><td>Mais recentes</td><td>Ultimas 24hs</td></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Apresentações:</td>
+            <td>{statements.length}</td>
+            <td>{recentStatements.length}</td>
+            <td>{last24h.length}</td>
+          </tr>
+          <tr>
+            <td>Corretas:</td>
+            <td>{numberWithPercent(correct[0], statements.length)}</td>
+            <td>{numberWithPercent(correct[1], recentStatements.length)}</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Com erro:</td>
+            <td>{numberWithPercent(withError[0], statements.length)}</td>
+            <td>{numberWithPercent(withError[1], recentStatements.length)}</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Com erro no conceito:</td>
+            <td>{numberWithPercent(withConceptError[0], statements.length)}</td>
+            <td>{numberWithPercent(withConceptError[1], recentStatements.length)}</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </Table>
+      <div style={{display: 'flex'}}>
+        {word.split('').map((letter, index) => (
+          <div key={index} style={{ flex: 1, border: '1px solid', padding: '10px' }}>
+            <p>Letra: {letter}</p>
+            <ul>
+              {errorsOnLetter(letterData[index]).map((e, i) => <li key={i}>{e}</li>)}
+            </ul>
+          </div>
+        ))}
       </div>
-    );
-  }
+      <Button onClick={() => setShowHideStatements(!showHideStatements)}>
+        Dados brutos
+      </Button>
+      {showHideStatements && <ul>
+        {statements.map((statement) => (
+          <li key={statement.id}>{JSON.stringify(statement)}</li>
+        ))}
+      </ul>}
+    </div>
+  )
 }
