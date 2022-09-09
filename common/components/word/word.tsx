@@ -173,7 +173,7 @@ export const Word = (props: WordProps) => {
 
   return (
     <>
-      <Paper withBorder p="md" radius="md">
+      <Paper key={word} withBorder p="md" radius="md">
         <Group position="apart">
           <Group align="flex-end" spacing="xs">
             <Text size="xl" weight={700}>

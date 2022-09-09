@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router'
 import { InferGetStaticPropsType, GetStaticProps, NextPage } from 'next'
 import { nodes } from '../../../common/models/totaepe_nodes'
 import React from 'react';
@@ -21,6 +20,7 @@ import { Chart, CategoryScale,
   TimeSeriesScale} from "chart.js";
 import moment from 'moment';
 import { Tabs } from '@mantine/core';
+import { getLRSPeople } from '../../../modules/lrs/people';
 
 Chart.register(CategoryScale,
   TimeScale,
@@ -34,14 +34,13 @@ Chart.register(CategoryScale,
   Legend
 );
 
-const Page: NextPage = ({ statements, statementsPerWord, errorLetterGrades }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const router = useRouter()
-  const { id, nodeId } = router.query
-  let node = nodes.find(node => node._id === nodeId)
-  let nodeData = node?.articles.map(a => a.blocks.map(b => b.components)).flat(3)[0]
-  if (!nodeData) {
+const Page: NextPage = ({ nodeId, statements, statementsPerWord, errorLetterGrades }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  if (!nodeId) {
     return (<div>Node não encontrado</div>)
   }
+
+  let node = nodes.find(node => node._id === nodeId)
+  let nodeData = node?.articles.map(a => a.blocks.map(b => b.components)).flat(3)[0]
 
   let earlyCompletionIndex = statements.findIndex((statement: TotaStatement, index: number) => {
     return (index >= 29 && statement.conceptErrorScore && statement.conceptErrorScore > 0.8)
@@ -145,8 +144,8 @@ const Page: NextPage = ({ statements, statementsPerWord, errorLetterGrades }: In
 
   return (
     <div>
-      <h3>{nodeData.title} - {id}</h3>
-      <p>Conceitos: {JSON.stringify(nodeData.concepts)}</p>
+      <h3>{node?.conceptTitle}</h3>
+      {nodeData && <p>Conceitos: {Object.keys(nodeData.concepts).join(', ')}</p>}
       <p>Score de erros de conceito.: {conceptErrorGrade.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })}</p>
       <p>Nó dominado?: { nodeComplete ? 'sim' : 'não'} - {statements.length} Apresentações de palavras / Dominado em {earlyCompletionIndex + 1}</p>
       <p>Apresentações nas ultimas 24hs: {last24h.length}</p>
@@ -209,6 +208,7 @@ const Page: NextPage = ({ statements, statementsPerWord, errorLetterGrades }: In
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   if (!params || !params['accountName'] || !params['nodeId']) {
+    console.log('Params', params)
     return { props: { }, revalidate: 1 }
   }
 
@@ -220,6 +220,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   // Pass data to the page via props
   return {
     props: {
+      nodeId: nodeId,
       statements: resultStatements,
       statementsPerWord: statementsPerWord,
       errorLetterGrades: getErrorLetterGrades(resultStatements)
@@ -233,7 +234,7 @@ export async function getStaticPaths() {
   // const people = await getLRSPeople()
   // people.map((person) => {
   //   nodes.map((n) => {
-  //     paths.push({ params: { id: `${person.id}`, nodeId: n._id } })
+  //     paths.push({ params: { accountName: person.accountName, nodeId: n._id } })
   //   })
   // })
   return {

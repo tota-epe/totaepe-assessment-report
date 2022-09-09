@@ -72,7 +72,125 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "01-placement-test",
+    "conceptTitle": "Teste de Nivelamento",
+    "words": [
+      "RI",
+      "LÁ",
+      "NU",
+      "DÁ",
+      "PÉ",
+      "VÓ",
+      "BU",
+      "JÁ",
+      "SINO",
+      "FACA",
+      "GALO",
+      "XIXI",
+      "RÃ",
+      "LÃ",
+      "LAMA",
+      "CAMA",
+      "GOTA",
+      "VAZA",
+      "UM",
+      "AS",
+      "IR",
+      "AR",
+      "RUA",
+      "BOA",
+      "DIA",
+      "TIA",
+      "FIO",
+      "ANO",
+      "GÁS",
+      "PUS",
+      "UMA",
+      "ELA",
+      "UVA",
+      "OCA",
+      "MAR",
+      "TER",
+      "OI",
+      "AU",
+      "OU",
+      "ISCA",
+      "ESTE",
+      "ARCO",
+      "IRMÃ",
+      "URSO",
+      "QUE",
+      "PIANO",
+      "MOEDA",
+      "NAVIO",
+      "BUZINA",
+      "BANANA",
+      "BIGODE",
+      "DOCE",
+      "CIMA",
+      "CEBOLA",
+      "GELO",
+      "PÁGINA",
+      "CAIXA",
+      "BEIJO",
+      "CAUDA",
+      "SIM",
+      "COM",
+      "TEM",
+      "SOL",
+      "MEL",
+      "GOL",
+      "FESTA",
+      "CESTA",
+      "ANJO",
+      "INDIO",
+      "ALTO",
+      "ALFACE",
+      "ÚLTIMO",
+      "FUGIR",
+      "SABOR",
+      "FORTE",
+      "GARFO",
+      "CINCO",
+      "TONTO",
+      "AZUL",
+      "PEDAL",
+      "POLVO",
+      "TALCO",
+      "CAMPO",
+      "BOMBOM",
+      "FAMOSA",
+      "RISOTO",
+      "OSSO",
+      "TOSSE",
+      "CERA",
+      "XÍCARA",
+      "GARRAFA",
+      "ESPIRRO",
+      "MANHA",
+      "SONHO",
+      "HOJE",
+      "HORA",
+      "QUEIJO",
+      "FOLHA",
+      "CHÁ",
+      "BLUSA",
+      "MOÇO",
+      "CABEÇA",
+      "MAÇÃ",
+      "PRATO",
+      "BRUXA",
+      "FOGUETE",
+      "TÁXI",
+      "DESCER",
+      "EXISTE",
+      "SEXTA",
+      "KIT",
+      "EXCELENTE",
+      "YAKISOBA",
+      "KIWI"
+    ]
   },
   {
     "title": "Nó 1 - monossílabas simples com vogal aberta e consoante 1-2 (lá)",
@@ -147,7 +265,16 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "1",
+    "conceptTitle": "monossílabas simples com vogal aberta e consoante 1-2",
+    "words": [
+      "LÁ",
+      "NU",
+      "RÉ",
+      "RI",
+      "LU"
+    ]
   },
   {
     "title": "Nó 2 - monossílabos consoante 3-4 + vogal aberta (tu)",
@@ -222,7 +349,22 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "2",
+    "conceptTitle": "monossílabos consoante 3-4 + vogal aberta",
+    "words": [
+      "DÁ",
+      "CÁ",
+      "FÉ",
+      "JÁ",
+      "PÓ",
+      "SÓ",
+      "MÁ",
+      "VÓ",
+      "TU",
+      "PÁ",
+      "PÉ"
+    ]
   },
   {
     "title": "Nó 3 - dissílabas (consoante + vogal aberta) x2 (ralo; fada)",
@@ -297,7 +439,22 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "3",
+    "conceptTitle": "dissílabas (consoante + vogal aberta) x2",
+    "words": [
+      "COPO",
+      "JATO",
+      "ROLA",
+      "RALO",
+      "FADA",
+      "BOLA",
+      "PATO",
+      "GALO",
+      "MALA",
+      "SINO",
+      "VAZA"
+    ]
   },
   {
     "title": "Nó 4 - monossílabas consoante + vogal fechada (lã)",
@@ -372,7 +529,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "4",
+    "conceptTitle": "monossílabas consoante + vogal fechada",
+    "words": [
+      "LÊ",
+      "RÃ",
+      "ME",
+      "SE",
+      "TE",
+      "VÊ",
+      "DO",
+      "FÃ",
+      "LÃ",
+      "XÔ"
+    ]
   },
   {
     "title": "Nó 5 - dissílabas de consoante + vogal fechada (lama)",
@@ -447,7 +618,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "5",
+    "conceptTitle": "dissílabas de consoante + vogal fechada",
+    "words": [
+      "LAMA",
+      "DAMA",
+      "FAMA",
+      "CAMA",
+      "PANO",
+      "REMO",
+      "DEDO",
+      "BOCA",
+      "LOBO",
+      "GOTA"
+    ]
   },
   {
     "title": "Nó 6 - monossílabo vogal+ S ou M (os)",
@@ -522,7 +707,15 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "6",
+    "conceptTitle": "monossílabo vogal+ S ou M",
+    "words": [
+      "OS",
+      "AS",
+      "UM",
+      "EM"
+    ]
   },
   {
     "title": "Nó 7 - monossílabo vogal+  R (ir)",
@@ -597,7 +790,13 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "7",
+    "conceptTitle": "monossílabo vogal+  R",
+    "words": [
+      "IR",
+      "AR"
+    ]
   },
   {
     "title": "Nó 8 - dissílabos com hiato (lua)",
@@ -672,7 +871,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "8",
+    "conceptTitle": "dissílabos com hiato",
+    "words": [
+      "RUA",
+      "LUA",
+      "DIA",
+      "BOA",
+      "VOA",
+      "FIO",
+      "PIA",
+      "TIA",
+      "RIO",
+      "SUA"
+    ]
   },
   {
     "title": "Nó 9 - monossílabas de 3 letras terminadas em S (gás)",
@@ -747,7 +960,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "9",
+    "conceptTitle": "monossílabas de 3 letras terminadas em S",
+    "words": [
+      "GÁS",
+      "NÓS",
+      "PÁS",
+      "PÉS",
+      "MÊS",
+      "PUS",
+      "FÃS",
+      "RÃS",
+      "DAS",
+      "MAS"
+    ]
   },
   {
     "title": "Nó 10 - dissílabos com vogal inicial (uva)",
@@ -822,7 +1049,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "10",
+    "conceptTitle": "dissílabos com vogal inicial",
+    "words": [
+      "UMA",
+      "ELA",
+      "ELE",
+      "ALÔ",
+      "AMO",
+      "AVE",
+      "OCA",
+      "OVO",
+      "OLÁ",
+      "UVA"
+    ]
   },
   {
     "title": "Nó 11 - monossílabas de 3 letras terminadas em R (mar)",
@@ -897,7 +1138,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "11",
+    "conceptTitle": "monossílabas de 3 letras terminadas em R",
+    "words": [
+      "MAR",
+      "VER",
+      "TER",
+      "COR",
+      "PÔR",
+      "DOR",
+      "DAR",
+      "PAR",
+      "LAR",
+      "RIR"
+    ]
   },
   {
     "title": "Nó 12 - sílaba vogal+vogal (oi)",
@@ -972,7 +1227,19 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "12",
+    "conceptTitle": "sílaba vogal+vogal",
+    "words": [
+      "OI",
+      "UI",
+      "EU",
+      "AI",
+      "AU",
+      "AO",
+      "EI",
+      "OU"
+    ]
   },
   {
     "title": "Nó 13 - dissílabos com sílaba vogal + S (asma)",
@@ -1047,7 +1314,17 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "13",
+    "conceptTitle": "dissílabos com sílaba vogal + S",
+    "words": [
+      "ESTE",
+      "ESTA",
+      "ASMA",
+      "ISTO",
+      "ISCA",
+      "ASCO"
+    ]
   },
   {
     "title": "Nó 14 - dissílabos com sílaba vogal + R (arco)",
@@ -1122,7 +1399,20 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "14",
+    "conceptTitle": "dissílabos com sílaba vogal + R",
+    "words": [
+      "ARCO",
+      "IRMÃ",
+      "ARTE",
+      "URSO",
+      "ARCA",
+      "ARDE",
+      "ERVA",
+      "ORCA",
+      "ERGO"
+    ]
   },
   {
     "title": "Nó 15 - que (que)",
@@ -1197,7 +1487,12 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "15",
+    "conceptTitle": "que",
+    "words": [
+      "QUE"
+    ]
   },
   {
     "title": "Nó 16 - trissílabas com hiato (lagoa)",
@@ -1272,7 +1567,20 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "16",
+    "conceptTitle": "trissílabas com hiato",
+    "words": [
+      "PIANO",
+      "LAGOA",
+      "MOEDA",
+      "SAÚDE",
+      "NAVIO",
+      "PIADA",
+      "SAÍDA",
+      "POETA",
+      "CUTIA"
+    ]
   },
   {
     "title": "Nó 17 - trissílabas de sílabas simples (macaco)",
@@ -1347,7 +1655,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "17",
+    "conceptTitle": "trissílabas de sílabas simples",
+    "words": [
+      "MACACO",
+      "BATATA",
+      "BIGODE",
+      "BEBIDA",
+      "BUZINA",
+      "CABELO",
+      "CAFUNÉ",
+      "COMIDA",
+      "ESCOLA",
+      "MÉDICO"
+    ]
   },
   {
     "title": "Nó 18 - segundo fonema do C (doce)",
@@ -1422,7 +1744,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "18",
+    "conceptTitle": "segundo fonema do C",
+    "words": [
+      "VOCÊ",
+      "DOCE",
+      "CEBOLA",
+      "CEDO",
+      "VACINA",
+      "BACIA",
+      "CIMA",
+      "CINEMA",
+      "MACIO",
+      "TECIDO"
+    ]
   },
   {
     "title": "Nó 19 - segundo fonema do G (gelo)",
@@ -1497,7 +1833,20 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "19",
+    "conceptTitle": "segundo fonema do G",
+    "words": [
+      "GELO",
+      "GIBI",
+      "GEMA",
+      "TIGELA",
+      "MÁGICO",
+      "COLÉGIO",
+      "PÁGINA",
+      "RELÓGIO",
+      "PEDÁGIO"
+    ]
   },
   {
     "title": "Nó 20 - sílaba consoante+vogal+vogal (leite)",
@@ -1572,7 +1921,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "20",
+    "conceptTitle": "sílaba consoante+vogal+vogal",
+    "words": [
+      "LEITE",
+      "ÁGUA",
+      "CAUDA",
+      "CÉU",
+      "FEIJÃO",
+      "NOITE",
+      "BEIJO",
+      "MUITO",
+      "POUCO",
+      "CAIXA"
+    ]
   },
   {
     "title": "Nó 21 - monossílabas de 3 letras terminada em M (bom)",
@@ -1647,7 +2010,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "21",
+    "conceptTitle": "monossílabas de 3 letras terminada em M",
+    "words": [
+      "BOM",
+      "SIM",
+      "COM",
+      "MIM",
+      "BEM",
+      "VEM",
+      "NEM",
+      "FIM",
+      "TEM",
+      "SEM"
+    ]
   },
   {
     "title": "Nó 22 - segundo fonema do L (sal)",
@@ -1722,7 +2099,20 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "22",
+    "conceptTitle": "segundo fonema do L",
+    "words": [
+      "SOL",
+      "SAL",
+      "GOL",
+      "MEL",
+      "MAL",
+      "MIL",
+      "TIL",
+      "TAL",
+      "CAL"
+    ]
   },
   {
     "title": "Nó 23 - dissílaba consoante+vogal+ S (festa)",
@@ -1797,7 +2187,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "23",
+    "conceptTitle": "dissílaba consoante+vogal+ S",
+    "words": [
+      "FESTA",
+      "GOSTO",
+      "ROSCA",
+      "POSTE",
+      "ROSTO",
+      "PASTA",
+      "CASCA",
+      "CESTA",
+      "MOSCA",
+      "TESTA"
+    ]
   },
   {
     "title": "Nó 24 - palavras com sílabas vogal+N (onda)",
@@ -1872,7 +2276,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "24",
+    "conceptTitle": "palavras com sílabas vogal+N",
+    "words": [
+      "ANDO",
+      "ONDA",
+      "ANJO",
+      "ANTA",
+      "ENJOO",
+      "ÍNDIO",
+      "ENFEITE",
+      "ENTÃO",
+      "INCÊNDIO",
+      "ENSAIO"
+    ]
   },
   {
     "title": "Nó 25 - palavras com sílabas de vogal +L (alto)",
@@ -1947,7 +2365,19 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "25",
+    "conceptTitle": "palavras com sílabas de vogal +L",
+    "words": [
+      "ALTO",
+      "ALGO",
+      "ALFACE",
+      "OLFATO",
+      "ALVO",
+      "ELFO",
+      "ALGA",
+      "ÚLTIMO"
+    ]
   },
   {
     "title": "Nó 26 - dissílabas+ que terminem com consoante+vogal+R final (calor)",
@@ -2022,7 +2452,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "26",
+    "conceptTitle": "dissílabas+ que terminem com consoante+vogal+R final",
+    "words": [
+      "CALOR",
+      "AMOR",
+      "FEDOR",
+      "PULAR",
+      "COMER",
+      "PULAR",
+      "BEBER",
+      "FAZER",
+      "MEXER",
+      "JOGAR"
+    ]
   },
   {
     "title": "Nó 27 - dissílabas+ com consoante+vogal+R meio (barco)",
@@ -2097,7 +2541,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "27",
+    "conceptTitle": "dissílabas+ com consoante+vogal+R meio",
+    "words": [
+      "BARCO",
+      "PORTA",
+      "PORCO",
+      "CARTA",
+      "BARBA",
+      "CORDA",
+      "FORTE",
+      "GARFO",
+      "CARNE",
+      "PERNA"
+    ]
   },
   {
     "title": "Nó 28 - palavras com sílabas de consoante + vogal+ N  (ponte)",
@@ -2172,7 +2630,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "28",
+    "conceptTitle": "palavras com sílabas de consoante + vogal+ N ",
+    "words": [
+      "PONTE",
+      "PENTE",
+      "DENTE",
+      "BANCO",
+      "CINTO",
+      "CINCO",
+      "PINGO",
+      "MANGA",
+      "MUNDO",
+      "TONTO"
+    ]
   },
   {
     "title": "Nó 29 - palavras com sílabas de consoante + vogal + L final (anel)",
@@ -2247,7 +2719,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "29",
+    "conceptTitle": "palavras com sílabas de consoante + vogal + L final",
+    "words": [
+      "ANEL",
+      "ANIMAL",
+      "AZUL",
+      "NATAL",
+      "FÁCIL",
+      "FUTEBOL",
+      "PAPEL",
+      "DIFÍCIL",
+      "JORNAL",
+      "LEGAL"
+    ]
   },
   {
     "title": "Nó 30 - palavras com sílabas de consoante + vogal + L meio (calma)",
@@ -2322,7 +2808,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "30",
+    "conceptTitle": "palavras com sílabas de consoante + vogal + L meio",
+    "words": [
+      "BALDE",
+      "CALMA",
+      "FILME",
+      "MOLDE",
+      "BOLSA",
+      "FALTA",
+      "SALTO",
+      "PALCO",
+      "CALDA",
+      "FALSO"
+    ]
   },
   {
     "title": "Nó 31 - palavras com sílabas de consoante + vogal + M (campo)",
@@ -2397,7 +2897,20 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "31",
+    "conceptTitle": "palavras com sílabas de consoante + vogal + M",
+    "words": [
+      "CAMPO",
+      "TAMPA",
+      "TOMBO",
+      "LIMPO",
+      "POMBO",
+      "BOMBOM",
+      "RAMPA",
+      "LÂMPADA",
+      "POMPOM"
+    ]
   },
   {
     "title": "Nó 32 - 2o fonema do S (casa)",
@@ -2472,7 +2985,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "32",
+    "conceptTitle": "2o fonema do S",
+    "words": [
+      "CASA",
+      "MESA",
+      "PESO",
+      "RASO",
+      "ROSA",
+      "VASO",
+      "FAMOSA",
+      "CASACO",
+      "RISOTO",
+      "CAMISA"
+    ]
   },
   {
     "title": "Nó 33 - dígrafo SS (tosse)",
@@ -2547,7 +3074,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "33",
+    "conceptTitle": "dígrafo SS",
+    "words": [
+      "ISSO",
+      "ASSADO",
+      "ASSOBIO",
+      "MASSA",
+      "NOSSO",
+      "OSSO",
+      "GESSO",
+      "PESSOA",
+      "TOSSE",
+      "PASSO"
+    ]
   },
   {
     "title": "Nó 34 - 2o fonema R  (regionalismo) (cara)",
@@ -2622,7 +3163,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "34",
+    "conceptTitle": "2o fonema R  (regionalismo)",
+    "words": [
+      "CARA",
+      "PAREDE",
+      "CARECA",
+      "FAROFA",
+      "XAROPE",
+      "NÚMERO",
+      "PIRATA",
+      "CERA",
+      "GAROTO",
+      "XÍCARA"
+    ]
   },
   {
     "title": "Nó 35 - dígrafo RR (morro)",
@@ -2697,7 +3252,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "35",
+    "conceptTitle": "dígrafo RR",
+    "words": [
+      "TERRA",
+      "CARRO",
+      "MORRO",
+      "ESPIRRO",
+      "BARRIGA",
+      "BARRACA",
+      "CORRIDA",
+      "FERRO",
+      "GARRAFA",
+      "TORRE"
+    ]
   },
   {
     "title": "Nó 36 - dígrafo NH (sonho)",
@@ -2772,7 +3341,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "36",
+    "conceptTitle": "dígrafo NH",
+    "words": [
+      "MANHA",
+      "SONHO",
+      "NENHUM",
+      "FARINHA",
+      "DINHEIRO",
+      "DESENHO",
+      "UNHA",
+      "ESPINHO",
+      "GALINHA",
+      "RAINHA"
+    ]
   },
   {
     "title": "Nó 37 - H mudo (hoje)",
@@ -2847,7 +3430,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "37",
+    "conceptTitle": "H mudo",
+    "words": [
+      "HOJE",
+      "HOMEM",
+      "HORA",
+      "HERÓI",
+      "HORTA",
+      "HOTEL",
+      "HINO",
+      "HOSPITAL",
+      "HISTÓRIA",
+      "HIGIENE"
+    ]
   },
   {
     "title": "Nó 38 - dígrafo do QU além do que (queijo)",
@@ -2922,7 +3519,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "38",
+    "conceptTitle": "dígrafo do QU além do que",
+    "words": [
+      "QUEIJO",
+      "QUEIXO",
+      "AQUILO",
+      "AQUELE",
+      "QUEM",
+      "QUERO",
+      "QUINTA",
+      "QUERIDO",
+      "QUILO",
+      "MÁQUINA"
+    ]
   },
   {
     "title": "Nó 39 - dígrafo LH (milho)",
@@ -2997,7 +3608,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "39",
+    "conceptTitle": "dígrafo LH",
+    "words": [
+      "MILHO",
+      "BOLHA",
+      "PALHA",
+      "VELHO",
+      "ABELHA",
+      "COELHO",
+      "FILHO",
+      "FOLHA",
+      "ILHA",
+      "OLHO"
+    ]
   },
   {
     "title": "Nó 40 - dígrafo CH (chá)",
@@ -3072,7 +3697,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "40",
+    "conceptTitle": "dígrafo CH",
+    "words": [
+      "CHÁ",
+      "CHAVE",
+      "CHUVA",
+      "BICHO",
+      "MOCHILA",
+      "CHOCOLATE",
+      "CHUCHU",
+      "CHUTE",
+      "MACHUCADO",
+      "CACHORRO"
+    ]
   },
   {
     "title": "Nó 41 - encontro consonantal L (clube)",
@@ -3147,7 +3786,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "41",
+    "conceptTitle": "encontro consonantal L",
+    "words": [
+      "CLUBE",
+      "BLUSA",
+      "GLOBO",
+      "CLIMA",
+      "BICICLETA",
+      "TECLA",
+      "PLANTA",
+      "FLAUTA",
+      "BLOCO",
+      "DUPLA"
+    ]
   },
   {
     "title": "Nó 42 - Ç (poça)",
@@ -3222,7 +3875,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "42",
+    "conceptTitle": "Ç",
+    "words": [
+      "MOÇO",
+      "POÇA",
+      "AÇAÍ",
+      "CABEÇA",
+      "CAROÇO",
+      "DANÇAR",
+      "TAÇA",
+      "ALMOÇO",
+      "MAÇÃ",
+      "NATAÇÃO"
+    ]
   },
   {
     "title": "Nó 43 - encontro consonantal R (prato)",
@@ -3297,7 +3964,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "43",
+    "conceptTitle": "encontro consonantal R",
+    "words": [
+      "PRATO",
+      "VIDRO",
+      "LIVRO",
+      "COBRA",
+      "PEDRA",
+      "BRUXA",
+      "FRUTA",
+      "FRIO",
+      "BRAÇO",
+      "BRASIL"
+    ]
   },
   {
     "title": "Nó 44 - dígrafo GU (foguete)",
@@ -3372,7 +4053,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "44",
+    "conceptTitle": "dígrafo GU",
+    "words": [
+      "GUERRA",
+      "SANGUE",
+      "FOGUETE",
+      "ALGUÉM",
+      "GUITARRA",
+      "SEGUINTE",
+      "PREGUIÇA",
+      "FOGUEIRA",
+      "MANGUEIRA",
+      "ÁGUIA"
+    ]
   },
   {
     "title": "Nó 45 - 2o fonema X (táxi)",
@@ -3447,7 +4142,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "45",
+    "conceptTitle": "2o fonema X",
+    "words": [
+      "TÁXI",
+      "BOXE",
+      "SAXOFONE",
+      "DUREX",
+      "REFLEXO",
+      "OXIGÊNIO",
+      "TÓXICO",
+      "FLUXO",
+      "AXILA",
+      "FIXO"
+    ]
   },
   {
     "title": "Nó 46 - dígrafo SC (piscina)",
@@ -3522,7 +4231,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "46",
+    "conceptTitle": "dígrafo SC",
+    "words": [
+      "DESCER",
+      "CRESCER",
+      "NASCER",
+      "PISCINA",
+      "ADOLESCENTE",
+      "DISCIPLINA",
+      "FLORESCER",
+      "CRESCIMENTO",
+      "DESCIDA",
+      "NASCIMENTO"
+    ]
   },
   {
     "title": "Nó 47 - 3o fonema X (existe)",
@@ -3597,7 +4320,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "47",
+    "conceptTitle": "3o fonema X",
+    "words": [
+      "EXISTE",
+      "EXAGERO",
+      "EXAME",
+      "EXATO",
+      "EXEMPLO",
+      "EXERCÍCIO",
+      "EXIGENTE",
+      "EXÓTICO",
+      "EXÉRCITO",
+      "EXIBIR"
+    ]
   },
   {
     "title": "Nó 48 - 4o fonema X (sexta)",
@@ -3672,7 +4409,21 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "48",
+    "conceptTitle": "4o fonema X",
+    "words": [
+      "SEXTA",
+      "TEXTO",
+      "EXPLICAR",
+      "EXPLOSÃO",
+      "EXCURSÃO",
+      "EXCLUIR",
+      "EXTERIOR",
+      "EXTINÇÃO",
+      "EXPRESSO",
+      "EXTRAIR"
+    ]
   },
   {
     "title": "Nó 49 - K (karaokê)",
@@ -3747,7 +4498,18 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "49",
+    "conceptTitle": "K",
+    "words": [
+      "KIT",
+      "KARAOKÊ",
+      "KETCHUP",
+      "LINK",
+      "KART",
+      "DESKTOP",
+      "SKATE"
+    ]
   },
   {
     "title": "Nó 50 - dígrafo XC (excelente)",
@@ -3822,7 +4584,16 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "50",
+    "conceptTitle": "dígrafo XC",
+    "words": [
+      "EXCELENTE",
+      "EXCESSO",
+      "EXCETO",
+      "EXCITAÇÃO",
+      "EXCEDENTE"
+    ]
   },
   {
     "title": "Nó 51 - Y (yoga)",
@@ -3897,7 +4668,18 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "51",
+    "conceptTitle": "Y",
+    "words": [
+      "YOGA",
+      "YAKISOBA",
+      "PLAY",
+      "MOTOBOY",
+      "DELIVERY",
+      "YOUTUBE",
+      "REPLAY"
+    ]
   },
   {
     "title": "Nó 52 - W (kiwi)",
@@ -3972,7 +4754,15 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "52",
+    "conceptTitle": "W",
+    "words": [
+      "KIWI",
+      "WIFI",
+      "WEBCAM",
+      "SHOW"
+    ]
   },
   {
     "title": "Nó 46b - dígrafo SC (piscina)",
@@ -4047,6 +4837,20 @@
           "_small": null
         }
       }
-    }
+    },
+    "nodeId": "46b",
+    "conceptTitle": "dígrafo SC",
+    "words": [
+      "DESCER",
+      "CRESCER",
+      "NASCER",
+      "PISCINA",
+      "ADOLESCENTE",
+      "DISCIPLINA",
+      "FLORESCER",
+      "CRESCIMENTO",
+      "DESCIDA",
+      "NASCIMENTO"
+    ]
   }
 ]
