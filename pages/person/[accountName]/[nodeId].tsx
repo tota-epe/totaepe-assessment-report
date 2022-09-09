@@ -17,12 +17,15 @@ import { Chart, CategoryScale,
   LineElement,
   Title,
   Tooltip,
-  Legend } from "chart.js";
+  Legend,
+  TimeSeriesScale} from "chart.js";
 import moment from 'moment';
+import { Tabs } from '@mantine/core';
 
 Chart.register(CategoryScale,
   TimeScale,
   LinearScale,
+  TimeSeriesScale,
   PointElement,
   LineElement,
   Title,
@@ -54,9 +57,9 @@ const Page: NextPage = ({ statements, statementsPerWord, errorLetterGrades }: In
 
   const nodeWords = nodeData?.words
 
-  let idx = 1;
+  const timeSeries = statements.map((statement: TotaStatement, index: number) => moment(statement.timestamp).format('DD/MM HH:mm') )
   const data = {
-    labels: statements.map((statement: TotaStatement, index: number) => { return moment(statement.timestamp).format('DD/MM HH:mm') + ` (${index + 1})` }),
+    labels: timeSeries,
     datasets: [
       {
         label: 'Score de acerto',
@@ -73,7 +76,14 @@ const Page: NextPage = ({ statements, statementsPerWord, errorLetterGrades }: In
       xAxis: {
         // The axis for this scale is determined from the first letter of the id as `'x'`
         // It is recommended to specify `position` and / or `axis` explicitly.
-        // type: 'time',
+        // type: 'category',
+        ticks: {
+          // For a category axis, the val is the index so the lookup via getLabelForValue is needed
+          callback: function(val: any, index: number) {
+            // Hide every 2nd tick label
+            return `${timeSeries[val]} (${index + 1})`;
+          }
+        }
       },
       yAxis: {
         min: 0,
@@ -94,6 +104,8 @@ const Page: NextPage = ({ statements, statementsPerWord, errorLetterGrades }: In
       }
     }
   };
+  const timeOptions = JSON.parse(JSON.stringify(options));
+  timeOptions.scales.xAxis.type = 'time'
 
   const toggleLabel = (context: any, event: any) => {
     const chart = context.chart;
@@ -114,8 +126,8 @@ const Page: NextPage = ({ statements, statementsPerWord, errorLetterGrades }: In
       type: "line",
       mode: "vertical",
       scaleID: "xAxis",
-      value: moment(statement.timestamp).format('DD/MM HH:mm') + ` (${index + 1})`,
-      borderColor: "red",
+      value: timeSeries[index],
+      borderColor: "orange",
       enter: toggleLabel,
       leave: toggleLabel,
       label: {
@@ -138,42 +150,58 @@ const Page: NextPage = ({ statements, statementsPerWord, errorLetterGrades }: In
       <p>Score de erros de conceito.: {conceptErrorGrade.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })}</p>
       <p>Nó dominado?: { nodeComplete ? 'sim' : 'não'} - {statements.length} Apresentações de palavras / Dominado em {earlyCompletionIndex + 1}</p>
       <p>Apresentações nas ultimas 24hs: {last24h.length}</p>
-      {true && <div>
-        <h2>Percental de erro em cada letra das palavras do Nó</h2>
-        <ul>
-          {Object.keys(errorLetterGrades).sort().map(letter => {
-            const errorWords = (errorLetterGrades as ErrorGrades)[letter].errors.map(error => { return error.word })
-            return (
-              <li key={letter}>
-                <div>
-                  <h3>Letra: {letter}</h3>
-                  <p>
-                    <strong>Palavras onde teve erro:</strong>
-                    {errorWords.filter((word, index)=> errorWords.indexOf(word) === index).join(', ')}
-                  </p>
-                  <p>
-                    <strong>Total de palavras onde a letra aparece</strong>:
-                    {errorLetterGrades[letter].totalWords}
-                  </p>
-                  <p>
-                    <strong>Total interação nas palavras</strong>:
-                    {errorLetterGrades[letter].totalWordsInteractions}
-                  </p>
-                  <p>
-                    <strong>Total erros nas interação das palavras</strong>:
-                    {errorLetterGrades[letter].errors.length}
-                  </p>
-                  <p>
-                    <strong>Porcentagem de erro(total de interação / errors nas interações):
-                    {errorLetterGrades[letter].errorPercent}%</strong>
-                  </p>
-                </div>
-              </li>
-            )
-          })}
-        </ul>
-      </div>}
-      <Line data={data} options={options} />
+      <Tabs defaultValue="chart">
+        <Tabs.List>
+          <Tabs.Tab value="chart">Gráfico</Tabs.Tab>
+          <Tabs.Tab value="chart-time">Gráfico Temporal</Tabs.Tab>
+          <Tabs.Tab value="letters">Letras</Tabs.Tab>
+        </Tabs.List>
+
+        <Tabs.Panel value="chart" pt="xs">
+          <Line data={data} options={options} />
+        </Tabs.Panel>
+
+        <Tabs.Panel value="chart-time" pt="xs">
+          <Line data={data} options={timeOptions} />
+        </Tabs.Panel>
+
+        <Tabs.Panel value="letters" pt="xs">
+          <h2>Percental de erro em cada letra das palavras do Nó</h2>
+          <ul>
+            {Object.keys(errorLetterGrades).sort().map(letter => {
+              const errorWords = (errorLetterGrades as ErrorGrades)[letter].errors.map(error => { return error.word })
+              return (
+                <li key={letter}>
+                  <div>
+                    <h3>Letra: {letter}</h3>
+                    <p>
+                      <strong>Palavras onde teve erro:</strong>
+                      {errorWords.filter((word, index)=> errorWords.indexOf(word) === index).join(', ')}
+                    </p>
+                    <p>
+                      <strong>Total de palavras onde a letra aparece</strong>:
+                      {errorLetterGrades[letter].totalWords}
+                    </p>
+                    <p>
+                      <strong>Total interação nas palavras</strong>:
+                      {errorLetterGrades[letter].totalWordsInteractions}
+                    </p>
+                    <p>
+                      <strong>Total erros nas interação das palavras</strong>:
+                      {errorLetterGrades[letter].errors.length}
+                    </p>
+                    <p>
+                      <strong>Porcentagem de erro(total de interação / errors nas interações):
+                      {errorLetterGrades[letter].errorPercent}%</strong>
+                    </p>
+                  </div>
+                </li>
+              )
+            })}
+          </ul>
+        </Tabs.Panel>
+
+      </Tabs>
       {nodeWords?.map(renderWord)}
     </div>
   )

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Table } from '@mantine/core';
+import { Button, Table, createStyles, Progress, Box, Text, Group, Paper, SimpleGrid, List } from '@mantine/core';
 import { TotaStatement, ErrorProfile } from '../../../types/tota_statement'
 
 type WordProps = {
@@ -7,8 +7,37 @@ type WordProps = {
   statements: TotaStatement[]
 }
 
+const useStyles = createStyles((theme) => ({
+  progressLabel: {
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    lineHeight: 1,
+    fontSize: theme.fontSizes.sm,
+  },
+
+  stat: {
+    border: '1px solid',
+    padding: '10px'
+  },
+
+  statCount: {
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    lineHeight: 1.3,
+  },
+
+  diff: {
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    display: 'flex',
+    alignItems: 'center',
+  },
+
+  icon: {
+    color: theme.colorScheme === 'dark' ? theme.colors.dark[3] : theme.colors.gray[4],
+  },
+}));
+
 export const Word = (props: WordProps) => {
   const [showHideStatements, setShowHideStatements] = useState(false);
+  const { classes } = useStyles();
 
   if (!props.statements) {
     return null
@@ -16,6 +45,7 @@ export const Word = (props: WordProps) => {
 
   let conceptRange = props.wordData.conceptRange.split(',').map(Number)
   let word = props.wordData.word
+  const wordLetters = word.split('');
 
   let statements = props.statements
   let recentStatements = props.statements.slice(0,10)
@@ -32,7 +62,7 @@ export const Word = (props: WordProps) => {
     correct: [0, 0],
     withError: [0, 0],
     withConceptError: [0, 0],
-    letterData: word.split('').map(letter => { return { } as ErrorProfile }),
+    letterData: wordLetters.map(letter => { return { } as ErrorProfile }),
     rawErrorCount: [] as number[], // Marks total count of error on each letter
     chartData: []
   }
@@ -110,10 +140,6 @@ export const Word = (props: WordProps) => {
   let withError = reducedStatements.withError
   let withConceptError = reducedStatements.withConceptError
   let correct = reducedStatements.correct
-  const totalAttempts = reducedStatements.rawErrorCount.reduce((s, a) => s + a, 0);
-  let rawErrorCount = reducedStatements.rawErrorCount.map((e, index) => {
-    return numberWithPercent(e, totalAttempts)
-  })
 
   const errorsOnLetter = (errorProfile: ErrorProfile) => {
     let errors = []
@@ -134,57 +160,83 @@ export const Word = (props: WordProps) => {
     return errors
   }
 
+  const totalAttempts = reducedStatements.rawErrorCount.reduce((s, a) => s + a, 0);
+  const colors = ['green', 'yellow', 'orange', 'red']
+  let segments = reducedStatements.rawErrorCount.map((e, index) => {
+    const segmentValue = e/totalAttempts;
+    return {
+      value: segmentValue*100,
+      color: colors[index],
+      label: segmentValue.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 }),
+    }
+  });
+
   return (
-    <div key={word}>
-      <h4>{word} - grupo conceito: <b>{word.slice(conceptRange[0], conceptRange[1] + 1)}</b></h4>
-      <p>Media Móvel 5 ultimas {statements[0]?.ma5?.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })}</p>
-      <p>Perfil de acertos pelo total de letras digitadas:
-      { rawErrorCount[0] && (<p>Sem erros: {rawErrorCount[0]}</p>) }
-      { rawErrorCount[1] && (<p>Segunda tentativa: {rawErrorCount[1]}</p>) }
-      { rawErrorCount[2] && (<p>Terceira tentativa: {rawErrorCount[2]}</p>) }
-      { rawErrorCount[3] && (<p>Com 3+ tentativas: {rawErrorCount[3]}</p>) }
-      </p>
-      <Table>
-        <thead>
-          <tr><td></td><td>Total</td><td>Mais recentes</td><td>Ultimas 24hs</td></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Apresentações:</td>
-            <td>{statements.length}</td>
-            <td>{recentStatements.length}</td>
-            <td>{last24h.length}</td>
-          </tr>
-          <tr>
-            <td>Corretas:</td>
-            <td>{numberWithPercent(correct[0], statements.length)}</td>
-            <td>{numberWithPercent(correct[1], recentStatements.length)}</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Com erro:</td>
-            <td>{numberWithPercent(withError[0], statements.length)}</td>
-            <td>{numberWithPercent(withError[1], recentStatements.length)}</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Com erro no conceito:</td>
-            <td>{numberWithPercent(withConceptError[0], statements.length)}</td>
-            <td>{numberWithPercent(withConceptError[1], recentStatements.length)}</td>
-            <td></td>
-          </tr>
-        </tbody>
-      </Table>
-      <div style={{display: 'flex'}}>
-        {word.split('').map((letter, index) => (
-          <div key={index} style={{ flex: 1, border: '1px solid', padding: '10px' }}>
-            <p>Letra: {letter}</p>
-            <ul>
-              {errorsOnLetter(letterData[index]).map((e, i) => <li key={i}>{e}</li>)}
-            </ul>
-          </div>
-        ))}
-      </div>
+    <>
+      <Paper withBorder p="md" radius="md">
+        <Group position="apart">
+          <Group align="flex-end" spacing="xs">
+            <Text size="xl" weight={700}>
+              {word} - grupo conceito: <b>{word.slice(conceptRange[0], conceptRange[1] + 1)}</b>
+            </Text>
+            <Text color="teal" className={classes.diff} size="sm" weight={700}>
+              <span>{statements[0]?.ma5?.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })}</span>
+            </Text>
+            <Text color="dimmed" size="sm">Media Móvel 5 ultimas</Text>
+          </Group>
+        </Group>
+
+        <Text color="dimmed" size="sm">
+          Perfil de acertos pelo total de letras digitadas
+        </Text>
+        <Progress
+          sections={segments}
+          size={24}
+          classNames={{ label: classes.progressLabel }}
+          mt={10} mb={10}
+        />
+        <Table>
+          <thead>
+            <tr><td></td><td>Total</td><td>Mais recentes</td><td>Ultimas 24hs</td></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Apresentações:</td>
+              <td>{statements.length}</td>
+              <td>{recentStatements.length}</td>
+              <td>{last24h.length}</td>
+            </tr>
+            <tr>
+              <td>Corretas:</td>
+              <td>{numberWithPercent(correct[0], statements.length)}</td>
+              <td>{numberWithPercent(correct[1], recentStatements.length)}</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Com erro:</td>
+              <td>{numberWithPercent(withError[0], statements.length)}</td>
+              <td>{numberWithPercent(withError[1], recentStatements.length)}</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Com erro no conceito:</td>
+              <td>{numberWithPercent(withConceptError[0], statements.length)}</td>
+              <td>{numberWithPercent(withConceptError[1], recentStatements.length)}</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </Table>
+      </Paper>
+      <SimpleGrid cols={wordLetters.length} spacing={5} breakpoints={[{ maxWidth: 'xs', cols: 1 }]} mt="xl">
+        {wordLetters.map((letter, index) => (
+            <Box key={index} className={classes.stat}>
+              <Text weight={700}>Letra: {letter}</Text>
+              <List sx={ { 'list-style-type': 'none' } }>
+                {errorsOnLetter(letterData[index]).map((e, i) => <List.Item key={i}>{e}</List.Item>)}
+              </List>
+            </Box>
+          ))}
+      </SimpleGrid>
       <Button onClick={() => setShowHideStatements(!showHideStatements)}>
         Dados brutos
       </Button>
@@ -193,6 +245,6 @@ export const Word = (props: WordProps) => {
           <li key={statement.id}>{JSON.stringify(statement)}</li>
         ))}
       </ul>}
-    </div>
+    </>
   )
 }

@@ -4,6 +4,7 @@ import Router from 'next/router'
 import Link from 'next/link'
 import Head from 'next/head'
 import NProgress from 'nprogress'
+import { MantineProvider } from '@mantine/core';
 
 Router.events.on('routeChangeStart', (url) => {
   NProgress.start()
@@ -21,7 +22,16 @@ export default function App({ Component, pageProps }: AppProps) {
           crossOrigin="anonymous"
           referrerPolicy="no-referrer" />
       </Head>
-      <Component {...pageProps} />
+      <MantineProvider
+        withGlobalStyles
+        withNormalizeCSS
+        theme={{
+          /** Put your mantine theme override here */
+          colorScheme: 'light',
+        }}
+      >
+        <Component {...pageProps} />
+      </MantineProvider>
     </>
   )
 }
