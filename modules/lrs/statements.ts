@@ -157,38 +157,45 @@ const processStatements = (statements: Statement[]) => {
         ?.map(l => l.split(',')) ?? []
     }
     let word = totaStatement.response.map(r => { return r.slice(-1)[0] }).join('')
-    totaStatement.word = word
+    totaStatement.word = word.toUpperCase();
     totaStatement.perf = totaStatement.response.length / totaStatement.response.reduce(
       ((previousValue, currentValue) => previousValue + currentValue.length), 0)
     totaStatement.correct = (totaStatement.perf == 1 ? true : false)
-    totaStatement.errorsPerLetter = totaStatement.response.map((l, index) => {
-      let errorsPerLetter = { } as ErrorProfile
-      return l.slice(0, l.length - 1).reduce(((t, wrongLetter) => {
-        if (!wrongLetter.match(/[a-záéíóúàâêôãõç]/i)) {
-          return t
-        }
-        let errorType = new ErrorType(word, index, wrongLetter)
-        if (!t[errorType.errorType]) {
-          t[errorType.errorType] = { count: 0, occurrences: [] }
-        }
-
-        // Prevents consecutive sequences of more than 2 occurences of same letter
-        if (t[errorType.errorType].occurrences[0] == wrongLetter &&
-            t[errorType.errorType].occurrences[1] == wrongLetter) {
-          return t
-        }
-
-        t[errorType.errorType].count += 1
-        t[errorType.errorType].occurrences.unshift(wrongLetter)
-        return t
-      }), errorsPerLetter)
-    })
 
     let newComponentId = (idComponentInverseMap[totaStatement.objectId] || totaStatement.objectId)
     let componentSourceData = components.find(c => c.id == newComponentId)
     let conceptErrorsWeights = componentSourceData?.concepts
     const conceptErrorsWeightIsEmpty = conceptErrorsWeights &&
                                        Object.values(conceptErrorsWeights).reduce((accumulator, curr) => { return (accumulator + curr.weight) }, 0) === 0
+
+    totaStatement.errorsPerLetter = totaStatement.response.map((l, index) => {
+      let errorsPerLetter = { } as ErrorProfile
+      return l.slice(0, l.length - 1).reduce(((t, wrongLetter) => {
+        if (!wrongLetter.match(/[a-záéíóúàâêôãõç]/i)) {
+          return t
+        }
+        let errorType = new ErrorType(word, conceptErrorsWeights)
+        let currentErrorType = errorType.classifyError(index, wrongLetter);
+        if (!currentErrorType) {
+          return t;
+        }
+
+        if (!t[currentErrorType]) {
+          t[currentErrorType] = { count: 0, occurrences: [] }
+        }
+
+        // Prevents consecutive sequences of more than 2 occurences of same letter
+        if (t[currentErrorType].occurrences[0] == wrongLetter &&
+            t[currentErrorType].occurrences[1] == wrongLetter) {
+          return t
+        }
+
+        t[currentErrorType].count += 1
+        t[currentErrorType].occurrences.unshift(wrongLetter)
+        return t
+      }), errorsPerLetter)
+    })
+
     let currentWordData = wordConcepts?.[newComponentId]?.[word]
     if (!currentWordData?.conceptRange) {
       return totaStatement

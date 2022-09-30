@@ -142,10 +142,22 @@ const Page: NextPage = ({ nodeId, statements, statementsPerWord, errorLetterGrad
     return (<Word wordData={wordData} statements={statementsPerWord[wordData.word]}/>)
   }
 
+  const renderConcepts = (concepts: any) => {
+    let renderedConcepts = <></>
+    const renderedChildren = Object.keys(concepts).map((concept: any) => {
+      if (concepts[concept].weight < 0) {
+        return (<span>Excluindo:{concept} </span>)
+      } else {
+        return (<span>{concept} </span>)
+      }
+    })
+    return (<>{renderedChildren}</>)
+  }
+
   return (
     <div>
       <h3>{node?.conceptTitle}</h3>
-      {nodeData && <p>Conceitos: {Object.keys(nodeData.concepts).join(', ')}</p>}
+      {nodeData && <p>Conceitos: {renderConcepts(nodeData.concepts)}</p>}
       <p>Score de erros de conceito.: {conceptErrorGrade.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })}</p>
       <p>Nó dominado?: { nodeComplete ? 'sim' : 'não'} - {statements.length} Apresentações de palavras / Dominado em {earlyCompletionIndex + 1}</p>
       <p>Apresentações nas ultimas 24hs: {last24h.length}</p>

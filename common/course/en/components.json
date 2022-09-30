@@ -2233,7 +2233,7 @@
         "weight": 1
       },
       "phonic": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -2316,7 +2316,7 @@
         "weight": 1
       },
       "phonic": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -2553,6 +2553,9 @@
       },
       "memory": {
         "weight": 1
+      },
+      "phonic": {
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -2911,10 +2914,6 @@
       },
       {
         "word": "COMER",
-        "conceptRange": "2,4"
-      },
-      {
-        "word": "PULAR",
         "conceptRange": "2,4"
       },
       {
@@ -3558,6 +3557,9 @@
       },
       "memory": {
         "weight": 1
+      },
+      "phonic": {
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -3724,6 +3726,9 @@
       },
       "omission": {
         "weight": 1
+      },
+      "phonic": {
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -4648,7 +4653,7 @@
     },
     "_concepts": {
       "phonic": {
-        "weight": 1
+        "weight": -1
       },
       "graphic": {
         "weight": 1
@@ -4822,6 +4827,9 @@
     "_concepts": {
       "orthographic": {
         "weight": 1
+      },
+      "phonic": {
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -4899,6 +4907,9 @@
     "_concepts": {
       "orthographic": {
         "weight": 1
+      },
+      "phonic": {
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -5022,12 +5033,12 @@
         "conceptRange": "0,0"
       },
       {
-        "word": "DESKTOP",
-        "conceptRange": "3,3"
-      },
-      {
         "word": "SKATE",
         "conceptRange": "1,1"
+      },
+      {
+        "word": "POKE",
+        "conceptRange": "2,2"
       }
     ]
   },

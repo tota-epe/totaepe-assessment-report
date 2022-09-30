@@ -38,26 +38,29 @@ export class ErrorType {
       // 'I' => ['E'],
     },
     graphic: { // Deveria ter o inverso sempre?
-      A: ['E'],
-      B: ['D'],
-      D: ['B'],
-      E: ['A'],
-      F: ['T'],
-      G: ['Q'],
+      a: ['e'],
+      b: ['d'],
+      d: ['b'],
+      e: ['a'],
+      f: ['t'],
+      g: ['q'],
+      h: ['n'],
+      i: ['l'],
+      m: ['w'],
+      n: ['u'],
+      p: ['q'],
+      q: ['p'],
+      t: ['f'],
+      u: ['n'],
+      w: ['m'],
+      // Maiúsculas
       H: ['N'],
-      I: ['L'],
       J: ['L'],
-      L: ['I', 'J'],
+      L: ['J'],
       M: ['W'],
-      N: ['U'],
-      P: ['Q'],
-      Q: ['P'],
-      S: ['Z'],
-      T: ['F'],
-      U: ['N'],
-      Z: ['S']
+      W: ['M']
     },
-    orthographic: {
+  orthographic: {
       // 'CH' => ['X'],
       // 'LH' => ['LI'],
       // 'RR' => ['R'],
@@ -87,58 +90,74 @@ export class ErrorType {
   }
 
   public errorType: ErrorTypes = ErrorTypes.other
+  private word: string
+  private concepts: any
 
-  constructor(word: string, index: number, user_input: string) {
-    let correct_letter = word[index]
-    if (user_input == correct_letter) { return }
-
-    this.errorType = this.ERROR_TYPES.find(error => this[error](word, index, user_input)) ?? ErrorTypes.other
+  constructor(word: string, concepts: any) {
+    this.word = word
+    this.concepts = concepts
   }
 
-  graphic(word: string, index: number, user_input: string) {
-    let correct_letter = word[index]
-    return this.ERRORS['graphic'][correct_letter]?.includes(user_input)
+  sortedErrorTypes() {
+    return this.ERROR_TYPES.sort((e1, e2) => {
+      const e1Weight = (this.concepts[e1]?.weight || 0);
+      const e2Weight = (this.concepts[e2]?.weight || 0);
+
+      return e2Weight - e1Weight;
+    });
+  };
+
+  classifyError(index: number, userInput: string) {
+    const correctLetter = this.word[index];
+    if (userInput.toUpperCase() === correctLetter.toUpperCase()) { return; }
+
+    return this.sortedErrorTypes().find(error => this[error](index, userInput));
+  };
+
+  graphic(index: number, userInput: string) {
+    let correctLetter = this.word[index]
+    return this.ERRORS['graphic'][correctLetter]?.includes(userInput)
   }
 
-  phonic(word: string, index: number, user_input: string) {
-    let correct_letter = word[index]
-    return this.ERRORS['phonic'][correct_letter]?.includes(user_input)
+  phonic(index: number, userInput: string) {
+    let correctLetter = this.word[index]
+    return this.ERRORS['phonic'][correctLetter]?.includes(userInput.toUpperCase())
   }
 
-  speech(word: string, index: number, user_input: string) {
-    let correct_letter = word[index]
-    return this.ERRORS['speech'][correct_letter]?.includes(user_input)
+  speech(index: number, userInput: string) {
+    let correctLetter = this.word[index]
+    return this.ERRORS['speech'][correctLetter]?.includes(userInput.toUpperCase())
   }
 
-  memory(word: string, index: number, user_input: string) {
+  memory(index: number, userInput: string) {
     if (index == 0) {
       return false
     }
     let startIndex = (index > 2 ? index - 2 : 0)
 
-    let memoryLetters = word.split('').slice(startIndex, index);
-    memoryLetters.push(...latinize(word).split('').slice(startIndex, index))
+    let memoryLetters = this.word.split('').slice(startIndex, index);
+    memoryLetters.push(...latinize(this.word).split('').slice(startIndex, index))
 
-    return memoryLetters.includes(user_input)
+    return memoryLetters.includes(userInput)
   }
 
-  intrusion(word: string, index: number, user_input: string) {
-    return (user_input == 'R' && word.split('').slice(index + 1).includes(user_input))
+  intrusion(index: number, userInput: string) {
+    return (userInput == 'R' && this.word.split('').slice(index + 1).includes(userInput))
   }
 
-  orthographic(word: string, index: number, user_input: string) {
-    let correct_letter = word[index]
-    return this.ERRORS['orthographic'][correct_letter]?.includes(user_input)
+  orthographic(index: number, userInput: string) {
+    let correctLetter = this.word[index]
+    return this.ERRORS['orthographic'][correctLetter]?.includes(userInput.toUpperCase())
   }
 
-  omission(word: string, index: number, user_input: string) {
-    let omissionLetters = word.split('').slice(index + 1, index + 3);
-    omissionLetters.push(...latinize(word).split('').slice(index + 1, index + 3))
+  omission(index: number, userInput: string) {
+    let omissionLetters = this.word.split('').slice(index + 1, index + 3);
+    omissionLetters.push(...latinize(this.word).split('').slice(index + 1, index + 3))
 
-    return omissionLetters.includes(user_input)
+    return omissionLetters.includes(userInput)
   }
 
-  other(word: string, index: number, user_input: string) {
+  other(index: number, userInput: string) {
     return true
   }
 }
