@@ -100,8 +100,8 @@ export class ErrorType {
 
   sortedErrorTypes() {
     return this.ERROR_TYPES.sort((e1, e2) => {
-      const e1Weight = (this.concepts[e1]?.weight || 0);
-      const e2Weight = (this.concepts[e2]?.weight || 0);
+      const e1Weight = (this.concepts?.[e1]?.weight || 0);
+      const e2Weight = (this.concepts?.[e2]?.weight || 0);
 
       return e2Weight - e1Weight;
     });

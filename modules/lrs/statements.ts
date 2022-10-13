@@ -147,7 +147,7 @@ const processStatements = (statements: Statement[]) => {
       // .in_time_zone('America/Sao_Paulo')
       // .strftime('%d/%m/%Y %H:%M:%S'),
       verb: s?.verb?.id.replace('http://adlnet.gov/expapi/verbs/', ''),
-      duration: parse(s?.result?.duration ?? ''),
+      duration: parse(s?.result?.duration ?? 'PT0S'),
       perf: 0,
       conceptErrorGrade: 0,
       response: s?.result?.response
