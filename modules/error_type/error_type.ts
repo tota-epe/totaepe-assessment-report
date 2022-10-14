@@ -135,8 +135,11 @@ export class ErrorType {
     }
     let startIndex = (index > 2 ? index - 2 : 0)
 
-    let memoryLetters = this.word.split('').slice(startIndex, index);
-    memoryLetters.push(...latinize(this.word).split('').slice(startIndex, index))
+    const memoryLetters = [];
+    memoryLetters.push(...this.word.toUpperCase().split('').slice(startIndex, index));
+    memoryLetters.push(...latinize(this.word.toUpperCase()).split('').slice(startIndex, index));
+    memoryLetters.push(...this.word.toLowerCase().split('').slice(startIndex, index));
+    memoryLetters.push(...latinize(this.word.toLowerCase()).split('').slice(startIndex, index));
 
     return memoryLetters.includes(userInput)
   }
@@ -151,8 +154,11 @@ export class ErrorType {
   }
 
   omission(index: number, userInput: string) {
-    let omissionLetters = this.word.split('').slice(index + 1, index + 3);
-    omissionLetters.push(...latinize(this.word).split('').slice(index + 1, index + 3))
+    const omissionLetters = [];
+    omissionLetters.push(...this.word.toUpperCase().split('').slice(index + 1, index + 3));
+    omissionLetters.push(...latinize(this.word.toUpperCase()).split('').slice(index + 1, index + 3));
+    omissionLetters.push(...this.word.toLowerCase().split('').slice(index + 1, index + 3));
+    omissionLetters.push(...latinize(this.word.toLowerCase()).split('').slice(index + 1, index + 3));
 
     return omissionLetters.includes(userInput)
   }
