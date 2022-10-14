@@ -143,7 +143,6 @@ const Page: NextPage = ({ nodeId, statements, statementsPerWord, errorLetterGrad
   }
 
   const renderConcepts = (concepts: any) => {
-    let renderedConcepts = <></>
     const renderedChildren = Object.keys(concepts).map((concept: any) => {
       if (concepts[concept].weight < 0) {
         return (<span>Excluindo:{concept} </span>)
