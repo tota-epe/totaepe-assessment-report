@@ -156,6 +156,7 @@ const processStatements = (statements: Statement[]) => {
         ?.split('],[')
         ?.map(l => l.split(',')) ?? []
     }
+    const lowercaseKeyboard = s.result?.extensions?.['https://totaepe.global/device-options']?.['lowercaseKeyboard'] || false
     let word = totaStatement.response.map(r => { return r.slice(-1)[0] }).join('')
     totaStatement.word = word.toUpperCase();
     totaStatement.perf = totaStatement.response.length / totaStatement.response.reduce(
@@ -175,6 +176,10 @@ const processStatements = (statements: Statement[]) => {
           return t
         }
         let errorType = new ErrorType(word, conceptErrorsWeights)
+        wrongLetter = wrongLetter.toUpperCase();
+        if (lowercaseKeyboard) {
+          wrongLetter = wrongLetter.toLowerCase();
+        }
         let currentErrorType = errorType.classifyError(index, wrongLetter);
         if (!currentErrorType) {
           return t;
