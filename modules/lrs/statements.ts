@@ -201,7 +201,7 @@ const processStatements = (statements: Statement[]) => {
       }), errorsPerLetter)
     })
 
-    let currentWordData = wordConcepts?.[newComponentId]?.[word]
+    let currentWordData = wordConcepts?.[newComponentId]?.[totaStatement.word]
     if (!currentWordData?.conceptRange) {
       return totaStatement
     }
