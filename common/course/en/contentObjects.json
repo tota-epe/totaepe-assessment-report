@@ -74,6 +74,7 @@
       }
     },
     "nodeId": "01-placement-test",
+    "nodeType": "placement-test",
     "conceptTitle": "Teste de Nivelamento",
     "words": [
       "RI",
@@ -267,6 +268,7 @@
       }
     },
     "nodeId": "1",
+    "nodeType": "main",
     "conceptTitle": "monossílabas simples com vogal aberta e consoante 1-2",
     "words": [
       "LÁ",
@@ -351,6 +353,7 @@
       }
     },
     "nodeId": "2",
+    "nodeType": "main",
     "conceptTitle": "monossílabos consoante 3-4 + vogal aberta",
     "words": [
       "DÁ",
@@ -441,6 +444,7 @@
       }
     },
     "nodeId": "3",
+    "nodeType": "main",
     "conceptTitle": "dissílabas (consoante + vogal aberta) x2",
     "words": [
       "COPO",
@@ -531,6 +535,7 @@
       }
     },
     "nodeId": "4",
+    "nodeType": "main",
     "conceptTitle": "monossílabas consoante + vogal fechada",
     "words": [
       "LÊ",
@@ -620,6 +625,7 @@
       }
     },
     "nodeId": "5",
+    "nodeType": "main",
     "conceptTitle": "dissílabas de consoante + vogal fechada",
     "words": [
       "LAMA",
@@ -709,6 +715,7 @@
       }
     },
     "nodeId": "6",
+    "nodeType": "main",
     "conceptTitle": "monossílabo vogal+ S ou M",
     "words": [
       "OS",
@@ -792,6 +799,7 @@
       }
     },
     "nodeId": "7",
+    "nodeType": "main",
     "conceptTitle": "monossílabo vogal+  R",
     "words": [
       "IR",
@@ -873,6 +881,7 @@
       }
     },
     "nodeId": "8",
+    "nodeType": "main",
     "conceptTitle": "dissílabos com hiato",
     "words": [
       "RUA",
@@ -962,6 +971,7 @@
       }
     },
     "nodeId": "9",
+    "nodeType": "main",
     "conceptTitle": "monossílabas de 3 letras terminadas em S",
     "words": [
       "GÁS",
@@ -1051,6 +1061,7 @@
       }
     },
     "nodeId": "10",
+    "nodeType": "main",
     "conceptTitle": "dissílabos com vogal inicial",
     "words": [
       "UMA",
@@ -1140,6 +1151,7 @@
       }
     },
     "nodeId": "11",
+    "nodeType": "main",
     "conceptTitle": "monossílabas de 3 letras terminadas em R",
     "words": [
       "MAR",
@@ -1229,6 +1241,7 @@
       }
     },
     "nodeId": "12",
+    "nodeType": "main",
     "conceptTitle": "sílaba vogal+vogal",
     "words": [
       "OI",
@@ -1316,6 +1329,7 @@
       }
     },
     "nodeId": "13",
+    "nodeType": "main",
     "conceptTitle": "dissílabos com sílaba vogal + S",
     "words": [
       "ESTE",
@@ -1401,6 +1415,7 @@
       }
     },
     "nodeId": "14",
+    "nodeType": "main",
     "conceptTitle": "dissílabos com sílaba vogal + R",
     "words": [
       "ARCO",
@@ -1489,6 +1504,7 @@
       }
     },
     "nodeId": "15",
+    "nodeType": "main",
     "conceptTitle": "que",
     "words": [
       "QUE"
@@ -1569,6 +1585,7 @@
       }
     },
     "nodeId": "16",
+    "nodeType": "main",
     "conceptTitle": "trissílabas com hiato",
     "words": [
       "PIANO",
@@ -1657,6 +1674,7 @@
       }
     },
     "nodeId": "17",
+    "nodeType": "main",
     "conceptTitle": "trissílabas de sílabas simples",
     "words": [
       "MACACO",
@@ -1746,6 +1764,7 @@
       }
     },
     "nodeId": "18",
+    "nodeType": "main",
     "conceptTitle": "segundo fonema do C",
     "words": [
       "VOCÊ",
@@ -1835,6 +1854,7 @@
       }
     },
     "nodeId": "19",
+    "nodeType": "main",
     "conceptTitle": "segundo fonema do G",
     "words": [
       "GELO",
@@ -1923,6 +1943,7 @@
       }
     },
     "nodeId": "20",
+    "nodeType": "main",
     "conceptTitle": "sílaba consoante+vogal+vogal",
     "words": [
       "LEITE",
@@ -2012,6 +2033,7 @@
       }
     },
     "nodeId": "21",
+    "nodeType": "main",
     "conceptTitle": "monossílabas de 3 letras terminada em M",
     "words": [
       "BOM",
@@ -2101,6 +2123,7 @@
       }
     },
     "nodeId": "22",
+    "nodeType": "main",
     "conceptTitle": "segundo fonema do L",
     "words": [
       "SOL",
@@ -2189,6 +2212,7 @@
       }
     },
     "nodeId": "23",
+    "nodeType": "main",
     "conceptTitle": "dissílaba consoante+vogal+ S",
     "words": [
       "FESTA",
@@ -2278,6 +2302,7 @@
       }
     },
     "nodeId": "24",
+    "nodeType": "main",
     "conceptTitle": "palavras com sílabas vogal+N",
     "words": [
       "ANDO",
@@ -2367,6 +2392,7 @@
       }
     },
     "nodeId": "25",
+    "nodeType": "main",
     "conceptTitle": "palavras com sílabas de vogal +L",
     "words": [
       "ALTO",
@@ -2454,6 +2480,7 @@
       }
     },
     "nodeId": "26",
+    "nodeType": "main",
     "conceptTitle": "dissílabas+ que terminem com consoante+vogal+R final",
     "words": [
       "CALOR",
@@ -2542,6 +2569,7 @@
       }
     },
     "nodeId": "27",
+    "nodeType": "main",
     "conceptTitle": "dissílabas+ com consoante+vogal+R meio",
     "words": [
       "BARCO",
@@ -2631,6 +2659,7 @@
       }
     },
     "nodeId": "28",
+    "nodeType": "main",
     "conceptTitle": "palavras com sílabas de consoante + vogal+ N ",
     "words": [
       "PONTE",
@@ -2720,6 +2749,7 @@
       }
     },
     "nodeId": "29",
+    "nodeType": "main",
     "conceptTitle": "palavras com sílabas de consoante + vogal + L final",
     "words": [
       "ANEL",
@@ -2809,6 +2839,7 @@
       }
     },
     "nodeId": "30",
+    "nodeType": "main",
     "conceptTitle": "palavras com sílabas de consoante + vogal + L meio",
     "words": [
       "BALDE",
@@ -2898,6 +2929,7 @@
       }
     },
     "nodeId": "31",
+    "nodeType": "main",
     "conceptTitle": "palavras com sílabas de consoante + vogal + M",
     "words": [
       "CAMPO",
@@ -2986,6 +3018,7 @@
       }
     },
     "nodeId": "32",
+    "nodeType": "main",
     "conceptTitle": "2o fonema do S",
     "words": [
       "CASA",
@@ -3075,6 +3108,7 @@
       }
     },
     "nodeId": "33",
+    "nodeType": "main",
     "conceptTitle": "dígrafo SS",
     "words": [
       "ISSO",
@@ -3164,6 +3198,7 @@
       }
     },
     "nodeId": "34",
+    "nodeType": "main",
     "conceptTitle": "2o fonema R  (regionalismo)",
     "words": [
       "CARA",
@@ -3253,6 +3288,7 @@
       }
     },
     "nodeId": "35",
+    "nodeType": "main",
     "conceptTitle": "dígrafo RR",
     "words": [
       "TERRA",
@@ -3342,6 +3378,7 @@
       }
     },
     "nodeId": "36",
+    "nodeType": "main",
     "conceptTitle": "dígrafo NH",
     "words": [
       "MANHA",
@@ -3431,6 +3468,7 @@
       }
     },
     "nodeId": "37",
+    "nodeType": "main",
     "conceptTitle": "H mudo",
     "words": [
       "HOJE",
@@ -3520,6 +3558,7 @@
       }
     },
     "nodeId": "38",
+    "nodeType": "main",
     "conceptTitle": "dígrafo do QU além do que",
     "words": [
       "QUEIJO",
@@ -3609,6 +3648,7 @@
       }
     },
     "nodeId": "39",
+    "nodeType": "main",
     "conceptTitle": "dígrafo LH",
     "words": [
       "MILHO",
@@ -3698,6 +3738,7 @@
       }
     },
     "nodeId": "40",
+    "nodeType": "main",
     "conceptTitle": "dígrafo CH",
     "words": [
       "CHÁ",
@@ -3787,6 +3828,7 @@
       }
     },
     "nodeId": "41",
+    "nodeType": "main",
     "conceptTitle": "encontro consonantal L",
     "words": [
       "CLUBE",
@@ -3876,6 +3918,7 @@
       }
     },
     "nodeId": "42",
+    "nodeType": "main",
     "conceptTitle": "Ç",
     "words": [
       "MOÇO",
@@ -3965,6 +4008,7 @@
       }
     },
     "nodeId": "43",
+    "nodeType": "main",
     "conceptTitle": "encontro consonantal R",
     "words": [
       "PRATO",
@@ -4054,6 +4098,7 @@
       }
     },
     "nodeId": "44",
+    "nodeType": "main",
     "conceptTitle": "dígrafo GU",
     "words": [
       "GUERRA",
@@ -4143,6 +4188,7 @@
       }
     },
     "nodeId": "45",
+    "nodeType": "main",
     "conceptTitle": "2o fonema X",
     "words": [
       "TÁXI",
@@ -4232,6 +4278,7 @@
       }
     },
     "nodeId": "46",
+    "nodeType": "main",
     "conceptTitle": "dígrafo SC",
     "words": [
       "DESCER",
@@ -4321,6 +4368,7 @@
       }
     },
     "nodeId": "47",
+    "nodeType": "main",
     "conceptTitle": "3o fonema X",
     "words": [
       "EXISTE",
@@ -4410,6 +4458,7 @@
       }
     },
     "nodeId": "48",
+    "nodeType": "main",
     "conceptTitle": "4o fonema X",
     "words": [
       "SEXTA",
@@ -4499,6 +4548,7 @@
       }
     },
     "nodeId": "49",
+    "nodeType": "main",
     "conceptTitle": "K",
     "words": [
       "KIT",
@@ -4585,6 +4635,7 @@
       }
     },
     "nodeId": "50",
+    "nodeType": "main",
     "conceptTitle": "dígrafo XC",
     "words": [
       "EXCELENTE",
@@ -4669,6 +4720,7 @@
       }
     },
     "nodeId": "51",
+    "nodeType": "main",
     "conceptTitle": "Y",
     "words": [
       "YOGA",
@@ -4755,6 +4807,7 @@
       }
     },
     "nodeId": "52",
+    "nodeType": "main",
     "conceptTitle": "W",
     "words": [
       "KIWI",
@@ -4838,6 +4891,7 @@
       }
     },
     "nodeId": "46b",
+    "nodeType": "main",
     "conceptTitle": "dígrafo SC",
     "words": [
       "DESCER",
@@ -4927,7 +4981,9 @@
       }
     },
     "nodeId": "letter-a",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - A",
+    "letter": "A",
     "words": [
       "FACA",
       "GALO",
@@ -5255,7 +5311,9 @@
       }
     },
     "nodeId": "letter-b",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - B",
+    "letter": "B",
     "words": [
       "BU",
       "BOA",
@@ -5384,7 +5442,9 @@
       }
     },
     "nodeId": "letter-c",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - C",
+    "letter": "C",
     "words": [
       "FACA",
       "CAMA",
@@ -5502,6 +5562,101 @@
     ]
   },
   {
+    "title": "Eixo das letras - Ç",
+    "displayTitle": "Eixo das letras - Ç",
+    "body": "",
+    "_classes": "",
+    "subtitle": "",
+    "pageBody": "",
+    "instruction": "",
+    "_htmlClasses": "",
+    "linkText": "View",
+    "duration": "",
+    "_lockedBy": [],
+    "_lockType": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_requireCompletionOf": -1,
+    "_ariaLevel": 0,
+    "_id": "9f5045a71564c7964ee25a3d6e36acdc",
+    "_parentId": "course",
+    "_type": "page",
+    "_graphic": {
+      "alt": "",
+      "src": ""
+    },
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_showPageCompletion": true,
+      "_isCompletionIndicatorEnabled": false,
+      "_excludeAssessments": false
+    },
+    "_boxMenu": {
+      "_renderAsGroup": false
+    },
+    "_vanilla": {
+      "_backgroundImage": {
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_backgroundStyles": {
+        "_backgroundRepeat": "repeat",
+        "_backgroundSize": "auto",
+        "_backgroundPosition": "left top"
+      },
+      "_responsiveClasses": {
+        "_large": "",
+        "_medium": "",
+        "_small": ""
+      },
+      "_pageHeader": {
+        "_backgroundImage": {
+          "_large": "",
+          "_medium": "",
+          "_small": ""
+        },
+        "_backgroundStyles": {
+          "_backgroundRepeat": "repeat",
+          "_backgroundSize": "auto",
+          "_backgroundPosition": "left top"
+        },
+        "_minimumHeights": {
+          "_large": null,
+          "_medium": null,
+          "_small": null
+        }
+      }
+    },
+    "nodeId": "letter-ç",
+    "nodeType": "letter",
+    "conceptTitle": "Eixo das letras - Ç",
+    "letter": "Ç",
+    "words": [
+      "MOÇO",
+      "CABEÇA",
+      "MAÇÃ",
+      "POÇA",
+      "AÇAÍ",
+      "CAROÇO",
+      "DANÇAR",
+      "TAÇA",
+      "ALMOÇO",
+      "NATAÇÃO",
+      "BRAÇO",
+      "PREGUIÇA",
+      "EXTINÇÃO",
+      "EXCITAÇÃO"
+    ]
+  },
+  {
     "title": "Eixo das letras - D",
     "displayTitle": "Eixo das letras - D",
     "body": "",
@@ -5576,7 +5731,9 @@
       }
     },
     "nodeId": "letter-d",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - D",
+    "letter": "D",
     "words": [
       "DÁ",
       "DIA",
@@ -5711,7 +5868,9 @@
       }
     },
     "nodeId": "letter-e",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - E",
+    "letter": "E",
     "words": [
       "ELA",
       "TER",
@@ -5957,7 +6116,9 @@
       }
     },
     "nodeId": "letter-f",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - F",
+    "letter": "F",
     "words": [
       "FACA",
       "FIO",
@@ -6080,7 +6241,9 @@
       }
     },
     "nodeId": "letter-g",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - G",
+    "letter": "G",
     "words": [
       "GALO",
       "GOTA",
@@ -6206,7 +6369,9 @@
       }
     },
     "nodeId": "letter-h",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - H",
+    "letter": "H",
     "words": [
       "MANHA",
       "SONHO",
@@ -6327,7 +6492,9 @@
       }
     },
     "nodeId": "letter-i",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - I",
+    "letter": "I",
     "words": [
       "RI",
       "SINO",
@@ -6541,7 +6708,9 @@
       }
     },
     "nodeId": "letter-j",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - J",
+    "letter": "J",
     "words": [
       "JÁ",
       "BEIJO",
@@ -6630,7 +6799,9 @@
       }
     },
     "nodeId": "letter-k",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - K",
+    "letter": "K",
     "words": [
       "KIT",
       "YAKISOBA",
@@ -6718,7 +6889,9 @@
       }
     },
     "nodeId": "letter-l",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - L",
+    "letter": "L",
     "words": [
       "LÁ",
       "GALO",
@@ -6914,7 +7087,9 @@
       }
     },
     "nodeId": "letter-m",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - M",
+    "letter": "M",
     "words": [
       "LAMA",
       "CAMA",
@@ -7079,7 +7254,9 @@
       }
     },
     "nodeId": "letter-n",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - N",
+    "letter": "N",
     "words": [
       "NU",
       "SINO",
@@ -7235,7 +7412,9 @@
       }
     },
     "nodeId": "letter-o",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - O",
+    "letter": "O",
     "words": [
       "SINO",
       "GALO",
@@ -7538,7 +7717,9 @@
       }
     },
     "nodeId": "letter-p",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - P",
+    "letter": "P",
     "words": [
       "PÉ",
       "PUS",
@@ -7681,7 +7862,9 @@
       }
     },
     "nodeId": "letter-q",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - Q",
+    "letter": "Q",
     "words": [
       "QUE",
       "QUEIJO",
@@ -7771,7 +7954,9 @@
       }
     },
     "nodeId": "letter-r",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - R",
+    "letter": "R",
     "words": [
       "RI",
       "RÃ",
@@ -7977,7 +8162,9 @@
       }
     },
     "nodeId": "letter-s",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - S",
+    "letter": "S",
     "words": [
       "SINO",
       "AS",
@@ -8151,7 +8338,9 @@
       }
     },
     "nodeId": "letter-t",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - T",
+    "letter": "T",
     "words": [
       "GOTA",
       "TIA",
@@ -8329,7 +8518,9 @@
       }
     },
     "nodeId": "letter-u",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - U",
+    "letter": "U",
     "words": [
       "NU",
       "BU",
@@ -8476,7 +8667,9 @@
       }
     },
     "nodeId": "letter-v",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - V",
+    "letter": "V",
     "words": [
       "VÓ",
       "VAZA",
@@ -8577,7 +8770,9 @@
       }
     },
     "nodeId": "letter-w",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - W",
+    "letter": "W",
     "words": [
       "KIWI",
       "WIFI",
@@ -8660,7 +8855,9 @@
       }
     },
     "nodeId": "letter-x",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - X",
+    "letter": "X",
     "words": [
       "XIXI",
       "CAIXA",
@@ -8782,7 +8979,9 @@
       }
     },
     "nodeId": "letter-y",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - Y",
+    "letter": "Y",
     "words": [
       "YAKISOBA",
       "YOGA",
@@ -8868,7 +9067,9 @@
       }
     },
     "nodeId": "letter-z",
+    "nodeType": "letter",
     "conceptTitle": "Eixo das letras - Z",
+    "letter": "Z",
     "words": [
       "VAZA",
       "BUZINA",

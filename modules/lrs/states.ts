@@ -6,10 +6,20 @@ type ComponentState = {
   }
 }
 
-type CourseState = {
+type NodeState = {
+  _id: string,
+  _isComplete?: boolean,
+  _isInteractionComplete?: boolean,
+  letter?: string,
+  errorGrade?: number
+  resultData: any
+}
+
+export type CourseState = {
   _id?: string,
-  _startId: string,
-  _lxpMaestroTimestamp?: string
+  _startId?: string,
+  _lxpMaestroTimestamp?: string,
+  currentMainNodeId?: string
 }
 
 export const getCourseState = async (accountName: string) => {
@@ -17,9 +27,40 @@ export const getCourseState = async (accountName: string) => {
   return await res.json() as CourseState
 }
 
+export const getNodeStates = async (accountName: string) => {
+  const res = await fetch(LRSStateURL(accountName, 'contentObjects').toString(), requestOptions())
+  return await res.json() as NodeState[]
+}
+
 export const getComponentState = async (accountName: string) => {
   const res = await fetch(LRSStateURL(accountName, 'components').toString(), requestOptions())
   return await res.json() as ComponentState[]
+}
+
+export const updateNodeStates = async (accountName: string, newState: NodeState | NodeState[] ) => {
+  let nodeStates = await getNodeStates(accountName)
+
+  if (!Array.isArray(newState)) {
+    newState = [newState] as NodeState[]
+  }
+  newState.forEach(state => {
+    let currentNodeState = nodeStates.find(c => c._id === state._id)
+    if (!currentNodeState) {
+      nodeStates.push(state)
+    } else {
+      Object.assign(currentNodeState, state);
+    }
+  });
+
+  let requestOptionsPut = {
+    ...requestOptions(),
+    method: 'PUT',
+    body: JSON.stringify(nodeStates)
+  }
+  requestOptionsPut.headers.set('Content-Type', 'application/json')
+
+  await fetch(LRSStateURL(accountName, 'contentObjects').toString(), requestOptionsPut)
+  return nodeStates
 }
 
 export const updateComponentState = async (accountName: string, newState: ComponentState) => {
@@ -46,7 +87,8 @@ export const updateCourseState = async (accountName: string, newState: CourseSta
   let currentCourseState = {
     ...courseState,
     ...newState,
-    _id: 'course'
+    _id: 'course',
+    _lxpMaestroTimestamp: Date()
   }
 
   let requestOptionsPut = {

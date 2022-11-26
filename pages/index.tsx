@@ -9,7 +9,7 @@ const Home: NextPage = ({people}: InferGetStaticPropsType<typeof getStaticProps>
       <ul>
         {people.map((person: {name: string, id: number, accountName: string}) => {
           return (
-            <li key={person.id}><Link href={`/person/${person.accountName}`}><a>{person.accountName}</a></Link></li>
+            <li key={person.id}><Link href={`/person/${person.accountName}`}>{person.accountName}</Link></li>
           )
         }
 

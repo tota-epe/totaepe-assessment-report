@@ -16,25 +16,36 @@ export type ErrorGrades = {
     totalWords: number,
     totalWordsInteractions: number,
     totalWordsInteractionsError: number,
-    errorPercent: number,
+    errorGrade: number,
     errors: ErrorGradeErrorsListType[]
   }
 }
 
 export const getErrorLetterGrades = (statements: TotaStatement[]): ErrorGrades => {
+  const errorsToConsider = ['phonic', 'graphic'];
   const errorsGrades: ErrorGrades = {}
   const uniqWordWithLetter = {} as { [key: string]: boolean}
-  statements.forEach(statement => {
-    statement.word?.split("").forEach((letter, letterWordIndex) => {
+  const bucketNodeWithLetter = {} as { [key: string]: number }
+  statements.slice().reverse().forEach(statement => {
+    statement.word?.split('').forEach((letter, letterWordIndex) => {
       letter = latinize(letter)
       if (errorsGrades[letter] === undefined) {
         errorsGrades[letter] = {
           totalWords: 0,
           totalWordsInteractions: 0,
-          errorPercent: 0,
+          errorGrade: 0,
           totalWordsInteractionsError: 0,
           errors: []
         }
+      }
+      const nodeIdWithLetter = `${statement.objectId}-${letter}`
+      bucketNodeWithLetter[nodeIdWithLetter] = bucketNodeWithLetter[nodeIdWithLetter] ?? 0
+      if (bucketNodeWithLetter[nodeIdWithLetter] >= 5) {
+        return;
+      }
+      bucketNodeWithLetter[nodeIdWithLetter] = bucketNodeWithLetter[nodeIdWithLetter] + 1
+      if (errorsGrades[letter].totalWordsInteractions >= 30) {
+        return;
       }
       errorsGrades[letter].totalWordsInteractions += 1
       //avoid to count duplicated Words for Letter
@@ -43,15 +54,15 @@ export const getErrorLetterGrades = (statements: TotaStatement[]): ErrorGrades =
         uniqWordWithLetter[uniqWordWithLetterKey] = true;
         errorsGrades[letter].totalWords += 1;
       }
-      if (statement.errorsPerLetter && statement.errorsPerLetter[letterWordIndex]) {
-        const letterError = statement.errorsPerLetter[letterWordIndex]
-        const letterErrorTypes = Object.keys(letterError);
+      const errorOnLetter = statement?.errorsPerLetter?.[letterWordIndex]
+      if (errorOnLetter) {
+        const letterErrorTypes = Object.keys(errorOnLetter).filter(x => errorsToConsider.includes(x));
         const errorsList = letterErrorTypes.map(type => {
           return {
             type: type,
             word: statement.word,
             position: letterWordIndex,
-            letters: letterError[type].occurrences
+            letters: errorOnLetter[type].occurrences
           } as ErrorGradeErrorsListType
         })
         if (errorsList.length > 0) {
@@ -62,8 +73,8 @@ export const getErrorLetterGrades = (statements: TotaStatement[]): ErrorGrades =
   })
   Object.keys(errorsGrades).forEach(letter => {
     errorsGrades[letter].totalWordsInteractionsError = errorsGrades[letter].errors.length
-    errorsGrades[letter].errorPercent = parseFloat(((errorsGrades[letter].totalWordsInteractionsError * 100) / errorsGrades[letter].totalWordsInteractions).toFixed(2))
+    errorsGrades[letter].errorGrade = (errorsGrades[letter].totalWordsInteractionsError / errorsGrades[letter].totalWordsInteractions)
   })
-
+// console.log(errorsGrades)
   return errorsGrades;
 }

@@ -8972,6 +8972,152 @@
     "title": "",
     "displayTitle": "",
     "body": "",
+    "_id": "8d08608f51dc4ec6204d653df45a5e17",
+    "_parentId": "cae3268c50db2c03bc351d2674dd2859",
+    "_type": "component",
+    "_layout": "full",
+    "_onScreen": {
+      "_isEnabled": false,
+      "_classes": "",
+      "_percentInviewVertical": 50
+    },
+    "_pageLevelProgress": {
+      "_isEnabled": true,
+      "_isCompletionIndicatorEnabled": false
+    },
+    "_concepts": {
+      "phonic": {
+        "weight": 1
+      },
+      "graphic": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      },
+      "intrusion": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": 1
+      },
+      "speech": {
+        "weight": 1
+      }
+    },
+    "_wordLimit": "5",
+    "_placementTest": false,
+    "_resumable": false,
+    "_words": [
+      {
+        "word": "MOÇO",
+        "conceptRange": "2,2",
+        "closedVowels": [
+          1,
+          3
+        ]
+      },
+      {
+        "word": "CABEÇA",
+        "conceptRange": "4,4",
+        "closedVowels": [
+          3
+        ]
+      },
+      {
+        "word": "MAÇÃ",
+        "conceptRange": "2,2"
+      },
+      {
+        "word": "POÇA",
+        "conceptRange": "2,2",
+        "closedVowels": [
+          1
+        ]
+      },
+      {
+        "word": "AÇAÍ",
+        "conceptRange": "1,1"
+      },
+      {
+        "word": "CAROÇO",
+        "conceptRange": "4,4",
+        "closedVowels": [
+          3,
+          5
+        ]
+      },
+      {
+        "word": "DANÇAR",
+        "conceptRange": "3,3"
+      },
+      {
+        "word": "TAÇA",
+        "conceptRange": "2,2"
+      },
+      {
+        "word": "ALMOÇO",
+        "conceptRange": "4,4",
+        "closedVowels": [
+          3,
+          5
+        ]
+      },
+      {
+        "word": "NATAÇÃO",
+        "conceptRange": "4,4",
+        "closedVowels": [
+          6
+        ]
+      },
+      {
+        "word": "BRAÇO",
+        "conceptRange": "3,3",
+        "closedVowels": [
+          4
+        ]
+      },
+      {
+        "word": "PREGUIÇA",
+        "conceptRange": "6,6",
+        "closedVowels": [
+          2
+        ]
+      },
+      {
+        "word": "EXTINÇÃO",
+        "conceptRange": "5,5",
+        "closedVowels": [
+          0,
+          7
+        ]
+      },
+      {
+        "word": "EXCITAÇÃO",
+        "conceptRange": "6,6",
+        "closedVowels": [
+          0,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "_component": "totaApp",
+    "_classes": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_isResetOnRevisit": "false",
+    "_ariaLevel": 0,
+    "_disableAccessibilityState": false,
+    "title": "",
+    "displayTitle": "",
+    "body": "",
     "_id": "0217d6656d0fe3da2793c2e6c3ec1d1b",
     "_parentId": "ea1d53398f95f35908b8ab1506ef1035",
     "_type": "component",

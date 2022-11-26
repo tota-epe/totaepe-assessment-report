@@ -1151,6 +1151,26 @@
     "_isVisible": true,
     "_requireCompletionOf": -1,
     "_ariaLevel": 0,
+    "_id": "fcee3cc978d459183773f5cf8a8724c9",
+    "_parentId": "9f5045a71564c7964ee25a3d6e36acdc",
+    "_type": "article",
+    "_pageLevelProgress": {
+      "_isEnabled": false,
+      "_isCompletionIndicatorEnabled": false
+    }
+  },
+  {
+    "title": "New Article Title",
+    "displayTitle": "",
+    "body": "",
+    "_classes": "",
+    "instruction": "",
+    "_isOptional": false,
+    "_isAvailable": true,
+    "_isHidden": false,
+    "_isVisible": true,
+    "_requireCompletionOf": -1,
+    "_ariaLevel": 0,
     "_id": "8e532e99021cc0b9e68c6208f4a4b795",
     "_parentId": "c3263a29e41efae73b0f6df8400e859a",
     "_type": "article",

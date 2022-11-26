@@ -109,6 +109,11 @@ export const nodes = courseContentObjects.map(contentObject => {
   }
 })
 
+export const mainNodes = nodes.filter(n => !isNaN(parseInt(n.nodeId)))
+export const letterNodes = nodes.filter(n => n.nodeId.startsWith('letter-'))
+
+export const defaultStartId = nodes.find(n => n.nodeId === '1')?._id || ''
+
 export const placementTestNode = nodes.find((n) => {
   const componentsOnNode = n.articles.flatMap((a) => { return a.blocks.flatMap((b) => { return b.components })})
   return componentsOnNode.find((c) => { return c._placementTest })

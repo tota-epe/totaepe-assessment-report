@@ -57,7 +57,7 @@ export const getLRSData = async (options: LrsGetDataOptions) => {
     const today = new Date();
     const recentDate = new Date(new Date().setDate(today.getDate() - 30));
 
-    requestData['dateField'] ='timestamp'
+    requestData['dateField'] = 'timestamp'
     requestData['since'] = recentDate.toISOString()
   }
 
@@ -117,7 +117,6 @@ export const getStatementsPerWord = (resultStatements: TotaStatement[]): Hash<To
 
   return statementsPerWord
 }
-
 
 const processStatements = (statements: Statement[]) => {
   type WordConceptMap = {
