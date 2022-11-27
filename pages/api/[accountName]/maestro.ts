@@ -96,7 +96,7 @@ export default async function handler(
   currentNodeState = {
     ...currentNodeState,
     errorGrade: conceptErrorGrade,
-    lastInteraction: lastStatement.timestamp,
+    lastInteraction: lastStatement?.timestamp,
   };
   if (!currentNodeState.superMemo) {
     currentNodeState.superMemo = {
