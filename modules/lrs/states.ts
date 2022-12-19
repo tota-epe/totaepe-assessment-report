@@ -6,12 +6,19 @@ type ComponentState = {
   }
 }
 
-type NodeState = {
+export type NodeState = {
   _id: string,
   _isComplete?: boolean,
   _isInteractionComplete?: boolean,
   letter?: string,
-  errorGrade?: number
+  nodeScore?: number,
+  lastInteraction?: string,
+  superMemo?: {
+    interval: number,
+    repetition: number,
+    efactor: number,
+    lastStatement?: string
+  }
   resultData: any
 }
 

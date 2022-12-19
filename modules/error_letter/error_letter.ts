@@ -16,7 +16,7 @@ export type ErrorGrades = {
     totalWords: number,
     totalWordsInteractions: number,
     totalWordsInteractionsError: number,
-    errorGrade: number,
+    nodeScore: number,
     errors: ErrorGradeErrorsListType[]
   }
 }
@@ -33,7 +33,7 @@ export const getErrorLetterGrades = (statements: TotaStatement[]): ErrorGrades =
         errorsGrades[letter] = {
           totalWords: 0,
           totalWordsInteractions: 0,
-          errorGrade: 0,
+          nodeScore: 0,
           totalWordsInteractionsError: 0,
           errors: []
         }
@@ -73,7 +73,7 @@ export const getErrorLetterGrades = (statements: TotaStatement[]): ErrorGrades =
   })
   Object.keys(errorsGrades).forEach(letter => {
     errorsGrades[letter].totalWordsInteractionsError = errorsGrades[letter].errors.length
-    errorsGrades[letter].errorGrade = (errorsGrades[letter].totalWordsInteractionsError / errorsGrades[letter].totalWordsInteractions)
+    errorsGrades[letter].nodeScore = 1 - (errorsGrades[letter].totalWordsInteractionsError / errorsGrades[letter].totalWordsInteractions)
   })
 // console.log(errorsGrades)
   return errorsGrades;

@@ -22,7 +22,7 @@ import {
   Center,
   Loader,
 } from "@mantine/core";
-import { getCourseState, getNodeStates } from "../../modules/lrs/states";
+import { getCourseState, getNodeStates, NodeState } from "../../modules/lrs/states";
 import clsx from "clsx";
 import { redirect } from "next/dist/server/api-utils";
 
@@ -82,8 +82,8 @@ const Page: NextPage = ({
     const nodeData = nodeStates[node._id];
     const isWarning =
       node.nodeType === "letter" &&
-      nodeData?.errorGrade &&
-      nodeData?.errorGrade > 0.1;
+      nodeData?.nodeScore &&
+      nodeData?.nodeScore <= 0.9;
 
     return (
       <Paper
@@ -107,8 +107,8 @@ const Page: NextPage = ({
         </Text>
         {nodeData && (
           <Text>
-            % de erro:{" "}
-            {nodeData?.errorGrade?.toLocaleString(undefined, {
+            % de acerto:{" "}
+            {nodeData?.nodeScore?.toLocaleString(undefined, {
               style: "percent",
               minimumFractionDigits: 2,
             })}
@@ -169,14 +169,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   )[0];
 
   const courseState = await getCourseState(accountName);
-  const nodeStates = {} as { [key: string]: any };
+  const nodeStates = {} as { [key: string]: NodeState };
   const LRSNodeStates = await getNodeStates(accountName);
   if (Array.isArray(LRSNodeStates)) {
-    LRSNodeStates.forEach((nodeState: any) => {
+    LRSNodeStates.forEach((nodeState) => {
       nodeStates[nodeState._id] = nodeState;
     });
   }
-  return { props: { person, courseState, nodeStates } };
+  return { props: { person, courseState, nodeStates }, revalidate: 5 * 60 };
 };
 
 export async function getStaticPaths() {

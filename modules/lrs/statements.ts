@@ -237,7 +237,9 @@ const processStatements = (statements: Statement[]) => {
     if (statementWindow.length > windowSize) {
       statementWindow.shift();
     }
-    currentStatement.conceptErrorScore = 1 - (statementWindow.reduce(((p: number, c: TotaStatement) => p + (c.conceptErrorGrade > 0 ? 1 : 0)), 0.0) / statementWindow.length)
+    if (statementWindow.length === windowSize) {
+      currentStatement.conceptErrorScore = 1 - (statementWindow.reduce(((p: number, c: TotaStatement) => p + (c.conceptErrorGrade > 0 ? 1 : 0)), 0.0) / statementWindow.length)
+    }
   })
 
   totaStatements.sort(function(x, y){

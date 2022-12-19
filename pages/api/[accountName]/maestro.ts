@@ -1,4 +1,3 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 import {
   getCourseState,
@@ -7,6 +6,7 @@ import {
   updateCourseState,
   updateNodeStates,
   CourseState,
+  NodeState,
 } from "../../../modules/lrs/states";
 import {
   nodes,
@@ -23,7 +23,7 @@ import {
 } from "../../../modules/lrs/statements";
 import { getErrorLetterGrades } from "../../../modules/error_letter/error_letter";
 import { TotaStatement } from "../../../types/tota_statement";
-import { supermemo, SuperMemoGrade } from "supermemo";
+import { updateSMForNode } from "../../../modules/spaced_repetition/spaced_repetition";
 
 export default async function handler(
   req: NextApiRequest,
@@ -39,10 +39,7 @@ export default async function handler(
   const currentMainNode = mainNodes.find(
     (n) => n._id == courseState.currentMainNodeId
   );
-  const currentMainNodeIndex = mainNodes.findIndex(
-    (n) => n._id == courseState.currentMainNodeId
-  );
-
+console.log('CALCULANDO')
   let nodeId = Array.isArray(req.query.nodeID)
     ? req.query.nodeID[0]
     : req.query.nodeID;
@@ -64,7 +61,12 @@ export default async function handler(
     return;
   }
   // Get data from current component and analyse
-  let resultStatements = await getLRSDataForNode(accountName, nodeId, true);
+  const onlyRecents = shouldUpdateStart;
+  let resultStatements = await getLRSDataForNode(
+    accountName,
+    nodeId,
+    onlyRecents
+  );
 
   if (currentComponent._placementTest) {
     const { nextNodeId, wordsWithError } = await placementTestHandler(
@@ -82,47 +84,22 @@ export default async function handler(
   }
 
   // Check if node should advance to next Node
-  const recentStatements = resultStatements.slice(-30);
   const [lastStatement] = resultStatements.slice(-1);
-  const conceptErrorGrade =
-    recentStatements.reduce(
-      (p, c) => p + (c.conceptErrorGrade > 0 ? 1 : 0),
-      0
-    ) / recentStatements.length;
   let nodeStates = await getNodeStates(accountName);
   let currentNodeState =
     nodeStates.find((state) => state._id === nodeId) ||
-    ({ _id: nodeId } as any);
+    ({ _id: nodeId } as NodeState);
   currentNodeState = {
     ...currentNodeState,
-    errorGrade: conceptErrorGrade,
+    nodeScore: lastStatement?.conceptErrorScore,
     lastInteraction: lastStatement?.timestamp,
   };
-  if (!currentNodeState.superMemo) {
-    currentNodeState.superMemo = {
-      interval: 0,
-      repetition: 0,
-      efactor: 2.5,
-    };
-  }
-  if (lastStatement) {
-    const multiplier = lastStatement.conceptErrorGrade > 0 ? 0 : 1;
-    const performanceAdd =
-      lastStatement.conceptErrorGrade >= 0.8
-        ? lastStatement.conceptErrorGrade === 1
-          ? 2
-          : 1
-        : 0;
-    const superMemoScore = (3 * multiplier + performanceAdd) as SuperMemoGrade;
+  updateSMForNode(resultStatements, currentNodeState);
 
-    currentNodeState.superMemo = supermemo(
-      currentNodeState.superMemo,
-      superMemoScore
-    );
+  let nodeComplete = false;
+  if (lastStatement && lastStatement.conceptErrorScore) {
+    nodeComplete = lastStatement.conceptErrorScore >= 0.8;
   }
-
-  const nodeComplete =
-    recentStatements.length === 30 && conceptErrorGrade < 0.2;
   let words = currentComponent.words;
   let statementsPerWord = getStatementsPerWord(resultStatements);
   let sortedWords = words
@@ -164,7 +141,7 @@ export default async function handler(
   let newNodeStates = [
     ...(await getLetterErrorData(accountName)),
     currentNodeState,
-  ] as any[];
+  ] as NodeState[];
 
   if (shouldWrite) {
     await updateComponentState(accountName, newComponentState);
@@ -184,9 +161,9 @@ export default async function handler(
     return;
   }
 
-  let newCourseState = { } as CourseState;
+  let newCourseState = {} as CourseState;
   // First check if nodeComplete (will advance to next)
-  if (node.nodeType === 'main' && nodeComplete) {
+  if (node.nodeType === "main" && nodeComplete) {
     let nextNodeIndex = mainNodes.findIndex((n) => n._id == nodeId) + 1;
     let nextNodeId = mainNodes[nextNodeIndex]?._id;
 
@@ -196,9 +173,9 @@ export default async function handler(
       currentMainNodeId: nextNodeId,
       _startId: nextNodeId,
     };
-  } else if (node.nodeType === 'letter') {
-    const letterNodeState = nodeStates.find((n) => n.letter === node.letter)
-    if (letterNodeState?.errorGrade && letterNodeState?.errorGrade > 0.1) {
+  } else if (node.nodeType === "letter") {
+    const letterNodeState = nodeStates.find((n) => n.letter === node.letter);
+    if (letterNodeState?.nodeScore && letterNodeState?.nodeScore >= 0.9) {
       newCourseState = {
         ...newCourseState,
         _startId: node._id,
@@ -209,9 +186,9 @@ export default async function handler(
   if (!newCourseState._startId) {
     // Check if any letter is on alarming state
     const worstLetterNode = nodeStates
-      .filter((n) => n.letter && n.errorGrade && n.errorGrade > 0.1)
+      .filter((n) => n.letter && n.nodeScore && n.nodeScore < 0.9)
       .sort((a, b) => {
-        return (b?.errorGrade || 0) - (a?.errorGrade || 0);
+        return (a?.nodeScore || 0) - (b?.nodeScore || 0);
       })[0];
 
     if (worstLetterNode) {
@@ -248,7 +225,7 @@ const getLetterErrorData = async (accountName: string) => {
       _id: letterNode?._id,
       letter: letter,
       totalWordsInteractions: errorLetterGrades[letter].totalWordsInteractions,
-      errorGrade: errorLetterGrades[letter].errorGrade,
+      nodeScore: errorLetterGrades[letter].nodeScore,
     };
   });
 };
@@ -257,9 +234,6 @@ const placementTestHandler = async (
   currentComponent: TotaEpeComponent,
   resultStatements: TotaStatement[]
 ) => {
-  const nextNodeIDGroup = {} as any;
-  let shouldSetNextNodeId = false;
-
   let destinationNodeIdPerWord = {} as { [key: string]: string | undefined };
   currentComponent.words.reduce((t, wordData) => {
     destinationNodeIdPerWord[wordData.word] = wordData.destinationNodeID;
