@@ -26,5 +26,6 @@ export type TotaStatement = {
   errorsPerLetter?: ErrorProfile[],
   conceptErrors?: ErrorProfile,
   conceptErrorScore?: number,
-  conceptErrorGrade: number
+  conceptErrorGrade: number,
+  withLetterError?: boolean
 }

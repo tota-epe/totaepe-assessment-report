@@ -4,6 +4,7 @@ import React from "react";
 import { Word } from "../../../common/components/word/word";
 import { TotaStatement } from "../../../types/tota_statement";
 import {
+  getLRSData,
   getLRSDataForPersonAndNode,
   getStatementsPerWord,
 } from "../../../modules/lrs/statements";
@@ -28,7 +29,7 @@ import {
   TimeSeriesScale,
 } from "chart.js";
 import moment from "moment";
-import { Center, Loader, Tabs } from "@mantine/core";
+import { Card, Center, Loader, Tabs } from "@mantine/core";
 import { getLRSPeople } from "../../../modules/lrs/people";
 
 Chart.register(
@@ -59,6 +60,7 @@ const Page: NextPage = ({
   }
 
   let node = nodes.find((node) => node._id === nodeId);
+  const nodeLetter = node?.letter;
   let nodeData = node?.articles
     .map((a) => a.blocks.map((b) => b.components))
     .flat(3)[0];
@@ -222,6 +224,7 @@ const Page: NextPage = ({
           <Tabs.Tab value="chart">Gráfico</Tabs.Tab>
           <Tabs.Tab value="chart-time">Gráfico Temporal</Tabs.Tab>
           <Tabs.Tab value="letters">Letras</Tabs.Tab>
+          <Tabs.Tab value="data">Dados Brutos</Tabs.Tab>
         </Tabs.List>
 
         <Tabs.Panel value="chart" pt="xs">
@@ -280,6 +283,49 @@ const Page: NextPage = ({
               })}
           </ul>
         </Tabs.Panel>
+
+        <Tabs.Panel value="data" pt="xs">
+          {nodeLetter && (
+            <Card>
+              <div>
+                Total de erros:{" "}
+                {errorLetterGrades[nodeLetter].totalWordsInteractionsError}
+              </div>
+              <div>
+                Total: {errorLetterGrades[nodeLetter].totalWordsInteractions}
+              </div>
+              <div>
+                Score:{" "}
+                {errorLetterGrades[nodeLetter].nodeScore.toLocaleString(
+                  undefined,
+                  {
+                    style: "percent",
+                    minimumFractionDigits: 2,
+                  }
+                )}
+              </div>
+
+              {nodeLetter && (
+                <table>
+                  {errorLetterGrades[nodeLetter].statements.map(
+                    (statement: TotaStatement) => (
+                      <tr key={statement.id}>
+                        <td>
+                          {moment(statement.timestamp).format("DD/MM/YY HH:mm")}
+                        </td>
+                        <td>{statement.word}</td>
+                        <td>{JSON.stringify(statement.response)}</td>
+                        <td>{statement.withLetterError ? "COM ERRO" : ""}</td>
+                        <td>{statement.objectId}</td>
+                        {/* {JSON.stringify(statement)} */}
+                      </tr>
+                    )
+                  )}
+                </table>
+              )}
+            </Card>
+          )}
+        </Tabs.Panel>
       </Tabs>
       {nodeWords?.map(renderWord)}
     </div>
@@ -301,13 +347,23 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   var statementsPerWord: Hash<TotaStatement[]> =
     getStatementsPerWord(resultStatements);
 
+  let node = nodes.find((node) => node._id === nodeId);
+  const nodeLetter = node?.letter;
+  let errorLetterGrades;
+  if (nodeLetter) {
+    const allUserStatements = await getLRSData({ accountName: accountName });
+    errorLetterGrades = getErrorLetterGrades(allUserStatements);
+  } else {
+    errorLetterGrades = getErrorLetterGrades(resultStatements);
+  }
+
   // Pass data to the page via props
   return {
     props: {
       nodeId: nodeId,
       statements: resultStatements,
       statementsPerWord: statementsPerWord,
-      errorLetterGrades: getErrorLetterGrades(resultStatements),
+      errorLetterGrades: errorLetterGrades,
     },
     revalidate: 5 * 60,
   };
