@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2015",
     "lib": [
       "dom",
       "dom.iterable",
@@ -20,6 +20,7 @@
     "incremental": true
   },
   "include": [
+    "scripts/rebuild_cache.ts",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"

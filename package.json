@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "rebuild_cache": "ts-node -P tsconfig.buildScripts.json ./scripts/rebuild_cache.ts"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
