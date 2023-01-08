@@ -22,9 +22,12 @@ import {
   Center,
   Loader,
 } from "@mantine/core";
-import { getCourseState, getNodeStates, NodeState } from "../../modules/lrs/states";
+import {
+  getCourseState,
+  getNodeStates,
+  NodeState,
+} from "../../modules/lrs/states";
 import clsx from "clsx";
-import { redirect } from "next/dist/server/api-utils";
 
 const ICON_SIZE = 60;
 
@@ -121,7 +124,10 @@ const Page: NextPage = ({
           </Text>
         )}
         {nodeData?.superMemo && (
-          <Text>SM2: {JSON.stringify(nodeData.superMemo)}</Text>
+          <div>
+            <Text>SM2: {JSON.stringify(nodeData.superMemo)}</Text>
+            <Text>NextInteraction: {nodeData.nextSMInteraction}</Text>
+          </div>
         )}
         {nodeWordsText && (
           <Text color="dimmed" align="center" size="sm">

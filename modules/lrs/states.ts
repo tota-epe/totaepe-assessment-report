@@ -13,6 +13,7 @@ export type NodeState = {
   letter?: string,
   nodeScore?: number,
   lastInteraction?: string,
+  nextSMInteraction?: string,
   superMemo?: {
     interval: number,
     repetition: number,

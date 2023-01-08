@@ -22,6 +22,16 @@ export const updateSMForNode = (
     return true;
   });
 
+  if (recentStatements.length === 0) {
+    return currentNodeState;
+  }
+
+  const [lastStatement] = recentStatements.slice(-1);
+  if (currentNodeState.lastInteraction === lastStatement.timestamp) {
+    return currentNodeState;
+  }
+
+  currentNodeState.lastInteraction = lastStatement.timestamp;
   if (!currentNodeState.superMemo) {
     currentNodeState.superMemo = {
       interval: 0,
@@ -30,10 +40,34 @@ export const updateSMForNode = (
     };
   }
 
-  if (recentStatements.length === 0) {
-    return currentNodeState;
-  }
+  const superMemoScore = computeSuperMemoScore(recentStatements);
 
+  currentNodeState.superMemo = supermemo(
+    currentNodeState.superMemo,
+    superMemoScore
+  );
+
+  computeNextSMInteraction(currentNodeState);
+  return currentNodeState;
+};
+
+const computeNextSMInteraction = (currentNodeState: NodeState) => {
+  if (
+    currentNodeState._isComplete &&
+    currentNodeState.lastInteraction &&
+    currentNodeState.superMemo
+  ) {
+    currentNodeState.nextSMInteraction = moment(
+      currentNodeState.lastInteraction
+    )
+      .add(currentNodeState.superMemo.interval, "days")
+      .toISOString();
+  } else {
+    delete currentNodeState.nextSMInteraction;
+  }
+};
+
+const computeSuperMemoScore = (recentStatements: TotaStatement[]) => {
   const conceptErrorGrade = recentStatements.map((s) =>
     s.conceptErrorGrade > 0 ? 1 : 0
   ) as number[];
@@ -43,10 +77,5 @@ export const updateSMForNode = (
   const performanceAdd =
     avgConceptErrorGrade <= 0.2 ? (avgConceptErrorGrade === 0 ? 2 : 1) : 0;
   const superMemoScore = (3 * multiplier + performanceAdd) as SuperMemoGrade;
-
-  currentNodeState.superMemo = supermemo(
-    currentNodeState.superMemo,
-    superMemoScore
-  );
-  return currentNodeState;
+  return superMemoScore;
 };

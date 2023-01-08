@@ -24,6 +24,7 @@ import {
 import { getErrorLetterGrades } from "../../../modules/error_letter/error_letter";
 import { TotaStatement } from "../../../types/tota_statement";
 import { updateSMForNode } from "../../../modules/spaced_repetition/spaced_repetition";
+import moment from "moment";
 
 export default async function handler(
   req: NextApiRequest,
@@ -39,7 +40,7 @@ export default async function handler(
   const currentMainNode = mainNodes.find(
     (n) => n._id == courseState.currentMainNodeId
   );
-console.log('CALCULANDO')
+
   let nodeId = Array.isArray(req.query.nodeID)
     ? req.query.nodeID[0]
     : req.query.nodeID;
@@ -85,6 +86,11 @@ console.log('CALCULANDO')
 
   // Check if node should advance to next Node
   const [lastStatement] = resultStatements.slice(-1);
+  let nodeComplete = false;
+  if (lastStatement && lastStatement.conceptErrorScore) {
+    nodeComplete = lastStatement.conceptErrorScore >= 0.8;
+  }
+
   let nodeStates = await getNodeStates(accountName);
   let currentNodeState =
     nodeStates.find((state) => state._id === nodeId) ||
@@ -92,14 +98,29 @@ console.log('CALCULANDO')
   currentNodeState = {
     ...currentNodeState,
     nodeScore: lastStatement?.conceptErrorScore,
+    _isComplete: nodeComplete,
     lastInteraction: lastStatement?.timestamp,
   };
-  updateSMForNode(resultStatements, currentNodeState);
-
-  let nodeComplete = false;
-  if (lastStatement && lastStatement.conceptErrorScore) {
-    nodeComplete = lastStatement.conceptErrorScore >= 0.8;
+  if (node.nodeType === "main") {
+    updateSMForNode(resultStatements, currentNodeState);
+  } else {
+    delete currentNodeState.superMemo;
   }
+
+  let shouldRecapNode = nodeStates
+    .filter((state) => {
+      if (!state._isComplete || !state.nextSMInteraction || state.letter) {
+        return false;
+      }
+      return moment(state.nextSMInteraction).isBefore();
+    })
+    .sort((a, b) => {
+      return (
+        moment(a.nextSMInteraction).unix() - moment(b.nextSMInteraction).unix()
+      );
+    })
+    .shift();
+
   let words = currentComponent.words;
   let statementsPerWord = getStatementsPerWord(resultStatements);
   let sortedWords = words
@@ -163,22 +184,36 @@ console.log('CALCULANDO')
 
   let newCourseState = {} as CourseState;
   // First check if nodeComplete (will advance to next)
-  if (node.nodeType === "main" && nodeComplete) {
-    let nextNodeIndex = mainNodes.findIndex((n) => n._id == nodeId) + 1;
-    let nextNodeId = mainNodes[nextNodeIndex]?._id;
-
-    // Move the user to the next node on the main course
-    newCourseState = {
-      ...newCourseState,
-      currentMainNodeId: nextNodeId,
-      _startId: nextNodeId,
-    };
-  } else if (node.nodeType === "letter") {
+  if (node.nodeType === "letter") {
     const letterNodeState = nodeStates.find((n) => n.letter === node.letter);
-    if (letterNodeState?.nodeScore && letterNodeState?.nodeScore >= 0.9) {
+    const letterFinished =
+      letterNodeState?.nodeScore && letterNodeState?.nodeScore >= 0.9;
+    if (letterFinished && shouldRecapNode) {
       newCourseState = {
         ...newCourseState,
-        _startId: node._id,
+        _startId: shouldRecapNode._id,
+      };
+    } else if (letterFinished && currentMainNode) {
+      newCourseState = {
+        ...newCourseState,
+        _startId: currentMainNode._id,
+      };
+    }
+  } else if (node.nodeType === "main" && nodeComplete) {
+    if (shouldRecapNode) {
+      newCourseState = {
+        ...newCourseState,
+        _startId: shouldRecapNode._id,
+      };
+    } else {
+      let nextNodeIndex = mainNodes.findIndex((n) => n._id == nodeId) + 1;
+      let nextNodeId = mainNodes[nextNodeIndex]?._id;
+
+      // Move the user to the next node on the main course
+      newCourseState = {
+        ...newCourseState,
+        currentMainNodeId: nextNodeId,
+        _startId: nextNodeId,
       };
     }
   }
