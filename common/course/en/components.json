@@ -986,7 +986,7 @@
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
+        "weight": -1
       },
       "speech": {
         "weight": 1
@@ -1061,7 +1061,7 @@
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
+        "weight": -1
       },
       "speech": {
         "weight": 1
@@ -1076,7 +1076,15 @@
         "conceptRange": "0,1"
       },
       {
-        "word": "CÁ",
+        "word": "VÓ",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "PÉ",
+        "conceptRange": "0,1"
+      },
+      {
+        "word": "TU",
         "conceptRange": "0,1"
       },
       {
@@ -1100,19 +1108,11 @@
         "conceptRange": "0,1"
       },
       {
-        "word": "VÓ",
-        "conceptRange": "0,1"
-      },
-      {
-        "word": "TU",
-        "conceptRange": "0,1"
-      },
-      {
         "word": "PÁ",
         "conceptRange": "0,1"
       },
       {
-        "word": "PÉ",
+        "word": "CÁ",
         "conceptRange": "0,1"
       }
     ]
@@ -1160,7 +1160,7 @@
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
+        "weight": -1
       },
       "speech": {
         "weight": 1
@@ -1178,6 +1178,10 @@
         ]
       },
       {
+        "word": "FADA",
+        "conceptRange": "0,3"
+      },
+      {
         "word": "JATO",
         "conceptRange": "0,3",
         "closedVowels": [
@@ -1185,7 +1189,7 @@
         ]
       },
       {
-        "word": "ROLA",
+        "word": "BOLA",
         "conceptRange": "0,3"
       },
       {
@@ -1196,11 +1200,7 @@
         ]
       },
       {
-        "word": "FADA",
-        "conceptRange": "0,3"
-      },
-      {
-        "word": "BOLA",
+        "word": "ROLA",
         "conceptRange": "0,3"
       },
       {
@@ -1262,6 +1262,12 @@
     },
     "_concepts": {
       "phonic": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": -1
+      },
+      "speech": {
         "weight": 1
       }
     },
@@ -1358,7 +1364,7 @@
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
+        "weight": -1
       },
       "speech": {
         "weight": 1
@@ -1474,7 +1480,7 @@
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
+        "weight": -1
       },
       "speech": {
         "weight": 1
@@ -1551,7 +1557,7 @@
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
+        "weight": -1
       },
       "speech": {
         "weight": 1
@@ -1603,6 +1609,12 @@
       },
       "memory": {
         "weight": 1
+      },
+      "orthographic": {
+        "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -1622,14 +1634,14 @@
         "conceptRange": "1,2"
       },
       {
-        "word": "BOA",
+        "word": "VOA",
         "conceptRange": "1,2",
         "closedVowels": [
           1
         ]
       },
       {
-        "word": "VOA",
+        "word": "BOA",
         "conceptRange": "1,2",
         "closedVowels": [
           1
@@ -1718,6 +1730,12 @@
         "speech": {
           "weight": 1
         }
+      },
+      "orthographic": {
+        "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -1798,6 +1816,12 @@
         "weight": 1
       },
       "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": -1
+      },
+      "speech": {
         "weight": 1
       }
     },
@@ -1913,6 +1937,12 @@
         "speech": {
           "weight": 1
         }
+      },
+      "orthographic": {
+        "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -2017,7 +2047,7 @@
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
+        "weight": -1
       },
       "speech": {
         "weight": 1
@@ -2054,13 +2084,6 @@
         "conceptRange": "0,1"
       },
       {
-        "word": "AO",
-        "conceptRange": "0,1",
-        "closedVowels": [
-          1
-        ]
-      },
-      {
         "word": "EI",
         "conceptRange": "0,1",
         "closedVowels": [
@@ -2072,6 +2095,13 @@
         "conceptRange": "0,1",
         "closedVowels": [
           0
+        ]
+      },
+      {
+        "word": "AO",
+        "conceptRange": "0,1",
+        "closedVowels": [
+          1
         ]
       }
     ]
@@ -2119,7 +2149,7 @@
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
+        "weight": -1
       },
       "speech": {
         "weight": 1
@@ -2129,6 +2159,10 @@
     "_placementTest": false,
     "_resumable": false,
     "_words": [
+      {
+        "word": "ISCA",
+        "conceptRange": "0,1"
+      },
       {
         "word": "ESTE",
         "conceptRange": "0,1",
@@ -2147,10 +2181,6 @@
       },
       {
         "word": "ISTO",
-        "conceptRange": "0,1"
-      },
-      {
-        "word": "ISCA",
         "conceptRange": "0,1"
       },
       {
@@ -2205,7 +2235,7 @@
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
+        "weight": -1
       },
       "speech": {
         "weight": 1
@@ -2258,14 +2288,6 @@
       {
         "word": "ORCA",
         "conceptRange": "0,1"
-      },
-      {
-        "word": "ERGO",
-        "conceptRange": "0,1",
-        "closedVowels": [
-          0,
-          3
-        ]
       }
     ]
   },
@@ -2312,7 +2334,7 @@
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
+        "weight": -1
       },
       "speech": {
         "weight": 1
@@ -2362,6 +2384,12 @@
         "weight": 1
       },
       "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": -1
+      },
+      "speech": {
         "weight": 1
       }
     },
@@ -2456,6 +2484,12 @@
         "weight": 1
       },
       "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": -1
+      },
+      "speech": {
         "weight": 1
       }
     },
@@ -2562,6 +2596,12 @@
       },
       "phonic": {
         "weight": -1
+      },
+      "orthographic": {
+        "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -2670,6 +2710,12 @@
       },
       "phonic": {
         "weight": -1
+      },
+      "orthographic": {
+        "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -2767,6 +2813,12 @@
         "weight": 1
       },
       "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": -1
+      },
+      "speech": {
         "weight": 1
       }
     },
@@ -2870,6 +2922,12 @@
       },
       "memory": {
         "weight": 1
+      },
+      "orthographic": {
+        "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -2972,8 +3030,14 @@
       "memory": {
         "weight": 1
       },
+      "orthographic": {
+        "weight": -1
+      },
       "phonic": {
         "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -3076,6 +3140,12 @@
         "speech": {
           "weight": 1
         }
+      },
+      "orthographic": {
+        "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -3178,6 +3248,12 @@
         "weight": 1
       },
       "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": -1
+      },
+      "speech": {
         "weight": 1
       }
     },
@@ -3291,6 +3367,12 @@
       },
       "memory": {
         "weight": 1
+      },
+      "orthographic": {
+        "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -3382,6 +3464,9 @@
       },
       "memory": {
         "weight": 1
+      },
+      "orthographic": {
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -3486,6 +3571,9 @@
       },
       "memory": {
         "weight": 1
+      },
+      "orthographic": {
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -3605,6 +3693,9 @@
         "speech": {
           "weight": 1
         }
+      },
+      "orthographic": {
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -3735,6 +3826,9 @@
         "speech": {
           "weight": 1
         }
+      },
+      "orthographic": {
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -3897,6 +3991,9 @@
         "speech": {
           "weight": 1
         }
+      },
+      "orthographic": {
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -4071,6 +4168,9 @@
         "speech": {
           "weight": 1
         }
+      },
+      "orthographic": {
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -4165,7 +4265,7 @@
     },
     "_concepts": {
       "orthographic": {
-        "weight": 1
+        "weight": -1
       },
       "omission": {
         "weight": 1
@@ -4271,7 +4371,7 @@
     },
     "_concepts": {
       "orthographic": {
-        "weight": 1
+        "weight": -1
       },
       "omission": {
         "weight": 1
@@ -4393,6 +4493,9 @@
       "omission": {
         "weight": 1
       },
+      "orthographic": {
+        "weight": -1
+      },
       "phonic": {
         "weight": -1
       }
@@ -4494,6 +4597,9 @@
       },
       "omission": {
         "weight": 1
+      },
+      "orthographic": {
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -4606,7 +4712,7 @@
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
+        "weight": -1
       },
       "speech": {
         "weight": 1
@@ -4717,6 +4823,9 @@
     "_concepts": {
       "omission": {
         "weight": 1
+      },
+      "orthographic": {
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -4832,7 +4941,7 @@
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
+        "weight": -1
       },
       "speech": {
         "weight": 1
@@ -5163,6 +5272,9 @@
       },
       "speech": {
         "weight": 1
+      },
+      "orthographic": {
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -5354,6 +5466,9 @@
       },
       "speech": {
         "weight": 1
+      },
+      "orthographic": {
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -5446,6 +5561,9 @@
       },
       "omission": {
         "weight": 1
+      },
+      "orthographic": {
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -5560,7 +5678,7 @@
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
+        "weight": -1
       },
       "speech": {
         "weight": 1
@@ -5664,6 +5782,9 @@
     "_concepts": {
       "omission": {
         "weight": 1
+      },
+      "orthographic": {
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -6029,7 +6150,7 @@
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
+        "weight": -1
       },
       "speech": {
         "weight": 1
@@ -6063,15 +6184,12 @@
         "conceptRange": "0,0"
       },
       {
-        "word": "SKATE",
-        "conceptRange": "1,1",
-        "closedVowels": [
-          4
-        ]
-      },
-      {
         "word": "POKE",
         "conceptRange": "2,2"
+      },
+      {
+        "word": "TEMAKI",
+        "conceptRange": "4,4"
       }
     ]
   },
@@ -6212,10 +6330,6 @@
         ]
       },
       {
-        "word": "PLAY",
-        "conceptRange": "3,3"
-      },
-      {
         "word": "MOTOBOY",
         "conceptRange": "6,6"
       },
@@ -6225,20 +6339,6 @@
         "closedVowels": [
           1,
           5
-        ]
-      },
-      {
-        "word": "YOUTUBE",
-        "conceptRange": "0,0",
-        "closedVowels": [
-          6
-        ]
-      },
-      {
-        "word": "REPLAY",
-        "conceptRange": "5,5",
-        "closedVowels": [
-          1
         ]
       }
     ]
@@ -6286,10 +6386,6 @@
         "conceptRange": "2,2"
       },
       {
-        "word": "WIFI",
-        "conceptRange": "0,0"
-      },
-      {
         "word": "WEBCAM",
         "conceptRange": "0,0",
         "closedVowels": [
@@ -6297,11 +6393,8 @@
         ]
       },
       {
-        "word": "SHOW",
-        "conceptRange": "3,3",
-        "closedVowels": [
-          2
-        ]
+        "word": "WASABI",
+        "conceptRange": "0,0"
       }
     ]
   },
@@ -6758,6 +6851,10 @@
         ]
       },
       {
+        "word": "FADA",
+        "conceptRange": "1,1"
+      },
+      {
         "word": "JATO",
         "conceptRange": "1,1",
         "closedVowels": [
@@ -6765,7 +6862,7 @@
         ]
       },
       {
-        "word": "ROLA",
+        "word": "BOLA",
         "conceptRange": "3,3"
       },
       {
@@ -6776,11 +6873,7 @@
         ]
       },
       {
-        "word": "FADA",
-        "conceptRange": "1,1"
-      },
-      {
-        "word": "BOLA",
+        "word": "ROLA",
         "conceptRange": "3,3"
       },
       {
@@ -7793,11 +7886,8 @@
         "conceptRange": "1,1"
       },
       {
-        "word": "SKATE",
-        "conceptRange": "2,2",
-        "closedVowels": [
-          4
-        ]
+        "word": "TEMAKI",
+        "conceptRange": "3,3"
       },
       {
         "word": "EXCITAÇÃO",
@@ -7815,22 +7905,15 @@
         ]
       },
       {
-        "word": "PLAY",
-        "conceptRange": "2,2"
-      },
-      {
-        "word": "REPLAY",
-        "conceptRange": "4,4",
-        "closedVowels": [
-          1
-        ]
-      },
-      {
         "word": "WEBCAM",
         "conceptRange": "4,4",
         "closedVowels": [
           1
         ]
+      },
+      {
+        "word": "WASABI",
+        "conceptRange": "1,1"
       }
     ]
   },
@@ -8183,18 +8266,15 @@
         "conceptRange": "4,4"
       },
       {
-        "word": "YOUTUBE",
-        "conceptRange": "5,5",
-        "closedVowels": [
-          6
-        ]
-      },
-      {
         "word": "WEBCAM",
         "conceptRange": "2,2",
         "closedVowels": [
           1
         ]
+      },
+      {
+        "word": "WASABI",
+        "conceptRange": "4,4"
       }
     ]
   },
@@ -9854,14 +9934,6 @@
         "conceptRange": "0,0"
       },
       {
-        "word": "ERGO",
-        "conceptRange": "0,0",
-        "closedVowels": [
-          0,
-          3
-        ]
-      },
-      {
         "word": "SAÚDE",
         "conceptRange": "4,4",
         "closedVowels": [
@@ -10687,15 +10759,12 @@
         "conceptRange": "1,1"
       },
       {
-        "word": "SKATE",
-        "conceptRange": "4,4",
-        "closedVowels": [
-          4
-        ]
-      },
-      {
         "word": "POKE",
         "conceptRange": "3,3"
+      },
+      {
+        "word": "TEMAKI",
+        "conceptRange": "1,1"
       },
       {
         "word": "EXCESSO",
@@ -10737,20 +10806,6 @@
         "closedVowels": [
           1,
           5
-        ]
-      },
-      {
-        "word": "YOUTUBE",
-        "conceptRange": "6,6",
-        "closedVowels": [
-          6
-        ]
-      },
-      {
-        "word": "REPLAY",
-        "conceptRange": "1,1",
-        "closedVowels": [
-          1
         ]
       },
       {
@@ -11070,10 +11125,6 @@
           4,
           7
         ]
-      },
-      {
-        "word": "WIFI",
-        "conceptRange": "2,2"
       }
     ]
   },
@@ -11196,14 +11247,6 @@
           1,
           4,
           6
-        ]
-      },
-      {
-        "word": "ERGO",
-        "conceptRange": "2,2",
-        "closedVowels": [
-          0,
-          3
         ]
       },
       {
@@ -11745,13 +11788,6 @@
       {
         "word": "KETCHUP",
         "conceptRange": "4,4"
-      },
-      {
-        "word": "SHOW",
-        "conceptRange": "1,1",
-        "closedVowels": [
-          2
-        ]
       }
     ]
   },
@@ -12599,6 +12635,10 @@
         "conceptRange": "1,1"
       },
       {
+        "word": "TEMAKI",
+        "conceptRange": "5,5"
+      },
+      {
         "word": "EXCITAÇÃO",
         "conceptRange": "3,3",
         "closedVowels": [
@@ -12615,8 +12655,8 @@
         ]
       },
       {
-        "word": "WIFI",
-        "conceptRange": "1,1"
+        "word": "WASABI",
+        "conceptRange": "5,5"
       }
     ]
   },
@@ -12835,15 +12875,12 @@
         "conceptRange": "0,0"
       },
       {
-        "word": "SKATE",
-        "conceptRange": "1,1",
-        "closedVowels": [
-          4
-        ]
-      },
-      {
         "word": "POKE",
         "conceptRange": "2,2"
+      },
+      {
+        "word": "TEMAKI",
+        "conceptRange": "4,4"
       }
     ]
   },
@@ -13017,7 +13054,7 @@
         "conceptRange": "0,0"
       },
       {
-        "word": "ROLA",
+        "word": "BOLA",
         "conceptRange": "2,2"
       },
       {
@@ -13028,7 +13065,7 @@
         ]
       },
       {
-        "word": "BOLA",
+        "word": "ROLA",
         "conceptRange": "2,2"
       },
       {
@@ -13568,22 +13605,11 @@
         "conceptRange": "0,0"
       },
       {
-        "word": "PLAY",
-        "conceptRange": "1,1"
-      },
-      {
         "word": "DELIVERY",
         "conceptRange": "2,2",
         "closedVowels": [
           1,
           5
-        ]
-      },
-      {
-        "word": "REPLAY",
-        "conceptRange": "3,3",
-        "closedVowels": [
-          1
         ]
       }
     ]
@@ -14143,6 +14169,10 @@
           2,
           6
         ]
+      },
+      {
+        "word": "TEMAKI",
+        "conceptRange": "2,2"
       },
       {
         "word": "MOTOBOY",
@@ -15096,7 +15126,7 @@
         ]
       },
       {
-        "word": "ROLA",
+        "word": "BOLA",
         "conceptRange": "1,1"
       },
       {
@@ -15107,7 +15137,7 @@
         ]
       },
       {
-        "word": "BOLA",
+        "word": "ROLA",
         "conceptRange": "1,1"
       },
       {
@@ -15233,14 +15263,6 @@
       {
         "word": "ORCA",
         "conceptRange": "0,0"
-      },
-      {
-        "word": "ERGO",
-        "conceptRange": "3,3",
-        "closedVowels": [
-          0,
-          3
-        ]
       },
       {
         "word": "LAGOA",
@@ -16322,20 +16344,6 @@
       {
         "word": "MOTOBOY",
         "conceptRange": "1,1"
-      },
-      {
-        "word": "YOUTUBE",
-        "conceptRange": "1,1",
-        "closedVowels": [
-          6
-        ]
-      },
-      {
-        "word": "SHOW",
-        "conceptRange": "2,2",
-        "closedVowels": [
-          2
-        ]
       }
     ]
   },
@@ -16752,17 +16760,6 @@
       {
         "word": "POKE",
         "conceptRange": "0,0"
-      },
-      {
-        "word": "PLAY",
-        "conceptRange": "0,0"
-      },
-      {
-        "word": "REPLAY",
-        "conceptRange": "2,2",
-        "closedVowels": [
-          1
-        ]
       }
     ]
   },
@@ -17079,15 +17076,15 @@
         "conceptRange": "0,0"
       },
       {
-        "word": "ROLA",
-        "conceptRange": "0,0"
-      },
-      {
         "word": "RALO",
         "conceptRange": "0,0",
         "closedVowels": [
           3
         ]
+      },
+      {
+        "word": "ROLA",
+        "conceptRange": "0,0"
       },
       {
         "word": "REMO",
@@ -17175,14 +17172,6 @@
       {
         "word": "ORCA",
         "conceptRange": "1,1"
-      },
-      {
-        "word": "ERGO",
-        "conceptRange": "1,1",
-        "closedVowels": [
-          0,
-          3
-        ]
       },
       {
         "word": "RELÓGIO",
@@ -17708,13 +17697,6 @@
         "closedVowels": [
           1,
           5
-        ]
-      },
-      {
-        "word": "REPLAY",
-        "conceptRange": "0,0",
-        "closedVowels": [
-          1
         ]
       }
     ]
@@ -18339,13 +18321,6 @@
         ]
       },
       {
-        "word": "SKATE",
-        "conceptRange": "0,0",
-        "closedVowels": [
-          4
-        ]
-      },
-      {
         "word": "EXCESSO",
         "conceptRange": "4,4",
         "closedVowels": [
@@ -18354,11 +18329,8 @@
         ]
       },
       {
-        "word": "SHOW",
-        "conceptRange": "0,0",
-        "closedVowels": [
-          2
-        ]
+        "word": "WASABI",
+        "conceptRange": "2,2"
       }
     ]
   },
@@ -18999,11 +18971,8 @@
         "conceptRange": "3,3"
       },
       {
-        "word": "SKATE",
-        "conceptRange": "3,3",
-        "closedVowels": [
-          4
-        ]
+        "word": "TEMAKI",
+        "conceptRange": "0,0"
       },
       {
         "word": "EXCETO",
@@ -19034,13 +19003,6 @@
       {
         "word": "MOTOBOY",
         "conceptRange": "2,2"
-      },
-      {
-        "word": "YOUTUBE",
-        "conceptRange": "3,3",
-        "closedVowels": [
-          6
-        ]
       }
     ]
   },
@@ -19461,13 +19423,6 @@
       {
         "word": "KETCHUP",
         "conceptRange": "5,5"
-      },
-      {
-        "word": "YOUTUBE",
-        "conceptRange": "2,2",
-        "closedVowels": [
-          6
-        ]
       }
     ]
   },
@@ -19706,10 +19661,6 @@
         "conceptRange": "2,2"
       },
       {
-        "word": "WIFI",
-        "conceptRange": "0,0"
-      },
-      {
         "word": "WEBCAM",
         "conceptRange": "0,0",
         "closedVowels": [
@@ -19717,11 +19668,8 @@
         ]
       },
       {
-        "word": "SHOW",
-        "conceptRange": "3,3",
-        "closedVowels": [
-          2
-        ]
+        "word": "WASABI",
+        "conceptRange": "0,0"
       }
     ]
   },
@@ -20159,10 +20107,6 @@
         ]
       },
       {
-        "word": "PLAY",
-        "conceptRange": "3,3"
-      },
-      {
         "word": "MOTOBOY",
         "conceptRange": "6,6"
       },
@@ -20172,20 +20116,6 @@
         "closedVowels": [
           1,
           5
-        ]
-      },
-      {
-        "word": "YOUTUBE",
-        "conceptRange": "0,0",
-        "closedVowels": [
-          6
-        ]
-      },
-      {
-        "word": "REPLAY",
-        "conceptRange": "5,5",
-        "closedVowels": [
-          1
         ]
       }
     ]

@@ -357,16 +357,16 @@
     "conceptTitle": "monossílabos consoante 3-4 + vogal aberta",
     "words": [
       "DÁ",
-      "CÁ",
+      "VÓ",
+      "PÉ",
+      "TU",
       "FÉ",
       "JÁ",
       "PÓ",
       "SÓ",
       "MÁ",
-      "VÓ",
-      "TU",
       "PÁ",
-      "PÉ"
+      "CÁ"
     ]
   },
   {
@@ -448,11 +448,11 @@
     "conceptTitle": "dissílabas (consoante + vogal aberta) x2",
     "words": [
       "COPO",
-      "JATO",
-      "ROLA",
-      "RALO",
       "FADA",
+      "JATO",
       "BOLA",
+      "RALO",
+      "ROLA",
       "PATO",
       "GALO",
       "MALA",
@@ -887,8 +887,8 @@
       "RUA",
       "LUA",
       "DIA",
-      "BOA",
       "VOA",
+      "BOA",
       "FIO",
       "PIA",
       "TIA",
@@ -1249,9 +1249,9 @@
       "EU",
       "AI",
       "AU",
-      "AO",
       "EI",
-      "OU"
+      "OU",
+      "AO"
     ]
   },
   {
@@ -1332,11 +1332,11 @@
     "nodeType": "main",
     "conceptTitle": "dissílabos com sílaba vogal + S",
     "words": [
+      "ISCA",
       "ESTE",
       "ESTA",
       "ASMA",
       "ISTO",
-      "ISCA",
       "ASCO"
     ]
   },
@@ -1425,8 +1425,7 @@
       "ARCA",
       "ARDE",
       "ERVA",
-      "ORCA",
-      "ERGO"
+      "ORCA"
     ]
   },
   {
@@ -4556,8 +4555,8 @@
       "KETCHUP",
       "LINK",
       "KART",
-      "SKATE",
-      "POKE"
+      "POKE",
+      "TEMAKI"
     ]
   },
   {
@@ -4725,11 +4724,8 @@
     "words": [
       "YOGA",
       "YAKISOBA",
-      "PLAY",
       "MOTOBOY",
-      "DELIVERY",
-      "YOUTUBE",
-      "REPLAY"
+      "DELIVERY"
     ]
   },
   {
@@ -4811,9 +4807,8 @@
     "conceptTitle": "W",
     "words": [
       "KIWI",
-      "WIFI",
       "WEBCAM",
-      "SHOW"
+      "WASABI"
     ]
   },
   {
@@ -5041,11 +5036,11 @@
       "BRUXA",
       "SEXTA",
       "YAKISOBA",
-      "JATO",
-      "ROLA",
-      "RALO",
       "FADA",
+      "JATO",
       "BOLA",
+      "RALO",
+      "ROLA",
       "PATO",
       "MALA",
       "DAMA",
@@ -5228,12 +5223,11 @@
       "EXTRAIR",
       "KARAOKÊ",
       "KART",
-      "SKATE",
+      "TEMAKI",
       "EXCITAÇÃO",
       "YOGA",
-      "PLAY",
-      "REPLAY",
-      "WEBCAM"
+      "WEBCAM",
+      "WASABI"
     ]
   },
   {
@@ -5363,8 +5357,8 @@
       "BOXE",
       "EXIBIR",
       "MOTOBOY",
-      "YOUTUBE",
-      "WEBCAM"
+      "WEBCAM",
+      "WASABI"
     ]
   },
   {
@@ -5915,7 +5909,6 @@
       "ARTE",
       "ARDE",
       "ERVA",
-      "ERGO",
       "SAÚDE",
       "POETA",
       "BEBIDA",
@@ -6029,15 +6022,13 @@
       "EXPRESSO",
       "EXTRAIR",
       "KETCHUP",
-      "SKATE",
       "POKE",
+      "TEMAKI",
       "EXCESSO",
       "EXCETO",
       "EXCITAÇÃO",
       "EXCEDENTE",
       "DELIVERY",
-      "YOUTUBE",
-      "REPLAY",
       "WEBCAM"
     ]
   },
@@ -6162,8 +6153,7 @@
       "REFLEXO",
       "FLUXO",
       "FIXO",
-      "FLORESCER",
-      "WIFI"
+      "FLORESCER"
     ]
   },
   {
@@ -6256,7 +6246,6 @@
       "GARFO",
       "GARRAFA",
       "FOGUETE",
-      "ERGO",
       "LAGOA",
       "GIBI",
       "GEMA",
@@ -6413,8 +6402,7 @@
       "CHUTE",
       "MACHUCADO",
       "CACHORRO",
-      "KETCHUP",
-      "SHOW"
+      "KETCHUP"
     ]
   },
   {
@@ -6628,9 +6616,10 @@
       "EXTINÇÃO",
       "EXTRAIR",
       "LINK",
+      "TEMAKI",
       "EXCITAÇÃO",
       "DELIVERY",
-      "WIFI"
+      "WASABI"
     ]
   },
   {
@@ -6810,8 +6799,8 @@
       "KETCHUP",
       "LINK",
       "KART",
-      "SKATE",
-      "POKE"
+      "POKE",
+      "TEMAKI"
     ]
   },
   {
@@ -6914,9 +6903,9 @@
       "BLUSA",
       "EXCELENTE",
       "LU",
-      "ROLA",
-      "RALO",
       "BOLA",
+      "RALO",
+      "ROLA",
       "MALA",
       "LÊ",
       "LOBO",
@@ -7007,9 +6996,7 @@
       "EXPLOSÃO",
       "EXCLUIR",
       "LINK",
-      "PLAY",
-      "DELIVERY",
-      "REPLAY"
+      "DELIVERY"
     ]
   },
   {
@@ -7175,6 +7162,7 @@
       "NASCIMENTO",
       "EXAME",
       "EXEMPLO",
+      "TEMAKI",
       "MOTOBOY",
       "WEBCAM"
     ]
@@ -7467,9 +7455,9 @@
       "YAKISOBA",
       "COPO",
       "JATO",
-      "ROLA",
-      "RALO",
       "BOLA",
+      "RALO",
+      "ROLA",
       "PATO",
       "DO",
       "PANO",
@@ -7489,7 +7477,6 @@
       "ISTO",
       "ASCO",
       "ORCA",
-      "ERGO",
       "LAGOA",
       "POETA",
       "MACACO",
@@ -7637,9 +7624,7 @@
       "EXCETO",
       "EXCITAÇÃO",
       "YOGA",
-      "MOTOBOY",
-      "YOUTUBE",
-      "SHOW"
+      "MOTOBOY"
     ]
   },
   {
@@ -7782,9 +7767,7 @@
       "EXPLOSÃO",
       "EXPRESSO",
       "KETCHUP",
-      "POKE",
-      "PLAY",
-      "REPLAY"
+      "POKE"
     ]
   },
   {
@@ -7982,8 +7965,8 @@
       "BRUXA",
       "DESCER",
       "RÉ",
-      "ROLA",
       "RALO",
+      "ROLA",
       "REMO",
       "RIO",
       "RÃS",
@@ -8000,7 +7983,6 @@
       "ARDE",
       "ERVA",
       "ORCA",
-      "ERGO",
       "RELÓGIO",
       "ROSCA",
       "ROSTO",
@@ -8083,8 +8065,7 @@
       "EXTRAIR",
       "KARAOKÊ",
       "KART",
-      "DELIVERY",
-      "REPLAY"
+      "DELIVERY"
     ]
   },
   {
@@ -8258,9 +8239,8 @@
       "EXPLOSÃO",
       "EXCURSÃO",
       "EXPRESSO",
-      "SKATE",
       "EXCESSO",
-      "SHOW"
+      "WASABI"
     ]
   },
   {
@@ -8435,12 +8415,11 @@
       "EXTRAIR",
       "KETCHUP",
       "KART",
-      "SKATE",
+      "TEMAKI",
       "EXCETO",
       "EXCITAÇÃO",
       "EXCEDENTE",
-      "MOTOBOY",
-      "YOUTUBE"
+      "MOTOBOY"
     ]
   },
   {
@@ -8588,8 +8567,7 @@
       "FLUXO",
       "EXCURSÃO",
       "EXCLUIR",
-      "KETCHUP",
-      "YOUTUBE"
+      "KETCHUP"
     ]
   },
   {
@@ -8775,9 +8753,8 @@
     "letter": "W",
     "words": [
       "KIWI",
-      "WIFI",
       "WEBCAM",
-      "SHOW"
+      "WASABI"
     ]
   },
   {
@@ -8985,11 +8962,8 @@
     "words": [
       "YAKISOBA",
       "YOGA",
-      "PLAY",
       "MOTOBOY",
-      "DELIVERY",
-      "YOUTUBE",
-      "REPLAY"
+      "DELIVERY"
     ]
   },
   {
