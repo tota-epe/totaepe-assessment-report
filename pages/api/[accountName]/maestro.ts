@@ -199,13 +199,13 @@ export default async function handler(
         _startId: currentMainNode._id,
       };
     }
-  } else if (node.nodeType === "main" && nodeComplete) {
+  } else if (node.nodeType === "main") {
     if (shouldRecapNode) {
       newCourseState = {
         ...newCourseState,
         _startId: shouldRecapNode._id,
       };
-    } else {
+    } else if (nodeComplete) {
       let nextNodeIndex = mainNodes.findIndex((n) => n._id == nodeId) + 1;
       let nextNodeId = mainNodes[nextNodeIndex]?._id;
 
