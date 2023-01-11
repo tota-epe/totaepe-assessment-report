@@ -86,7 +86,7 @@ const Page: NextPage = ({
     const isWarning =
       node.nodeType === "letter" &&
       nodeData?.nodeScore &&
-      nodeData?.nodeScore <= 0.9;
+      nodeData?.nodeScore < 0.9;
 
     return (
       <Paper
