@@ -95,12 +95,9 @@ export default async function handler(
   let currentNodeState =
     nodeStates.find((state) => state._id === nodeId) ||
     ({ _id: nodeId } as NodeState);
-  currentNodeState = {
-    ...currentNodeState,
-    nodeScore: lastStatement?.conceptErrorScore,
-    _isComplete: nodeComplete,
-    lastInteraction: lastStatement?.timestamp,
-  };
+  currentNodeState.nodeScore = lastStatement?.conceptErrorScore
+  currentNodeState.lastInteraction = lastStatement?.timestamp
+  currentNodeState._isComplete = nodeComplete
   if (node.nodeType === "main") {
     updateSMForNode(resultStatements, currentNodeState);
   } else {
