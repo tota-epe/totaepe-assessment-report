@@ -61,6 +61,12 @@ export default async function handler(
   if (!currentComponent || !node) {
     return;
   }
+
+  const isMainNodeRecap =
+    node.nodeType === "main" &&
+    currentMainNode &&
+    node._id !== currentMainNode._id;
+
   // Get data from current component and analyse
   const onlyRecents = shouldUpdateStart;
   let resultStatements = await getLRSDataForNode(
@@ -92,10 +98,9 @@ export default async function handler(
   let currentNodeState =
     nodeStates.find((state) => state._id === nodeId) ||
     ({ _id: nodeId } as NodeState);
-  currentNodeState.nodeScore = lastStatement?.conceptErrorScore
-  currentNodeState.lastInteraction = lastStatement?.timestamp
-  currentNodeState._isComplete = nodeComplete
-  if (node.nodeType === "main") {
+  currentNodeState.nodeScore = lastStatement?.conceptErrorScore;
+  currentNodeState._isComplete = nodeComplete;
+  if (isMainNodeRecap) {
     updateSMForNode(resultStatements, currentNodeState);
   } else {
     delete currentNodeState.superMemo;

@@ -126,6 +126,7 @@ const Page: NextPage = ({
         {nodeData?.superMemo && (
           <div>
             <Text>SM2: {JSON.stringify(nodeData.superMemo)}</Text>
+            <Text>Last Interaction: {nodeData.lastInteraction}</Text>
             <Text>NextInteraction: {nodeData.nextSMInteraction}</Text>
           </div>
         )}

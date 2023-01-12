@@ -7,7 +7,6 @@ export const updateSMForNode = (
   resultStatements: TotaStatement[],
   currentNodeState: NodeState
 ) => {
-  const nodeId = currentNodeState._id;
   const recentStatements = [] as TotaStatement[];
   resultStatements.reverse().every((statement) => {
     const lastStatement = recentStatements[0];
@@ -52,11 +51,7 @@ export const updateSMForNode = (
 };
 
 const computeNextSMInteraction = (currentNodeState: NodeState) => {
-  if (
-    currentNodeState._isComplete &&
-    currentNodeState.lastInteraction &&
-    currentNodeState.superMemo
-  ) {
+  if (currentNodeState.lastInteraction && currentNodeState.superMemo) {
     currentNodeState.nextSMInteraction = moment(
       currentNodeState.lastInteraction
     )
