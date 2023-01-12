@@ -86,10 +86,7 @@ export default async function handler(
 
   // Check if node should advance to next Node
   const [lastStatement] = resultStatements.slice(-1);
-  let nodeComplete = false;
-  if (lastStatement && lastStatement.conceptErrorScore) {
-    nodeComplete = lastStatement.conceptErrorScore >= 0.8;
-  }
+  let nodeComplete = lastStatement?.conceptComplete;
 
   let nodeStates = await getNodeStates(accountName);
   let currentNodeState =

@@ -110,7 +110,7 @@ export const getStatementsPerWord = (resultStatements: TotaStatement[]): Hash<To
 
     let movingAverage5 = statementsPerWord[word].slice(0, 5)
     statements[index].ma5 = movingAverage5.reduce(((p: number, c: TotaStatement) => p + c.perf), 0) / movingAverage5.length
-    statements[index].complete = (movingAverage5.reduce(((p: number, c: TotaStatement) => p + (c.correct ? 1 : 0)), 0) / 5.0) >= 0.8
+    statements[index].wordComplete = (movingAverage5.reduce(((p: number, c: TotaStatement) => p + (c.correct ? 1 : 0)), 0) / 5.0) >= 0.8
     statements[index].occurrence = statementsPerWord[word].length
     statements[index].first = (statementsPerWord[word].length == 1 ? true : false)
   })
@@ -149,6 +149,7 @@ const processStatements = (statements: Statement[]) => {
       duration: parse(s?.result?.duration ?? 'PT0S'),
       perf: 0,
       conceptErrorGrade: 0,
+      conceptComplete: false,
       response: s?.result?.response
         ?.replace(/^[ \[\]]+/, '')
         ?.replace(/[ \[\]]+$/, '')
@@ -237,8 +238,9 @@ const processStatements = (statements: Statement[]) => {
     if (statementWindow.length > windowSize) {
       statementWindow.shift();
     }
-    if (statementWindow.length === windowSize) {
-      currentStatement.conceptErrorScore = 1 - (statementWindow.reduce(((p: number, c: TotaStatement) => p + (c.conceptErrorGrade > 0 ? 1 : 0)), 0.0) / statementWindow.length)
+    currentStatement.conceptErrorScore = 1 - (statementWindow.reduce(((p: number, c: TotaStatement) => p + (c.conceptErrorGrade > 0 ? 1 : 0)), 0.0) / statementWindow.length)
+    if (statementWindow.length === windowSize && currentStatement.conceptErrorScore >= 0.8) {
+      currentStatement.conceptComplete = true;
     }
   })
 

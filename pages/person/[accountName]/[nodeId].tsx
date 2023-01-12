@@ -65,15 +65,9 @@ const Page: NextPage = ({
     .map((a) => a.blocks.map((b) => b.components))
     .flat(3)[0];
 
-  let earlyCompletionIndex = statements.findIndex(
-    (statement: TotaStatement, index: number) => {
-      return (
-        index >= 29 &&
-        statement.conceptErrorScore &&
-        statement.conceptErrorScore > 0.8
-      );
-    }
-  );
+  let earlyCompletionIndex = statements.findIndex((s: TotaStatement) => {
+    return s.conceptComplete;
+  });
 
   const recentStatements = statements.slice(-30);
   var timeStamp = Math.round(new Date().getTime() / 1000);

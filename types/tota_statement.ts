@@ -20,12 +20,13 @@ export type TotaStatement = {
   correct?: boolean,
   result?: object,
   ma5?: number,
-  complete?: boolean,
+  wordComplete?: boolean,
   occurrence?: number,
   first?: boolean,
   errorsPerLetter?: ErrorProfile[],
   conceptErrors?: ErrorProfile,
   conceptErrorScore?: number,
   conceptErrorGrade: number,
+  conceptComplete: boolean,
   withLetterError?: boolean
 }
