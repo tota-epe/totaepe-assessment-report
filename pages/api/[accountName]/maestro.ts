@@ -91,23 +91,56 @@ export default async function handler(
       .json({ shouldWrite, shouldUpdateStart, wordsWithError, nextNodeId });
   }
 
+  // Update component word selection
+  let wordsForNode = refreshWords(currentComponent, resultStatements);
+  let newComponentState = {
+    _id: currentComponent.id,
+    _extras: { words: wordsForNode.map((w) => w.word), shuffle: true },
+  };
+  if (shouldWrite) {
+    await updateComponentState(accountName, newComponentState);
+  }
+
   // Check if node should advance to next Node
   let nodeStates = await getNodeStates(accountName);
-  let currentNodeState =
-    nodeStates.find((state) => state._id === nodeId) ||
-    ({ _id: nodeId } as NodeState);
 
-  const [lastStatement] = resultStatements.slice(-1);
-  if (lastStatement) {
-    currentNodeState.nodeScore = lastStatement.conceptErrorScore;
-    currentNodeState._isComplete = lastStatement.conceptComplete;
+  let currentNodeState;
+  if (node.nodeType === "main") {
+    currentNodeState =
+      nodeStates.find((state) => state._id === nodeId) ||
+      ({ _id: nodeId } as NodeState);
+
+    const [lastStatement] = resultStatements.slice(-1);
+    if (lastStatement) {
+      currentNodeState.nodeScore = lastStatement.conceptErrorScore;
+      currentNodeState._isComplete = lastStatement.conceptComplete;
+    }
+
+    if (isMainNodeRecap) {
+      updateSMForNode(resultStatements, currentNodeState);
+    }
   }
-  const conceptComplete = currentNodeState._isComplete;
 
-  if (isMainNodeRecap) {
-    updateSMForNode(resultStatements, currentNodeState);
-  } else {
-    delete currentNodeState.superMemo;
+  const letterErrorData = await getLetterErrorData(accountName);
+  let newNodeStates = [...(letterErrorData as any)] as NodeState[];
+  if (currentNodeState) {
+    newNodeStates.push(currentNodeState);
+  }
+
+  if (shouldWrite) {
+    // Update Node and Letter performances
+    nodeStates = await updateNodeStates(accountName, newNodeStates);
+  }
+
+  const conceptComplete = currentNodeState?._isComplete;
+  if (!shouldUpdateStart) {
+    res.status(200).json({
+      shouldWrite,
+      conceptComplete,
+      newComponentState,
+      shouldUpdateStart,
+    });
+    return;
   }
 
   let shouldRecapNode = nodeStates
@@ -123,34 +156,6 @@ export default async function handler(
       );
     })
     .shift();
-
-  let wordsForNode = refreshWords(currentComponent, resultStatements);
-
-  let newComponentState = {
-    _id: currentComponent.id,
-    _extras: { words: wordsForNode.map((w) => w.word), shuffle: true },
-  };
-  let newNodeStates = [
-    ...(await getLetterErrorData(accountName)),
-    currentNodeState,
-  ] as NodeState[];
-
-  if (shouldWrite) {
-    await updateComponentState(accountName, newComponentState);
-
-    // Update Node and Letter performances
-    nodeStates = await updateNodeStates(accountName, newNodeStates);
-  }
-
-  if (!shouldUpdateStart) {
-    res.status(200).json({
-      shouldWrite,
-      conceptComplete,
-      newComponentState,
-      shouldUpdateStart,
-    });
-    return;
-  }
 
   let newCourseState = {} as CourseState;
   // First check if nodeComplete (will advance to next)

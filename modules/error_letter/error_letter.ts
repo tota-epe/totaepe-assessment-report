@@ -48,9 +48,9 @@ export const getErrorLetterGrades = (
         const nodeIdWithLetter = `${statement.objectId}-${letter}`;
         bucketNodeWithLetter[nodeIdWithLetter] =
           bucketNodeWithLetter[nodeIdWithLetter] ?? 0;
-        if (bucketNodeWithLetter[nodeIdWithLetter] >= 5) {
-          return;
-        }
+        // if (bucketNodeWithLetter[nodeIdWithLetter] >= 5) {
+        //   return; TODO: skip max bucket size on letter node IDs
+        // }
         bucketNodeWithLetter[nodeIdWithLetter] =
           bucketNodeWithLetter[nodeIdWithLetter] + 1;
         if (errorsGrades[letter].totalWordsInteractions >= 30) {
