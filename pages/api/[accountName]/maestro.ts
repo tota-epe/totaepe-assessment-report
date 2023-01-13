@@ -120,39 +120,7 @@ export default async function handler(
     })
     .shift();
 
-  let words = currentComponent.words;
-  let statementsPerWord = getStatementsPerWord(resultStatements);
-  let sortedWords = words
-    .map((wordData) => {
-      const word: string = wordData.word;
-      const lastOccurrenceOfWord = statementsPerWord[word][0];
-
-      return {
-        word: word,
-        performance: lastOccurrenceOfWord?.ma5 ?? 0,
-        occurrence: lastOccurrenceOfWord?.occurrence ?? 0,
-      };
-    })
-    .sort((a, b) => {
-      if (a.occurrence === 0) {
-        return 1;
-      }
-
-      return b.performance - a.performance;
-    });
-
-  let completedWords = sortedWords.filter(
-    (w) => w.performance > 0.8 && w.occurrence >= 5
-  );
-  let wordsForNode = sortedWords
-    .filter((w) => !completedWords.includes(w))
-    .slice(0, 5);
-  if (wordsForNode.length < 5) {
-    // Keep at least 5 items on word array
-    let numMissingItems = 5 - wordsForNode.length;
-    let wordsToAdd = completedWords.reverse().slice(0, numMissingItems);
-    wordsForNode = wordsForNode.concat(wordsToAdd);
-  }
+  let wordsForNode = refreshWords(currentComponent, resultStatements);
 
   let newComponentState = {
     _id: currentComponent.id,
@@ -294,3 +262,43 @@ const placementTestHandler = async (
 
   return {};
 };
+
+function refreshWords(
+  currentComponent: TotaEpeComponent,
+  resultStatements: TotaStatement[]
+) {
+  let words = currentComponent.words;
+  let statementsPerWord = getStatementsPerWord(resultStatements);
+  let sortedWords = words
+    .map((wordData) => {
+      const word: string = wordData.word;
+      const lastOccurrenceOfWord = statementsPerWord[word][0];
+
+      return {
+        word: word,
+        performance: lastOccurrenceOfWord?.ma5 ?? 0,
+        occurrence: lastOccurrenceOfWord?.occurrence ?? 0,
+      };
+    })
+    .sort((a, b) => {
+      if (a.occurrence === 0) {
+        return 1;
+      }
+
+      return b.performance - a.performance;
+    });
+
+  let completedWords = sortedWords.filter(
+    (w) => w.performance > 0.8 && w.occurrence >= 5
+  );
+  let wordsForNode = sortedWords
+    .filter((w) => !completedWords.includes(w))
+    .slice(0, 5);
+  if (wordsForNode.length < 5) {
+    // Keep at least 5 items on word array
+    let numMissingItems = 5 - wordsForNode.length;
+    let wordsToAdd = completedWords.reverse().slice(0, numMissingItems);
+    wordsForNode = wordsForNode.concat(wordsToAdd);
+  }
+  return wordsForNode;
+}
