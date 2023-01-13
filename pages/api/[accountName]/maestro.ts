@@ -48,6 +48,7 @@ export default async function handler(
     if (!courseState._startId && placementTestNode) {
       // Put the user on the placement test
       courseState._startId = placementTestNode._id;
+      courseState.currentMainNodeId = placementTestNode._id;
       await updateCourseState(accountName, { _startId: courseState._startId });
     }
     nodeId = courseState._startId || defaultStartId;
@@ -91,15 +92,18 @@ export default async function handler(
   }
 
   // Check if node should advance to next Node
-  const [lastStatement] = resultStatements.slice(-1);
-  let nodeComplete = lastStatement?.conceptComplete;
-
   let nodeStates = await getNodeStates(accountName);
   let currentNodeState =
     nodeStates.find((state) => state._id === nodeId) ||
     ({ _id: nodeId } as NodeState);
-  currentNodeState.nodeScore = lastStatement?.conceptErrorScore;
-  currentNodeState._isComplete = nodeComplete;
+
+  const [lastStatement] = resultStatements.slice(-1);
+  if (lastStatement) {
+    currentNodeState.nodeScore = lastStatement.conceptErrorScore;
+    currentNodeState._isComplete = lastStatement.conceptComplete;
+  }
+  const conceptComplete = currentNodeState._isComplete;
+
   if (isMainNodeRecap) {
     updateSMForNode(resultStatements, currentNodeState);
   } else {
@@ -141,8 +145,7 @@ export default async function handler(
   if (!shouldUpdateStart) {
     res.status(200).json({
       shouldWrite,
-      nodeComplete,
-      sortedWords,
+      conceptComplete,
       newComponentState,
       shouldUpdateStart,
     });
@@ -172,7 +175,7 @@ export default async function handler(
         ...newCourseState,
         _startId: shouldRecapNode._id,
       };
-    } else if (nodeComplete) {
+    } else if (conceptComplete) {
       let nextNodeIndex = mainNodes.findIndex((n) => n._id == nodeId) + 1;
       let nextNodeId = mainNodes[nextNodeIndex]?._id;
 
@@ -207,8 +210,7 @@ export default async function handler(
 
   res.status(200).json({
     shouldWrite,
-    nodeComplete,
-    sortedWords,
+    conceptComplete,
     newComponentState,
     shouldUpdateStart,
     newCourseState,
