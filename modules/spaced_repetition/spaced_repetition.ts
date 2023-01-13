@@ -27,6 +27,7 @@ export const updateSMForNode = (
 
   const [lastStatement] = recentStatements.slice(-1);
   if (currentNodeState.lastInteraction === lastStatement.timestamp) {
+    computeNextSMInteraction(currentNodeState);
     return currentNodeState;
   }
 

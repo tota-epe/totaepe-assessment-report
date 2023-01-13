@@ -119,6 +119,7 @@ export const getStatementsPerWord = (resultStatements: TotaStatement[]): Hash<To
 }
 
 const processStatements = (statements: Statement[]) => {
+  const minConceptScoreToComplete = 0.8;
   type WordConceptMap = {
     [key: string]: {
       [key: string]: {
@@ -137,6 +138,7 @@ const processStatements = (statements: Statement[]) => {
     return map
   }), {} as WordConceptMap)
 
+  let statementWindow: { [key: string]: TotaStatement[] } = {};
   const totaStatements = statements.map(s => {
     let totaStatement: TotaStatement = {
       id: s.id,
@@ -228,23 +230,26 @@ const processStatements = (statements: Statement[]) => {
       }
     }
 
+    const componentWordsCount = componentSourceData?.words?.length;
+    let windowSize = 30;
+    if (componentWordsCount && componentWordsCount > 0) {
+      windowSize = Math.min(30, 5 * componentWordsCount)
+    }
+    const currentStatementWindow = statementWindow[newComponentId] ?? [];
+    currentStatementWindow.push(totaStatement);
+    if (currentStatementWindow.length > windowSize) {
+      currentStatementWindow.shift();
+    }
+    totaStatement.conceptErrorScore = 1 - (currentStatementWindow.reduce(((p: number, c: TotaStatement) => p + (c.conceptErrorGrade > 0 ? 1 : 0)), 0.0) / currentStatementWindow.length)
+    if (currentStatementWindow.length === windowSize && totaStatement.conceptErrorScore >= minConceptScoreToComplete) {
+      totaStatement.conceptComplete = true;
+    }
+    statementWindow[newComponentId] = currentStatementWindow;
+
     return totaStatement
   })
 
-  let statementWindow: TotaStatement[] = [];
-  const windowSize = 30;
-  totaStatements.forEach((currentStatement, index: number) => {
-    statementWindow.push(currentStatement);
-    if (statementWindow.length > windowSize) {
-      statementWindow.shift();
-    }
-    currentStatement.conceptErrorScore = 1 - (statementWindow.reduce(((p: number, c: TotaStatement) => p + (c.conceptErrorGrade > 0 ? 1 : 0)), 0.0) / statementWindow.length)
-    if (statementWindow.length === windowSize && currentStatement.conceptErrorScore >= 0.8) {
-      currentStatement.conceptComplete = true;
-    }
-  })
-
-  totaStatements.sort(function(x, y){
+  totaStatements.sort((x, y) => {
     return moment(x.timestamp).unix() - moment(y.timestamp).unix();
   })
 
