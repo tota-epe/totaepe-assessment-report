@@ -21,12 +21,11 @@ export const updateSMForNode = (
     return true;
   });
 
-  if (recentStatements.length === 0) {
-    return currentNodeState;
-  }
-
   const [lastStatement] = recentStatements.slice(-1);
-  if (currentNodeState.lastInteraction === lastStatement.timestamp) {
+  if (
+    !lastStatement ||
+    currentNodeState.lastInteraction === lastStatement.timestamp
+  ) {
     computeNextSMInteraction(currentNodeState);
     return currentNodeState;
   }

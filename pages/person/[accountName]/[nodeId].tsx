@@ -217,7 +217,6 @@ const Page: NextPage = ({
         <Tabs.List>
           <Tabs.Tab value="chart">Gráfico</Tabs.Tab>
           <Tabs.Tab value="chart-time">Gráfico Temporal</Tabs.Tab>
-          <Tabs.Tab value="letters">Letras</Tabs.Tab>
           <Tabs.Tab value="data">Dados Brutos</Tabs.Tab>
         </Tabs.List>
 
@@ -227,55 +226,6 @@ const Page: NextPage = ({
 
         <Tabs.Panel value="chart-time" pt="xs">
           <Line data={data} options={timeOptions} />
-        </Tabs.Panel>
-
-        <Tabs.Panel value="letters" pt="xs">
-          <h2>Percental de erro em cada letra das palavras do Nó</h2>
-          <ul>
-            {Object.keys(errorLetterGrades)
-              .sort()
-              .map((letter) => {
-                const errorWords = (errorLetterGrades as ErrorGrades)[
-                  letter
-                ].errors.map((error) => {
-                  return error.word;
-                });
-                return (
-                  <li key={letter}>
-                    <div>
-                      <h3>Letra: {letter}</h3>
-                      <p>
-                        <strong>Palavras onde teve erro:</strong>
-                        {errorWords
-                          .filter(
-                            (word, index) => errorWords.indexOf(word) === index
-                          )
-                          .join(", ")}
-                      </p>
-                      <p>
-                        <strong>Total de palavras onde a letra aparece</strong>:
-                        {errorLetterGrades[letter].totalWords}
-                      </p>
-                      <p>
-                        <strong>Total interação nas palavras</strong>:
-                        {errorLetterGrades[letter].totalWordsInteractions}
-                      </p>
-                      <p>
-                        <strong>Total erros nas interação das palavras</strong>:
-                        {errorLetterGrades[letter].errors.length}
-                      </p>
-                      <p>
-                        <strong>
-                          Porcentagem de erro(total de interação / errors nas
-                          interações):
-                          {errorLetterGrades[letter].errorPercent}%
-                        </strong>
-                      </p>
-                    </div>
-                  </li>
-                );
-              })}
-          </ul>
         </Tabs.Panel>
 
         <Tabs.Panel value="data" pt="xs">

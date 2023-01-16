@@ -193,20 +193,18 @@ export default async function handler(
     }
   }
 
-  if (!newCourseState._startId) {
-    // Check if any letter is on alarming state
-    const worstLetterNode = nodeStates
-      .filter((n) => n.letter && n.nodeScore && n.nodeScore < 0.9)
-      .sort((a, b) => {
-        return (a?.nodeScore || 0) - (b?.nodeScore || 0);
-      })[0];
+  // Check if any letter is on alarming state
+  const worstLetterNode = nodeStates
+    .filter((n) => n.letter && n.nodeScore && n.nodeScore < 0.9)
+    .sort((a, b) => {
+      return (a?.nodeScore || 0) - (b?.nodeScore || 0);
+    })[0];
 
-    if (worstLetterNode) {
-      newCourseState = {
-        ...newCourseState,
-        _startId: worstLetterNode._id,
-      };
-    }
+  if (worstLetterNode) {
+    newCourseState = {
+      ...newCourseState,
+      _startId: worstLetterNode._id,
+    };
   }
 
   if (shouldWrite) {

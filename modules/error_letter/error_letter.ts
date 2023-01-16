@@ -45,12 +45,12 @@ export const getErrorLetterGrades = (
             statements: [],
           };
         }
-        const nodeIdWithLetter = `${statement.objectId}-${letter}`;
+        const nodeIdWithLetter = `${statement.word}-${letter}`;
         bucketNodeWithLetter[nodeIdWithLetter] =
           bucketNodeWithLetter[nodeIdWithLetter] ?? 0;
-        // if (bucketNodeWithLetter[nodeIdWithLetter] >= 5) {
-        //   return; TODO: skip max bucket size on letter node IDs
-        // }
+        if (bucketNodeWithLetter[nodeIdWithLetter] >= 5) {
+          return; // TODO: skip max bucket size on letter node IDs
+        }
         bucketNodeWithLetter[nodeIdWithLetter] =
           bucketNodeWithLetter[nodeIdWithLetter] + 1;
         if (errorsGrades[letter].totalWordsInteractions >= 30) {
