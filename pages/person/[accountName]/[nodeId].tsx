@@ -76,8 +76,8 @@ const Page: NextPage = ({
     return new Date(s.timestamp) >= timeStampYesterday;
   });
 
-  const conceptErrorGrade = lastStatement?.conceptErrorScore
-  const nodeComplete = lastStatement?.conceptComplete
+  const conceptErrorGrade = lastStatement?.conceptErrorScore ?? 0
+  const nodeComplete = lastStatement?.conceptComplete ?? false
 
   const nodeWords = nodeData?.words;
 
