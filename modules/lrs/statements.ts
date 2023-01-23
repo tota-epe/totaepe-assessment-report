@@ -138,7 +138,7 @@ const processStatements = (statements: Statement[]) => {
     return map
   }), {} as WordConceptMap)
 
-  let statementWindow: { [key: string]: TotaStatement[] } = {};
+  let statementWindow: { [key: string]: number[] } = {};
   const totaStatements = statements.map(s => {
     let totaStatement: TotaStatement = {
       id: s.id,
@@ -153,8 +153,8 @@ const processStatements = (statements: Statement[]) => {
       conceptErrorGrade: 0,
       conceptComplete: false,
       response: s?.result?.response
-        ?.replace(/^[ \[\]]+/, '')
-        ?.replace(/[ \[\]]+$/, '')
+        ?.replace(/^[ \[]+/, '')
+        ?.replace(/[ \]]+$/, '')
         ?.split('],[')
         ?.map(l => l.split(',')) ?? []
     }
@@ -223,7 +223,9 @@ const processStatements = (statements: Statement[]) => {
     if (totaStatement.conceptErrors && Object.keys(totaStatement.conceptErrors).length) {
       for (const error in conceptErrorsWeights) {
         const weightForError = Number(conceptErrorsWeights[error]?.weight);
-        totaStatement.conceptErrorGrade += (totaStatement?.conceptErrors?.[error]?.count ?? 0) * weightForError;
+        if (!isNaN(weightForError) && weightForError > 0) {
+          totaStatement.conceptErrorGrade += (totaStatement?.conceptErrors?.[error]?.count ?? 0) * weightForError;
+        }
       }
       if (conceptErrorsWeightIsEmpty) {
         totaStatement.conceptErrorGrade += 1;
@@ -236,18 +238,18 @@ const processStatements = (statements: Statement[]) => {
       windowSize = Math.min(30, 5 * componentWordsCount)
     }
     const currentStatementWindow = statementWindow[newComponentId] ?? [];
-    currentStatementWindow.push(totaStatement);
+    currentStatementWindow.push((totaStatement.conceptErrorGrade > 0 ? 1 : 0));
     if (currentStatementWindow.length > windowSize) {
       currentStatementWindow.shift();
     }
-    totaStatement.conceptErrorScore = 1 - (currentStatementWindow.reduce(((p: number, c: TotaStatement) => p + (c.conceptErrorGrade > 0 ? 1 : 0)), 0.0) / currentStatementWindow.length)
+    totaStatement.conceptErrorScore = 1 - (currentStatementWindow.reduce(((p, c) => p + c)) / currentStatementWindow.length)
     if (currentStatementWindow.length === windowSize && totaStatement.conceptErrorScore >= minConceptScoreToComplete) {
       totaStatement.conceptComplete = true;
     }
     statementWindow[newComponentId] = currentStatementWindow;
 
     return totaStatement
-  })
+  }).filter(s => s.word && s.word.length > 0)
 
   totaStatements.sort((x, y) => {
     return moment(x.timestamp).unix() - moment(y.timestamp).unix();

@@ -69,25 +69,20 @@ const Page: NextPage = ({
     return s.conceptComplete;
   });
 
-  const recentStatements = statements.slice(-30);
+  const [lastStatement] = statements.slice(-1);
   var timeStamp = Math.round(new Date().getTime() / 1000);
   var timeStampYesterday = new Date((timeStamp - 24 * 3600) * 1000);
   const last24h = statements.filter((s: TotaStatement) => {
     return new Date(s.timestamp) >= timeStampYesterday;
   });
 
-  const conceptErrorGrade =
-    recentStatements.reduce(
-      (p: number, c: TotaStatement) => p + (c.conceptErrorGrade > 0 ? 1 : 0),
-      0
-    ) / recentStatements.length;
-  const nodeComplete =
-    recentStatements.length === 30 && conceptErrorGrade < 0.2;
+  const conceptErrorGrade = lastStatement?.conceptErrorScore
+  const nodeComplete = lastStatement?.conceptComplete
 
   const nodeWords = nodeData?.words;
 
   const timeSeries = statements.map((statement: TotaStatement, index: number) =>
-    moment(statement.timestamp).format("DD/MM HH:mm")
+    moment(statement.timestamp).format("DD/MM HH:mm") + ` (${index + 1})`
   );
   const data = {
     labels: timeSeries,
@@ -110,13 +105,13 @@ const Page: NextPage = ({
         // The axis for this scale is determined from the first letter of the id as `'x'`
         // It is recommended to specify `position` and / or `axis` explicitly.
         // type: 'category',
-        ticks: {
-          // For a category axis, the val is the index so the lookup via getLabelForValue is needed
-          callback: function (val: any, index: number) {
-            // Hide every 2nd tick label
-            return `${timeSeries[val]} (${index + 1})`;
-          },
-        },
+        // ticks: {
+        //   // For a category axis, the val is the index so the lookup via getLabelForValue is needed
+        //   callback: function (val: any, index: number) {
+        //     // Hide every 2nd tick label
+        //     return `${timeSeries[val]} (${index + 1})`;
+        //   },
+        // },
       },
       yAxis: {
         min: 0,
@@ -175,9 +170,7 @@ const Page: NextPage = ({
         },
       };
     })
-    .filter((statement: TotaStatement) => {
-      return statement != null;
-    });
+    .filter((statement: TotaStatement) => statement != null );
   options.plugins.annotation.annotations.push(...newWordLines);
 
   const renderWord = (wordData: any) => {
