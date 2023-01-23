@@ -83,10 +83,13 @@ const Page: NextPage = ({
 
     const isActive = node._id === courseState._startId;
     const nodeData = nodeStates[node._id];
-    const isWarning =
-      node.nodeType === "letter" &&
-      nodeData?.nodeScore &&
-      nodeData?.nodeScore < 0.9;
+    let isWarning = false
+    if (node.nodeType === "letter" && nodeData?.nodeScore && nodeData?.nodeScore < 0.9) {
+      isWarning = true
+    }
+    if (node.nodeType === "main" && nodeData?.nodeScore && nodeData?.nodeScore < 0.8) {
+      isWarning = true
+    }
 
     return (
       <Paper
