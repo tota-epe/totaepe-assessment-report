@@ -7,6 +7,32 @@ export const updateSMForNode = (
   resultStatements: TotaStatement[],
   currentNodeState: NodeState
 ) => {
+  const lastInteraction = currentNodeState.lastInteraction;
+  if (!lastInteraction) {
+    return currentNodeState;
+  }
+
+  // Temporary code??
+  if (
+    currentNodeState.superMemo &&
+    !currentNodeState.superMemo.lastInteraction
+  ) {
+    currentNodeState.superMemo.lastInteraction = lastInteraction;
+  }
+
+  if (!currentNodeState.superMemo) {
+    currentNodeState.superMemo = {
+      interval: 0,
+      repetition: 0,
+      efactor: 2.5,
+    };
+  }
+
+  if (lastInteraction === currentNodeState.superMemo.lastInteraction) {
+    computeNextSMInteraction(currentNodeState);
+    return currentNodeState;
+  }
+
   const recentStatements = [] as TotaStatement[];
   resultStatements.reverse().every((statement) => {
     const lastStatement = recentStatements[0];
@@ -20,46 +46,28 @@ export const updateSMForNode = (
     recentStatements.unshift(statement);
     return true;
   });
-
-  const [lastStatement] = recentStatements.slice(-1);
-  if (
-    !lastStatement ||
-    currentNodeState.lastInteraction === lastStatement.timestamp
-  ) {
-    computeNextSMInteraction(currentNodeState);
-    return currentNodeState;
-  }
-
-  currentNodeState.lastInteraction = lastStatement.timestamp;
-  if (!currentNodeState.superMemo) {
-    currentNodeState.superMemo = {
-      interval: 0,
-      repetition: 0,
-      efactor: 2.5,
-    };
-  }
-
   const superMemoScore = computeSuperMemoScore(recentStatements);
 
   currentNodeState.superMemo = supermemo(
     currentNodeState.superMemo,
     superMemoScore
   );
+  currentNodeState.superMemo.lastInteraction = lastInteraction;
 
   computeNextSMInteraction(currentNodeState);
   return currentNodeState;
 };
 
 const computeNextSMInteraction = (currentNodeState: NodeState) => {
-  if (currentNodeState.lastInteraction && currentNodeState.superMemo) {
-    currentNodeState.nextSMInteraction = moment(
-      currentNodeState.lastInteraction
-    )
-      .add(currentNodeState.superMemo.interval, "days")
-      .toISOString();
-  } else {
+  const superMemo = currentNodeState.superMemo;
+  if (!superMemo?.lastInteraction) {
     delete currentNodeState.nextSMInteraction;
+    return;
   }
+
+  currentNodeState.nextSMInteraction = moment(superMemo.lastInteraction)
+    .add(superMemo.interval, "days")
+    .toISOString();
 };
 
 const computeSuperMemoScore = (recentStatements: TotaStatement[]) => {

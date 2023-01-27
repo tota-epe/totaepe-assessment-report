@@ -104,6 +104,8 @@ export default async function handler(
 
   // Check if node should advance to next Node
   let nodeStates = await getNodeStates(accountName);
+  const letterErrorData = await getLetterErrorData(accountName);
+  let newNodeStates = [...letterErrorData];
 
   let currentNodeState;
   if (node.nodeType === "main") {
@@ -115,16 +117,13 @@ export default async function handler(
     if (lastStatement) {
       currentNodeState.nodeScore = lastStatement.conceptErrorScore;
       currentNodeState._isComplete = lastStatement.conceptComplete;
+      currentNodeState.lastInteraction = lastStatement.timestamp;
     }
 
-    if (isMainNodeRecap) {
+    if (isMainNodeRecap || currentNodeState._isComplete) {
       updateSMForNode(resultStatements, currentNodeState);
     }
-  }
 
-  const letterErrorData = await getLetterErrorData(accountName);
-  let newNodeStates = [...(letterErrorData as any)] as NodeState[];
-  if (currentNodeState) {
     newNodeStates.push(currentNodeState);
   }
 
@@ -207,6 +206,10 @@ export default async function handler(
     }
   }
 
+  if (newCourseState?._startId != courseState?._startId) {
+    newCourseState.onNodeSince = moment().toString();
+  }
+
   if (shouldWrite) {
     await updateCourseState(accountName, newCourseState);
   }
@@ -233,7 +236,7 @@ const getLetterErrorData = async (accountName: string) => {
       letter: letter,
       totalWordsInteractions: errorLetterGrades[letter].totalWordsInteractions,
       nodeScore: errorLetterGrades[letter].nodeScore,
-    };
+    } as NodeState;
   });
 };
 

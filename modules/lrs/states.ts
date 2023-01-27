@@ -18,15 +18,15 @@ export type NodeState = {
     interval: number,
     repetition: number,
     efactor: number,
-    lastStatement?: string
+    lastInteraction?: string,
   }
-  resultData: any
 }
 
 export type CourseState = {
   _id?: string,
   _startId?: string,
   _lxpMaestroTimestamp?: string,
+  onNodeSince?: string,
   currentMainNodeId?: string
 }
 

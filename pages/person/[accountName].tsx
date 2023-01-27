@@ -45,7 +45,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   warning: {
-    backgroundColor: "#febdb9",
+    border: "3px solid red",
   },
 
   icon: {
@@ -114,7 +114,7 @@ const Page: NextPage = ({
         mt={ICON_SIZE / 3}
       >
         <ThemeIcon
-          className={clsx(classes.icon, { [classes.active]: isActive })}
+          className={classes.icon}
           size={ICON_SIZE}
           radius={ICON_SIZE}
         >
@@ -124,7 +124,7 @@ const Page: NextPage = ({
         <Text align="center" weight={700} className={classes.title}>
           {node.conceptTitle}
         </Text>
-        {nodeData && (
+        {nodeData && nodeData.nodeScore && (
           <Text>
             Score de erros de conceito:{" "}
             {nodeData?.nodeScore?.toLocaleString(undefined, {
@@ -141,6 +141,7 @@ const Page: NextPage = ({
         )}
         {nodeData?.superMemo && (
           <div>
+            {/* <Text>{JSON.stringify(nodeData.superMemo)}</Text> */}
             <Text>
               Last Interaction:{" "}
               {moment(nodeData.lastInteraction).format("DD/MM/YYYY")}
