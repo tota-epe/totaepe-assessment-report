@@ -226,7 +226,7 @@ const processStatements = (statements: Statement[]) => {
     const componentWordsCount = componentSourceData?.words?.length;
     let windowSize = 30;
     if (componentWordsCount && componentWordsCount > 0) {
-      windowSize = Math.min(30, 5 * componentWordsCount)
+      windowSize = Math.min(30, 6 * componentWordsCount)
     }
     const currentStatementWindow = statementWindow[newComponentId] ?? [];
     currentStatementWindow.push((totaStatement.conceptErrorGrade > 0 ? 1 : 0));
