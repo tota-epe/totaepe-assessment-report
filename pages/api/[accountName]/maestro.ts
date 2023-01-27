@@ -25,6 +25,7 @@ import { getErrorLetterGrades } from "../../../modules/error_letter/error_letter
 import { TotaStatement } from "../../../types/tota_statement";
 import { updateSMForNode } from "../../../modules/spaced_repetition/spaced_repetition";
 import moment from "moment";
+import { minBy } from "lodash";
 
 export default async function handler(
   req: NextApiRequest,
@@ -143,19 +144,15 @@ export default async function handler(
     return;
   }
 
-  let shouldRecapNode = nodeStates
-    .filter((state) => {
-      if (!state._isComplete || !state.nextSMInteraction || state.letter) {
-        return false;
-      }
-      return moment(state.nextSMInteraction).isBefore();
-    })
-    .sort((a, b) => {
-      return (
-        moment(a.nextSMInteraction).unix() - moment(b.nextSMInteraction).unix()
-      );
-    })
-    .shift();
+  let shouldRecapNodeCandidates = nodeStates.filter((state) => {
+    if (!state.nextSMInteraction || state.letter) {
+      return false;
+    }
+    return moment(state.nextSMInteraction).isBefore();
+  });
+  let shouldRecapNode = minBy(shouldRecapNodeCandidates, (s: NodeState) =>
+    moment(s.nextSMInteraction).unix()
+  );
 
   let newCourseState = {} as CourseState;
   // First check if nodeComplete (will advance to next)
@@ -195,11 +192,12 @@ export default async function handler(
 
   if (!newCourseState._startId) {
     // Check if any letter is on alarming state
-    const worstLetterNode = nodeStates
-      .filter((n) => n.letter && n.nodeScore && n.nodeScore < 0.9)
-      .sort((a, b) => {
-        return (a?.nodeScore || 0) - (b?.nodeScore || 0);
-      })[0];
+    const letterNodeCandidates = nodeStates.filter(
+      (n) => n.letter && n.nodeScore && n.nodeScore < 0.9
+    );
+    const worstLetterNode = minBy(letterNodeCandidates, (s: NodeState) => {
+      s.nodeScore;
+    });
 
     if (worstLetterNode) {
       newCourseState = {
