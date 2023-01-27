@@ -1,21 +1,18 @@
-import { mainNodes, letterNodes } from "../common/models/totaepe_nodes";
+import { mainNodes } from "../common/models/totaepe_nodes";
 const http = require("http");
+
+const accountName = "2BNE75KTBT|teste_ninoca@mailinator.com";
+// const accountName = 'guiomar.albuquerque@ufes.br';
 
 function processNode(nodeId: string) {
   return new Promise((resolve, reject) => {
-    const nodeUpdateURL = `http://127.0.0.1:3000/api/2BNE75KTBT|teste_ninoca@mailinator.com/maestro?nodeID=${nodeId}`;
+    const nodeUpdateURL = `http://127.0.0.1:3000/api/${accountName}/maestro?nodeID=${nodeId}`;
     let requestOptions = {
       method: "POST",
     };
     const req = http.request(nodeUpdateURL, requestOptions, (res: any) => {
-      // console.log(`STATUS: ${res.statusCode}`);
-      // console.log(`HEADERS: ${JSON.stringify(res.headers)}`);
       res.setEncoding("utf8");
-      res.on("data", (chunk: any) => {
-        // console.log(`BODY: ${chunk}`);
-      });
       res.on("end", () => {
-        console.log("No more data in response.");
         resolve(nodeId);
       });
     });
@@ -31,7 +28,7 @@ function processNode(nodeId: string) {
 const processNodes = async () => {
   for (let index = 0; index < mainNodes.length; index++) {
     const element = mainNodes[index];
-    const nodeUpdateURL = `http://127.0.0.1:3000/api/2BNE75KTBT|teste_ninoca@mailinator.com/maestro?nodeID=${element._id}`;
+    const nodeUpdateURL = `http://127.0.0.1:3000/api/${accountName}/maestro?nodeID=${element._id}`;
     console.log(element.title, element._id, nodeUpdateURL);
     await processNode(element._id);
   }
