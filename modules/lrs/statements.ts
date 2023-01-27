@@ -120,23 +120,6 @@ export const getStatementsPerWord = (resultStatements: TotaStatement[]): Hash<To
 
 const processStatements = (statements: Statement[]) => {
   const minConceptScoreToComplete = 0.8;
-  type WordConceptMap = {
-    [key: string]: {
-      [key: string]: {
-        word: string,
-        conceptRange: string
-      }
-    }
-  }
-  const wordConcepts: WordConceptMap = components.reduce(((map, component) => {
-    map[component.id] = {}
-    component.words.reduce(((componentMap, obj) => {
-      componentMap[obj.word] = obj;
-      componentMap[latinize(obj.word)] = obj;
-      return componentMap;
-    }), map[component.id])
-    return map
-  }), {} as WordConceptMap)
 
   let statementWindow: { [key: string]: number[] } = {};
   const totaStatements = statements.map(s => {
@@ -203,12 +186,20 @@ const processStatements = (statements: Statement[]) => {
       }), errorsPerLetter)
     })
 
-    let currentWordData = wordConcepts?.[newComponentId]?.[totaStatement.word]
-    if (!currentWordData?.conceptRange) {
+    if (!componentSourceData) {
       return totaStatement
     }
 
-    const conceptRange = currentWordData.conceptRange.split(',').map(Number)
+    let conceptRange = [0, totaStatement.word.length];
+    if (componentSourceData.conceptPattern) {
+      let keyRegExp = new RegExp(componentSourceData.conceptPattern, "i");
+      let conceptSubString = totaStatement.word.match(keyRegExp);
+      if (conceptSubString) {
+        conceptRange[0] = conceptSubString.index ?? 0;
+        conceptRange[1] = (conceptSubString.index ?? 0)+ conceptSubString[0].length - 1;
+      }
+    }
+
     const conceptRangeErrors: ErrorProfile[] = totaStatement.errorsPerLetter
       ?.slice(conceptRange[0], conceptRange[1] + 1) ?? []
     totaStatement.conceptErrors = conceptRangeErrors.reduce(((t, errorsOnLetter) => {

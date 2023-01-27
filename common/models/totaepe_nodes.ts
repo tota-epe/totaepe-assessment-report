@@ -33,6 +33,7 @@ export type TotaEpeComponent = {
       weight: number;
     };
   };
+  conceptPattern: string,
   words: {
     word: string;
     conceptRange: string;
@@ -85,6 +86,7 @@ export const components = courseComponents.map((component) => {
     _placementTest: component._placementTest,
     concepts: component._concepts,
     words: component._words,
+    conceptPattern: component.conceptPattern,
   } as TotaEpeComponent;
 });
 
