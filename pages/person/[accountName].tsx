@@ -28,6 +28,7 @@ import {
   NodeState,
 } from "../../modules/lrs/states";
 import clsx from "clsx";
+import moment from "moment";
 
 const ICON_SIZE = 60;
 
@@ -83,12 +84,20 @@ const Page: NextPage = ({
 
     const isActive = node._id === courseState._startId;
     const nodeData = nodeStates[node._id];
-    let isWarning = false
-    if (node.nodeType === "letter" && nodeData?.nodeScore && nodeData?.nodeScore < 0.9) {
-      isWarning = true
+    let isWarning = false;
+    if (
+      node.nodeType === "letter" &&
+      nodeData?.nodeScore &&
+      nodeData?.nodeScore < 0.9
+    ) {
+      isWarning = true;
     }
-    if (node.nodeType === "main" && nodeData?.nodeScore && nodeData?.nodeScore < 0.8) {
-      isWarning = true
+    if (
+      node.nodeType === "main" &&
+      nodeData?.nodeScore &&
+      nodeData?.nodeScore < 0.8
+    ) {
+      isWarning = true;
     }
 
     return (
@@ -104,7 +113,11 @@ const Page: NextPage = ({
         })}
         mt={ICON_SIZE / 3}
       >
-        <ThemeIcon className={classes.icon} size={ICON_SIZE} radius={ICON_SIZE}>
+        <ThemeIcon
+          className={clsx(classes.icon, { [classes.active]: isActive })}
+          size={ICON_SIZE}
+          radius={ICON_SIZE}
+        >
           {node.nodeId}
         </ThemeIcon>
 
@@ -113,7 +126,7 @@ const Page: NextPage = ({
         </Text>
         {nodeData && (
           <Text>
-            % de acerto:{" "}
+            Score de erros de conceito:{" "}
             {nodeData?.nodeScore?.toLocaleString(undefined, {
               style: "percent",
               minimumFractionDigits: 2,
@@ -128,9 +141,15 @@ const Page: NextPage = ({
         )}
         {nodeData?.superMemo && (
           <div>
-            <Text>SM2: {JSON.stringify(nodeData.superMemo)}</Text>
-            <Text>Last Interaction: {nodeData.lastInteraction}</Text>
-            <Text>NextInteraction: {nodeData.nextSMInteraction}</Text>
+            <Text>
+              Last Interaction:{" "}
+              {moment(nodeData.lastInteraction).format("DD/MM/YYYY")}
+            </Text>
+            <Text>
+              NextInteraction ({nodeData.superMemo.repetition}/+
+              {nodeData.superMemo.interval}):{" "}
+              {moment(nodeData.nextSMInteraction).format("DD/MM/YYYY")}
+            </Text>
           </div>
         )}
         {nodeWordsText && (
