@@ -1012,10 +1012,6 @@
       {
         "word": "RI",
         "conceptRange": "0,1"
-      },
-      {
-        "word": "LU",
-        "conceptRange": "0,1"
       }
     ],
     "conceptPattern": ".+"
@@ -1356,18 +1352,6 @@
       "phonic": {
         "weight": 1
       },
-      "graphic": {
-        "weight": 1
-      },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
-        "weight": 1
-      },
       "orthographic": {
         "weight": -1
       },
@@ -1381,30 +1365,30 @@
     "_words": [
       {
         "word": "LAMA",
-        "conceptRange": "0,3"
+        "conceptRange": "1,1"
       },
       {
         "word": "DAMA",
-        "conceptRange": "0,3"
+        "conceptRange": "1,1"
       },
       {
         "word": "FAMA",
-        "conceptRange": "0,3"
+        "conceptRange": "1,1"
       },
       {
         "word": "CAMA",
-        "conceptRange": "0,3"
+        "conceptRange": "1,1"
       },
       {
         "word": "PANO",
-        "conceptRange": "0,3",
+        "conceptRange": "1,1",
         "closedVowels": [
           3
         ]
       },
       {
         "word": "REMO",
-        "conceptRange": "0,3",
+        "conceptRange": "1,1",
         "closedVowels": [
           1,
           3
@@ -1412,7 +1396,7 @@
       },
       {
         "word": "DEDO",
-        "conceptRange": "0,3",
+        "conceptRange": "1,1",
         "closedVowels": [
           1,
           3
@@ -1420,14 +1404,14 @@
       },
       {
         "word": "BOCA",
-        "conceptRange": "0,3",
+        "conceptRange": "1,1",
         "closedVowels": [
           1
         ]
       },
       {
         "word": "LOBO",
-        "conceptRange": "0,3",
+        "conceptRange": "1,1",
         "closedVowels": [
           1,
           3
@@ -1435,13 +1419,13 @@
       },
       {
         "word": "GOTA",
-        "conceptRange": "0,3",
+        "conceptRange": "1,1",
         "closedVowels": [
           1
         ]
       }
     ],
-    "conceptPattern": ".+"
+    "conceptPattern": "[aeiouáéíóúàâêôãõ]"
   },
   {
     "_component": "totaApp",
@@ -1470,16 +1454,7 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
-      "graphic": {
-        "weight": 1
-      },
       "omission": {
-        "weight": 1
-      },
-      "intrusion": {
         "weight": 1
       },
       "memory": {
@@ -2233,16 +2208,7 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
-      "graphic": {
-        "weight": 1
-      },
       "omission": {
-        "weight": 1
-      },
-      "intrusion": {
         "weight": 1
       },
       "memory": {
@@ -2533,13 +2499,6 @@
         ]
       },
       {
-        "word": "BEBIDA",
-        "conceptRange": "0,5",
-        "closedVowels": [
-          1
-        ]
-      },
-      {
         "word": "BUZINA",
         "conceptRange": "0,5"
       },
@@ -2575,6 +2534,10 @@
         "closedVowels": [
           5
         ]
+      },
+      {
+        "word": "PANELA",
+        "conceptRange": "0,5"
       }
     ],
     "conceptPattern": ".+"
@@ -2613,7 +2576,7 @@
         "weight": 1
       },
       "phonic": {
-        "weight": -1
+        "weight": 1
       },
       "orthographic": {
         "weight": -1
@@ -2728,7 +2691,7 @@
         "weight": 1
       },
       "phonic": {
-        "weight": -1
+        "weight": 1
       },
       "orthographic": {
         "weight": -1
@@ -4296,14 +4259,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "orthographic": {
-        "weight": -1
-      },
       "omission": {
         "weight": 1
       },
       "memory": {
         "weight": 1
+      },
+      "orthographic": {
+        "weight": -1
       },
       "phonic": {
         "weight": -1
@@ -4403,14 +4366,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "orthographic": {
-        "weight": -1
-      },
       "omission": {
         "weight": 1
       },
       "memory": {
         "weight": 1
+      },
+      "orthographic": {
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -4963,16 +4926,7 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
-      "graphic": {
-        "weight": 1
-      },
       "omission": {
-        "weight": 1
-      },
-      "intrusion": {
         "weight": 1
       },
       "memory": {
@@ -4980,9 +4934,6 @@
       },
       "orthographic": {
         "weight": -1
-      },
-      "speech": {
-        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -5507,11 +5458,11 @@
       "memory": {
         "weight": 1
       },
-      "speech": {
-        "weight": 1
-      },
       "orthographic": {
         "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -5565,10 +5516,6 @@
         "closedVowels": [
           4
         ]
-      },
-      {
-        "word": "BRASIL",
-        "conceptRange": "0,2"
       }
     ],
     "conceptPattern": "[bcdfghjklmnpqrstvwxyz]R[aeiouáéíóúàâêôãõ]"
@@ -5941,11 +5888,26 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "orthographic": {
-        "weight": 1
-      },
       "phonic": {
         "weight": -1
+      },
+      "graphic": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      },
+      "intrusion": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -6064,11 +6026,26 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "orthographic": {
-        "weight": 1
-      },
       "phonic": {
         "weight": -1
+      },
+      "graphic": {
+        "weight": 1
+      },
+      "omission": {
+        "weight": 1
+      },
+      "intrusion": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -6270,11 +6247,11 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "orthographic": {
-        "weight": 1
-      },
       "omission": {
         "weight": 1
+      },
+      "orthographic": {
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -6593,26 +6570,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -7118,13 +7083,6 @@
         "conceptRange": "1,1"
       },
       {
-        "word": "BEBIDA",
-        "conceptRange": "5,5",
-        "closedVowels": [
-          1
-        ]
-      },
-      {
         "word": "CABELO",
         "conceptRange": "1,1",
         "closedVowels": [
@@ -7149,6 +7107,10 @@
         "closedVowels": [
           0
         ]
+      },
+      {
+        "word": "PANELA",
+        "conceptRange": "1,1"
       },
       {
         "word": "VACINA",
@@ -7787,10 +7749,6 @@
         ]
       },
       {
-        "word": "BRASIL",
-        "conceptRange": "2,2"
-      },
-      {
         "word": "GUERRA",
         "conceptRange": "5,5"
       },
@@ -7999,26 +7957,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -8123,13 +8069,6 @@
       {
         "word": "BATATA",
         "conceptRange": "0,0"
-      },
-      {
-        "word": "BEBIDA",
-        "conceptRange": "0,0",
-        "closedVowels": [
-          1
-        ]
       },
       {
         "word": "CABELO",
@@ -8299,10 +8238,6 @@
         ]
       },
       {
-        "word": "BRASIL",
-        "conceptRange": "0,0"
-      },
-      {
         "word": "BOXE",
         "conceptRange": "0,0",
         "closedVowels": [
@@ -8361,26 +8296,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -9123,26 +9046,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -9270,26 +9181,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -9405,13 +9304,6 @@
       {
         "word": "SAÍDA",
         "conceptRange": "3,3"
-      },
-      {
-        "word": "BEBIDA",
-        "conceptRange": "4,4",
-        "closedVowels": [
-          1
-        ]
       },
       {
         "word": "COMIDA",
@@ -9675,26 +9567,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -10007,13 +9887,6 @@
         ]
       },
       {
-        "word": "BEBIDA",
-        "conceptRange": "1,1",
-        "closedVowels": [
-          1
-        ]
-      },
-      {
         "word": "CABELO",
         "conceptRange": "3,3",
         "closedVowels": [
@@ -10027,6 +9900,10 @@
         "closedVowels": [
           0
         ]
+      },
+      {
+        "word": "PANELA",
+        "conceptRange": "3,3"
       },
       {
         "word": "CEDO",
@@ -10904,26 +10781,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -11216,26 +11081,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -11567,26 +11420,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -11881,26 +11722,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -12115,13 +11944,6 @@
       {
         "word": "CUTIA",
         "conceptRange": "3,3"
-      },
-      {
-        "word": "BEBIDA",
-        "conceptRange": "3,3",
-        "closedVowels": [
-          1
-        ]
       },
       {
         "word": "COMIDA",
@@ -12516,10 +12338,6 @@
         ]
       },
       {
-        "word": "BRASIL",
-        "conceptRange": "4,4"
-      },
-      {
         "word": "GUITARRA",
         "conceptRange": "2,2"
       },
@@ -12751,26 +12569,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -12879,26 +12685,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -12977,26 +12771,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -13116,10 +12898,6 @@
         ]
       },
       {
-        "word": "LU",
-        "conceptRange": "0,0"
-      },
-      {
         "word": "BOLA",
         "conceptRange": "2,2"
       },
@@ -13196,6 +12974,10 @@
         "closedVowels": [
           0
         ]
+      },
+      {
+        "word": "PANELA",
+        "conceptRange": "4,4"
       },
       {
         "word": "TIGELA",
@@ -13585,10 +13367,6 @@
         ]
       },
       {
-        "word": "BRASIL",
-        "conceptRange": "5,5"
-      },
-      {
         "word": "ALGUÉM",
         "conceptRange": "1,1",
         "closedVowels": []
@@ -13708,26 +13486,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -14282,26 +14048,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -14407,6 +14161,10 @@
       {
         "word": "CAFUNÉ",
         "conceptRange": "4,4"
+      },
+      {
+        "word": "PANELA",
+        "conceptRange": "2,2"
       },
       {
         "word": "VACINA",
@@ -14827,26 +14585,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -16444,26 +16190,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -16579,6 +16313,10 @@
         "closedVowels": [
           1
         ]
+      },
+      {
+        "word": "PANELA",
+        "conceptRange": "0,0"
       },
       {
         "word": "PEDÁGIO",
@@ -16861,26 +16599,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -16992,26 +16718,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -17596,10 +17310,6 @@
         ]
       },
       {
-        "word": "BRASIL",
-        "conceptRange": "1,1"
-      },
-      {
         "word": "GUERRA",
         "conceptRange": "3,3"
       },
@@ -17801,26 +17511,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -18275,10 +17973,6 @@
         "conceptRange": "2,2"
       },
       {
-        "word": "BRASIL",
-        "conceptRange": "3,3"
-      },
-      {
         "word": "SANGUE",
         "conceptRange": "0,0",
         "closedVowels": [
@@ -18435,26 +18129,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -19108,26 +18790,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -19227,10 +18897,6 @@
           4,
           6
         ]
-      },
-      {
-        "word": "LU",
-        "conceptRange": "1,1"
       },
       {
         "word": "TU",
@@ -19529,26 +19195,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -19707,26 +19361,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -19778,26 +19420,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -20145,26 +19775,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -20227,26 +19845,14 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "phonic": {
-        "weight": 1
-      },
       "graphic": {
         "weight": 1
       },
-      "omission": {
-        "weight": 1
-      },
-      "intrusion": {
-        "weight": 1
-      },
-      "memory": {
+      "phonic": {
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
-      },
-      "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
