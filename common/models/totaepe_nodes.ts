@@ -115,6 +115,22 @@ export const nodes = courseContentObjects.map((contentObject) => {
   };
 });
 
+const nodeIdByComponentId: { [key: string]: string } = {};
+nodes.forEach((node) => {
+  const currentNodeId = node._id;
+  node.articles.forEach((article) => {
+    article.blocks.forEach((block) => {
+      block.components.forEach((component) => {
+        nodeIdByComponentId[component.id] = currentNodeId;
+      })
+    })
+  })
+})
+export const nodeById = (nodeId: string) => nodes.find((n) => n._id === nodeId)
+export const nodeByComponentId = (componentId: string) => {
+  return nodeById(nodeIdByComponentId[componentId]);
+}
+
 export const mainNodes = nodes.filter((n) => n.nodeType === "main");
 export const letterNodes = nodes.filter((n) => n.nodeId.startsWith("letter-"));
 

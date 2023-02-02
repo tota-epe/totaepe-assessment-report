@@ -1,24 +1,18 @@
 import type { NextPage, GetStaticProps, InferGetStaticPropsType } from "next";
 import { useRouter } from "next/router";
-import Link from "next/link";
 import {
-  nodes,
   mainNodes,
   letterNodes,
+  nodeByComponentId,
 } from "../../common/models/totaepe_nodes";
 import { getLRSPeople } from "../../modules/lrs/people";
 import {
   Grid,
-  Box,
-  Anchor,
+  Flex,
   createStyles,
   ThemeIcon,
-  Progress,
   Text,
-  Group,
-  Badge,
   Paper,
-  Button,
   Center,
   Loader,
 } from "@mantine/core";
@@ -29,6 +23,8 @@ import {
 } from "../../modules/lrs/states";
 import clsx from "clsx";
 import moment from "moment";
+import { getLRSData } from "../../modules/lrs/statements";
+import { TotaStatement } from "../../types/tota_statement";
 
 const ICON_SIZE = 60;
 
@@ -64,6 +60,7 @@ const Page: NextPage = ({
   person,
   courseState,
   nodeStates,
+  statements,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { classes } = useStyles();
   const router = useRouter();
@@ -113,11 +110,7 @@ const Page: NextPage = ({
         })}
         mt={ICON_SIZE / 3}
       >
-        <ThemeIcon
-          className={classes.icon}
-          size={ICON_SIZE}
-          radius={ICON_SIZE}
-        >
+        <ThemeIcon className={classes.icon} size={ICON_SIZE} radius={ICON_SIZE}>
           {node.nodeId}
         </ThemeIcon>
 
@@ -144,12 +137,12 @@ const Page: NextPage = ({
             {/* <Text>{JSON.stringify(nodeData.superMemo)}</Text> */}
             <Text>
               Last Interaction:{" "}
-              {moment(nodeData.lastInteraction).format("DD/MM/YYYY")}
+              {moment(nodeData.lastInteraction).format("DD/MM/YYYY HH:MM")}
             </Text>
             <Text>
               NextInteraction ({nodeData.superMemo.repetition}/+
               {nodeData.superMemo.interval}):{" "}
-              {moment(nodeData.nextSMInteraction).format("DD/MM/YYYY")}
+              {moment(nodeData.nextSMInteraction).format("DD/MM/YYYY HH:MM")}
             </Text>
           </div>
         )}
@@ -161,6 +154,20 @@ const Page: NextPage = ({
       </Paper>
     );
   };
+
+  let currentStatement: TotaStatement;
+  let statementGroups = statements.reduce(
+    (statementGroups: TotaStatement[][], statement: TotaStatement) => {
+      if (currentStatement?.objectId !== statement.objectId) {
+        statementGroups.unshift([statement]);
+      } else {
+        statementGroups[0].push(statement);
+      }
+      currentStatement = statement;
+      return statementGroups;
+    },
+    [] as TotaStatement[][]
+  );
 
   return (
     <>
@@ -180,6 +187,42 @@ const Page: NextPage = ({
           </Grid.Col>
         ))}
       </Grid>
+      <h2>Dados recentes</h2>
+      {statementGroups && (
+        <Flex sx={{ "max-width": "100vw" }} wrap="wrap" gap={10}>
+          {statementGroups.map(
+            (statementGroup: TotaStatement[], index: number) => {
+              const firstStatement = statementGroup[0];
+              const lastStatement = statementGroup[statementGroup.length - 1];
+              return (
+                <Paper
+                  sx={{ height: "100%" }}
+                  radius="md"
+                  withBorder
+                  className={clsx(classes.card)}
+                  mt={ICON_SIZE / 3}
+                  key={index}
+                >
+                  <Text>
+                    {nodeByComponentId(firstStatement.objectId)?.title}
+                  </Text>
+                  <Text>Interações: {statementGroup.length}</Text>
+                  <Text>
+                    de:{" "}
+                    {moment(firstStatement.timestamp).format(
+                      "DD/MM/YYYY HH:mm:ss"
+                    )}{" "}
+                    até{" "}
+                    {moment(lastStatement?.timestamp).format(
+                      "DD/MM/YYYY HH:mm:ss"
+                    )}
+                  </Text>
+                </Paper>
+              );
+            }
+          )}
+        </Flex>
+      )}
     </>
   );
 };
@@ -206,7 +249,16 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       nodeStates[nodeState._id] = nodeState;
     });
   }
-  return { props: { person, courseState, nodeStates }, revalidate: 5 * 60 };
+
+  const statements = await getLRSData({
+    accountName: accountName,
+    onlyRecents: true,
+  });
+
+  return {
+    props: { person, courseState, nodeStates, statements },
+    revalidate: 5 * 60,
+  };
 };
 
 export async function getStaticPaths() {
