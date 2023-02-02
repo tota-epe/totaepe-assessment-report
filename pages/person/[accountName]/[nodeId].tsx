@@ -182,11 +182,12 @@ const Page: NextPage = ({
   const renderConcepts = (concepts: any) => {
     const renderedChildren = Object.keys(concepts).map((concept: any) => {
       if (concepts[concept].weight < 0) {
-        return <span key={concept}>Excluindo:{concept} </span>;
+        return <span key={concept} className='excluded'>{concept} </span>;
       } else {
         return <span key={concept}>{concept} </span>;
       }
     });
+
     return <>{renderedChildren}</>;
   };
 
@@ -203,7 +204,7 @@ const Page: NextPage = ({
       </p>
       <p>
         Nó dominado?: {nodeComplete ? "sim" : "não"} - {statements.length}{" "}
-        Apresentações de palavras / Dominado em {earlyCompletionIndex + 1}
+        Apresentações de palavras / Dominado pela primeira vez em {earlyCompletionIndex + 1}
       </p>
       <p>Apresentações nas ultimas 24hs: {last24h.length}</p>
       <Tabs defaultValue="chart">

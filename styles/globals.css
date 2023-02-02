@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+span.excluded {
+  text-decoration: line-through;
+}
+
 * {
   box-sizing: border-box;
 }
