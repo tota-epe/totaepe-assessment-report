@@ -76,13 +76,14 @@ const Page: NextPage = ({
     return new Date(s.timestamp) >= timeStampYesterday;
   });
 
-  const conceptErrorGrade = lastStatement?.conceptErrorScore ?? 0
-  const nodeComplete = lastStatement?.conceptComplete ?? false
+  const conceptErrorGrade = lastStatement?.conceptErrorScore ?? 0;
+  const nodeComplete = lastStatement?.conceptComplete ?? false;
 
   const nodeWords = nodeData?.words;
 
-  const timeSeries = statements.map((statement: TotaStatement, index: number) =>
-    moment(statement.timestamp).format("DD/MM HH:mm") + ` (${index + 1})`
+  const timeSeries = statements.map(
+    (statement: TotaStatement, index: number) =>
+      moment(statement.timestamp).format("DD/MM HH:mm") + ` (${index + 1})`
   );
   const data = {
     labels: timeSeries,
@@ -170,7 +171,7 @@ const Page: NextPage = ({
         },
       };
     })
-    .filter((statement: TotaStatement) => statement != null );
+    .filter((statement: TotaStatement) => statement != null);
   options.plugins.annotation.annotations.push(...newWordLines);
 
   const renderWord = (wordData: any) => {
@@ -182,7 +183,11 @@ const Page: NextPage = ({
   const renderConcepts = (concepts: any) => {
     const renderedChildren = Object.keys(concepts).map((concept: any) => {
       if (concepts[concept].weight < 0) {
-        return <span key={concept} className='excluded'>{concept} </span>;
+        return (
+          <span key={concept} className="excluded">
+            {concept}{" "}
+          </span>
+        );
       } else {
         return <span key={concept}>{concept} </span>;
       }
@@ -190,6 +195,10 @@ const Page: NextPage = ({
 
     return <>{renderedChildren}</>;
   };
+
+  const detailStatements = nodeLetter
+    ? errorLetterGrades[nodeLetter].statements
+    : statements;
 
   return (
     <div>
@@ -204,7 +213,8 @@ const Page: NextPage = ({
       </p>
       <p>
         Nó dominado?: {nodeComplete ? "sim" : "não"} - {statements.length}{" "}
-        Apresentações de palavras / Dominado pela primeira vez em {earlyCompletionIndex + 1}
+        Apresentações de palavras / Dominado pela primeira vez em{" "}
+        {earlyCompletionIndex + 1}
       </p>
       <p>Apresentações nas ultimas 24hs: {last24h.length}</p>
       <Tabs defaultValue="chart">
@@ -223,46 +233,45 @@ const Page: NextPage = ({
         </Tabs.Panel>
 
         <Tabs.Panel value="data" pt="xs">
-          {nodeLetter && (
-            <Card>
-              <div>
-                Total de erros:{" "}
-                {errorLetterGrades[nodeLetter].totalWordsInteractionsError}
-              </div>
-              <div>
-                Total: {errorLetterGrades[nodeLetter].totalWordsInteractions}
-              </div>
-              <div>
-                Score:{" "}
-                {errorLetterGrades[nodeLetter].nodeScore.toLocaleString(
-                  undefined,
-                  {
-                    style: "percent",
-                    minimumFractionDigits: 2,
-                  }
-                )}
-              </div>
-
-              {nodeLetter && (
-                <table>
-                  {errorLetterGrades[nodeLetter].statements.map(
-                    (statement: TotaStatement) => (
-                      <tr key={statement.id}>
-                        <td>
-                          {moment(statement.timestamp).format("DD/MM/YY HH:mm")}
-                        </td>
-                        <td>{statement.word}</td>
-                        <td>{JSON.stringify(statement.response)}</td>
-                        <td>{statement.withLetterError ? "COM ERRO" : ""}</td>
-                        <td>{statement.objectId}</td>
-                        {/* {JSON.stringify(statement)} */}
-                      </tr>
-                    )
+          <Card>
+            {nodeLetter && (
+              <>
+                <div>
+                  Total de erros:{" "}
+                  {errorLetterGrades[nodeLetter].totalWordsInteractionsError}
+                </div>
+                <div>
+                  Total:{" "}
+                  {errorLetterGrades[nodeLetter].totalWordsInteractions}
+                </div>
+                <div>
+                  Score:{" "}
+                  {errorLetterGrades[nodeLetter].nodeScore.toLocaleString(
+                    undefined,
+                    {
+                      style: "percent",
+                      minimumFractionDigits: 2,
+                    }
                   )}
-                </table>
-              )}
-            </Card>
-          )}
+                </div>
+              </>
+            )}
+
+            <table>
+              {detailStatements.map((statement: TotaStatement) => (
+                <tr key={statement.id}>
+                  <td>
+                    {moment(statement.timestamp).format("DD/MM/YY HH:mm")}
+                  </td>
+                  <td>{statement.word}</td>
+                  <td>{JSON.stringify(statement.response)}</td>
+                  <td>{statement.withLetterError ? "COM ERRO" : ""}</td>
+                  <td>{statement.objectId}</td>
+                  {/* {JSON.stringify(statement)} */}
+                </tr>
+              ))}
+            </table>
+          </Card>
         </Tabs.Panel>
       </Tabs>
       {nodeWords?.map(renderWord)}

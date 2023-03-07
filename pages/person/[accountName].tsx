@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import {
   mainNodes,
   letterNodes,
+  placementTestNode,
   nodeByComponentId,
 } from "../../common/models/totaepe_nodes";
 import { getLRSPeople } from "../../modules/lrs/people";
@@ -187,6 +188,16 @@ const Page: NextPage = ({
           </Grid.Col>
         ))}
       </Grid>
+      {placementTestNode && (
+        <>
+          <h2>Teste de nivelamento</h2>
+          <Grid>
+            <Grid.Col span={4} key={placementTestNode._id}>
+              {renderNode(placementTestNode)}
+            </Grid.Col>
+          </Grid>
+        </>
+      )}
       <h2>Dados recentes</h2>
       {statementGroups && (
         <Flex sx={{ "max-width": "100vw" }} wrap="wrap" gap={10}>
