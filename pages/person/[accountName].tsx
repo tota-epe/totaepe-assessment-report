@@ -267,7 +267,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   });
 
   return {
-    props: { person, courseState, nodeStates, statements },
+    props: {
+      person,
+      courseState,
+      nodeStates,
+      statements,
+    },
     revalidate: 5 * 60,
   };
 };

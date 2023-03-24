@@ -1,27 +1,39 @@
-import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next'
-import Link from 'next/link'
-import { getLRSPeople } from '../modules/lrs/people'
+import type { NextPage, GetStaticProps, InferGetStaticPropsType } from "next";
+import Link from "next/link";
 
-const Home: NextPage = ({people}: InferGetStaticPropsType<typeof getStaticProps>) => {
+import connectToDatabase from "../utils/db";
+import { StudentModel, Student } from "../models/student";
+
+const Home: NextPage = ({
+  students,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <div>
-    <h1>Alunos</h1>
+    <>
+      <h1>Alunos</h1>
       <ul>
-        {people.map((person: {name: string, id: number, accountName: string}) => {
+        {students.map((student: Student) => {
           return (
-            <li key={person.id}><Link href={`/person/${person.accountName}`}>{person.accountName}</Link></li>
-          )
-        }
-
-        )}
+            <li key={student.code}>
+              <Link href={`/person/${student.accountName}`}>
+                {student.name}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
-    </div>
-)}
+    </>
+  );
+};
 
 // This also gets called at build time
 export const getStaticProps: GetStaticProps = async () => {
-  const people = await getLRSPeople()
-  return { props: { people: people }, revalidate: 60 * 60 }
-}
+  await connectToDatabase();
+  const students = await StudentModel.find();
 
-export default Home
+  return {
+    props: { students: JSON.parse(JSON.stringify(students)) },
+    revalidate: 60,
+  };
+};
+
+export default Home;
