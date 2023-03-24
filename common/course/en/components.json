@@ -42,7 +42,7 @@
         "weight": 1
       },
       "orthographic": {
-        "weight": 1
+        "weight": -1
       },
       "speech": {
         "weight": 1
@@ -3456,6 +3456,9 @@
       },
       "orthographic": {
         "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -3564,6 +3567,9 @@
       },
       "orthographic": {
         "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -3687,6 +3693,9 @@
       },
       "orthographic": {
         "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -3821,6 +3830,9 @@
       },
       "orthographic": {
         "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -3987,6 +3999,9 @@
       },
       "orthographic": {
         "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -4165,6 +4180,9 @@
       },
       "orthographic": {
         "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -4270,6 +4288,9 @@
       },
       "phonic": {
         "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -4374,6 +4395,9 @@
       },
       "orthographic": {
         "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -4598,6 +4622,9 @@
       },
       "orthographic": {
         "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -4732,7 +4759,7 @@
     "_resumable": false,
     "_words": [
       {
-        "word": "MANHA",
+        "word": "MANHÃ",
         "conceptRange": "2,4"
       },
       {
@@ -4826,6 +4853,9 @@
       },
       "orthographic": {
         "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -4934,6 +4964,9 @@
       },
       "orthographic": {
         "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -5150,12 +5183,15 @@
     },
     "_concepts": {
       "orthographic": {
-        "weight": 1
+        "weight": -1
       },
       "omission": {
         "weight": 1
       },
       "memory": {
+        "weight": 1
+      },
+      "speech": {
         "weight": 1
       }
     },
@@ -5555,6 +5591,9 @@
       },
       "orthographic": {
         "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -6252,6 +6291,9 @@
       },
       "orthographic": {
         "weight": -1
+      },
+      "speech": {
+        "weight": 1
       }
     },
     "_wordLimit": "5",
@@ -6289,16 +6331,6 @@
         "conceptRange": "1,2",
         "closedVowels": [
           0,
-          8
-        ]
-      },
-      {
-        "word": "EXCEDENTE",
-        "conceptRange": "1,2",
-        "closedVowels": [
-          0,
-          3,
-          5,
           8
         ]
       }
@@ -7545,6 +7577,10 @@
         "closedVowels": [
           1
         ]
+      },
+      {
+        "word": "MANHÃ",
+        "conceptRange": "1,1"
       },
       {
         "word": "FARINHA",
@@ -9000,16 +9036,6 @@
         ]
       },
       {
-        "word": "EXCEDENTE",
-        "conceptRange": "2,2",
-        "closedVowels": [
-          0,
-          3,
-          5,
-          8
-        ]
-      },
-      {
         "word": "WEBCAM",
         "conceptRange": "3,3",
         "closedVowels": [
@@ -9517,16 +9543,6 @@
         "conceptRange": "0,0",
         "closedVowels": [
           1
-        ]
-      },
-      {
-        "word": "EXCEDENTE",
-        "conceptRange": "4,4",
-        "closedVowels": [
-          0,
-          3,
-          5,
-          8
         ]
       },
       {
@@ -10727,16 +10743,6 @@
         ]
       },
       {
-        "word": "EXCEDENTE",
-        "conceptRange": "0,0",
-        "closedVowels": [
-          0,
-          3,
-          5,
-          8
-        ]
-      },
-      {
         "word": "DELIVERY",
         "conceptRange": "1,1",
         "closedVowels": [
@@ -11468,6 +11474,10 @@
       {
         "word": "CHÁ",
         "conceptRange": "1,1"
+      },
+      {
+        "word": "MANHÃ",
+        "conceptRange": "3,3"
       },
       {
         "word": "NENHUM",
@@ -13899,6 +13909,10 @@
         ]
       },
       {
+        "word": "MANHÃ",
+        "conceptRange": "0,0"
+      },
+      {
         "word": "NENHUM",
         "conceptRange": "5,5",
         "closedVowels": [
@@ -14359,6 +14373,10 @@
         ]
       },
       {
+        "word": "MANHÃ",
+        "conceptRange": "2,2"
+      },
+      {
         "word": "NENHUM",
         "conceptRange": "0,0",
         "closedVowels": [
@@ -14544,16 +14562,6 @@
       {
         "word": "LINK",
         "conceptRange": "2,2"
-      },
-      {
-        "word": "EXCEDENTE",
-        "conceptRange": "6,6",
-        "closedVowels": [
-          0,
-          3,
-          5,
-          8
-        ]
       }
     ],
     "conceptPattern": "N"
@@ -18747,16 +18755,6 @@
         ]
       },
       {
-        "word": "EXCEDENTE",
-        "conceptRange": "7,7",
-        "closedVowels": [
-          0,
-          3,
-          5,
-          8
-        ]
-      },
-      {
         "word": "MOTOBOY",
         "conceptRange": "2,2"
       }
@@ -19732,16 +19730,6 @@
         "conceptRange": "1,1",
         "closedVowels": [
           0,
-          8
-        ]
-      },
-      {
-        "word": "EXCEDENTE",
-        "conceptRange": "1,1",
-        "closedVowels": [
-          0,
-          3,
-          5,
           8
         ]
       }
