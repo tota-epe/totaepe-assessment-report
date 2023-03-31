@@ -29,8 +29,14 @@ export default async function handler(
       break;
     case "GET":
       try {
-        const students = await StudentModel.find();
-        res.status(200).json({ success: true, students });
+        const code = req.query.code as string;
+        if (!code) {
+          res.status(405).json({ success: false, error: "Method not allowed" });
+          return;
+        }
+
+        const student = await StudentModel.findOne({ code });
+        return res.status(200).json({ success: !!student, student });
       } catch (error: any) {
         res.status(400).json({ success: false, error: error.message });
       }
