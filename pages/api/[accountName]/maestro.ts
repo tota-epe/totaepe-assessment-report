@@ -57,7 +57,7 @@ export default async function handler(
   }
 
   const node = nodes.find((node) => node._id === nodeId);
-  let currentComponent = node?.articles
+  const currentComponent = node?.articles
     .map((a) => a.blocks.map((b) => b.components))
     .flat(3)[0];
   if (!currentComponent || !node) {
@@ -108,12 +108,12 @@ export default async function handler(
   let newNodeStates = [...letterErrorData];
 
   let currentNodeState;
+  const [lastStatement] = resultStatements.slice(-1);
   if (node.nodeType === "main") {
     currentNodeState =
       nodeStates.find((state) => state._id === nodeId) ||
       ({ _id: nodeId } as NodeState);
 
-    const [lastStatement] = resultStatements.slice(-1);
     if (lastStatement) {
       currentNodeState.nodeScore = lastStatement.conceptErrorScore;
       currentNodeState._isComplete = lastStatement.conceptComplete;
@@ -125,6 +125,14 @@ export default async function handler(
     }
 
     newNodeStates.push(currentNodeState);
+  } else if (node.nodeType === "letter" && lastStatement) {
+    const currentLetterNodeState = letterErrorData.find(
+      (state) => state._id === nodeId
+    );
+
+    if (currentLetterNodeState) {
+      currentLetterNodeState.lastInteraction = lastStatement.timestamp;
+    }
   }
 
   if (shouldWrite) {
@@ -155,10 +163,19 @@ export default async function handler(
 
   let newCourseState = {} as CourseState;
   // First check if nodeComplete (will advance to next)
+  const startDateOnNode = moment(courseState.onNodeSince);
   if (node.nodeType === "letter") {
     const letterNodeState = nodeStates.find((n) => n.letter === node.letter);
-    const letterFinished =
+    let letterFinished =
       letterNodeState?.nodeScore && letterNodeState?.nodeScore >= 0.9;
+
+    // If user is on letter node. check if has completed at least X interactions
+    // since the last transition
+    const resultsOnCurrentInteraction = resultStatements.filter((statement) => {
+      return moment(statement.timestamp).isAfter(startDateOnNode);
+    });
+    letterFinished = letterFinished || resultsOnCurrentInteraction.length >= 5;
+
     if (letterFinished && shouldRecapNode) {
       newCourseState = {
         ...newCourseState,
@@ -176,7 +193,7 @@ export default async function handler(
         ...newCourseState,
         _startId: shouldRecapNode._id,
       };
-    } else if (conceptComplete) {
+    } else if (!isMainNodeRecap && conceptComplete) {
       let nextNodeIndex = mainNodes.findIndex((n) => n._id == nodeId) + 1;
       let nextNodeId = mainNodes[nextNodeIndex]?._id;
 
@@ -191,9 +208,20 @@ export default async function handler(
 
   if (!newCourseState._startId) {
     // Check if any letter is on alarming state
-    const letterNodeCandidates = nodeStates.filter(
-      (n) => n.letter && n.nodeScore && n.nodeScore < 0.9
-    );
+    const letterGraceLimitDate = moment().subtract(2, "days");
+    const letterNodeCandidates = nodeStates.filter((n) => {
+      if (!n.letter || !n.nodeScore || n.nodeScore >= 0.9) {
+        return false;
+      }
+
+      if (!n.lastInteraction) {
+        return true;
+      }
+
+      const letterLastInteraction = moment(n.lastInteraction);
+      return letterLastInteraction.isBefore(letterGraceLimitDate);
+    });
+
     const worstLetterNode = minBy(letterNodeCandidates, (s: NodeState) => {
       return s.nodeScore;
     });
@@ -206,7 +234,10 @@ export default async function handler(
     }
   }
 
-  if (newCourseState?._startId != courseState?._startId) {
+  if (
+    newCourseState?._startId &&
+    newCourseState?._startId != courseState?._startId
+  ) {
     newCourseState.onNodeSince = moment().toString();
   }
 
