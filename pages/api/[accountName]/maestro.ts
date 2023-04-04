@@ -195,7 +195,7 @@ export default async function handler(
       (n) => n.letter && n.nodeScore && n.nodeScore < 0.9
     );
     const worstLetterNode = minBy(letterNodeCandidates, (s: NodeState) => {
-      s.nodeScore;
+      return s.nodeScore;
     });
 
     if (worstLetterNode) {
