@@ -990,7 +990,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -1062,7 +1062,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -1162,7 +1162,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -1268,7 +1268,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -1356,7 +1356,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -1464,7 +1464,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -1542,7 +1542,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -1597,7 +1597,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -1719,7 +1719,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -1807,7 +1807,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -1928,7 +1928,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -2037,7 +2037,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -2140,7 +2140,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -2218,7 +2218,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -2318,7 +2318,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -2372,7 +2372,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -2473,7 +2473,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -2582,7 +2582,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -2697,7 +2697,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -2802,7 +2802,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -2911,7 +2911,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -3022,7 +3022,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -3131,7 +3131,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -3241,7 +3241,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -3360,7 +3360,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -3458,7 +3458,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -3569,7 +3569,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -3695,7 +3695,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -3832,7 +3832,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -4001,7 +4001,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -4182,7 +4182,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -4290,7 +4290,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -4397,7 +4397,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -4506,7 +4506,7 @@
     },
     "_concepts": {
       "speech": {
-        "weight": 1
+        "weight": -1
       },
       "memory": {
         "weight": 1
@@ -4624,7 +4624,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -4741,7 +4741,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       },
       "E": {
         "speech": {
@@ -4855,7 +4855,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -4966,7 +4966,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -5192,7 +5192,7 @@
         "weight": 1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -5299,7 +5299,7 @@
         "weight": 1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       },
       "orthographic": {
         "weight": -1
@@ -5498,7 +5498,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -5593,7 +5593,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -5712,7 +5712,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -5946,7 +5946,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -6084,7 +6084,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -6293,7 +6293,7 @@
         "weight": -1
       },
       "speech": {
-        "weight": 1
+        "weight": -1
       }
     },
     "_wordLimit": "5",
@@ -6364,10 +6364,25 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "orthographic": {
+      "phonic": {
+        "weight": 1
+      },
+      "graphic": {
         "weight": 1
       },
       "omission": {
+        "weight": 1
+      },
+      "intrusion": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": -1
+      },
+      "speech": {
         "weight": 1
       }
     },
@@ -6431,10 +6446,25 @@
       "_isCompletionIndicatorEnabled": false
     },
     "_concepts": {
-      "orthographic": {
+      "phonic": {
+        "weight": 1
+      },
+      "graphic": {
         "weight": 1
       },
       "omission": {
+        "weight": 1
+      },
+      "intrusion": {
+        "weight": 1
+      },
+      "memory": {
+        "weight": 1
+      },
+      "orthographic": {
+        "weight": -1
+      },
+      "speech": {
         "weight": 1
       }
     },
