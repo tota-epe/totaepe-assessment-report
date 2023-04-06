@@ -208,7 +208,7 @@ export default async function handler(
 
   if (!newCourseState._startId) {
     // Check if any letter is on alarming state
-    const letterGraceLimitDate = moment().subtract(2, "days");
+    const letterGraceLimitDate = moment().subtract(1, "days");
     const letterNodeCandidates = nodeStates.filter((n) => {
       if (!n.letter || !n.nodeScore || n.nodeScore >= 0.9) {
         return false;
