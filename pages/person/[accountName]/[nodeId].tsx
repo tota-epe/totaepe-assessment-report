@@ -198,7 +198,7 @@ const Page: NextPage = ({
 
   const detailStatements = nodeLetter
     ? errorLetterGrades[nodeLetter].statements
-    : statements;
+    : statements.reverse();
 
   return (
     <div>
