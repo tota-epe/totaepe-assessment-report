@@ -84,7 +84,10 @@ export default async function handler(
     );
 
     if (shouldUpdateStart && nextNodeId && shouldWrite) {
-      await updateCourseState(accountName, { _startId: nextNodeId });
+      await updateCourseState(accountName, {
+        _startId: nextNodeId,
+        currentMainNodeId: nextNodeId,
+      });
     }
 
     return res
