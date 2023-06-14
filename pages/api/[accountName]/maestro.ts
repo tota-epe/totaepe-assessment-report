@@ -257,6 +257,8 @@ export default async function handler(
   });
 }
 
+const selectNextNode = () => {};
+
 const getLetterErrorData = async (accountName: string) => {
   const allUserStatements = await getLRSData({ accountName: accountName });
   const errorLetterGrades = getErrorLetterGrades(allUserStatements);

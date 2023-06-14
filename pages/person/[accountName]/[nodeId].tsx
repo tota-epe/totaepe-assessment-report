@@ -241,8 +241,7 @@ const Page: NextPage = ({
                   {errorLetterGrades[nodeLetter].totalWordsInteractionsError}
                 </div>
                 <div>
-                  Total:{" "}
-                  {errorLetterGrades[nodeLetter].totalWordsInteractions}
+                  Total: {errorLetterGrades[nodeLetter].totalWordsInteractions}
                 </div>
                 <div>
                   Score:{" "}
@@ -258,18 +257,32 @@ const Page: NextPage = ({
             )}
 
             <table>
-              {detailStatements.map((statement: TotaStatement) => (
-                <tr key={statement.id}>
-                  <td>
-                    {moment(statement.timestamp).format("DD/MM/YY HH:mm")}
-                  </td>
-                  <td>{statement.word}</td>
-                  <td>{JSON.stringify(statement.response)}</td>
-                  <td>{statement.withLetterError ? "COM ERRO" : ""}</td>
-                  <td>{statement.objectId}</td>
-                  {/* {JSON.stringify(statement)} */}
-                </tr>
-              ))}
+              {detailStatements.map(
+                (statement: TotaStatement, index: number) => (
+                  <tr key={statement.id} className={index < 30 ? "border" : ""}>
+                    <td>
+                      {moment(statement.timestamp).format("DD/MM/YY HH:mm")}
+                    </td>
+                    <td>{statement.word}</td>
+                    <td>{JSON.stringify(statement.response)}</td>
+                    {nodeLetter ? (
+                      <td>
+                        {statement.withLetterError
+                          ? `ERRO na letra ${nodeLetter}`
+                          : ""}
+                      </td>
+                    ) : (
+                      <td>
+                        {statement.conceptErrorGrade > 0
+                          ? "ERRO No conceito"
+                          : ""}
+                      </td>
+                    )}
+                    <td>{statement.objectId}</td>
+                    {/* {JSON.stringify(statement)} */}
+                  </tr>
+                )
+              )}
             </table>
           </Card>
         </Tabs.Panel>

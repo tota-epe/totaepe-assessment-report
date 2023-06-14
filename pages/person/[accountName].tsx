@@ -138,12 +138,12 @@ const Page: NextPage = ({
             {/* <Text>{JSON.stringify(nodeData.superMemo)}</Text> */}
             <Text>
               Last Interaction:{" "}
-              {moment(nodeData.lastInteraction).format("DD/MM/YYYY HH:MM")}
+              {moment(nodeData.lastInteraction).format("DD/MM/YYYY HH:mm")}
             </Text>
             <Text>
               NextInteraction ({nodeData.superMemo.repetition}/+
               {nodeData.superMemo.interval}):{" "}
-              {moment(nodeData.nextSMInteraction).format("DD/MM/YYYY HH:MM")}
+              {moment(nodeData.nextSMInteraction).format("DD/MM/YYYY HH:mm")}
             </Text>
           </div>
         )}

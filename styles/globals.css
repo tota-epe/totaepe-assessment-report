@@ -18,3 +18,7 @@ span.excluded {
 * {
   box-sizing: border-box;
 }
+
+tr.border td {
+  border: 1px solid #666;
+}
