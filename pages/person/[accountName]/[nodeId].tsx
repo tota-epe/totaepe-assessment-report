@@ -31,6 +31,7 @@ import {
 import moment from "moment";
 import { Card, Center, Loader, Tabs } from "@mantine/core";
 import { getLRSPeople } from "../../../modules/lrs/people";
+import cx from "classnames";
 
 Chart.register(
   CategoryScale,
@@ -258,30 +259,41 @@ const Page: NextPage = ({
 
             <table>
               {detailStatements.map(
-                (statement: TotaStatement, index: number) => (
-                  <tr key={statement.id} className={index < 30 ? "border" : ""}>
-                    <td>
-                      {moment(statement.timestamp).format("DD/MM/YY HH:mm")}
-                    </td>
-                    <td>{statement.word}</td>
-                    <td>{JSON.stringify(statement.response)}</td>
-                    {nodeLetter ? (
+                (statement: TotaStatement, index: number) => {
+                  const markError = nodeLetter ? statement.withLetterError : statement.conceptErrorGrade > 0;
+                  const mainWindow = index < 30;
+
+                  return (
+                    <tr
+                      key={statement.id}
+                      className={cx({
+                        border: mainWindow,
+                        "concept-error": markError,
+                      })}
+                    >
                       <td>
-                        {statement.withLetterError
-                          ? `ERRO na letra ${nodeLetter}`
-                          : ""}
+                        {moment(statement.timestamp).format("DD/MM/YY HH:mm")}
                       </td>
-                    ) : (
-                      <td>
-                        {statement.conceptErrorGrade > 0
-                          ? "ERRO No conceito"
-                          : ""}
-                      </td>
-                    )}
-                    <td>{statement.objectId}</td>
-                    {/* {JSON.stringify(statement)} */}
-                  </tr>
-                )
+                      <td>{statement.word}</td>
+                      <td>{JSON.stringify(statement.response)}</td>
+                      {/* {nodeLetter ? (
+                        <td>
+                          {statement.withLetterError
+                            ? `ERRO na letra ${nodeLetter}`
+                            : ""}
+                        </td>
+                      ) : (
+                        <td>
+                          {statement.conceptErrorGrade > 0
+                            ? "ERRO No conceito"
+                            : ""}
+                        </td>
+                      )} */}
+                      {/* <td>{statement.objectId}</td> */}
+                      {/* {JSON.stringify(statement)} */}
+                    </tr>
+                  );
+                }
               )}
             </table>
           </Card>

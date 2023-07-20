@@ -22,3 +22,6 @@ span.excluded {
 tr.border td {
   border: 1px solid #666;
 }
+tr.concept-error td {
+  background-color: yellow;
+}
