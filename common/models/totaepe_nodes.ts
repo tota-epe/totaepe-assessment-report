@@ -3,6 +3,12 @@ import courseBlocks from "../course/en/blocks.json";
 import courseArticles from "../course/en/articles.json";
 import courseContentObjects from "../course/en/contentObjects.json";
 
+export type WordData = {
+  word: string;
+  conceptRange: string;
+  destinationNodeID?: string;
+};
+
 export type TotaEpeComponent = {
   id: string;
   title: string;
@@ -33,12 +39,8 @@ export type TotaEpeComponent = {
       weight: number;
     };
   };
-  conceptPattern: string,
-  words: {
-    word: string;
-    conceptRange: string;
-    destinationNodeID?: string;
-  }[];
+  conceptPattern: string;
+  words: WordData[];
 };
 
 export const idMap: { [key: string]: string[] } = {
@@ -122,14 +124,14 @@ nodes.forEach((node) => {
     article.blocks.forEach((block) => {
       block.components.forEach((component) => {
         nodeIdByComponentId[component.id] = currentNodeId;
-      })
-    })
-  })
-})
-export const nodeById = (nodeId: string) => nodes.find((n) => n._id === nodeId)
+      });
+    });
+  });
+});
+export const nodeById = (nodeId: string) => nodes.find((n) => n._id === nodeId);
 export const nodeByComponentId = (componentId: string) => {
   return nodeById(nodeIdByComponentId[componentId]);
-}
+};
 
 export const mainNodes = nodes.filter((n) => n.nodeType === "main");
 export const letterNodes = nodes.filter((n) => n.nodeId.startsWith("letter-"));

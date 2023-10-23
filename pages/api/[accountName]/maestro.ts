@@ -15,6 +15,8 @@ import {
   defaultStartId,
   TotaEpeComponent,
   letterNodes,
+  WordData,
+  nodeByComponentId,
 } from "../../../common/models/totaepe_nodes";
 import {
   getLRSDataForNode,
@@ -96,7 +98,25 @@ export default async function handler(
   }
 
   // Update component word selection
-  let wordsForNode = refreshWords(currentComponent, resultStatements);
+  const allUserStatements = await getLRSData({ accountName: accountName });
+  const letterErrorData = await getLetterErrorData(allUserStatements);
+
+  // On letter nodes removes words not available on concept axis
+  let componentWords = currentComponent.words;
+  if (node.nodeType === "letter") {
+    const wordsFromConcepts = allUserStatements.reduce((acc, s) => {
+      const statementNode = nodeByComponentId(s.objectId);
+      if (statementNode?.nodeType === "main" && s.word) {
+        acc.add(s.word);
+      }
+      return acc;
+    }, new Set<string>());
+
+    componentWords = componentWords.filter((word) => {
+      return wordsFromConcepts.has(word.word);
+    });
+  }
+  const wordsForNode = refreshWords(componentWords, resultStatements);
   let newComponentState = {
     _id: currentComponent.id,
     _extras: { words: wordsForNode.map((w) => w.word), shuffle: true },
@@ -107,7 +127,6 @@ export default async function handler(
 
   // Check if node should advance to next Node
   let nodeStates = await getNodeStates(accountName);
-  const letterErrorData = await getLetterErrorData(accountName);
   let newNodeStates = [...letterErrorData];
 
   let currentNodeState;
@@ -259,8 +278,7 @@ export default async function handler(
 
 const selectNextNode = () => {};
 
-const getLetterErrorData = async (accountName: string) => {
-  const allUserStatements = await getLRSData({ accountName: accountName });
+const getLetterErrorData = async (allUserStatements: TotaStatement[]) => {
   const errorLetterGrades = getErrorLetterGrades(allUserStatements);
   const lettersWithData = Object.keys(errorLetterGrades);
   return lettersWithData.map((letter) => {
@@ -308,12 +326,11 @@ const placementTestHandler = async (
 };
 
 function refreshWords(
-  currentComponent: TotaEpeComponent,
+  componentWords: WordData[],
   resultStatements: TotaStatement[]
 ) {
-  let words = currentComponent.words;
   let statementsPerWord = getStatementsPerWord(resultStatements);
-  let sortedWords = words
+  let sortedWords = componentWords
     .map((wordData) => {
       const word: string = wordData.word;
       const lastOccurrenceOfWord = statementsPerWord[word][0];
